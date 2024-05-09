@@ -43,13 +43,13 @@ NDefines.NIndustrialOrganisation.MAX_FUNDS_FROM_MANUFACTURER_PER_DAY = 175
 --█   ▄▀▄ █▄ █ █▀▄    █▀▀ █▀█ █▄ ▄█ █▄▄ ▄▀▄ ▀█▀ 
 --█▄▄ █▀█ █ ▀█ █▄▀    █▄▄ █▄█ █ ▀ █ █▄█ █▀█  █  
 
-NDefines.NMilitary.PLANNING_GAIN = 0.025   -- vanilla 0.02
+NDefines.NMilitary.PLANNING_GAIN = 0.02   -- vanilla 0.02
 NDefines.NMilitary.PLANNING_MAX = 0.25     -- vanilla 0.3
 
 NDefines.NMilitary.ARMY_INITIATIVE_REINFORCE_FACTOR = 0.5 -- vanilla 0.25
 NDefines.NMilitary.REINFORCE_CHANCE = 0.03                -- vanilla 0.02
 
-NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.0425           -- vanilla 0.05  | 15% slower | basic speed control
+NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.05           -- vanilla 0.05
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.2            -- vanilla 0.25 | Speed bonus when retreating
 NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.15    --vanilla 0.2
 NDefines.NMilitary.ZERO_ORG_MOVEMENT_MODIFIER = -0.6     --vanilla 0.8
@@ -151,7 +151,7 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20 --vanilla 10
 NDefines.NTechnology.BASE_TECH_COST= 100                   -- vanilla 100
 NDefines.NTechnology.USE_BONUS_REGRET_TIMER=10            -- vanilla 7
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50      -- vanilla 30
-NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 1.5 -- vanilla 2.0
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 2.5 -- vanilla 2.0
 
 --█▀▀ █▀█ ▄▀▄ █▀█ █▄█ ▀█▀ █▀▀ █▀▀ 
 --█▄█ █▀▄ █▀█ █▀▀ █ █ ▄█▄ █▄▄ ▄██ 
@@ -302,7 +302,7 @@ NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0.0
 --██▄ █ ▀█ ██▄ █ ▀ █  █     █▀█ ▄█▄ █▀▄    ▄██ █▄█ █▀▀ ██▄ █▀▄ ▄█▄ █▄█ █▀▄ ▄█▄  █   █ 
 
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.4          -- vanilla 0.35 | Effect on defense due to enemy air superiorty
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.2    -- vanilla 0.3
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.6    -- vanilla 0.3
 
 --████  █      ███  █   █ █████ █████ 
 --█   █ █     █   █ ██  █ █     █     

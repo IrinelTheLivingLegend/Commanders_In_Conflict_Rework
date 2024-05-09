@@ -1,6 +1,25 @@
-# options for map_icon_category:
-# For land units: infantry,armored,other
-# For sea units: ship,transport,uboat
+README:
+
+TODO: Infantry
+#Add support equipment for cost on SPF
+#initiative = 0.01
+#supply_consumption = 0.07
+#supply_consumption_factor=-0.01
+#breakthrough = -0.1
+		# river = {
+		# 	attack = 0.3
+		# }
+		# jungle = {
+
+		# 	attack = 0.10
+		# }
+		# fort = {
+		# 	attack = 0.10
+		# 	movement = 0.1
+		# }
+		# forest = {
+		# 	attack = 0.1
+		# }
 
 sub_units = {
 
@@ -361,6 +380,42 @@ sub_units = {
 			infantry_equipment = 105
 		}
 	}
+	TODO: Motorized
+# max_strength = 35
+# supply_consumption = 0.12
+# need = {
+# 			infantry_equipment = 100
+# 			motorized_equipment = 50
+# 		}
+# mountain = {
+# 			attack = -0.2
+# 			defence = -0.2
+# 			movement = -0.2
+# 		}
+# 		jungle = {
+# 			attack = -0.2
+# 			defence = -0.2
+# 			movement = -0.5
+# 		}
+# 		hills = {
+# 			attack = -0.1
+# 			defence = -0.1
+# 		}
+# 		marsh = {
+# 			attack = -0.1
+# 			movement = -0.3
+# 		}
+# 		urban = {
+# 			attack = -0.1
+# 		}
+# 		river = {
+# 			attack = -0.1
+# 			movement = -0.1
+# 		}
+# 		amphibious = {
+# 			attack = -0.2
+# 		}
+
 
 	motorized = {
 		abbreviation = "MOT"

@@ -1,5 +1,4 @@
 on_actions = {
-	#Not run on a specific country.
 	on_startup = {
 		effect = {
 			set_variable ={ Global.allies_points = 700 }

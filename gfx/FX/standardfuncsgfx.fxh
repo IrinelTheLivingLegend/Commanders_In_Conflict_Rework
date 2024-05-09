@@ -573,7 +573,6 @@ PixelShader =
 		aSpecularLightOut = specColor * aLightColor * NdotL;
 	}
 
-	// TODO other, square, falloff?
 	void ImprovedBlinnPhongPointLight(PointLight aPointlight, LightingProperties aProperties, inout float3 aDiffuseLightOut, inout float3 aSpecularLightOut)
 	{
 		float3 posToLight = aPointlight._Position - aProperties._WorldSpacePos;

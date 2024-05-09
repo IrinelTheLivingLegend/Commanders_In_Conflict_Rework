@@ -1,13 +1,13 @@
 
 state = {
 	id = 39
-	name = "STATE_39" # (South Tyrol) Alto Adige -> #TODO_Manu: Should change name to Südtirol when under Austrian/German control
-	manpower = 1 # = 1 # was 641650 before Trentino split
+	name = "STATE_39" 
+	manpower = 1 
 
 	state_category = town
 
 	history = {
-		victory_points = { #Bolzano
+		victory_points = { 
 			11598 1
 		}
 		owner = NOO

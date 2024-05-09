@@ -73,7 +73,7 @@ commando_leader:0 "Commando Leader"
 grace_of_god:0 "By the Grace of God"
 ALK_high_command:0 "Third Allied High Command"
 
- #TODO
+
  ALI_commonwelth:0 "The Commonwealth"
  ALI_commonwelth_desc:0 ""
  ALI_defence_in_depth:0 "Defence in Depth"
@@ -224,7 +224,6 @@ ALK_high_command:0 "Third Allied High Command"
  ALI_katyushas:0 "Stalin's Organ"
 
  ALI_GATHERING_STORM_DESC:0 ""
- #TODO
  ALI_sas:0 "Special Air Service"
  ALI_sas_desc:0 ""
  ALI_the_kings_choice:0 "The King's Choice"
@@ -331,7 +330,6 @@ ALK_lord_lovat_desc:0 ""
 ALK_jack_churchill:0 "Mad Jack Churchill"
 ALK_jack_churchill_desc:0 ""
 
- #TODO
  ALI_talented_young_officiers_desc:0 ""
  ALI_helmet_for_my_pillow_idea:0 "Helmet for My Pillow"
  ALI_helmet_for_my_pillow_idea_desc:0 ""

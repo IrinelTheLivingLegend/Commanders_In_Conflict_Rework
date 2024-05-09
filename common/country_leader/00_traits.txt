@@ -2034,7 +2034,6 @@ leader_traits = {
 		drift_defence_factor = 0.1
 		political_power_factor = 0.05
 		mobilization_speed = 0.05
-		# TODO_TA create lvl 2, 3a, 3b and 4
 	}
 	# Haile Selassie - Starting trait + King of Kings
 	king_of_kings_2 = {
@@ -4923,7 +4922,6 @@ leader_traits = {
 		intel_network_gain_factor = 0.1
 		boost_ideology_mission_factor = 0.1
 		diplomatic_pressure_mission_factor = 0.1
-		# TODO Thomas - maybe add something relating to decisions for internatinal revolutions
 	}
 
 	#Preobrazhensky

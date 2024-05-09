@@ -503,7 +503,7 @@ ideas = {
 				tactic_elastic_defense_preferred_weight_factor = 1
 				tactic_overwhelming_fire_preferred_weight_factor = 1
 				max_dig_in_factor = 0.05
-				dig_in_speed_factor = 0.5
+				dig_in_speed_factor = 0.25
 			}
 			ai_will_do = {
 				factor = 1

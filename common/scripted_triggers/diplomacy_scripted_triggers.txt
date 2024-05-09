@@ -298,7 +298,7 @@ game_weight_can_add_communist = {
 }
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
-	if = { # TODO_TA make more generic trigger
+	if = {
 		limit = {
 			NOT = { has_global_flag = ethiopia_recognized_flag }
 			FROM = {

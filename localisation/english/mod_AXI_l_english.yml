@@ -27,7 +27,6 @@ AXK_high_command:0 "Oberkommando der Wehrmacht 3"
  count_general:0 "2nd Count"
  the_pacifier:0 "The Pacifier of Libya"
  clever_hans:0 "The Clever Hans"
- #TODO
  AXI_wehrmacht:0 "Wehrmacht"
  AXI_wehrmacht_desc:0 ""
  AXI_afrika_korps:0 "Panzer Group West"
@@ -155,7 +154,6 @@ AXI_101st_motorized_tt:0 "All §YMotorized Battalions§! will gain §G+20.00 % B
 
  
  AXI_GATHERING_STORM_DESC:0 ""
- #TODO
  AXI_royal_italian:0 "Royal Italian Army"
  AXI_royal_italian_desc:0 ""
  AXI_tankettes:0 "Tankettes"
@@ -199,7 +197,6 @@ AXI_101st_motorized_tt:0 "All §YMotorized Battalions§! will gain §G+20.00 % B
  AXI_terauchi_supreme:0 "Terauchi Supreme"
  AXI_terauchi_supreme_desc:0 ""
 
- #TODO
  AXI_lessons_of_blitzkrieg_idea_desc:0 ""
  AXI_tankettes_idea:0 "Tankettes"
  AXI_tankettes_idea_desc:0 ""
@@ -223,7 +220,6 @@ AXI_aeronautica_machta:0 "Aeronautica Macchi"
 AXI_aeronautica_machta_idea:0 "Retooling the Aviation Industry"
 
 new_generals_tt:0 "New §YGenerals§! will be available!"
- #TODO
  AXI_winter_is_coming:0 "Winter is Coming"
  AXI_winter_is_coming_desc:0 ""
  AXI_from_abroad:0 "North Finland Group"
@@ -267,7 +263,6 @@ new_generals_tt:0 "New §YGenerals§! will be available!"
  AXI_ostbau_werke_tt:0 "Adds a §Y 30-width Armored Division§! with Motorized Rocket Artillery, SPAA and support companies."
 AXI_ostbau_werke:0 "Ostbau-Werke"
 
- #TODO
  AXI_tokyo_express_ideas:0 "The Tokyo Express"
  AXI_tokyo_express_ideas_desc:0 ""
  AXI_luftwaffe_defence_units_idea:0 "Luftwaffe Defence Units"

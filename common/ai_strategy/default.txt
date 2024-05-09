@@ -303,7 +303,6 @@ default_surplus_management = {
 }
 
 bba_air_prod_1 = {
-	# TODO BFW: this was moved from germany's strats
 
 	enable = {
 		always = yes

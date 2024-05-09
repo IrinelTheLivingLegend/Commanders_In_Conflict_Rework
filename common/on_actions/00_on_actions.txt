@@ -3070,7 +3070,6 @@ on_actions = {
 						20 = { set_country_flag = ETH_AI_RANDOM_ANARCHIST}
 						20 = { set_country_flag = ETH_AI_RANDOM_COLLABORATIONIST}
 						20 = { set_country_flag = ETH_AI_RANDOM_INDEPENDENT_FASCIST}
-						#TODO_TA Set Correct values
 						#15 = {
 						#	modifier = {
 						#		factor = 0.25
