@@ -1,0 +1,43 @@
+state={
+	id=723
+	name="STATE_723"
+	manpower = 1 # = 3000000
+
+	state_category = megalopolis
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 30
+		chromium = 5
+	}
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 3 #was: 5
+			#industrial_complex = 4
+			#dockyard=2
+			#arms_factory = 2
+			air_base = 1
+			2197 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			2197 25
+		}
+		victory_points = {
+			2211 1
+		}
+
+	}
+	provinces={
+		2197 2203 2211 4819 5195 7839 8204 8212 8232 8241 10650 12632 12966 12974 12980 12988
+	}
+
+	local_supplies=0.0
+}

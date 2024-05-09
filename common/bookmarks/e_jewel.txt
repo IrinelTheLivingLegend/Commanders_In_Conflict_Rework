@@ -1,0 +1,173 @@
+bookmarks = {
+	bookmark = {
+		name = "INDIAN_SUNRISE"
+		desc = "INDIAN_SUNRISE_DESC"
+		date = 1940.1.1.12
+		picture = "GFX_select_date_indian_sunrise"
+		default_country = "ALI"
+		default = yes
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_indian_sunrise
+			AXI={
+				set_capital = {state = 430}
+				set_oob = AXI_indian_sunrise
+				AXI_high_command = {
+					set_character_name = AXI_high_command_jap
+				}
+			}
+			ALI={
+				set_capital = {state = 439}
+				set_oob = ALI_indian_sunrise
+			}
+			every_state = {
+				limit={OR={state=433 state = 445 state=439 state=440 state=443 state=428}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				
+			}
+
+
+			every_state = {
+				limit={OR={state=431 state=323 state=438 state=436 state=437 state=435 state=426}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=430 state=324 state=434 state=640 state=288 state=432}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				
+			}
+
+			every_state = {
+				limit={OR={ state=433 state = 445 state=439 state=440 state=443 state=428 #ALI
+				state=430 state=324 state=434 state=640 state=288 state=432 # AXI
+				 }}
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+			}
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+
+		build_railway = {
+    		level = 1
+    	    path = { 12338 8010 }
+			}
+
+		build_railway = {
+    		level = 1
+    	    path = { 12338 5310 4987 4386 7374 10021 5002 11955 2086 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 12464 10486 1581 10514 12395 12366 7455 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 1492 12404 4541 7163 10033 7122 9991 }
+			}
+
+			#Those nations are required to exist on map for the flags on industrial decisions to show properly
+		every_state = {
+				limit={state=270}
+				USA={transfer_state=PREV}
+				add_core_of =USA
+		}
+		every_state = {
+				limit={state=650}
+				ENG={transfer_state=PREV}
+				add_core_of =ENG
+		}
+		every_state = {
+				limit={state=631}
+				FRA={transfer_state=PREV}
+				add_core_of =FRA
+		}
+		every_state = {
+				limit={state=630}
+				SOV={transfer_state=PREV}
+				add_core_of =SOV
+		}
+		every_state = {
+				limit={state=713}
+				GER={transfer_state=PREV}
+				add_core_of =GER
+		}
+		every_state = {
+				limit={state=706}
+				ROM={transfer_state=PREV}
+				add_core_of =ROM
+		}
+		every_state = {
+				limit={state=707}
+				ITA={transfer_state=PREV}
+				add_core_of =ITA
+		}
+		every_state = {
+				limit={state=704}
+				JAP={transfer_state=PREV}
+				add_core_of =JAP
+		}
+		}
+	}
+}

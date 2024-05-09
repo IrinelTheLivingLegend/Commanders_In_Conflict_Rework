@@ -1,0 +1,245 @@
+bookmarks = {
+	bookmark = {
+		name = "SONNENBLUME"
+		desc = "SONNENBLUME_DESC"
+		date = 1940.1.1.12
+		picture = "GFX_select_date_sonnenblum"
+		default_country = "ALI"
+		default = yes
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			116 = {
+		
+		add_resource = {
+    		type = oil
+    		amount = 60
+		}
+		add_resource = {
+    		type = aluminium
+    		amount = 40
+		}
+		add_resource = {
+    		type = tungsten
+    		amount = 40
+		}
+		add_resource = {
+    		type = rubber
+    		amount = 40
+		}
+		add_resource = {
+    		type = steel
+    		amount = 40
+		}
+		add_resource = {
+    		type = chromium
+    		amount = 40
+		}
+		}
+		665 = {
+		
+		add_resource = {
+    		type = aluminium
+    		amount = 50
+		}
+		add_resource = {
+    		type = steel
+    		amount = 50
+		}
+		add_resource = {
+    		type = oil
+    		amount = 60
+		}
+		}
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag=FiveVpMap
+			set_global_flag = game_sonnenblum
+			AXI={
+				set_capital = {state = 461}
+				set_oob = "AXI_1936"
+			}
+			ALI = {
+				set_capital = {state = 907}
+				set_oob = "ALI_1936"
+			}
+
+			every_state = {
+				limit={OR={ state=447 state=452 state=456 state=457 state=907}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				
+			}
+			every_state = {
+				limit={OR={state=446 state=453}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = rural
+				
+			}
+
+
+			every_state = {
+				limit={OR={state=116 state=448 state=449 state=450 state=451 state=458 state=460 state=513 state=661 state=662 state=663 state=665 state=910}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=459 state=290 state=461 state=462 state=783 state=909}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				
+			}
+			every_state = {
+				limit={state=909}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = rural
+				
+			}
+
+			every_state = {
+				limit={OR={ state=447 state=452 state=456 state=457 state=907 #ALI
+				state=459 state=290 state=461 state=462 state=783 # AXI
+				 }}
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+			}
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {state = 452 }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+			}
+			}
+
+		build_railway = {
+    		level = 2
+    	    path = { 4076 4145 1071 11910 13285 11967 9989 7079 10120 4136 1130 9992 7082 1204 4151 12094 10123 11954 4120 1127 1198 4057 12088 10117 13282 13281 1041 1118 9980 7209 4194 1149 1189 12039 11957 7005 10026 11921 }
+		}
+		build_railway = {
+    		level = 1
+    	    path = { 1130 13078 13257 11951 13275 10785 4200 1198 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 4057 8069 7985 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 1149 4051 11940 4962 }
+			}
+
+			#Those nations are required to exist on map for the flags on industrial decisions to show properly
+		every_state = {
+				limit={state=270}
+				USA={transfer_state=PREV}
+				add_core_of =USA
+		}
+		every_state = {
+				limit={state=650}
+				ENG={transfer_state=PREV}
+				add_core_of =ENG
+		}
+		every_state = {
+				limit={state=631}
+				FRA={transfer_state=PREV}
+				add_core_of =FRA
+		}
+		every_state = {
+				limit={state=630}
+				SOV={transfer_state=PREV}
+				add_core_of =SOV
+		}
+		every_state = {
+				limit={state=713}
+				GER={transfer_state=PREV}
+				add_core_of =GER
+		}
+		every_state = {
+				limit={state=706}
+				ROM={transfer_state=PREV}
+				add_core_of =ROM
+		}
+		every_state = {
+				limit={state=707}
+				ITA={transfer_state=PREV}
+				add_core_of =ITA
+		}
+		every_state = {
+				limit={state=704}
+				JAP={transfer_state=PREV}
+				add_core_of =JAP
+		}
+	}
+}
+}

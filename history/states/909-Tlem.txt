@@ -1,0 +1,21 @@
+state={
+	id=909
+	name="Tlem"
+	provinces={
+		1126 1128 1967 3991 4018 4150 7008 7040 9960 10045 12018 12020 13074
+	}
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 3
+
+		}
+
+	}
+	manpower = 1 #=1
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

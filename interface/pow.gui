@@ -1,0 +1,64 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "pow_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 510 height= 60 }
+		
+		iconType = {
+			name = "background"
+			position = { x=-5 y=-20 }
+			spriteType = "GFX_pow_info_menu_bg"
+			scale=1.05
+		}
+		
+		instantTextBoxType = {
+			name ="Total Prisoners"
+			position = { x = 10 y = -15 }
+			font = "hoi_18mbs"
+			text = "Total Enemy Desertors"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="Unassigned POW"
+			position = { x = 10 y = 10 }
+			font = "hoi_18mbs"
+			text = "Unassigned Enemy Desertors"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="Assigned Enemy Desertors"
+			position = { x = 10 y = 35 }
+			font = "hoi_18mbs"
+			text = "Assigned Enemy Desertors"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="Total Prisonerss"
+			position = { x = 210 y = -15 }
+			font = "hoi_18mbs"
+			text = "[?total_pows|0]K"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="Unassigned POWs"
+			position = { x = 210 y = 10 }
+			font = "hoi_18mbs"
+			text = "[?total_pows_unassigned|0]K"
+			format = left
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name ="Assigned POWs"
+			position = { x = 210 y = 35 }
+			font = "hoi_18mbs"
+			text = "[?total_pows_assigned|0]K"
+			format = left
+			maxHeight = 24
+		}
+	}
+}

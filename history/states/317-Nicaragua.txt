@@ -1,0 +1,31 @@
+
+state={
+	id=317
+	name="STATE_317"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 2
+			air_base = 1
+			12738 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			12738 1 
+		}
+
+	}
+
+	provinces={
+		1988 2075 10728 12738 13139 13178 13286 13287 13288 13289 
+	}
+	manpower = 1 #=100000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

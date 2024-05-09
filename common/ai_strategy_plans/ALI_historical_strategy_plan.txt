@@ -1,0 +1,69 @@
+ALI_plan1 = {
+	name = "ALI_plan1"
+	desc = ""
+
+	allowed = {
+		or = {
+		original_tag = ALI
+		original_tag = ALJ
+		original_tag = ALK
+		}
+	}
+	enable = {
+		is_ai = yes
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		INDUSTRY_start_rapid_industralisation
+		INDUSTRY_phase_1
+		INDUSTRY_expand_the_arms_industry
+		INDUSTRY_phase_2
+		INDUSTRY_continue_expanding_the_arms_industry
+		INDUSTRY_phase_3
+		INDUSTRY_final_expansion_of_the_arms_industry
+		ALI_cbi
+		ALI_national_revolutionary_army
+		ALI_flying_tigers
+		ALI_the_hump
+		ALI_mobilise_the_people
+		ALI_guerilla_warfare
+		ALI_defenders_of_shanghai
+		ALI_eighth_route_army
+		ALI_united_front
+		ALI_war_of_resistance
+		INDUSTRY_expand_the_industral_sector
+		INDUSTRY_continue_expanding_the_industral_sector
+		INDUSTRY_final_expansion_of_the_industral_sector
+		INDUSTRY_advanced_warfare
+		INDUSTRY_school_of_attack
+		INDUSTRY_siege_warfare_school
+		
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

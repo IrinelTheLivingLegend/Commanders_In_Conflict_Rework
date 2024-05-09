@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	mod_no_enemy_trade = {
+		trade = yes
+		value = -150
+	}
+}

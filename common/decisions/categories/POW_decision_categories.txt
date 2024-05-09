@@ -1,0 +1,10 @@
+POW = {
+	allowed = {
+	}
+	visible= {
+		has_war=yes
+	}
+	scripted_gui = pow_decision_ui
+	priority = 90
+}
+

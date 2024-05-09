@@ -1,0 +1,1864 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GetFactionPick
+	text = {
+		trigger = {
+			has_completed_focus = AXI_from_abroad
+		}
+		localization_key = AXI_from_abroad
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_from_within
+		}
+		localization_key = AXI_from_within
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_afrika_korps
+		}
+		localization_key = AXI_afrika_korps
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_wehrmacht_4th_army
+		}
+		localization_key = AXI_wehrmacht_4th_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_army_of_north_africa
+		}
+		localization_key = AXI_italian_1st_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_army_of_the_po
+		}
+		localization_key = AXI_army_of_the_po
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_imperial_japanese_navy
+		}
+		localization_key = AXI_imperial_japanese_navy
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_IJ_army
+		}
+		localization_key = AXI_IJ_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_spirit_of_oscarsborg
+		}
+		localization_key = ALI_spirit_of_oscarsborg
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_royal_commandos
+		}
+		localization_key = ALI_royal_commandos
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_commonwealth_8th_army
+		}
+		localization_key = ALI_commonwealth_8th_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_canadian_1st_army
+		}
+		localization_key = ALI_canadian_1st_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_US_12th_army_group
+		}
+		localization_key = ALI_US_12th_army_group
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_USMC
+		}
+		localization_key = ALI_USMC
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_5th_guards_tank_army
+		}
+		localization_key = ALI_5th_guards_tank_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_3rd_shock_army
+		}
+		localization_key = ALI_3rd_shock_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_national_revolutionary_army
+		}
+		localization_key = ALI_national_revolutionary_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_french_liberation_army
+		}
+		localization_key = ALI_french_liberation_army
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_hungary
+		}
+		localization_key = AXI_hungary
+	}
+	text = {
+		trigger = {
+			has_completed_focus = AXI_romania
+		}
+		localization_key = AXI_romania
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ALI_abbisinian_ambitions
+		}
+		localization_key = ALI_ethiopia
+	}
+
+	
+	text = {
+		localization_key = nothing
+	}
+}
+
+defined_text = {
+	name = GetVPOne
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_malta
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_amsterdam
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_manila
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_lucknow
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_stockholm
+	}
+	text ={
+		trigger = {
+			OR = {
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+			}
+		}
+		localization_key = vp_stalingrad
+	}
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_kiev
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_toulouse
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_beijing
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_mexico_city
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_novgorod
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_oradea
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+		localization_key = vp_amsterdam
+}
+
+	text = {
+		localization_key = vp_undefined
+	}
+}
+
+defined_text = {
+	name = GetVPTwo
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_dnipropetrovsk
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_gabes
+	}
+	
+	text ={
+		trigger = {
+				has_global_flag = game_red_october
+			
+		}
+		localization_key = vp_voronezh
+	}
+	text ={
+		trigger = {
+				has_global_flag = game_red_october2v2
+			
+		}
+		localization_key = vp_kursk
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_koln
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_batavia
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_patna
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_narvik
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_nice
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_qingdao
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_tegucigalpa
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_moscow
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_budapest
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+			
+	localization_key = vp_koln
+}
+	text = {
+		localization_key = vp_undefined
+	}
+}
+
+defined_text = {
+	name = GetVPThree
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_kharkov
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_bengazi
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_frankfurt
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_brunai
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_nagpur
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_lulea
+	}
+	
+	text ={
+		trigger = {
+			OR = {
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+			}
+		}
+		localization_key = vp_millerovo
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_cagliari
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_taiyuan
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_havana
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_tula
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_belgrade
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_brussels
+}
+	text = {
+		localization_key = vp_undefined
+	}
+}
+
+defined_text = {
+	name = GetVPFour
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_chania
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_sulawesi
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_algiers
+	}
+	
+	text ={
+		trigger = {
+				OR={
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+		}
+		}
+		localization_key = vp_tambov
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_yucatan
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_valhalla
+		}
+		localization_key = vp_danzig
+	}
+	text = {
+		localization_key = vp_undefined
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_sarajevo
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_voronezh
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_luxembourg
+}
+}
+
+defined_text = {
+	name = GetVPFive
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_sirte
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_new_guinea
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_bizerte
+	}
+	text ={
+		trigger = {
+				has_global_flag = game_red_october
+			
+		}
+		localization_key = vp_mikhaylovka
+	}
+	
+	text ={
+		trigger = {
+				has_global_flag = game_red_october2v2
+			
+		}
+		localization_key = vp_moscow
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_santo_domingo
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_valhalla
+		}
+		localization_key = vp_riga
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_millerovo
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_dubrovnik
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_milano
+}
+	text = {
+		localization_key = vp_undefined
+	}
+}
+
+
+defined_text = {
+	name = GetVPOneOwner
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_malta_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_amsterdam_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_manila_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_lucknow_owner
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_stockholm_owner
+	}
+	
+	text ={
+		trigger = {
+			OR = {
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+			}
+		}
+		localization_key = vp_stalingrad_owner
+	}
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_kiev_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_toulouse_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_beijing_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_mexico_city_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_novgorod_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_oradea_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_amsterdam_owner
+}
+	text = {
+		localization_key = vp_undefined_owner
+	}
+}
+
+defined_text = {
+	name = GetVPTwoOwner
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_dnipropetrovsk_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_gabes_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_koln_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_batavia_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_patna_owner
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_narvik_owner
+	}
+	text ={
+		trigger = {
+				has_global_flag = game_red_october
+			
+		}
+		localization_key = vp_voronezh_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_red_october2v2
+		}
+		localization_key = vp_kursk_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_nice_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_qingdao_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_tegucigalpa_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_moscow_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_budapest_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_koln_owner
+}
+	text = {
+		localization_key = vp_undefined_owner
+	}
+}
+
+defined_text = {
+	name = GetVPThreeOwner
+	text ={
+		trigger = {
+				has_global_flag = game_ukraine
+		}
+		localization_key = vp_kharkov_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_bengazi_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_across_the_rhine
+		}
+		localization_key = vp_frankfurt_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_brunai_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_indian_sunrise
+		}
+		localization_key = vp_nagpur_owner
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_global_flag = game_scandinavia
+				has_global_flag = game_valhalla
+			}
+		}
+		localization_key = vp_lulea_owner
+	}
+	
+	text ={
+		trigger = {
+			OR = {
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+			}
+		}
+		localization_key = vp_millerovo_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_cagliari_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_marco_polo
+		}
+		localization_key = vp_taiyuan_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_havana_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_tula_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_belgrade_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_brussels_owner
+}
+	text = {
+		localization_key = vp_undefined_owner
+	}
+}
+
+defined_text = {
+	name = GetVPFourOwner
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_chania_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_sulawesi_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_algiers_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_yucatan_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_valhalla
+		}
+			localization_key = vp_danzig_owner
+	}	
+	text ={
+		trigger = {
+				OR={
+				has_global_flag = game_red_october
+				has_global_flag = game_red_october2v2
+			}
+		}
+		localization_key = vp_tambov_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_voronezh_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_sarajevo_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_luxembourg_owner
+}
+	text = {
+		localization_key = vp_undefined_owner
+	}
+}
+
+defined_text = {
+	name = GetVPFiveOwner
+	text = {
+		trigger = {
+			has_global_flag = game_sonnenblum
+		}
+		localization_key = vp_sirte_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_nanshin_ron
+		}
+		localization_key = vp_new_guinea_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_spain
+		}
+		localization_key = vp_bizerte_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_caribbean
+		}
+		localization_key = vp_santo_domingo_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_valhalla
+		}
+		localization_key = vp_riga_owner
+	}
+	
+	text ={
+		trigger = {
+				has_global_flag = game_red_october
+			
+		}
+		localization_key = vp_mikhaylovka_owner
+	}
+	
+	text ={
+		trigger = {
+				has_global_flag = game_red_october2v2
+			
+		}
+		localization_key = vp_moscow_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_barbarossa3v3
+		}
+		localization_key = vp_millerovo_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_powder_keg
+		}
+		localization_key = vp_dubrovnik_owner
+	}
+	text = {
+		trigger = {
+			has_global_flag = game_great_war_3v3
+	}
+	localization_key = vp_milano_owner
+}
+	text = {
+		localization_key = vp_undefined_owner
+	}
+}
+
+defined_text = { 
+	name = GetNationScore
+	text = {
+		trigger = {
+			OR = {
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+			}
+		}
+		localization_key = alled_score_txt
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALK
+			}
+		}
+		localization_key = axis_score_txt
+	}
+}
+
+defined_text = {
+	name = AXIGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?AXI.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?AXI.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?AXI.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?AXI.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?AXI.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?AXI.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?AXI.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?AXI.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?AXI.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?AXI.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?AXI.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?AXI.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?AXI.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?AXI.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?AXI.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?AXI.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?AXI.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?AXI.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?AXI.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?AXI.army_leaders^19.GetName]"
+		
+	}
+}
+defined_text = {
+	name = AXJGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?AXJ.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?AXJ.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?AXJ.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?AXJ.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?AXJ.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?AXJ.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?AXJ.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?AXJ.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?AXJ.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?AXJ.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?AXJ.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?AXJ.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?AXJ.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?AXJ.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?AXJ.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?AXJ.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?AXJ.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?AXJ.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?AXJ.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?AXJ.army_leaders^19.GetName]"
+		
+	}
+}
+
+defined_text = {
+	name = AXKGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?AXK.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?AXK.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?AXK.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?AXK.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?AXK.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?AXK.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?AXK.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?AXK.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?AXK.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?AXK.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?AXK.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?AXK.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?AXK.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?AXK.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?AXK.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?AXK.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?AXK.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?AXK.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?AXK.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?AXK.army_leaders^19.GetName]"
+		
+	}
+}
+
+defined_text = {
+	name = ALIGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?ALI.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?ALI.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?ALI.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?ALI.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?ALI.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?ALI.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?ALI.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?ALI.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?ALI.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?ALI.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?ALI.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?ALI.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?ALI.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?ALI.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?ALI.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?ALI.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?ALI.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?ALI.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?ALI.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?ALI.army_leaders^19.GetName]"
+		
+	}
+}
+
+defined_text = {
+	name = ALJGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?ALJ.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?ALJ.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?ALJ.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?ALJ.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?ALJ.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?ALJ.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?ALJ.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?ALJ.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?ALJ.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?ALJ.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?ALJ.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?ALJ.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?ALJ.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?ALJ.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?ALJ.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?ALJ.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?ALJ.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?ALJ.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?ALJ.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?ALJ.army_leaders^19.GetName]"
+		
+	}
+}
+
+defined_text = {
+	name = ALKGetUnitLeaderName
+	text = {
+		trigger={
+		state=1
+		}
+		localization_key = "[?ALK.army_leaders^0.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=2
+		}
+		localization_key = "[?ALK.army_leaders^1.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=3
+		}
+		localization_key = "[?ALK.army_leaders^2.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=4
+		}
+		localization_key = "[?ALK.army_leaders^3.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=5
+		}
+		localization_key = "[?ALK.army_leaders^4.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=6
+		}
+		localization_key = "[?ALK.army_leaders^5.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=7
+		}
+		localization_key = "[?ALK.army_leaders^6.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=8
+		}
+		localization_key = "[?ALK.army_leaders^7.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=9
+		}
+		localization_key = "[?ALK.army_leaders^8.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=10
+		}
+		localization_key = "[?ALK.army_leaders^9.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=11
+		}
+		localization_key = "[?ALK.army_leaders^10.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=12
+		}
+		localization_key = "[?ALK.army_leaders^11.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=13
+		}
+		localization_key = "[?ALK.army_leaders^12.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=14
+		}
+		localization_key = "[?ALK.army_leaders^13.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=15
+		}
+		localization_key = "[?ALK.army_leaders^14.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=16
+		}
+		localization_key = "[?ALK.army_leaders^15.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=17
+		}
+		localization_key = "[?ALK.army_leaders^16.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=18
+		}
+		localization_key = "[?ALK.army_leaders^17.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=19
+		}
+		localization_key = "[?ALK.army_leaders^18.GetName]"
+		
+	}
+	text = {
+		trigger={
+		state=20
+		}
+		localization_key = "[?ALK.army_leaders^19.GetName]"
+		
+	}
+}

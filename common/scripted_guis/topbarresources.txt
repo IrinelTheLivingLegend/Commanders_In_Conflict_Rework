@@ -1,0 +1,95 @@
+scripted_gui = {
+	topbar_resource_toogle_window = {
+		context_type = player_context
+
+		window_name = "topbar_resource_toogle_window"
+		parent_window_token = trade_tab
+		#visible = {
+			#	has_country_flag=fuel_system_enabled
+			#
+			#}
+
+		effects = {
+			toogle_button_click={
+				if={limit={check_variable={resources_disabled=0}}
+					set_variable={resources_disabled=1}}
+				else={clear_variable=resources_disabled}
+			}
+		}
+
+
+	}
+	topbar_resource= {
+		context_type = player_context
+		window_name = "topbar_resource_container"
+		visible = {
+			check_variable={resources_disabled=0}
+				has_game_rule = { rule = cic_alt_vp option = no } 
+		}
+
+
+		triggers = {
+
+		}
+		
+		properties = {
+
+			vp1={
+				frame = Global.vp1_status
+			}
+
+			vp2={
+				frame = Global.vp2_status
+			}
+
+			vp3={
+				frame = Global.vp3_status
+			}
+
+			vp4={
+				frame = Global.vp4_status
+			}
+
+			vp5={
+				frame = Global.vp5_status
+			}
+		}
+	}
+	topbar_resource= {
+		context_type = player_context
+		window_name = "topbar_resource_container2"
+		visible = {
+			check_variable={resources_disabled=0}
+			has_game_rule = { rule = cic_alt_vp option = yes } 
+		}
+
+
+		triggers = {
+
+		}
+		
+		properties = {
+
+			vp1={
+				frame = Global.vp1_status
+			}
+
+			vp2={
+				frame = Global.vp2_status
+			}
+
+			vp3={
+				frame = Global.vp3_status
+			}
+
+			vp4={
+				frame = Global.vp4_status
+			}
+
+			vp5={
+				frame = Global.vp5_status
+			}
+		}
+	}
+
+}

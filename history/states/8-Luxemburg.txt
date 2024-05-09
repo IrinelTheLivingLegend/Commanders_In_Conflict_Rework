@@ -1,0 +1,27 @@
+state=
+{
+	id=8
+	name="STATE_8"
+
+	state_category = town
+
+	manpower = 1 # = 300000
+
+	history=
+	{
+
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 3
+		}
+		victory_points = { 6583 1 }
+
+	}
+
+	provinces=
+	{
+		6583 	}
+
+	local_supplies=0.0
+}

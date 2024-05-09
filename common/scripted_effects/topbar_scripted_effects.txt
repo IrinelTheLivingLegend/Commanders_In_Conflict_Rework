@@ -1,0 +1,284 @@
+refresh_topbar = {
+	set_variable = {
+		Global.total_score = global.neutral_score
+	}
+	add_to_variable = {
+		Global.total_score = Global.axis_score
+	}
+	add_to_variable = {
+		Global.total_score = Global.allied_score
+	}
+	set_variable = {
+		Global.vp1_status = 3
+	}
+	set_variable = {
+		Global.vp2_status = 3
+	}
+	set_variable = {
+		Global.vp3_status = 3
+	}
+	set_variable = {
+		Global.vp4_status = 3
+	}
+	set_variable = {
+		Global.vp5_status = 3
+	}
+	if = {
+		limit = {
+			check_variable = {
+				Global.total_score = 3
+			}
+		}
+		set_variable = {
+			Global.vp1_status = 4
+		}
+		set_variable = {
+			Global.vp5_status = 4
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 3
+				}
+			}
+			set_variable = {
+				Global.vp2_status = 2
+			}
+			set_variable = {
+				Global.vp3_status = 2
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 2
+				}
+			}
+			set_variable = {
+				Global.vp3_status = 2
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 1
+				}
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 3
+				}
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+			set_variable = {
+				Global.vp3_status = 1
+			}
+			set_variable = {
+				Global.vp4_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 2
+				}
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+			set_variable = {
+				Global.vp3_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 1
+				}
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				Global.total_score = 5
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 5
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 2
+			}
+			set_variable = {
+				Global.vp2_status = 2
+			}
+			set_variable = {
+				Global.vp3_status = 2
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+			set_variable = {
+				Global.vp5_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 4
+				}
+			}
+			set_variable = {
+				Global.vp2_status = 2
+			}
+			set_variable = {
+				Global.vp3_status = 2
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+			set_variable = {
+				Global.vp5_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 3
+				}
+			}
+			set_variable = {
+				Global.vp3_status = 2
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+			set_variable = {
+				Global.vp5_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 2
+				}
+			}
+			set_variable = {
+				Global.vp4_status = 2
+			}
+			set_variable = {
+				Global.vp5_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.axis_score = 1
+				}
+			}
+			set_variable = {
+				Global.vp5_status = 2
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 5
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 1
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+			set_variable = {
+				Global.vp3_status = 1
+			}
+			set_variable = {
+				Global.vp4_status = 1
+			}
+			set_variable = {
+				Global.vp5_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 4
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 1
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+			set_variable = {
+				Global.vp3_status = 1
+			}
+			set_variable = {
+				Global.vp4_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 3
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 1
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+			set_variable = {
+				Global.vp3_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 2
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 1
+			}
+			set_variable = {
+				Global.vp2_status = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Global.allied_score = 1
+				}
+			}
+			set_variable = {
+				Global.vp1_status = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=450
+	name="STATE_450"
+	manpower = 1 # = 1
+
+	state_category = wasteland
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			11954 50
+		}
+		buildings = {
+			#infrastructure = 3
+			air_base = 5
+			11954 = {
+				naval_base = 5
+			}
+		}
+
+	}
+
+	provinces={
+		1127 4120 10123 11954
+	}
+	resources = {
+		aluminium = 25
+		steel = 25
+		oil = 30
+	}
+
+	local_supplies=0.0
+}

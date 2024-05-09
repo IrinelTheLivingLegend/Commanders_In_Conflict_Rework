@@ -1,0 +1,62 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_ali"
+		modifier = diff_strong_ai_generic
+		countries = { ALI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_axi"
+		modifier = diff_strong_ai_generic
+		countries = { AXI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_alj"
+		modifier = diff_strong_ai_generic
+		countries = { ALJ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_axj"
+		modifier = diff_strong_ai_generic
+		countries = {AXJ }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_alk"
+		modifier = diff_strong_ai_generic
+		countries = {ALK }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_axk"
+		modifier = diff_strong_ai_generic
+		countries = {ALK }
+		multiplier = 2.0
+	}
+#	difficulty_setting = {
+#		key = "custom_diff_strong_eng"
+#		modifier = diff_strong_ai_generic
+#		countries = { ENG }
+#		multiplier = 2.0
+#	}
+#	difficulty_setting = {
+#		key = "custom_diff_strong_usa"
+#		modifier = diff_strong_ai_generic
+#		countries = { USA }
+#		multiplier = 2.0
+#	}
+#	difficulty_setting = {
+#		key = "custom_diff_strong_jap"
+#		modifier = diff_strong_ai_generic
+#		countries = { JAP MEN MAN }
+#		multiplier = 2.0
+#	}
+#	difficulty_setting = {
+#		key = "custom_diff_strong_chi"
+#		modifier = diff_strong_ai_generic
+##		countries = { CHI PRC }
+#		multiplier = 2.0
+#	}
+}

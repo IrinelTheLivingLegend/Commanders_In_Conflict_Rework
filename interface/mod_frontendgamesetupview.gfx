@@ -1,0 +1,69 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_select_date_a_ukraine"
+		texturefile = "gfx/interface/select_date_a_ukraine.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_barbarossa3v3"
+		texturefile = "gfx/interface/select_date_barbarossa3v3.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_across_the_rhine"
+		texturefile = "gfx/interface/select_date_across_the_rhine.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_nashin_ron"
+		texturefile = "gfx/interface/select_date_nashin_ron.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_sonnenblum"
+		texturefile = "gfx/interface/select_date_sonnenblum.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_indian_sunrise"
+		texturefile = "gfx/interface/select_date_indian_sunrise.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_marco_polo"
+		texturefile = "gfx/interface/select_date_marco_polo.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_scandinavia"
+		texturefile = "gfx/interface/select_date_scandinavia.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_spain"
+		texturefile = "gfx/interface/select_date_spain.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_caribbean"
+		texturefile = "gfx/interface/select_date_caribbean.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_valhalla"
+		texturefile = "gfx/interface/select_date_valhalla.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_red_october2v2"
+		texturefile = "gfx/interface/select_date_red_october2v2.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_red_october"
+		texturefile = "gfx/interface/select_date_red_october.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_powder_keg"
+		texturefile = "gfx/interface/select_date_powder_keg.dds"
+	}spriteType = {
+		name = "GFX_select_date_liberation3v3"
+		texturefile = "gfx/interface/select_date_liberation3v3.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo_red"
+		texturefile = "gfx/interface/discord_logo_red.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo"
+		texturefile = "gfx/interface/discord_logo.dds"
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=195
+	name="STATE_195"
+	manpower = 1 # = 1
+
+	state_category = megalopolis
+
+	history={
+
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			3151 50
+		}
+		buildings = {
+			#infrastructure = 4 #was: 7
+		}
+
+	}
+
+	provinces={
+		79 149 3151 6174 11068
+	}
+
+	local_supplies=11.0
+}

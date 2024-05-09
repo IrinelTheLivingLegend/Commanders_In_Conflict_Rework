@@ -1,0 +1,35 @@
+
+state={
+	id=477
+	name="STATE_477"
+	manpower = 1 # = 100000
+
+	state_category = town
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 2
+			
+			12810 = {
+				naval_base = 3
+			}
+		}
+
+		victory_points = {
+			12810 1
+		}
+		victory_points = {
+			8089 1
+		}
+	}
+
+	provinces={
+		8079 8089 10732 12810
+	}
+
+
+	local_supplies=0.0
+}

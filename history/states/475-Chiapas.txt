@@ -1,0 +1,26 @@
+
+state={
+	id=475
+	name="STATE_475"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 2
+
+		}
+		victory_points = {
+			1900 1 
+		}
+
+	}
+
+	provinces={
+		1900 12753 13293 13299 13300 13304 
+	}
+	manpower = 1 #=100000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

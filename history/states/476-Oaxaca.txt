@@ -1,0 +1,29 @@
+
+state={
+	id=476
+	name="STATE_476"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 2
+			air_base = 2
+			10889 = {
+				naval_base = 2
+
+			}
+		}
+		victory_points = {
+			10889 1 
+		}
+	}
+
+	provinces={
+		8236 10773 10889 12712 13295 13296 13298 13301 13305 13306 13307 
+	}
+	manpower = 1 #=100000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=8.000
+}

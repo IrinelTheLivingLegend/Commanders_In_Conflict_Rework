@@ -1,0 +1,35 @@
+
+state={
+	id=478
+	name="STATE_478" # Jalisco
+	manpower = 1 # = 100000
+
+	state_category = town
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 2
+		}
+
+		victory_points = {
+			13089 1
+		}
+		victory_points = {
+			10172 1
+		}
+		victory_points = {
+			12746 1
+		}
+
+	}
+
+	provinces={
+		2051 5052 10172 12746 12873 13089
+	}
+
+
+	local_supplies=0.0
+}

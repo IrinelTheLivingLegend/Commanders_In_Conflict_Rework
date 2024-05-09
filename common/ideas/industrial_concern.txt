@@ -1,0 +1,724 @@
+
+ideas = {
+	industrial_concern = {
+	
+		generic_electronics_concern = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			cost = 50
+			removal_cost = 0
+			
+			modifier = {
+				research_speed_factor = 0.25
+			}
+			
+			traits = { electronics_concern }
+		}
+
+		generic_industrial_concern = {
+			
+			picture = generic_industrial_concern_1
+ 
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				 }
+			 
+			}
+
+			visible = {
+			not = {
+				has_country_flag = industrial_concern_upgraded_once_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_upgraded_twice_flag
+			}
+		}
+
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			}
+			traits = { industrial_concern }
+		}
+
+	industrial_concern_mil = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_twice_flag}
+			not = {
+				has_country_flag = industrial_concern_civ_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_civ = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_twice_flag}
+			not = {
+				has_country_flag = industrial_concern_mil_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_dock = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+				has_country_flag = industrial_concern_dock_flag
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_twice_flag}
+			not = {
+				has_country_flag = industrial_concern_civ_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.05
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_mil_cap = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_civ_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_mil_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_ret_flag
+			}
+			}
+
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_mil_base = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_civ_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_mil_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_ret_flag
+			}
+			}
+
+			cost = 75
+			removal_cost = 0
+
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+			production_factory_start_efficiency_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_mil_grow = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_civ_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_mil_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_ret_flag
+			}
+			}
+
+
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_mil_ret = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_civ_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_mil_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_mil_cap_flag
+			}
+			}
+
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.1
+			production_speed_arms_factory_factor = 0.05
+			line_change_production_efficiency_factor = 0.15
+			production_lack_of_resource_penalty_factor = -0.15
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_civ_cap = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_civ_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_civ_base = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_civ_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_civ_grow = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_civ_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_civ_ret = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_dock_type_flag }
+			not = {
+				has_country_flag = industrial_concern_civ_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_civ_cap_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_lack_of_resource_penalty_factor = -0.15
+			line_change_production_efficiency_factor = 0.15
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_dock_cap = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_civ_type_flag }
+			not = {
+				has_country_flag = industrial_concern_dock_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_dock_base = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_civ_type_flag }
+			not = {
+				has_country_flag = industrial_concern_dock_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.05
+			production_factory_start_efficiency_factor = 0.1
+
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_dock_grow = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_civ_type_flag }
+			not = {
+				has_country_flag = industrial_concern_dock_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_cap_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_ret_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.1
+			}
+			traits = { industrial_concern }
+		}
+		industrial_concern_dock_ret = {
+			name = generic_industrial_concern
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+
+			visible = {
+			not = {has_country_flag = industrial_concern_flag }
+			not ={has_country_flag = industrial_concern_upgraded_once_flag}
+			not ={ has_country_flag = industrial_mil_type_flag }
+			not = {has_country_flag = industrial_civ_type_flag }
+			not = {
+				has_country_flag = industrial_concern_dock_base_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_grow_flag
+			}
+			not = {
+				has_country_flag = industrial_concern_dock_cap_flag
+			}
+			}
+			
+			cost = 75
+			removal_cost = 0
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier= {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.05
+			production_lack_of_resource_penalty_factor = -0.15
+			line_change_production_efficiency_factor = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+}
+}

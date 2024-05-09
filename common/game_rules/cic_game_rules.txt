@@ -1,0 +1,75 @@
+cic_alt_vp = {
+	name = "Use New Victory Condition System"
+	group = "CIC Rules"
+	icon = "GFX_production_licenses"
+
+	default ={
+		name = yes
+		text = "Yes"
+		desc = ""
+	}
+	option = {
+		name = no
+		text = "No"
+		desc = ""
+	}
+}
+
+cic_time_scale = {
+	name = "Preparation Time"
+	group = "CIC Rules"
+	icon = "GFX_volunteers"
+
+	default = {
+		name = time_467
+		text = "467 Days"
+		desc = ""
+	}
+	option = {
+		name = time_365
+		text = "360 Days"
+		desc = "Not optimized. Defines cannot be treated like variables."
+	}
+}
+cic_ali_annexations = {
+	name = "Merge Allied Nations"
+	group = "CIC Rules"
+	icon = "GFX_leave_faction"
+
+	default = {
+		name = no_merge_ali
+		text = "None"
+		desc = ""
+	}
+	option = {
+		name = merge_ali_alj
+		text = "Merge Allies I with Allies II"
+		desc = ""
+	}
+	option = {
+		name = merge_ali_alj_alk
+		text = "Merge all Allied Nations"
+		desc = ""
+	}
+}
+cic_axi_annexations = {
+	name = "Merge Axis Nations"
+	group = "CIC Rules"
+	icon = "GFX_leave_faction"
+
+	default = {
+		name = no_merge_axi
+		text = "None"
+		desc = ""
+	}
+	option = {
+		name = merge_axi_axj
+		text = "Merge Axis I with Axis II"
+		desc = ""
+	}
+	option = {
+		name = merge_axi_axj_axk
+		text = "Merge all Axis Nations"
+		desc = ""
+	}
+}

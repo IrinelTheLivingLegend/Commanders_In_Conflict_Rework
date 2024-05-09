@@ -1,0 +1,39 @@
+
+state={
+	id=433
+	name="STATE_433" # Rajasthan
+	manpower = 1 #=2142858
+
+	state_category = large_city
+
+
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 5
+		chromium = 5
+	}
+
+	history={
+		owner=NOO
+		add_core_of=NOO
+		victory_points = {
+			2054 1
+		}
+
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 2
+			#arms_factory = 2
+		}
+
+	}
+
+	provinces={
+		1199 1908 2054 4149 4915 4971 4984 7905 7998 10847 10866 12041 12718 12743 12829 12844 12876 12886
+	}
+
+	local_supplies=0.0
+}

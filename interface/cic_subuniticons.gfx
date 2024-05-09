@@ -1,0 +1,49 @@
+spriteTypes = {	
+
+	##################################
+	### Large images for DIVISIONS ###
+
+	spriteType = { name = "GFX_unit_light_infantry_icon_medium"										textureFile = "gfx/interface/counters/divisions_large/unit_light_infantry_icon.dds" noOfFrames = 2 }
+	
+	####################################################
+	### Small images for DIVISIONS (On-map-counters) ###
+
+	spriteType = { name = "GFX_unit_light_infantry_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_infantry_icon.dds" noOfFrames = 2}
+
+	###########################################
+	### Large images for DIVISION TEMPLATES ###
+
+	###########################################
+	### Small images for DIVISION TEMPLATES ###
+	spriteType = { 
+		name = "GFX_unit_shocktroop_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/unit_shocktroop_icon.dds" noOfFrames = 2 
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_mot_shocktroop_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/unit_mot_shocktroopers_icon.dds" noOfFrames = 2 
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_mec_shocktroop_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/unit_mec_shocktroop_icon.dds" noOfFrames = 2 
+	}	
+
+	spriteType = {
+		name = "GFX_unit_shocktroop_icon_medium_white"						
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_shocktroop_icon.dds" noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_mot_shocktroop_icon_medium_white"						
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mot_shocktroop_icon.dds" noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_mec_shocktroop_icon_medium_white"						
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mec_shocktroop_icon.dds" noOfFrames = 2
+	}
+
+
+}

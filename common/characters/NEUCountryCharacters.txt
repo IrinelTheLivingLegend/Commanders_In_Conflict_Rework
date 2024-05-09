@@ -1,0 +1,28 @@
+characters={
+	NEU_federal_council={
+		name=NEU_federal_council
+		portraits={
+			civilian={
+				large=GFX_portrait_SWI_federal_council
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	NOO_noone={
+		name=NOO_noone
+		portraits={
+			civilian={
+				large="gfx/leaders/NOO/noone.tga"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

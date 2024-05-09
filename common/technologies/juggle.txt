@@ -1,0 +1,110 @@
+technologies = {
+	juggle = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = industry_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle=0
+		}
+		}
+	}
+	juggle2 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = infantry_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle2=0
+		}
+		}
+	}
+	juggle3 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = support_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle3=0
+		}
+		}
+	}
+	juggle4 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = nsb_armour_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle4=0
+		}
+		}
+	}
+	juggle5 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = artillery_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle5=0
+		}
+		}
+	}
+	juggle6 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = mtgnavalfolder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle6=0
+		}
+		}
+	}
+	juggle7 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = mtgnavalsupportfolder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle7=0
+		}
+		}
+	}
+	juggle8 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = bba_air_techs_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle8=0
+		}
+		}
+	}
+	juggle9 = {
+		research_cost = 0
+		start_year = 1936
+		folder = {
+			name = electronics_folder
+		}
+		relative_position_id = construction1
+		on_research_complete = {
+		set_technology={juggle9=0
+		}
+		}
+	}
+}

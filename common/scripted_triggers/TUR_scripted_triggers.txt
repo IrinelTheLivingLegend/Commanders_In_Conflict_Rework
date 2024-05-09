@@ -1,0 +1,65 @@
+#	Example:
+#
+#	example_trigger = {
+	#		tag = GER
+	#		is_ai = no
+	#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+	#		exampel_trigger = yes
+	#	}
+#
+
+TUR_is_historical_ai = {
+	always = no
+}
+
+TUR_cannot_form_kurdish_collaboration_government = {
+	always = no
+}
+
+TUR_has_a_prime_minister = {
+	always = no
+}
+
+
+TUR_can_only_have_one_prime_minister = {
+	always = no
+}
+
+TUR_has_turkish_state_modifier = {
+	always = no
+}
+
+TUR_has_former_turkish_state_modifier = {
+	always = no
+}
+
+TUR_a_monopoly_has_been_formed = {
+	always = no
+}
+
+TUR_debt_council_has_no_sway = {
+	always = no
+}
+
+TUR_is_fundamentalist_state = {always = no}
+
+TUR_is_kemalist_state = {always = no}
+
+TUR_is_unaligned_state = {always = no}
+
+TUR_is_hostile_kurdish_state = {always = no}
+
+TUR_is_friendly_kurdish_state = {always = no}
+
+TUR_has_kemalist_officers = {always = no}
+
+TUR_is_friend_for_bosphorus = {always = no}
+
+TUR_is_friend_for_dardanelles = {always = no}
+
+TUR_owns_state_in_black_sea = {always = no}

@@ -1,0 +1,1836 @@
+MOD_countdown_to_war = {
+	MOD_countdown_to_war_mission = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 467
+
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			has_global_flag = time_467
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_war_mission_tt
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	MOD_countdown_to_war_mission_365 = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 360
+
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			has_global_flag = time_365
+			
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_war_mission_tt
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	MOD_countdown_to_war_mission_hidden = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 466
+
+		fire_only_once = yes
+
+		activation = {
+			original_tag = NEU
+			has_global_flag = time_467
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			every_country = {
+				remove_ideas=peace_supply_grace
+			}
+			hidden_effect = {
+				country_event = {
+					id = paradrop.1
+					hours = 36
+					}
+			}
+			AXI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALJ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALK
+					type = annex_everything
+				}
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					AXJ = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK = {exists = yes}
+					}
+				AXK = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+			}
+			ALI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+			}
+			
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					ALJ = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK ={exists=yes}
+					}
+					ALK = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	MOD_countdown_to_war_mission_365_hidden = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 359
+
+		fire_only_once = yes
+
+		activation = {
+			original_tag = NEU
+			has_global_flag = time_365
+		}
+
+		visible = {
+			always = yes
+		}
+		timeout_effect = {
+			every_country = {
+				remove_ideas=peace_supply_grace
+			}
+			hidden_effect = {
+				country_event = {
+					id = paradrop.1
+					hours = 36
+					}
+			}
+			AXI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALI
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALJ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ALK
+					type = annex_everything
+				}
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					AXJ = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK = {exists = yes}
+					}
+				AXK = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
+			}
+			ALI = {
+				declare_war_on = {
+					target = NEU
+					type = annex_everything
+				}
+			}
+			
+				if = {
+					limit = {
+						ALJ ={exists=yes}
+					}
+					ALJ = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALK ={exists=yes}
+					}
+					ALK = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+}
+
+MOD_countdown_to_victory_cat = {
+	MOD_countdown_to_victory_mission = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 685
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			has_game_rule = { rule = cic_alt_vp option = no }
+			has_war = yes
+			NOT = {
+				has_global_flag = FiveVpMap
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = FiveVpMap
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_victory_mission_tt
+			if = {
+				limit = {
+					check_variable = {
+						global.allied_score > global.axis_score
+					}
+				}
+				news_event = { id = cic_news.2 }
+				set_variable = { Global.super_event = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.axis_score > global.allied_score
+					}
+				}
+				news_event = { id = cic_news.1 }
+				set_variable = { Global.super_event = 1 }
+			}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+	Surrender = {
+ 		icon = generic_naval
+ 		fire_only_once = no
+ 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = ALK original_tag = AXK} }
+ 		
+ 		cost = 0
+ 		complete_effect = {
+			
+	set_variable={Global.end_date=Global.date}
+ 			if={limit={original_tag=AXI}
+	set_variable={Global.super_event=2}
+	}
+	else={set_variable={Global.super_event=1}}
+ 		}
+ 	}
+}
+
+MOD_leader_school_cat = {
+
+		MOD_leader_school_commando = {
+		allowed={
+    OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			}
+ target_root_trigger = {
+        has_completed_focus = INDUSTRY_covert_warfare_school
+		
+    }
+	visible={NOT={has_country_flag=commando}}
+    on_map_mode = decision_view_only
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			#check_variable={Root.army_leaders^num>[A]}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=commando}}
+		meta_effect = { 
+    text = {
+		set_temp_variable={a=[B]}
+		add_to_temp_variable={a=-1}
+	   var:Root.army_leaders^a={add_unit_leader_trait = commando}
+    }
+	B = "[?From.GetID]" 
+	}
+        
+    }
+    
+}
+	MOD_leader_school_adaptable = {
+    allowed={
+    OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			}
+ target_root_trigger = {
+        has_completed_focus = INDUSTRY_advanced_warfare
+		
+    }
+	visible={NOT={has_country_flag=adaptable}}
+    on_map_mode = decision_view_only
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=adaptable}}
+		meta_effect = { 
+    text = {
+		set_temp_variable={a=[B]}
+		add_to_temp_variable={a=-1}
+	   var:Root.army_leaders^a={add_unit_leader_trait = adaptable}
+    }
+	B = "[?From.GetID]" 
+	}
+        
+    }
+    
+}
+MOD_leader_school_fortress_buster = {
+    allowed={
+    OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			}
+ target_root_trigger = {
+        has_completed_focus = INDUSTRY_siege_warfare_school
+    }
+	visible={NOT={has_country_flag=fortress}}
+    on_map_mode = decision_view_only
+    target_trigger = {
+        FROM = {
+		
+			meta_trigger = {
+			text = {
+			check_variable = {
+				var = Root.army_leaders^num
+				value = [A]
+				compare = greater_than_or_equals
+			}
+			}
+			A = "[?This.GetID]"
+}
+        }
+    }
+	fire_only_once=yes
+	target_non_existing = yes
+    targets ={1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20}
+	state_target=yes
+    complete_effect = {
+		hidden_effect={ROOT={set_country_flag=fortress}}
+		meta_effect = { 
+    text = {
+		set_temp_variable={a=[B]}
+		add_to_temp_variable={a=-1}
+	   var:Root.army_leaders^a={add_unit_leader_trait = trait_engineer}
+    }
+	B = "[?From.GetID]" 
+	}
+        
+    }
+    
+}
+}
+MOD_countdown_to_victory_5vp_cat = {
+	
+	Surrender2 = {
+ 		icon = generic_naval
+ 		fire_only_once = no
+ 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = ALK original_tag = AXK} }
+ 		
+ 		cost = 0
+ 		complete_effect = {
+			
+	set_variable={Global.end_date=Global.date}
+ 			if={limit={original_tag=AXI}
+	set_variable={Global.super_event=2}
+	}
+	else={set_variable={Global.super_event=1}}
+ 		}
+ 	}
+	MOD_countdown_to_victory_mission_5vp = {
+
+		icon = generic_naval
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 685
+		fire_only_once = yes
+
+		activation = {
+			OR = {
+				
+				original_tag = ALI
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+			has_game_rule = { rule = cic_alt_vp option = no }
+			has_war = yes
+			has_global_flag = FiveVpMap
+		}
+
+		visible = {
+			has_global_flag = FiveVpMap
+		}
+		timeout_effect = {
+			custom_effect_tooltip =  MOD_countdown_to_victory_mission_tt
+			if = {
+				limit = {
+					check_variable = {
+						global.allied_score > global.axis_score
+					}
+				}
+				news_event = { id = cic_news.2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						global.axis_score > global.allied_score
+					}
+				}
+				news_event = { id = cic_news.1 }
+			}
+		}
+		is_good = no
+		complete_effect = {
+
+		}
+	}
+}
+MOD_hide_other_focuses = {
+	MOD_hide_focuses_not_needed = {
+		allowed={
+			OR = {
+				original_tag = AXI
+				original_tag = ALI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = AAA_hide_focus_tree
+			}
+		}
+		icon = GFX_decision_generic_political_discourse
+		complete_effect = {
+			set_country_flag = AAA_hide_focus_tree
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = AAA_hidden_trees
+		}
+	}
+	MOD_show_focuses_not_needed = {
+		allowed={
+			OR = {
+				original_tag = AXI
+				original_tag = ALI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+			}
+		}
+		visible = {
+			has_country_flag = AAA_hide_focus_tree
+		}
+		icon = GFX_decision_generic_political_discourse
+		complete_effect = {
+			clr_country_flag = AAA_hide_focus_tree
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = AAA_visible_trees
+		}
+	}
+}
+AXI_the_il_duce_project_category = {
+		AXI_the_il_duce_project = {
+		icon = GFX_decision_generic_tank
+		allowed={
+			OR = {
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK
+			}
+		}
+		fire_only_once = yes
+
+		days_remove = 300
+
+		ai_will_do = {
+			base = 1
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+		if = {
+		    limit = {
+		     has_dlc = "No Step Back"
+		     }
+			if = {
+		        limit = {
+		          NOT = {
+		            has_tech = super_heavy_tank_chassis
+		          }
+		        }
+		        set_technology = { 
+		         super_heavy_tank_chassis = 1 
+		        }
+		      }
+			  hidden_effect = {
+				 create_equipment_variant = {
+				name = "Il-Duce"
+				type = super_heavy_tank_chassis_1
+				modules = {
+					main_armament_slot = tank_super_heavy_cannon
+					turret_type_slot = tank_super_heavy_four_man_tank_turret
+					suspension_type_slot = tank_christie_suspension
+					armor_type_slot = tank_cast_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = sloped_armor
+					special_type_slot_2 = armor_skirts
+					special_type_slot_3 = smoke_launchers
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 5
+				}
+			}
+			}
+			capital_scope = {
+				add_resource = {
+					type = tungsten
+					amount = 40
+				}
+				add_resource = {
+					type = chromium
+					amount = 40
+				}
+			}
+			add_ideas = AXI_german_research_teams
+			}
+		else = {
+		custom_effect_tooltip = AXI_super_heavy_tank_no_dlc_tt
+		hidden_effect = {
+		set_technology = { 
+		         super_heavy_tank = 1 
+		        }	
+		}
+		capital_scope = {
+				add_resource = {
+					type = tungsten
+					amount = 40
+				}
+				add_resource = {
+					type = chromium
+					amount = 40
+				}
+			}
+			add_ideas = AXI_german_research_teams_no_dlc
+		}
+		}
+	}
+}
+MOD_custom_decisions = {
+	hun_picture = {
+	priority = 8
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 16 }}}}
+	}
+	rom_picture = {
+	priority = 7
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 15 }}}}
+	}
+	ger1_picture = {
+	priority = 2
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 3 }}}}
+	}
+	ger2_picture = {
+	priority = 1
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 11 }}}}
+	}
+	ita1_picture = {
+	priority = 4
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 4 }}}}
+	}
+	ita2_picture = {
+	priority = 3
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 14 }}}}
+	}
+	fin_picture = {
+	priority = 6
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 13 }}}}
+	}
+	jap_picture = {
+	priority = 5
+	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 5 }}}}
+	}
+
+	fra_picture = {
+	priority = 9
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 2 }}}}
+	}
+	chi_picture = {
+	priority = 8
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 8}}}}
+	}
+	eth_picture = {
+	priority = 7
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 17 }}}}
+	}
+	nor_picture = {
+	priority = 6
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 12 }}}}
+	}
+	usa1_picture = {
+	priority = 6
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 18 }}}}
+	}
+	usa2_picture = {
+	priority = 5
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 7 }}}}
+	}
+	fra_picture = {
+	priority = 4
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 2 }}}}
+	}
+	eng1_picture = {
+	priority = 3
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 1 }}}}
+	}
+	eng2_picture = {
+	priority = 2
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 9 }}}}
+	}
+	sov1_picture = {
+	priority = 1
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 6 }}}}
+	}
+	sov2_picture = {
+	priority = 0
+	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	complete_effect = {
+		hidden_effect = { ROOT  = { set_variable = { show_background = 10 }}}}
+	}
+
+	
+
+
+	
+
+}
+MOD_industry_phase1_category = {
+
+	MOD_industrial_concern_mil = {
+		priority = 3
+
+		#decision_generic_merge_plant_ship
+		#decision_generic_merge_plant_materiel
+		icon = GFX_decision_generic_merge_plant_tank
+
+		ai_will_do = {
+			base = 3
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			has_idea = generic_industrial_concern
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = generic_industrial_concern
+				}
+				swap_ideas= {
+					remove_idea = generic_industrial_concern
+					add_idea = industrial_concern_mil
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_flag
+					set_country_flag = industrial_concern_upgraded_once_flag
+					set_country_flag = industrial_mil_type_flag
+				}
+			}
+		}
+	}
+	MOD_industrial_concern_civ = {
+		priority = 3
+
+
+		icon = GFX_decision_generic_merge_plant_materiel
+
+		ai_will_do = {
+			base = 1
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			has_idea = generic_industrial_concern
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = generic_industrial_concern
+				}
+				swap_ideas= {
+					remove_idea = generic_industrial_concern
+					add_idea = industrial_concern_civ
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_flag
+					set_country_flag = industrial_concern_upgraded_once_flag
+					set_country_flag = industrial_civ_type_flag
+				}
+			}
+		}
+	}
+	MOD_industrial_concern_dock = {
+		priority = 3
+
+		#decision_generic_merge_plant_ship
+		#decision_generic_merge_plant_materiel
+		icon = GFX_decision_generic_merge_plant_ship
+
+		ai_will_do = {
+			base = 1
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			has_idea = generic_industrial_concern
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = generic_industrial_concern
+				}
+				swap_ideas= {
+					remove_idea = generic_industrial_concern
+					add_idea = industrial_concern_dock
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_flag
+					set_country_flag = industrial_concern_upgraded_once_flag
+					set_country_flag = industrial_dock_type_flag
+				}
+			}
+		}
+	}
+}
+
+MOD_industry_phase2_category = {
+	MOD_industrial_concern_cap_ali = {
+		 
+		icon = hol_attract_foreign_investors
+
+		targets = { USA }
+		priority = 4
+
+		ai_will_do = {
+			base = 3
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+		}
+		MOD_industrial_concern_cap_axi = {
+		 
+		icon = hol_attract_foreign_investors
+
+		targets = { ROM }
+		priority = 1
+
+		ai_will_do = {
+			base = 1
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+			
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_cap
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_cap_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+		}
+	MOD_industrial_concern_base_ali = {
+		priority = 1
+
+		icon = hol_attract_foreign_investors
+
+		targets = { SOV }
+
+		ai_will_do = {
+			base = 1
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+	MOD_industrial_concern_base_axi = {
+		priority = 2
+
+		icon = hol_attract_foreign_investors
+
+		targets = { JAP }
+
+		ai_will_do = {
+			base = 1
+		}
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_base
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_base_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+	MOD_industrial_concern_grow_ali = {
+		priority = 2
+
+		icon = hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 1
+		}
+
+	targets = { FRA }
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+	MOD_industrial_concern_grow_axi = {
+		priority = 4
+
+		icon = hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 1
+		}
+
+	targets = { GER }
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_grow
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_grow_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+	MOD_industrial_concern_ret_ali = {
+		priority = 3
+
+		icon = hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 1
+		}
+
+		targets = { ENG }
+
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+	MOD_industrial_concern_ret_axi = {
+		priority = 3
+
+		icon = hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 1
+		}
+
+		targets = { ITA }
+
+		allowed = {
+		}
+		available = {
+		}
+
+		days_remove = 45
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+			has_completed_focus = INDUSTRY_phase_2
+			not = { has_country_flag = already_upgraded_flag }
+			not = { has_country_flag = curently_upgrading_flag }
+		}
+
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			hidden_effect = {
+			set_country_flag = curently_upgrading_flag
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = industrial_concern_mil
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_mil
+					add_idea = industrial_concern_mil_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_mil_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_mil_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_civ
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_civ
+					add_idea = industrial_concern_civ_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_civ_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_civ_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			if = {
+				limit = {
+					has_idea = industrial_concern_dock
+				}
+				swap_ideas= {
+					remove_idea = industrial_concern_dock
+					add_idea = industrial_concern_dock_ret
+				}
+				hidden_effect = {
+					clr_country_flag = industrial_concern_dock_flag
+					clr_country_flag = industrial_concern_upgraded_once_flag
+					clr_country_flag = curently_upgrading_flag
+					set_country_flag = industrial_concern_dock_ret_flag
+					set_country_flag = industrial_concern_upgraded_twice_flag
+				}
+			}
+			hidden_effect = {
+				set_country_flag = already_upgraded_flag
+			}
+		}
+	}
+}

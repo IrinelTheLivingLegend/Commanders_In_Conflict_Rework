@@ -1,0 +1,100 @@
+AXI_ITA_initiate_balance_of_power_effect = {
+	set_power_balance = {
+		id = AXI_ITA_power_balance
+		left_side = AXI_ITA_grand_council_side # will keep the last set side if not specified
+		right_side = AXI_ITA_mussolini_side # will keep the last set side if not specified
+		set_default = yes # whether or not to reset the power balance to the initial value, default = no
+		#set_value = 0.25 # if specified will set the value of the power balance, this option will override the effect of set_default so the two options should not be used together. if neither set_default or set_value is specified the current value of the power balance will not change
+	}
+}
+
+AXI_ITA_bop_absurdly_high_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 1
+	}
+}
+
+AXI_ITA_bop_very_high_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 0.25
+	}
+}
+
+AXI_ITA_bop_high_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 0.2
+	}
+}
+
+AXI_ITA_bop_medium_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 0.15
+	}
+}
+
+AXI_ITA_bop_low_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 0.1
+	}
+}
+
+AXI_ITA_bop_very_low_increase_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = 0.05
+	}
+}
+
+AXI_ITA_bop_absurdly_high_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -1
+	}
+}
+
+AXI_ITA_bop_very_high_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -0.25
+	}
+}
+
+AXI_ITA_bop_high_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -0.2
+	}
+}
+
+AXI_ITA_bop_medium_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -0.15
+	}
+}
+
+AXI_ITA_bop_low_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -0.1
+	}
+}
+
+AXI_ITA_bop_very_low_decrease_effect = {
+	add_power_balance_value = {
+		id = AXI_ITA_power_balance
+		value = -0.05
+	}
+}
+
+
+AXI_ITA_bop_remove_bop_effect = {
+	remove_power_balance = { id = AXI_ITA_power_balance }
+}
+
+variable = { AXI_ITA_re_supply_node_range = AXI.AXI_ITA_re_supply_node_range }

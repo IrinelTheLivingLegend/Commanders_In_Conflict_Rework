@@ -1,0 +1,33 @@
+﻿capital = 876
+
+set_research_slots = 3
+
+set_stability = 1
+set_war_support = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	neutrality = 100
+	fascism = 0
+	communism = 0
+}
+
+add_ideas = {
+	tot_economic_mobilisation
+	closed_economy
+	extensive_conscription
+	neutral_country
+}
+
+recruit_character = NEU_federal_council

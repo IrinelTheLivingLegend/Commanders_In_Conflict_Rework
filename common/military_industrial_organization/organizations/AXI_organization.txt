@@ -1,0 +1,337 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+AXI_porsche_organization = {
+	name = GER_porsche_organization
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_henschel_organization = {
+	name = GER_henschel_organization
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_henschel
+	
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_man_organization = {
+	name = GER_man_organization
+	include = generic_medium_tank_organization
+	icon = GFX_idea_GER_MAN
+	
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_leonidas_works_organization = {
+	name = ROM_leonidas_works_organization
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_ROM_leonidas_works
+	allowed = {
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_fiat_organization = {
+	name = ITA_fiat_organization
+	include = generic_tank_organization
+	icon = GFX_idea_fiat
+	
+	allowed = {
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+AXI_blohm_und_voss_organization = {
+	name = GER_blohm_und_voss_organization
+	include = generic_raider_ship_organization
+	icon = GFX_idea_blohm_und_voss
+	
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_yokosuka_naval_arsenal_organization = {
+	name = JAP_yokosuka_naval_arsenal_organization
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_yokosuka_naval_arsenal
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_crda_organization = {
+	name = ITA_crda_organization
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_crda
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_maizuru_naval_arsenal_organization = {
+	name = JAP_maizuru_naval_arsenal_organization
+	include = generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+AXI_valtion_lentokonetehdas_organization = {
+	name = FIN_valtion_lentokonetehdas_organization
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_FIN_valtion_lentokonetehdas
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_messerschmitt_organization = {
+	name = GER_messerschmitt_organization
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_messerschmitt
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_junkers_organization = {
+	name = GER_junkers_organization
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_junkers
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_savoia_marchetti_organization = {
+	name = ITA_savoia_marchetti_organization
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_savoia_marchetti
+	
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_set_organization = {
+	name = ROM_set_organization
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_ROM_SET
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_piaggio_organization = {
+	name = ITA_piaggio_organization
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_piaggio
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+
+AXI_imam_organization = {
+	name = ITA_imam_organization
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_ITA_imam
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_mitsubishi_organization = {
+	name = JAP_mitsubishi_organization
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_aichi_organization = {
+	name = JAP_aichi_organization
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_aichi
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+AXI_mauser_organization = {
+	name = GER_mauser_organization
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_mauser
+	
+	allowed = {	 
+		OR = {
+			tag = AXI 
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_osaka_army_arsenal_artillery_organization = {
+	name = JAP_osaka_army_arsenal_artillery_organization
+	include = generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+} 
+AXI_opel_organization = {
+	name = GER_opel_organization
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_opel
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_brescia_arsenal_organization = {
+	name = ITA_brescia_arsenal_organization
+	include = generic_support_equipment_organization
+	icon = GFX_idea_ITA_brescia_arsenal
+	allowed = {	
+		OR = {
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}
+AXI_scania_vabis_organization = {
+	name = generic_armored_car_organization
+	include = generic_armored_car_organization
+	icon = GFX_idea_FRA_panhard
+	allowed = {
+		tag = AXI
+		tag = AXJ
+		tag = AXK
+	}	
+}
+AXI_valtion_panssaritehdas_organization = {
+	name = FIN_valtion_panssaritehdas_organization
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_FIN_valtion_panssaritehdas
+	
+	allowed = {	 
+		OR = {
+			tag = AXI 
+			tag = AXJ
+			tag = AXK
+		}
+	}
+}

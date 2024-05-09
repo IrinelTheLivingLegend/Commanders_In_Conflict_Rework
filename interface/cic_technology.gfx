@@ -1,0 +1,66 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_tech_light_infantry3_medium"
+		texturefile = "gfx/interface/technologies/ranger3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_light_infantry2_medium"
+		texturefile = "gfx/interface/technologies/ranger2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_tech_light_infantry_medium"
+		texturefile = "gfx/interface/technologies/ranger.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle_medium"
+		texturefile = "gfx/interface/technologies/juggle.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle2_medium"
+		texturefile = "gfx/interface/technologies/juggle2.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle3_medium"
+		texturefile = "gfx/interface/technologies/juggle3.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle4_medium"
+		texturefile = "gfx/interface/technologies/juggle4.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle5_medium"
+		texturefile = "gfx/interface/technologies/juggle5.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle6_medium"
+		texturefile = "gfx/interface/technologies/juggle6.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle7_medium"
+		texturefile = "gfx/interface/technologies/juggle7.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle8_medium"
+		texturefile = "gfx/interface/technologies/juggle8.dds"
+	}
+	SpriteType = {
+		name = "GFX_juggle9_medium"
+		texturefile = "gfx/interface/technologies/juggle10.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_shocktroops_medium"
+		texturefile = "gfx/interface/technologies/shocktroops.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_shocktroops2_medium"
+		texturefile = "gfx/interface/technologies/shocktroops2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_shocktroops3_medium"
+		texturefile = "gfx/interface/technologies/shocktroops_3.dds"
+	}
+	
+
+}

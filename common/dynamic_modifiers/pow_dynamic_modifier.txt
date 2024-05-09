@@ -1,0 +1,7 @@
+POW_industry = {
+	icon = "GFX_idea_generic_prisoner"
+	industrial_capacity_factory = pow_industrial_capacity
+	industrial_capacity_dockyard= pow_dockyard_capacity
+	local_resources_factor  = pow_resource_gain
+	production_speed_buildings_factor = pow_fortification
+}

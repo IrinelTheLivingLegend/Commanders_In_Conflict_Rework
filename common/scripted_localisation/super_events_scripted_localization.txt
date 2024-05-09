@@ -1,0 +1,246 @@
+
+defined_text = {
+	name = GetSuperEventPicture
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 1 }
+		}
+		localization_key = super_event_picture_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 2 }
+		}
+		localization_key = super_event_picture_2
+	}
+	
+
+}
+defined_text = {
+	name = GetSuperEventTitle
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 1 }
+		}
+		localization_key = super_event_title_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 2 }
+		}
+		localization_key = super_event_title_2
+	}
+	
+
+
+}
+defined_text = {
+	name = GetSuperEventText
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 1 }
+		}
+		localization_key = super_event_text_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 2 }
+		}
+		localization_key = super_event_text_2
+	}
+
+}
+defined_text = {
+	name = GetSuperEventButtonText
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 1 }
+		}
+		localization_key = super_event_button_text_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 2 }
+		}
+		localization_key = super_event_button_text_2
+	}
+	
+
+}
+
+defined_text = {
+	name = GetFaction
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 1 }
+		}
+		localization_key = super_event_button_text_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { GLOBAL.super_event = 2 }
+		}
+		localization_key = super_event_button_text_2
+	}
+	
+
+}
+
+defined_text = {
+	name = Axis1
+	text = {
+		trigger = {
+			OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}
+		}
+		localization_key = axis_player1_2v2_text
+	}
+
+	text = {
+		trigger = {
+			NOT={OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}}
+		}
+		localization_key = axis_player1_1v1_text
+	}
+	
+
+}
+defined_text = {
+	name = Axis2
+	text = {
+		trigger = {
+			OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}
+		}
+		localization_key = axis_player2_2v2_text
+	}
+
+	text = {
+		trigger = {
+			NOT={OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}}
+		}
+		localization_key = axis_player2_1v1_text
+	}
+	
+
+}
+defined_text = {
+	name = Allies1
+	text = {
+		trigger = {
+			OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}
+		}
+		localization_key = allies_player1_2v2_text
+	}
+
+	text = {
+		trigger = {
+			NOT={OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}}
+		}
+		localization_key = allies_player1_1v1_text
+	}
+	
+
+}
+defined_text = {
+	name = Allies2
+	text = {
+		trigger = {
+			OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}
+		}
+		localization_key = allies_player2_2v2_text
+	}
+
+	text = {
+		trigger = {
+			NOT={OR={has_global_flag = game_caribbean
+			has_global_flag = game_nanshin_ron
+			has_global_flag = game_spain}}
+		}
+		localization_key = allies_player2_1v1_text
+	}
+	
+
+}
+defined_text = {
+	name = GetMap
+	text = {
+		trigger = {
+		has_global_flag = game_across_the_rhine
+		}
+		localization_key = ACROSS_THE_RHINE
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_red_october
+		}
+		localization_key = RED_OCTOBER
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_indian_sunrise
+		}
+		localization_key = INDIAN_SUNRISE
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_marco_polo
+		}
+		localization_key = MARCO_POLO
+	}
+
+	text = {
+		trigger = {
+		has_global_flag = game_scandinavia
+		}
+		localization_key = SCANDINAVIA_GAME
+	}
+
+	text = {
+		trigger = {
+		has_global_flag = game_caribbean
+		}
+		localization_key = CARIBBEAN
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_nanshin_ron
+		}
+		localization_key = NASHIN_RON
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_sonnenblum
+		}
+		localization_key = SONNENBLUME
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_spain
+		}
+		localization_key = SPAIN
+	}
+	text = {
+		trigger = {
+		has_global_flag = game_powder_keg
+		}
+		localization_key = POWDER_KEG
+	}
+
+	
+
+}

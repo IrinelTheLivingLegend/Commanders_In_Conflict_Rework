@@ -1,0 +1,26 @@
+
+state={
+	id=662
+	name="STATE_662"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			12866 50
+		}
+		buildings = {
+			#infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		4200 7076 7136 7985 8069 10754 12022 12866 13073
+	}
+	manpower = 1 #=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

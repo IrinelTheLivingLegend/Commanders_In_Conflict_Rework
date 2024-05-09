@@ -1,0 +1,22 @@
+state={
+	id=73
+	name="STATE_73"
+	manpower = 1 # = 1
+
+	state_category = rural
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			3548 1
+		}
+
+	}
+
+	provinces={
+		3548 6571 9563 11536 11691
+	}
+
+	local_supplies=0.0
+}

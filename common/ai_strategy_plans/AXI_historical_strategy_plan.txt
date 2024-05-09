@@ -1,0 +1,61 @@
+AXI_plan1 = {
+	name = "AXI_plan1"
+	desc = ""
+
+	allowed = {
+		or = {
+		original_tag = AXI
+		original_tag = AXJ
+		original_tag = AXK
+		}
+	}
+	enable = {
+		is_ai = yes
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		INDUSTRY_start_rapid_industralisation
+		INDUSTRY_phase_1
+		INDUSTRY_expand_the_arms_industry
+		INDUSTRY_phase_2
+		INDUSTRY_continue_expanding_the_arms_industry
+		INDUSTRY_phase_3
+		INDUSTRY_final_expansion_of_the_arms_industry
+		AXI_hr_start
+		AXI_romania
+		AXI_romanian_artillery
+		AXI_siege_warfare
+		AXI_tacam
+		AXI_romanian_infantry
+		AXI_r_7
+		AXI_for_the_homeland
+		
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

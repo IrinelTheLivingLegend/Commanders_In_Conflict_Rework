@@ -1,0 +1,465 @@
+﻿capital = 907
+
+set_oob = "ALI_1936"
+#set_naval_oob = "ALI_1936_Naval"
+#set_air_oob = "ALI_1936_Air"
+
+create_faction = Allies
+set_research_slots = 5
+
+set_stability = 0.36
+set_war_support = 0.51
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	#improved_infantry_weapons = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	interwar_artillery = 1
+	#artillery1 = 1
+	interwar_antitank = 1
+	antitank1 = 1
+	antiair1 = 1
+	fuel_silos = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+		basic_large_airframe = 1
+		improved_small_airframe = 1
+		aa_cannon_1 = 1
+		engines_3 = 1
+		improved_large_airframe = 1
+		improved_medium_airframe =1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			fighter1 = 1
+			cv_fighter1 = 1
+			fighter2 = 1
+			cv_fighter2 = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+			CAS2 = 1
+			heavy_fighter1 = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+		}
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_medium_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		improved_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		improved_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		improved_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		improved_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		improved_depth_charges = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_submarine = 1
+		improved_airplane_launcher = 1
+		improved_naval_mines = 1
+		basic_light_shell = 1
+		basic_medium_shell = 1
+		basic_heavy_shell = 1
+		magnetic_detonator = 1
+		improved_ship_torpedo_launcher = 1
+		ship_hull_super_heavy = 1
+		improved_ship_hull_heavy = 1
+		improved_ship_hull_light = 1
+		improved_ship_hull_cruiser = 1
+		improved_ship_hull_submarine = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+add_ideas = {
+	civilian_economy
+	closed_economy
+	limited_conscription
+	starting_eff
+	no_day1_paradrop
+	peace_supply_grace
+}
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 100
+	fascism = 0
+	communism = 0
+}
+
+create_faction = Allies
+
+
+add_opinion_modifier = {
+    target = AXI
+    modifier = mod_no_enemy_trade
+}
+add_opinion_modifier = {
+    target = AXJ
+    modifier = mod_no_enemy_trade
+}
+add_opinion_modifier = {
+    target = AXK
+    modifier = mod_no_enemy_trade
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Nancy Wake"
+		GFX = GFX_portrait_nancy_wake
+		traits = { operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALI }
+	}
+
+	create_operative_leader = {
+		name = "Diana Rowden"
+		GFX = GFX_portrait_diana_rowden
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALI }
+	}
+
+	create_operative_leader = {
+		name = "Juan Pujol"
+		GFX = GFX_portrait_juan_pujol
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALI AXI }
+	}
+
+	create_operative_leader = {
+		name = "Dusko Popov"
+		GFX = GFX_portrait_dusko_popov
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALI AXI }
+	}
+
+	create_operative_leader = {
+		name = "Josephine Baker"
+		GFX = GFX_portrait_josephine_baker
+		traits = { operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALI }
+	}
+
+	create_operative_leader = {
+		name = "Virginia Hall"
+		GFX = GFX_portrait_virginia_hall
+		traits = { operative_demolition_expert }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALI }
+	}
+
+	create_operative_leader = {
+		name = "Richard Sorge"
+		GFX = GFX_portrait_richard_sorge
+		traits = { operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALI AXI }
+	}
+}
+
+recruit_character = ALI_high_command
+recruit_character = ALI_archibald_wavell
+recruit_character = ALI_bernard_montgomery
+recruit_character = ALI_claude_auchinleck
+recruit_character = ALI_harold_alexander
+recruit_character = ALI_richard_oconnor
+recruit_character = ALI_kenneth_anderson
+recruit_character = ALI_alan_cunningham
+recruit_character = ALI_henry_wilson
+recruit_character = ALI_neil_ritchie
+recruit_character = ALI_leslie_morshead
+recruit_character = ALI_philippe_leclerc
+recruit_character = ALI_david_stirling
+recruit_character = ALI_oliver_leese
+recruit_character = ALI_frank_messervy
+recruit_character = ALI_bernard_freyberg
+recruit_character = ALI_william_gott
+recruit_character = ALI_george_edwin_brink
+recruit_character = ALI_henry_harwood
+recruit_character = ALI_andrew_cunningham
+recruit_character = ALI_john_cunningham
+recruit_character = ALI_dwight_d_eisenhower
+recruit_character = ALI_george_s_patton
+recruit_character = ALI_omar_bradley
+recruit_character = ALI_lloyd_fredendall
+recruit_character = ALI_lucian_truscott
+recruit_character = ALI_mark_clark
+recruit_character = ALI_ernest_king
+recruit_character = ALI_frank_jack_fletcher
+recruit_character = ALI_semyon_timoshenko
+recruit_character = ALI_konstantin_rokossovsky
+recruit_character = ALI_georgy_zhukov
+recruit_character = ALI_filipp_oktyabrsky
+recruit_character = ALI_maxwell_aitken
+recruit_character = ALI_nikolay_voznesensky
+recruit_character = ALI_robert_taft
+recruit_character = ALI_ernest_bevin
+recruit_character = ALI_donald_nelson
+recruit_character = ALI_henry_morgenthau
+recruit_character = ALI_edmund_ironside
+recruit_character = ALI_cyril_newall
+recruit_character = ALI_charles_portal
+recruit_character = ALI_edward_ellington
+recruit_character = ALI_george_marshall
+recruit_character = ALI_henry_arnold
+recruit_character = ALI_carl_spaatz
+recruit_character = ALI_george_kenney
+recruit_character = ALI_konstantin_vershinin
+recruit_character = ALI_guy_simonds
+recruit_character = ALI_douglas_macarthur
+recruit_character = ALI_thomas_victor_anderson
+recruit_character = ALI_charles_foulkes
+recruit_character = ALI_percival_john_montague
+recruit_character = ALI_bert_hoffmeister
+recruit_character = ALI_leonard_w_murray
+recruit_character = ALI_ht_bailliegrohman
+recruit_character = ALI_james_d_prentice
+recruit_character = ALI_harry_dewolf
+recruit_character = ALI_walter_krueger
+recruit_character = ALI_thomas_kinkaid
+recruit_character = ALI_william_halsey_jr
+recruit_character = ALI_alexander_vandegrift
+recruit_character = ALI_chester_w_nimitz
+recruit_character = ALI_raymond_a_spruance
+recruit_character = ALI_arleigh_burke
+recruit_character = ALI_charles_m_cooke_jr
+recruit_character = ALI_kuzma_galitsky
+recruit_character = ALI_nikandr_chibisov
+recruit_character = ALI_vasily_kuznetsov
+recruit_character = ALI_harry_crerar
+recruit_character = ALI_harry_wickwire_foster
+recruit_character = ALI_frederic_franklin_worthington
+recruit_character = ALI_stewart_menzies
+recruit_character = ALI_laycock
+recruit_character = ALI_harald_ohquist
+recruit_character = ALI_mountbatten
+recruit_character = ALI_haakon_vii
+recruit_character = ALI_carl_gustav
+recruit_character = ALI_otto_ruge
+recruit_character = ALI_rasmus
+recruit_character = ALI_lord_lovat
+recruit_character = ALI_jack_churchill
+recruit_character = ALI_alexander_patch
+recruit_character = ALI_kirill_meretskov
+recruit_character = ALI_nikolay_berzarin
+recruit_character = ALI_leonid_govorov
+recruit_character = ALI_grigory_kulik
+recruit_character = ALI_charles_de_gaulle
+recruit_character = ALI_henri_giraud
+recruit_character = ALI_jean_de_lattre_de_tassigny
+recruit_character = ALI_alphonse_juin
+recruit_character = ALI_philippe_leclerc
+recruit_character = ALI_chiang_kaishek
+recruit_character = ALI_tu_yuming
+recruit_character = ALI_hsueh_yueh
+recruit_character = ALI_tai_anlan
+recruit_character = ALI_wang_yaowu
+recruit_character = ALI_sun_li_jen
+recruit_character = ALI_hu_zongnan
+recruit_character = ALI_gu_zhutong
+recruit_character = ALI_wei_lihuang
+recruit_character = ALI_fu_zuoyi
+recruit_character = ALI_zhang_xueliang
+recruit_character = ALI_mao_zedong
+recruit_character = ALI_zhu_de
+recruit_character = ALI_chen_yi
+recruit_character = ALI_peng_dehuai
+recruit_character = ALI_lin_biao
+recruit_character = ALI_marc_mitscher
+recruit_character = ALI_haile_selassie
+recruit_character = ALI_haile_selassie_gugsa
+recruit_character = ALI_hailu_tekle_haymanot
+recruit_character = ALI_abba_jofir
+recruit_character = ALI_amha_selassie
+recruit_character = ALI_desta_damtew
+recruit_character = ALI_mulugeta_yeggazu_of_illubabor
+recruit_character = ALI_ras_kassa
+recruit_character = ALI_abebe_aregai
+recruit_character = ALI_ayalew_birru
+recruit_character = ALI_balcho_safo
+recruit_character = ALI_nasibu_zeamanuel
+recruit_character = ALI_mech
+recruit_character = ALI_artillery
+recruit_character = ALI_francois_darlan
+recruit_character = ALI_jeanmarie_charles_abrial
+recruit_character = ALI_jeanpierre_esteva
+recruit_character = ALI_rene_emile_godfroy
+recruit_character = ALI_jean_de_laborde
+
+
+
+
+
+set_variable = {
+	global.allied_score = 0
+}
+
+set_country_flag = industrial_concern_flag
+
+
+#1940.1.1 = {
+	#	set_global_flag = game_sonnenblum
+	#	clr_global_flag = game_nanshin_ron
+	#	clr_global_flag = game_across_the_rhine
+	#}
+#1940.1.2 = {
+	#	capital = 64
+	#	set_oob = ALI_across_the_rhine
+	#	clr_global_flag = game_sonnenblum
+	#	clr_global_flag = game_nanshin_ron
+	#	set_global_flag = game_across_the_rhine
+	#}
+#1940.1.3 = {
+	#	capital = 285
+	#	set_oob = ALI_nanshin_ron
+	#	set_global_flag = game_nanshin_ron
+	#	clr_global_flag = game_sonnenblum
+	#	clr_global_flag = game_across_the_rhine
+	#}
+
+### Ship Variants ###

@@ -1,0 +1,40 @@
+style = {
+	name = land_focus_style
+
+	unavailable = GFX_focus_unavailable_land
+	completed = GFX_focus_completed_land
+	available = GFX_focus_can_start_land
+	current = GFX_focus_current_land
+}
+style = {
+	name = air_focus_style
+
+	unavailable = GFX_focus_unavailable_air
+	completed = GFX_focus_completed_air
+	available = GFX_focus_can_start_air
+	current = GFX_focus_current_air
+}
+style = {
+	name = navy_focus_style
+
+	unavailable = GFX_focus_unavailable_navy
+	completed = GFX_focus_completed_navy
+	available = GFX_focus_can_start_navy
+	current = GFX_focus_current_navy
+}
+style = {
+	name = industry_focus_style
+
+	unavailable = GFX_focus_unavailable_industry
+	completed = GFX_focus_completed_industry
+	available = GFX_focus_can_start_industry
+	current = GFX_focus_current_industry
+}
+style = {
+	name = politics_focus_style
+
+	unavailable = GFX_focus_unavailable_politics
+	completed = GFX_focus_completed_politics
+	available = GFX_focus_can_start_politics
+	current = GFX_focus_current_politics
+}

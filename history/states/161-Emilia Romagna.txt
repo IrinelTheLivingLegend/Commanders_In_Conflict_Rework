@@ -1,0 +1,44 @@
+
+state = {
+	id = 161
+	name = "STATE_161"
+	manpower = 1 # = 1
+
+	state_category = large_city
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 20
+		chromium = 5
+	}
+	
+
+	history = {
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = { #Bologna
+			6606 5
+		}
+		victory_points = { #Ferrara
+			6793 3
+		}
+		victory_points = { #Parma
+			9752 1
+		}
+		buildings = {
+			#infrastructure = 3 #was: 7
+			
+		}
+
+
+	}
+
+	provinces = {
+		782 3773 3976 6606 6790 6793 6985 9752 6973
+	}
+
+	local_supplies = 0.0
+}

@@ -1,0 +1,28 @@
+state={
+	id=784
+	name="STATE_784"
+	manpower = 1 # = 300000
+
+	state_category = rural
+
+	history={
+
+		victory_points = {
+			3320 1
+		}
+		buildings = {
+			#infrastructure = 3 #was: 5
+			air_base = 5
+		}
+
+
+		owner = NOO
+		add_core_of = NOO
+	}
+
+	provinces={
+		3320 9274
+	}
+
+	local_supplies=0.0
+}

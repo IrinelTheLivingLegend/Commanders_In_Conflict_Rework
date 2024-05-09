@@ -1,0 +1,40 @@
+
+state={
+	id=141
+	name="STATE_141" # Svealand
+	manpower = 1 # = 300000
+	state_category = city
+
+	resources = {
+		aluminium = 25
+		steel = 25
+		tungsten = 25
+		chromium = 25
+		oil = 25
+		rubber = 25
+	}
+
+	history={
+
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			6050 50
+		}
+		buildings = {
+			#infrastructure = 4 #was: 7
+			air_base = 6
+			6050 = {
+				naval_base = 5
+			}
+
+		}
+
+	}
+
+	provinces={
+		35 161 3106 3182 6050 6084 6127 6164 6188 6209 9109 9149 9185 9209 11044 11082 11163 11188 11278 13097 13098
+	}
+
+	local_supplies=0.0
+}

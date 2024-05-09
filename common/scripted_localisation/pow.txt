@@ -1,0 +1,103 @@
+defined_text = {
+	name = POW_recruit_soldiers_tt1
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_soldiers_cost >0}
+
+		}
+		localization_key =  POW_recruit_soldiers_tt1_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_soldiers_cost = 0}
+
+		}
+		localization_key = POW_recruit_soldiers_tt1_2
+	}
+}
+defined_text = {
+	name = POW_recruit_soldiers_tt2
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_soldiers_cost >0}
+
+		}
+		localization_key =  POW_recruit_soldiers_tt2_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_soldiers_cost = 0}
+
+		}
+		localization_key = POW_recruit_soldiers_tt2_2
+	}
+}
+defined_text = {
+	name = POW_recruit_workers_tt1
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_workers_cost >0}
+
+		}
+		localization_key =  POW_recruit_workers_tt1_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_workers_cost = 0}
+
+		}
+		localization_key = POW_recruit_workers_tt1_2
+	}
+}
+defined_text = {
+	name = POW_recruit_workers_tt2
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_workers_cost >0}
+
+		}
+		localization_key =  POW_recruit_workers_tt2_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_recruit_workers_cost = 0}
+
+		}
+		localization_key = POW_recruit_workers_tt2_2
+	}
+}
+defined_text = {
+	name = POW_free_prisoners_tt1
+	text = {
+		trigger = {
+			check_variable= {POW_free_prisoners_cost >0}
+
+		}
+		localization_key =  POW_free_prisoners_tt1_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_free_prisoners_cost = 0}
+
+		}
+		localization_key = POW_free_prisoners_tt1_2
+	}
+}
+defined_text = {
+	name = POW_free_prisoners_tt2
+	text = {
+		trigger = {
+			check_variable= {POW_free_prisoners_cost >0}
+
+		}
+		localization_key =  POW_free_prisoners_tt2_1
+	}
+	text = {
+		trigger = {
+			check_variable= {POW_free_prisoners_cost = 0}
+
+		}
+		localization_key = POW_free_prisoners_tt2_2
+	}
+}
+

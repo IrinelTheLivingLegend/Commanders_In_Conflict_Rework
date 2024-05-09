@@ -1,0 +1,2275 @@
+@advisor_cost = 50
+
+characters={
+	###############
+	# GERMANY	  #
+	###############
+	AXI_erwin_rommel={
+		name=GER_erwin_rommel
+		portraits={
+			army={
+				large=GFX_portrait_GER_erwin_rommel
+				small="GFX_idea_erwin_rommel"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_erwin_rommel
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_armored_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 8.000
+			}
+		}
+
+		corps_commander={
+			traits={ trait_reckless media_personality armor_officer war_hero trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				OR = {
+					has_completed_focus = AXI_afrika_korps
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+	AXI_albert_kesselring={
+		name=GER_albert_kesselring
+		portraits={
+			army={
+				small="GFX_idea_albert_kesselring"
+			}
+			army={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = AXI_albert_kesselring
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious war_hero }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			visible = {
+				has_completed_focus = AXI_wehrmacht_4th_army
+			}
+		}
+	}
+	AXI_wilhelm_ritter_von_thoma = {
+		name=GER_wilhelm_ritter_von_thoma
+		portraits={
+			army={
+				large="GFX_portrait_GER_wilhelm_ritter_von_thoma"
+				small=GFX_portrait_GER_wilhelm_ritter_von_thoma_small
+			}
+		}
+		corps_commander = {
+			traits = { war_hero brilliant_strategist armor_officer hill_fighter }
+			skill = 4 #13
+			legacy_id = 76
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+			visible = {
+				has_completed_focus = AXI_wehrmacht_4th_army
+			}
+		}
+	}
+	AXI_erich_von_manstein={
+		name=GER_erich_von_manstein
+		portraits={
+			army={
+				large=GFX_portrait_GER_erich_von_manstein
+				small="GFX_idea_manstein"
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist armor_officer trickster trait_engineer }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			visible = {
+				has_completed_focus = AXI_afrika_korps
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = AXI_mech
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_CombinedArms_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 0.01
+			}
+		}
+	}
+	AXI_karl_donitz={
+		name=GER_karl_donitz
+		portraits={
+			army={
+				large=GFX_portrait_GER_karl_donitz
+				small=GFX_portrait_GER_karl_donitz_small
+			}
+			army={
+				small="GFX_idea_donitz"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = AXI_donitz
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_chief_commerce_raiding_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+
+		navy_leader={
+			traits={ navy_career_officer seawolf }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=5
+			visible = {
+				has_completed_focus = AXI_wehrmacht
+			}
+		}
+	}
+
+	AXI_erich_raeder={
+		name=GER_erich_raeder
+		portraits={
+			army={
+				large=GFX_portrait_GER_erich_raeder
+				small=GFX_portrait_GER_erich_raeder_small
+			}
+			army={
+				small="GFX_idea_raeder"
+			}
+		}
+
+		navy_leader={
+			traits={ battleship_adherent naval_lineage }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=3
+			coordination_skill=3
+			visible = {
+				has_completed_focus = AXI_wehrmacht
+			}
+		}
+	}
+	AXI_ludwig_beck={
+		name=GER_ludwig_beck
+		portraits={
+			army={
+				small="GFX_idea_ludwig_beck"
+				large=GFX_portrait_GER_ludwig_beck
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ludwig_beck
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_organizational_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+
+		}
+	}
+
+	AXI_wilhelm_keitel={
+		name=GER_wilhelm_keitel
+		portraits={
+			army={
+				small="GFX_idea_wilhelm_keitel"
+				large=GFX_portrait_GER_wilhelm_keitel
+			}
+		}
+	}
+
+	AXI_franz_halder={
+		name=GER_franz_halder
+		portraits={
+			army={
+				small="GFX_idea_franz_halder"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = franz_halder
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_offensive_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_georg_von_kuchler={
+		name=GER_georg_von_kuchler
+		portraits={
+			army={
+				large=GFX_portrait_GER_georg_von_kuchler
+				small=GFX_portrait_GER_georg_von_kuchler_small
+			}
+		}
+		corps_commander={
+			traits = { infantry_leader ranger }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=22
+			visible = {
+				has_completed_focus = AXI_wehrmacht_4th_army
+			}
+		}
+	}
+
+	AXI_johannes_blaskowitz={
+		name=GER_johannes_blaskowitz
+		portraits={
+			army={
+				large=GFX_portrait_GER_johannes_blaskowitz
+				small=GFX_portrait_GER_johannes_blaskowitz_small
+			}
+		}
+		corps_commander={
+			traits = { trait_engineer skilled_staffer organizer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=19
+			visible = {
+				has_completed_focus = AXI_afrika_korps
+			}
+		}
+	}
+	AXI_walther_von_brauchitsch={
+		name=GER_walther_von_brauchitsch
+		portraits={
+			army={
+				small="GFX_idea_walther_von_brauchitsch"
+				large=GFX_portrait_GER_walter_von_brauchitsch
+			}
+		}
+	}
+	AXI_von_kluge={
+		name=GER_gunther_von_kluge
+		portraits={
+			army={
+				large=GFX_portrait_GER_gunther_von_kluge
+				small=GFX_portrait_GER_gunther_von_kluge_small
+			}
+		}
+
+		field_marshal={
+			traits={ armor_officer offensive_doctrine panzer_leader}
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				OR = {
+					has_completed_focus = AXI_wehrmacht_4th_army
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+	AXI_heinz_guderian={
+		name=GER_heinz_guderian
+		portraits={
+			army={
+				large=GFX_portrait_GER_heinz_guderian
+				small="GFX_idea_heinz_guderian"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AXI_heinz_guderian
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_planning_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist career_officer armor_officer trickster panzer_leader }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			visible = {
+				has_completed_focus = AXI_afrika_korps
+			}
+		}
+	}
+	AXI_hermann_boehm={
+		name=GER_hermann_boehm
+		portraits={
+			army={
+				large=GFX_portrait_GER_hermann_boehm
+				small=GFX_portrait_GER_hermann_boehm_small
+			}
+		}
+		navy_leader={
+			traits={ craven superior_tactician }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=2
+			legacy_id=29
+			visible = {
+				has_completed_focus = AXI_wehrmacht
+			}
+		}
+	}
+	AXI_gerd_von_rundstedt={
+		name=GER_gerd_von_rundstedt
+		portraits={
+			army={
+				large=GFX_portrait_GER_gerd_von_rundstedt
+				small="GFX_idea_gerd_von_rundstedt"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_gerd_von_rundstedt
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+
+		field_marshal={
+			traits={ old_guard urban_assault_specialist defensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=0
+			visible = {
+				has_completed_focus = AXI_afrika_korps
+			}
+		}
+	}
+	AXI_gunther_lutjens={
+		name=GER_gunther_lutjens
+		portraits={
+			army={
+				large=GFX_portrait_GER_gunther_lutjens
+				small=GFX_portrait_GER_gunther_lutjens_small
+			}
+			army={
+				small="GFX_idea_gunther_lutjens"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_gunther_lutjens
+			ledger = navy
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_fleet_logistics_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		navy_leader={
+			traits={ gentlemanly navy_career_officer superior_tactician }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=4
+			visible = {
+				has_completed_focus = AXI_afrika_korps
+			}
+		}
+	}
+	###############
+	# ITALY		  #
+	###############
+	AXI_high_command = {
+		name = AXI_high_command
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AXI/axi_leader.tga"
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	AXI_rodolfo_graziani = {
+		name = ITA_rodolfo_graziani
+		portraits = {
+			army = {
+				small = GFX_idea_rodolfo_graziani
+				large = GFX_portrait_ITA_rodolfo_graziani
+			}
+		}
+
+		advisor = {
+			cost = advisor_cost
+			slot = theorist
+			idea_token = AXI_rodolfo_graziani
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+			ai_will_do = {
+				base = 3.000
+			}
+		}
+
+		field_marshal = {
+			traits = { trait_cautious organizer desert_fox }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_the_po
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+
+	AXI_mario_berti = {
+		name = ITA_mario_berti
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_mario_berti_small
+				large = GFX_portrait_ITA_mario_berti
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = AXI_mario_berti
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_drill_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { old_guard trait_reckless war_hero } #Always sick really need to do something about it
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = {
+				has_completed_focus = AXI_army_of_north_africa
+			}
+		}
+	}
+	AXI_italo_gariboldi = {
+		name = ITA_italo_gariboldi
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_gariboldi_small
+				large = GFX_portrait_ITA_italo_gariboldi
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AXI_italo_gariboldi
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_entrenchment_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander = {
+			traits = { old_guard career_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = {
+				has_completed_focus = AXI_army_of_the_po
+			}
+		}
+	}
+
+	AXI_annibale_bergonzoli = {
+		name = ITA_annibale_bergonzoli
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_annibale_bergonzoli_small
+				large = GFX_portrait_ITA_annibale_bergonzoli
+			}
+		}
+
+		corps_commander = {
+			traits = { old_guard infantry_officer commando  }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = 0
+			visible = {
+				has_completed_focus = AXI_army_of_north_africa
+			}
+		}
+	}
+
+	AXI_giuseppe_tellera = {
+		name = ITA_giuseppe_tellera
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giuseppe_tellera_small
+				large = GFX_portrait_ITA_giuseppe_tellera
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = AXI_giuseppe_tellera
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			visible = {
+				has_completed_focus = AXI_army_of_the_po
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer cavalry_leader combined_arms_expert} #Representing how he died
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = {
+				has_completed_focus = AXI_army_of_the_po
+			}
+		}
+	}
+	AXI_ettore_bastico = {
+		name = ITA_ettore_bastico
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_ettore_bastico_small
+				large = GFX_portrait_ITA_ettore_bastico
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_officer career_officer ranger}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 0
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_the_po
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+	AXI_giovanni_messe = {
+		name = ITA_giovanni_messe
+		portraits = {
+			army = {
+				small = GFX_idea_giovanni_messe
+				large = GFX_portrait_ITA_giovanni_messe
+			}
+		}
+
+		advisor = {
+			cost = advisor_cost
+			slot = theorist
+			idea_token = AXI_giovanni_messe
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+
+		corps_commander = {
+			traits = { armor_officer war_hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = 0
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_north_africa
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+
+	AXI_inigo_campioni = {
+		name = ITA_inigo_campioni
+		portraits = {
+			navy = {
+				small = GFX_idea_inigo_campioni
+				large = GFX_portrait_ITA_inigo_campioni
+			}
+		}
+
+		navy_leader = {
+			traits = { battleship_adherent superior_tactician spotter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_north_africa
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+
+	AXI_alberto_da_zara = {
+		name = ITA_alberto_da_zara
+		portraits = {
+			navy = {
+				small = GFX_idea_alberto_da_zara
+				large = GFX_portrait_ITA_alberto_da_zara
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AXI_alberto_da_zara
+			ledger = navy
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_anti_submarine_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		navy_leader = {
+			traits = { gentlemanly superior_tactician }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_north_africa
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+
+	AXI_giuseppe_fioravanzo = {
+		name = ITA_giuseppe_fioravanzo
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_giuseppe_fioravanzo
+				small = GFX_portrait_ITA_giuseppe_fioravanzo_small
+			}
+		}
+
+		advisor = {
+			cost = advisor_cost
+			slot = theorist
+			idea_token = AXI_guiseppe_fioravanzo
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				superior_firepower_expert
+			}
+		}
+
+		navy_leader = {
+			traits = { aviation_enthusiast blockade_runner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 2
+			visible = {
+				OR = {
+					has_completed_focus = AXI_army_of_north_africa
+					has_completed_focus = AXI_intergrated_axis_command
+				}
+			}
+		}
+	}
+	AXI_italo_balbo = { #Can become Country Leader later
+		name = ITA_italo_balbo
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_italo_balbo_small
+				large = GFX_portrait_ITA_italo_balbo
+			}
+			civilian = {
+				large = GFX_portrait_ITA_italo_balbo_civilian
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = italo_balbo
+			allowed = {
+				original_tag = AXI
+			}
+
+			traits = {
+				air_chief_all_weather_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = { career_officer politically_connected trait_reckless media_personality }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = {
+				has_completed_focus = AXI_army_of_north_africa
+			}
+		}
+	}
+	AXI_alberto_pariani = {
+		name = ITA_alberto_pariani
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_alberto_pariani_small
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = ITA_alberto_pariani
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_maneuver_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	AXI_domenico_cavagnari = {
+		name = ITA_domenico_cavagnari
+		portraits = {
+			army = {
+				small = GFX_idea_domenico_cavagnari
+			}
+		}
+	}
+
+	AXI_arturo_riccardi = {
+		name = ITA_arturo_riccardi
+		portraits = {
+			army = {
+				small = GFX_idea_arturo_riccardi
+			}
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = arturo_riccardi
+			allowed = {
+				original_tag = AXI
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				navy_chief_naval_aviation_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	AXI_raffaele_de_courten = {
+		name = ITA_raffaele_de_courten
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_raffaele_de_courten_small
+			}
+		}
+	}
+	AXI_emilio_de_bono = {
+		name = ITA_emilio_de_bono
+		portraits = {
+			army = {
+				small = GFX_idea_emilio_de_bono
+				large = GFX_portrait_ITA_emilio_de_bono
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = AXI_emilio_de_bono
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = { old_guard trait_cautious politically_connected defensive_doctrine }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_completed_focus = AXI_army_of_the_po
+			}
+		}
+	}
+	AXI_rino_corso_fougier = {
+		name = ITA_rino_corso_fougier
+		portraits = {
+			army = {
+				small = GFX_idea_rino_corso_fougier
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = AXI_rino_corso_fougier
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				air_chief_safety_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	AXI_alfredo_guzzoni = {
+		name = ITA_alfredo_guzzoni
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_alfredo_guzzoni_small
+				large = GFX_portrait_ITA_alfredo_guzzoni
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AXI_alfredo_guzzoni
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_infantry_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 2.000
+			}
+		}
+
+		corps_commander = {
+			traits = { old_guard }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			visible = { has_completed_focus = AXI_army_of_the_po }
+		}
+	}
+	AXI_carlo_bergamini = {
+		name = ITA_carlo_bergamini
+		portraits = {
+			navy = {
+				small = GFX_idea_carlo_bergamini
+				large = GFX_portrait_ITA_carlo_bergamini
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AXI_carlo_bergamini
+			ledger = navy
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_capital_ship_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		navy_leader = {
+			traits = { gunnery_expert battleship_adherent ironside }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+			legacy_id = 0
+			visible = { has_completed_focus = AXI_army_of_the_po }
+		}
+	}
+	###############field_marshal
+	# JAPAN		  #
+	###############
+
+	AXI_shunroku_hata={
+		name=JAP_shunroku_hata
+		portraits={
+			army={
+				small="GFX_idea_shunroku_hata"
+				large=GFX_portrait_JAP_shunroku_hata
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_shunroku_hata
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_concealment_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal={
+			traits={ JAP_samurai_lineage offensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+			visible = {
+				has_completed_focus = AXI_imperial_japanese_navy
+			}
+		}
+	}
+	AXI_hitoshi_imamura={
+		name=JAP_hitoshi_imamura
+		portraits={
+			army={
+				small="GFX_idea_hitoshi_imamura"
+			}
+			army={
+				large=GFX_portrait_JAP_hitoshi_imamura
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_hitoshi_imamura
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_logistics_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 3.000
+			}
+		}
+
+		corps_commander={
+			traits={ career_officer infantry_officer commando }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			visible = {
+				has_completed_focus = AXI_imperial_japanese_navy
+			}
+		}
+	}
+	AXI_hisaichi_terauchi={
+		name=JAP_hisaichi_terauchi
+		portraits={
+			army={
+				small="GFX_idea_hisaichi_terauchi"
+				large=GFX_portrait_JAP_hisaichi_terauchi
+			}
+		}
+		advisor={
+			cost = advisor_cost
+			slot = theorist
+			idea_token = AXI_hisaichi_terauchi
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				mass_assault_expert
+			}
+		}
+
+		field_marshal={
+			traits={ politically_connected JAP_samurai_lineage offensive_doctrine }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			visible = {
+				has_completed_focus = AXI_IJ_army
+			}
+		}
+	}
+	AXI_isoroku_yamamoto={
+		name=JAP_isoroku_yamamoto
+		portraits={
+			navy={
+				small="GFX_idea_isoroku_yamamoto"
+			}
+			army={
+				large=GFX_portrait_JAP_isoroku_yamamoto
+			}
+		}
+		advisor={
+			cost = advisor_cost
+			slot = theorist
+			idea_token = isoroku_yamamoto
+			ledger = navy
+			allowed = {
+				original_tag = AXI
+			}
+
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+
+		navy_leader={
+			traits={ bold aviation_enthusiast superior_tactician spotter air_controller flight_deck_manager }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=6
+			visible = {
+				OR = {has_completed_focus = AXI_imperial_japanese_navy  has_completed_focus = AXI_IJ_army}
+			}
+		}
+	}
+	AXI_shigeyoshi_inoue={
+		name=JAP_shigeyoshi_inoue
+		portraits={
+			army={
+				large=GFX_portrait_JAP_shigeyoshi_inoue
+				small=GFX_portrait_JAP_shigeyoshi_inoue_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_shigeyoshi_inoue
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_amphibious_assault_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer aviation_enthusiast }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=3
+			visible = {
+				OR = {has_completed_focus = AXI_imperial_japanese_navy  has_completed_focus = AXI_IJ_army}
+		
+			}
+		}
+	}
+
+	AXI_nobutake_kondo={
+		name=JAP_nobutake_kondo
+		portraits={
+			army={
+				large=GFX_portrait_JAP_nobutake_kondo
+				small=GFX_portrait_JAP_nobutake_kondo_small
+			}
+		}
+		navy_leader={
+			traits={ battleship_adherent naval_lineage fly_swatter }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			visible = {
+				OR = {has_completed_focus = AXI_imperial_japanese_navy  has_completed_focus = AXI_IJ_army}
+		
+			}
+		}
+	}
+	AXI_kenji_doihara={
+		name=JAP_kenji_doihara
+		portraits={
+			army={
+				small="GFX_idea_kenji_doihara"
+				large=GFX_portrait_JAP_kenji_doihara
+			}
+		}
+
+		corps_commander={
+			traits={ career_officer substance_abuser politically_connected}
+			skill=4
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			visible = {
+				has_completed_focus = AXI_imperial_japanese_navy
+			}
+		}
+	}
+	AXI_kanin_kotohito={
+		name=JAP_kanin_kotohito
+		portraits={
+			army={
+				small="GFX_idea_kanin_kotohito"
+			}
+		}
+	}
+
+	AXI_hajime_sugiyama={
+		name=JAP_hajime_sugiyama
+		portraits={
+			army={
+				small="GFX_idea_hajime_sugiyama"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = hajime_sugiyama
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_reform_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	AXI_hideki_tojo={
+		name=JAP_hideki_tojo
+		portraits={
+			army={
+				small="GFX_idea_hideki_tojo"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = hideki_tojo
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_chief_morale_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_kanji_ishiwara={
+		name=JAP_kanji_ishiwara
+		portraits={
+			army={
+				large=GFX_portrait_JAP_kanji_ishiwara
+				small=GFX_portrait_JAP_kanji_ishiwara_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_kanji_ishiwara
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			available = {
+			}
+			traits = {
+				army_regrouping_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ JAP_samurai_lineage ranger organizer}
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+			visible = {
+				has_completed_focus = AXI_IJ_army
+			}
+		}
+	}
+	AXI_shizuichi_tanaka={
+		name=JAP_shizuichi_tanaka
+		portraits={
+			army={
+				large=GFX_portrait_JAP_shizuichi_tanaka
+				small=GFX_portrait_JAP_shizuichi_tanaka_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=0
+			visible = {
+				has_completed_focus = AXI_IJ_army
+			}
+		}
+	}
+	AXI_toshizo_nishio={
+		name=JAP_toshizo_nishio
+		portraits={
+			army={
+				large=GFX_portrait_JAP_toshizo_nishio
+				small=GFX_portrait_JAP_toshizo_nishio_small
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist infantry_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=0
+			visible = {
+				has_completed_focus = AXI_IJ_army
+			}
+		}
+	}
+
+	AXI_rikichi_ando={
+		name=JAP_rikichi_ando
+		portraits={
+			army={
+				large=GFX_portrait_JAP_rikichi_ando
+				small=GFX_portrait_JAP_rikichi_ando_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer jungle_rat }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=0
+			visible = {
+				has_completed_focus = AXI_imperial_japanese_navy
+			}
+		}
+	}
+	###########
+	##FINLAND##
+	###########
+	AXI_motti_matti={
+		name=AXI_motti_matti
+		portraits={
+			army={
+				large="gfx/leaders/AXI/axi_motti_matti.tga"
+				small=GFX_portrait_FIN_erik_heinrichs_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer guerilla_fighter commando }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_mannerheim={
+		name=FIN_carl_mannerheim
+		portraits={
+			army={
+				large=GFX_portrait_FIN_carl_mannerheim
+				small="GFX_idea_carl_mannerheim"
+			}
+		}
+		field_marshal={
+			traits={ inflexible_strategist trait_cautious war_hero trickster winter_specialist defensive_doctrine }
+			skill=5
+			attack_skill=3
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_erik_heinrichs={
+		name=FIN_erik_heinrichs
+		portraits={
+			army={
+				large="gfx/leaders/AXI/axi_erik_heinrichs.tga"
+				small=GFX_portrait_FIN_erik_heinrichs_small
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_vilho_petter_nenonen={
+		name=FIN_vilho_petter_nenonen
+		portraits={
+			army={
+				large=GFX_portrait_FIN_vilho_petter_nenonen
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ commando winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_harald_ohquist={
+		name=AXI_harald_ohquist
+		portraits={
+			army={
+				large="gfx/leaders/AXI/axi_harald_ohquist.tga"
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_wiljo_tuompo={
+		name=AXI_wiljo_tuompo
+		portraits={
+			army={
+				large="gfx/leaders/AXI/axi_wiljo_tuompo.tga"
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_woldemar_hagglund={
+		name=AXI_woldemar_hagglund
+		portraits={
+			army={
+				large="gfx/leaders/AXI/axi_woldemar_hagglund.tga"
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist commando }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_hugo_ostermann={
+		name=AXI_hugo_ostermann
+		portraits={
+			army={
+				large="gfx/leaders/AXI/AXI_hugo_ostermann.tga"
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist organizer }
+			skill=4
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+	AXI_eero_rahola={
+		name=AXI_eero_rahola
+		portraits={
+			army={
+				large=GFX_portrait_FIN_vilho_petter_nenonen
+				small=GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		navy_leader={
+			traits={ inshore_fighter spotter }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			coordination_skill = 3
+			maneuvering_skill = 2
+			legacy_id=-1
+			visible = {
+				OR = {
+					has_completed_focus = AXI_from_within
+					has_completed_focus = AXI_from_abroad
+				}
+			}
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+	AXI_fushimi_hiroyasu={
+		name=JAP_fushimi_hiroyasu
+		portraits={
+			army={
+				small="GFX_idea_fushimi_hiroyasu"
+			}
+		}
+	}
+
+	AXI_osami_nagano={
+		name=JAP_osami_nagano
+		portraits={
+			army={
+				small="GFX_idea_osami_nagano"
+			}
+		}
+	}
+
+	AXI_shigetaro_shimada={
+		name=JAP_shigetaro_shimada
+		portraits={
+			army={
+				small="GFX_idea_shigetaro_shimada"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = shigetaro_shimada
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_chief_decisive_battle_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	# Doihara up there
+
+	AXI_torashiro_kawabe={
+		name=JAP_torashiro_kawabe
+		portraits={
+			army={
+				small="GFX_idea_torashiro_kawabe"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = torashiro_kawabe
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				air_chief_night_operations_3
+			}
+			cost =  65
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	AXI_korechika_anami={
+		name=JAP_korechika_anami
+		portraits={
+			army={
+				small="GFX_idea_korechika_anami"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = korechika_anami
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				air_chief_ground_support_3
+			}
+			cost =  65
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_chuichi_nagumo={
+		name=JAP_chuichi_nagumo
+		portraits={
+			army={
+				small="GFX_idea_chuichi_nagumo"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AXI_chuichi_nagumo
+			ledger = air
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				navy_carrier_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	###############
+	# ADVISORS	  #
+	###############
+
+	AXI_walther_funk={
+		name=GER_walther_funk
+		portraits={
+			army={
+				small="GFX_idea_walther_funk"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AXI_walther_funk
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				war_industrialist
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_alberto_beneduce = {
+		name = ITA_alberto_beneduce
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_alberto_beneduce_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AXI_alberto_beneduce
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				captain_of_industry
+			}
+
+			cost = 25
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_mitsumasa_yonai={
+		name=JAP_mitsumasa_yonai
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AXI_mitsumasa_yonai
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				silent_workhorse
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_giovanni_marinelli = {
+		name = ITA_giovanni_marinelli
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giovanni_marinelli_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AXI_giovanni_marinelli
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				prince_of_terror
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+
+		}
+	}
+	AXI_paolo_thaon_di_revel = {
+		name = ITA_paolo_thaon_di_revel
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_paolo_thaon_di_revel_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AXI_paolo_thaon_di_revel
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				quartermaster_general
+			}
+
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_albert_speer={
+		name=GER_albert_speer
+		portraits={
+			army={
+				small="GFX_idea_speer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = speer
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				armaments_organizer
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AXI_guido_jung = {
+		name = ITA_guido_jung
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_guido_jung_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AXI_guido_jung
+			allowed = {
+				original_tag = AXI
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				financial_expert
+			}
+
+			ai_will_do = {
+				base = 0.300
+			}
+			cost = advisor_cost
+			
+		}
+	}
+	AXI_wilhelm_canaris={
+		name=GER_wilhelm_canaris
+		portraits={
+			army={
+				small="GFX_idea_ger_wilhelm_canaris"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AXI_wilhelm_canaris
+			available = {
+				has_intelligence_agency = yes
+			}
+			allowed = {
+				original_tag = AXI
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				head_of_intelligence
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	###############
+	###	Hungary	###
+	###############
+
+	AXI_miklos_horthy={
+		name=HUN_miklos_horthy
+		portraits={
+			navy = { #Can become Navy leader and therefore navy advisor
+				large = "GFX_Portrait_hungary_miklos_horthy_admiral"
+				small = "GFX_idea_HUN_miklos_horthy_admiral"
+			}
+			civilian={
+				large="GFX_Portrait_hungary_miklos_horthy"
+			}
+		}
+		navy_leader = {
+			traits = { gunnery_expert navy_media_personality superior_tactician }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 4
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+
+	AXI_geza_lakatos={
+		name=HUN_geza_lakatos
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_geza_lakatos"
+				small="GFX_idea_HUN_geza_lakatos"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+
+	AXI_ivan_hindy={
+		name=HUN_ivan_hindy
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_ivan_hindy"
+				small="GFX_idea_HUN_ivan_hindy"
+			}
+		}
+		corps_commander={
+			traits={ trickster cavalry_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+
+	AXI_karoly_beregfy={
+		name=HUN_karoly_beregfy
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_karoly_beregfy"
+				small="GFX_idea_HUN_karoly_beregfy"
+			}
+		}
+		corps_commander={
+			traits = { cavalry_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+
+	AXI_lajos_veress={
+		name=HUN_lajos_veress
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_lajos_veress"
+				small="GFX_idea_HUN_lajos_veress"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+
+	AXI_ferenc_feketehalmyczeydner={
+		name=HUN_ferenc_feketehalmyczeydner
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+				small="GFX_idea_HUN_ferenc_feketehalmy_czeydner"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_hungary }
+		}
+	}
+	
+	AXI_shvoy_kalman={
+		name=HUN_shvoy_kalman
+		portraits={
+			army={
+				small="GFX_idea_HUN_shvoy_kalman"
+			}
+		}
+		advisor={
+			cost = advisor_cost
+			slot = theorist
+			idea_token = HUN_shvoy_kalman
+			ledger = army
+			allowed = {
+				original_tag = AXI
+			}
+			
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	###############
+	###	Romania	###
+	###############
+	
+	AXI_petre_dumitrescu={
+		name=ROM_petre_dumitrescu
+		portraits={
+			army={
+				large="GFX_Portrait_romania_petre_dumitrescu"
+				small="GFX_idea_ROM_petre_dumitrescu"
+			}
+		}
+		field_marshal={
+			traits={ logistics_wizard offensive_doctrine }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+	}
+
+	AXI_ioan_mihail_racovita={
+		name=ROM_ioan_mihail_racovita
+		portraits={
+			army={
+				large="GFX_Portrait_romania_ioan_mihail_racovita"
+				small="GFX_idea_ROM_ioan_mihail_racovita"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+	}
+	
+	AXI_constantin_sanatescu={
+		name=ROM_constantin_sanatescu
+		portraits={
+			army={
+				small="GFX_idea_ROM_constantin_sanatescu"
+				large="GFX_Portrait_romania_constantin_sanatescu"
+			}
+		}
+		corps_commander={
+			traits={ infantry_expert bearer_of_artillery }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+		
+	}
+
+	AXI_ion_antonescu={
+		name=ROM_ion_antonescu
+		portraits={
+			army={
+				small="GFX_idea_ROM_ion_antonescu"
+				large="GFX_Portrait_romania_ion_antonescu"
+			}
+			civilian={
+				large="GFX_Portrait_romania_ion_antonescu"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine bearer_of_artillery }
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = AXI_artillery
+			allowed = {
+				original_tag = AXI
+			}
+			traits = {
+				army_artillery_3
+			}
+			cost = advisor_cost
+			ai_will_do = {
+				factor = 0.01
+			}
+	}
+}
+
+	AXI_horia_macellariu={
+		name=ROM_horia_macellariu
+		portraits={
+			army={
+				small="GFX_idea_ROM_horia_macellariu"
+				large="GFX_Portrait_romania_horia_macellariu"
+			}
+		}	
+		navy_leader={
+			traits={ gentlemanly spotter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+	}
+
+	AXI_gheorghe_avramescu={
+		name=ROM_gheorghe_avramescu
+		portraits={
+			army={
+				small="GFX_idea_ROM_gheorghe_avramescu"
+				large="GFX_Portrait_romania_gheorghe_avramescu"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+			visible = { has_completed_focus = AXI_romania }
+		}
+	}
+}

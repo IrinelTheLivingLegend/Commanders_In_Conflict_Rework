@@ -1,0 +1,43 @@
+
+state={
+	id=489
+	name="STATE_489" # Zulia
+	manpower = 1 # = 3750000
+
+	state_category = megalopolis
+
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 30
+		chromium = 5
+	}
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 5
+			#arms_factory = 5
+			
+			1944 = {
+				naval_base = 10
+			}
+		}
+
+		victory_points = {
+			1944 25
+		}
+
+	}
+
+	provinces={
+		1944 1997 2052 4526 5088 10855 12772
+	}
+
+	local_supplies=6.0
+}

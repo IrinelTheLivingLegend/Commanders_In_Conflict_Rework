@@ -1,0 +1,94 @@
+ideas = {
+	hidden_ideas= {
+		starting_eff={
+			picture = generic_infantry_bonus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+				production_factory_start_efficiency_factor = 0.4
+			}
+		}
+		no_day1_paradrop={
+			picture = generic_infantry_bonus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+				paratrooper_weight_factor = 10
+			}
+		}
+		peace_supply_grace={
+			picture = generic_infantry_bonus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+				attrition = -1
+				supply_consumption_factor = -1.0
+			}
+		}
+
+		mechanized_design_cost_discount={
+			picture = GFX_FRA_motorized_focus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+			mechanized_equipment_design_cost_factor = -0.5
+			}
+		}
+
+		neutral_country={
+			picture = generic_infantry_bonus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+				surrender_limit = 0.20
+				disabled_ideas = 1
+				war_support_factor = 0.6
+				stability_factor = 0.6
+				political_power_cost = 100
+				consumer_goods_factor = 1
+				conscription_factor = -100
+				local_resources_factor=-1
+				research_speed_factor = -0.9
+				industrial_factory_donations = -400
+				military_factory_donations = -200
+				join_faction_tension = 10
+				send_volunteers_tension = 10
+				guarantee_tension = 10
+				ai_get_ally_desire_factor = -1000
+				enemy_justify_war_goal_time = 10
+				drift_defence_factor = 10
+				lend_lease_tension = 1000
+			}
+		}
+	}
+}

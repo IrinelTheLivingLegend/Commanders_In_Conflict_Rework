@@ -1,0 +1,15 @@
+﻿add_namespace = paradrop
+country_event = {
+	id = paradrop.1
+	title = paradrop.1.t
+	desc = paradrop.1.d
+	picture = GFX_report_event_axisminor_startup
+	is_triggered_only = yes
+	hidden = yes
+	immediate={
+		every_country={
+			limit={has_idea=no_day1_paradrop}
+			remove_ideas=no_day1_paradrop
+		}
+	}
+}

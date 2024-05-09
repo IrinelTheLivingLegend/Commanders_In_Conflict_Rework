@@ -1,0 +1,15 @@
+version="1.0"
+tags={
+	"Balance"
+	"National Focuses"
+	"Fixes"
+}
+name="Commanders in Conflict Rework -dev"
+picture="thumbnail.png"
+replace_path="gfx/loadingscreens"
+replace_path="common/bookmarks"
+replace_path="history/states"
+replace_path="map/strategicregions"
+replace_path="common/national_focus"
+supported_version="1.14.*"
+remote_file_id="3041906894"

@@ -1,0 +1,42 @@
+
+state={
+	id=907
+	name="STATE_907"
+	resources={
+		oil=10
+		aluminium=10
+		tungsten=10
+		rubber=10
+		steel=40
+		chromium=10
+	}
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 3
+			#arms_factory = 5
+
+		}
+		victory_points = {
+			7011 50
+		}
+		victory_points = {
+			3996 1
+		}
+		victory_points = {
+			1068 1
+		}
+
+	}
+
+	provinces={
+		1068 4055 4143 7011 7117 7188 10005 10031 12004 13259 13269 13270 13273 13274
+	}
+	manpower = 1 #=1
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

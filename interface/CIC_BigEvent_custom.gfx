@@ -1,0 +1,11 @@
+spriteTypes = { ##### THIS FILE DEFINES THE PICTURE FOR EACH SUPER EVENT
+	spriteType = {
+		name = "GFX_superevent_custom_axis"
+		textureFile = "gfx//superevent_pictures//axis.tga"
+	}
+	spriteType = {
+		name = "GFX_superevent_custom_allies"
+		textureFile = "gfx//superevent_pictures//allies.tga"
+	}
+	
+}

@@ -1,0 +1,43 @@
+state=
+{
+	id=327
+	name="STATE_327" # Luzon
+	manpower = 1 # = 300000
+	resources = {
+		oil = 35
+		aluminium = 25
+		tungsten = 25
+		rubber = 25
+		steel = 25
+		chromium = 25
+	}
+
+	state_category = town
+	history=
+	{
+		owner = NOO
+		add_core_of = NOO
+
+
+		buildings = {
+			#infrastructure = 3 #was: 5
+			air_base = 6
+			10265 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			10265 50
+		}
+		victory_points = {
+			1221 1
+		}
+
+	}
+
+	provinces={
+		1221 1288 7275 7323 7351 10165 10236 10265 12236
+	}
+
+	local_supplies=0.0
+}

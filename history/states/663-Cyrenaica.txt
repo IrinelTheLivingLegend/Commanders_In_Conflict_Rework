@@ -1,0 +1,23 @@
+
+state={
+	id=663
+	name="STATE_663"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1060 1062 1186 4060 4063 4133 7063 7139 7206 9977 10049 10127 10785 11951 12025 12079 13078 13257 13264 13275
+	}
+	manpower = 1 #=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

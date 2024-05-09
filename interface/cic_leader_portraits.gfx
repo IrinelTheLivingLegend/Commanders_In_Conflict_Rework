@@ -1,0 +1,23 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_CAN_harry_crerar"
+		texturefile = "gfx/leaders/ALI/CAN_harry_crerar.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_harry_wickwire_foster"
+		texturefile = "gfx/leaders/ALI/CAN_harry_wickwire_foster.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_harry_wickwire_foster_small"
+		texturefile = "gfx/interface/ideas/idea_CAN_harry_wickwire_foster.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_frederic_franklin_worthington"
+		texturefile = "gfx/leaders/ALI/CAN_frederic_franklin_worthington.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN_frederic_franklin_worthington_small"
+		texturefile = "gfx/interface/ideas/idea_CAN_frederic_franklin_worthington.tga"
+	}
+}

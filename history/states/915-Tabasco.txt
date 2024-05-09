@@ -1,0 +1,21 @@
+state={
+	id=915
+	name="STATE_915"
+	provinces={
+		2021 12867 13308 
+	}
+	history= {
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 2
+		}
+		victory_points = {
+			12867 1 
+		}
+	}
+	manpower = 1 #=100000
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

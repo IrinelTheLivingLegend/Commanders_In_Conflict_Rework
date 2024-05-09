@@ -1,0 +1,135 @@
+﻿l_english:
+ ### Country Names ###
+ ALI: "Allies I"
+ ALI_DEF: "the Allied Nations"
+ ALI_ADJ: "Allied"
+
+ AXI: "Axis I"
+ AXI_DEF: "the Axis Powers"
+ AXI_ADJ: "Axis"
+
+ ALJ: "Allies II"
+ ALJ_DEF: "the Allied Nations 2"
+ ALJ_ADJ: "Allied 2"
+
+ AXJ: "Axis II"
+ AXJ_DEF: "the Axis Powers 2"
+ AXJ_ADJ: "Axis 2"
+
+ALK: "Allies III"
+ ALK_DEF: "the Allied Nations 3"
+ ALK_ADJ: "Allied 3"
+
+ AXK: "Axis III"
+ AXK_DEF: "the Axis Powers 3"
+ AXK_ADJ: "Axis 3"
+
+ NEU: ""
+ NEU_DEF: "the League of Neutrality"
+ NEU_ADJ: "Neutral" 
+ NEU_federal_council:0 "Council of Neutrality"
+
+ NOO: ""
+ NOO_DEF: ""
+ NOO_ADJ: ""
+
+ALI_merged: "Allies"
+AXI_merged: "Axis"
+
+ MOD_countdown_to_war:0 "The War"
+ MOD_countdown_to_war_mission:0 "Countdown to War"
+ MOD_countdown_to_war_mission_365:0 "Countdown to War"
+ MOD_countdown_to_war_mission_tt:0 "The War will begin."
+
+
+INDUSTRY_start_rapid_industralisation:0 "Reorganisation of the Heavy Industry"
+INDUSTRY_start_rapid_industralisation_desc:0 ""
+INDUSTRY_phase_1:0 "Phase I:\n Industrial Expansion"
+INDUSTRY_phase_1_desc:0 ""
+ INDUSTRY_expand_the_dockyards:0 "Battleship Investment"
+ INDUSTRY_expand_the_dockyards_desc:0 ""
+ INDUSTRY_continue_expanding_the_dockyards:0 "Cruiser Investment"
+ INDUSTRY_continue_expanding_the_dockyards_desc:0 ""
+ INDUSTRY_final_dockyard_expansion:0 "Carrier Investment"
+ INDUSTRY_final_dockyard_expansion_desc:0 ""
+ INDUSTRY_expand_the_industral_sector:0 "Buildup Industry I"
+ INDUSTRY_expand_the_industral_sector_desc:0 ""
+ INDUSTRY_continue_expanding_the_industral_sector:0 "Buildup Industry II"
+ INDUSTRY_continue_expanding_the_industral_sector_desc:0 ""
+ INDUSTRY_final_expansion_of_the_industral_sector:0 "Buildup Industry III"
+ INDUSTRY_final_expansion_of_the_industral_sector_desc:0 ""
+ INDUSTRY_expand_the_arms_industry:0 "Aggressive Industry I"
+ INDUSTRY_expand_the_arms_industry_desc:0 ""
+ INDUSTRY_continue_expanding_the_arms_industry:0 "Aggressive Industry II"
+ INDUSTRY_continue_expanding_the_arms_industry_desc:0 ""
+ INDUSTRY_final_expansion_of_the_arms_industry:0 "Aggressive Industry III"
+ INDUSTRY_final_expansion_of_the_arms_industry_desc:0 ""
+# INDUSTRY_extra_tech_slot:0 "Unlock Research Potential"
+# INDUSTRY_extra_tech_slot_desc:0 ""
+INDUSTRY_covert_warfare_school:0"School of Covert Warfare" 
+INDUSTRY_siege_warfare_school:0 "School of Siege Warfare"
+INDUSTRY_advanced_warfare:0 "School of Advanced Warfare"
+INDUSTRY_covert_warfare_school_desc:0 ""
+INDUSTRY_siege_warfare_school_desc:0 ""
+INDUSTRY_advanced_warfare_desc:0 ""
+INDUSTRY_school_of_attack:0 "School of Attack"
+INDUSTRY_school_of_attack_desc:0 ""
+INDUSTRY_school_of_defence:0 "School of Defence"
+INDUSTRY_school_of_defence_desc:0 ""
+
+INDUSTRY_phase_2:0 "Phase II:\n Armaments Production"
+INDUSTRY_phase_2_desc:0 ""
+INDUSTRY_phase_3:0 "Phase III: Research & Development"
+INDUSTRY_phase_3_desc:0 ""
+
+INDUSTRY_mixed_1:0 "Flexible Industry I"
+INDUSTRY_mixed_1_desc:0 ""
+INDUSTRY_mixed_2:0 "Flexible Industry II"
+INDUSTRY_mixed_2_desc:0 ""
+INDUSTRY_mixed_3:0 "Flexible Industry III"
+INDUSTRY_mixed_3_desc:0 ""
+
+INDUSTRY_navy_1:0 "Naval Manouvres"
+INDUSTRY_navy_2:0 "Destroyer Investment"
+INDUSTRY_navy_2_desc:0 ""
+INDUSTRY_navy_3:0 "Submarine Investment"
+INDUSTRY_navy_3_desc:0 ""
+INDUSTRY_navy_4:0 "Ultimate Naval Projection"
+INDUSTRY_navy_4_desc:0 ""
+
+navy_focuses_completion_tt:0 "Adds 3 §YDockyards§! and 20 §CNavy §!experience for every type of ships previously invested in."
+
+MOD_industry_interservice_rivalry_tt:0 "A rivalry between the military branches of §GArmy§! and §CNavy§! will break out over the nation's resources."
+
+industrial_concern_tt1:0 "Decisions to upgrade the §OIndustrial Concern§! will become available."
+industrial_concern_tt2:0 "This focus will unlock decisions to invite §OForeign  Industrial Experts.§!"
+
+MOD_industry_phase1_category:0 "Industry Specialisation"
+MOD_industry_phase2_category:0 "Invite Foreign Experts"
+
+MOD_industrial_concern_mil:0 "Specialization in Military Industry"
+MOD_industrial_concern_civ:0 "Specialization in Civilian Industry"
+MOD_industrial_concern_dock:0 "Specialization in Shipbuilding Industry"
+
+MOD_industrial_concern_cap_ali:0 "Bring American Experts"
+MOD_industrial_concern_base_ali:0 "Bring Soviet Experts"
+MOD_industrial_concern_grow_ali:0 "Bring French Experts"
+MOD_industrial_concern_ret_ali:0 "Bring English Experts"
+
+
+MOD_industrial_concern_cap_axi:0 "Bring Romanian Experts"
+MOD_industrial_concern_base_axi:0 "Bring Japanese Experts"
+MOD_industrial_concern_grow_axi:0 "Bring German Experts"
+MOD_industrial_concern_ret_axi:0 "Bring Italian Experts"
+
+
+
+ MOD_industrial_concern_cap_ali_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_base_ali_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_grow_ali_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_ret_ali_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_cap_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_base_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_grow_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+ MOD_industrial_concern_ret_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+

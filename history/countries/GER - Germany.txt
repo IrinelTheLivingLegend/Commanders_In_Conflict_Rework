@@ -1,0 +1,39 @@
+﻿capital = 713
+
+#set_oob = "AXI_1936"
+#set_naval_oob = "AXI_1936_Naval"
+#set_air_oob = "AXI_1936_Air"
+
+set_research_slots = 1
+
+set_stability = 1
+set_war_support = 0
+
+# Starting tech
+set_technology = {
+}
+
+
+add_ideas = {
+	undisturbed_isolation
+	disarmed_nation
+	closed_economy
+	neutral_country
+}
+
+set_convoys = 0
+
+recruit_character = NOO_noone
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 0
+	neutrality = 0
+	communism = 0
+	fascism = 100
+}

@@ -1,0 +1,301 @@
+frontline_defensive = {
+	enable = {
+		date > 1941.5.1
+
+		OR = {
+			AND = {
+				OR = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+				}
+				check_variable = { Global.allies_points > 300 }
+			}
+			AND = {
+				OR = {
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+				check_variable = { Global.axis_points > 300 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = { 
+			OR = {
+				original_tag= AXI
+				original_tag= AXJ
+				original_tag = AXK
+				original_tag= ALI
+				original_tag= ALJ
+				original_tag = ALK
+				original_tag= NEU
+			}
+		}
+		#ratio = 0.1
+		ordertype = front
+		execution_type = balanced
+		execute_order = no
+		manual_attack = yes
+	}
+}
+frontline_offensive = {
+	enable = {
+		date > 1941.5.1
+		OR = {
+			AND = {
+				OR = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+				}
+				check_variable = { Global.allies_points < 500 }
+			}
+			AND = {
+				OR = {
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+				check_variable = { Global.axis_points < 500 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = { 
+			OR = {
+				original_tag= AXI
+				original_tag= AXJ
+				original_tag= ALI
+				original_tag= ALJ
+				original_tag= NEU
+			}
+		}
+		#ratio = 0.1
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+desperate_attack = {
+	enable = {
+		date > 1941.5.1
+		OR = {
+			AND = {
+				OR = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+				}
+				check_variable = { Global.allies_points < 150 }
+			}
+			AND = {
+				OR = {
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+				check_variable = { Global.axis_points < 150 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = { 
+			OR = {
+				original_tag= AXI
+				original_tag= AXJ
+				original_tag= ALI
+				original_tag= ALJ
+				original_tag= NEU
+			}
+		}
+		ratio = 0.1
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+rush_vps_strat = {
+	enable = {
+		date < 1941.5.01
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = { 
+			OR = {
+				original_tag= AXI
+				original_tag= AXJ
+				original_tag = AXK
+				original_tag= ALI
+				original_tag= ALJ
+				original_tag = ALK
+				original_tag= NEU
+			}
+		}
+		#ratio = 0.1
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+across_the_rhine = {
+	enable = {
+		has_global_flag = game_across_the_rhine
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			55#frankfurt
+			51#köln
+			7#amsterdam
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+jewel = {
+	enable = {
+		has_global_flag = game_indian_sunrise
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			435#patna
+			436#nagpur
+			438#lucknow
+		}
+		subtract_fronts_from_need = no
+	}
+}
+marco_polo = {
+	enable = {
+		has_global_flag = game_marco_polo
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			615#taiyuan
+			743#qingdao
+			609#bejing
+		}
+		subtract_fronts_from_need = no
+	}
+}
+
+nordwind = {
+	enable = {
+		has_global_flag = game_scandinavia
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			141#stockholm
+			666#lulea
+			144#narvik
+		}
+		subtract_fronts_from_need = no
+	}
+}
+at_the_gates = {
+	enable = {
+		has_global_flag = game_red_october
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			217#stalingrad
+			260#voronesz
+			265#mikhaylovka
+			257#tambov
+			245#millerovo
+		}
+		subtract_fronts_from_need = no
+	}
+}
+sonnenblume = {
+	enable = {
+		has_global_flag = game_sonnenblum
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			910#crete
+			450#bengasi
+			662#waddan
+			665#gabes(the fall of dankus)
+			116#malta
+		}
+		subtract_fronts_from_need = no
+	}
+}
+powderkeg = {
+	enable = {
+		has_global_flag = game_powder_keg
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			43#Budpest
+			163#Zadar
+			107#Belgrade
+			76#Cluj
+			48#Sofia
+		}
+		subtract_fronts_from_need = no
+	}
+}
+great_war = {
+	enable = {
+		has_global_flag = game_great_war_3v3
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			7
+			51
+			8
+			6
+			161
+		}
+		subtract_fronts_from_need = no
+	}
+}

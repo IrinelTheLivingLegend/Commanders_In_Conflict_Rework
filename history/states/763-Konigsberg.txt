@@ -1,0 +1,32 @@
+
+state={
+	id=763
+	name="STATE_763"
+	manpower = 1 # = 1
+	state_category = city
+
+	history={
+
+
+
+		victory_points = {
+			6332 1
+		}
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			6332 = {
+				naval_base = 3
+
+			}
+			air_base = 3
+		}
+	}
+
+	provinces={
+		281 348 395 3384 6332 11265
+	}
+
+	local_supplies=0.0
+}

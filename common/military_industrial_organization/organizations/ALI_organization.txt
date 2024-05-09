@@ -1,0 +1,338 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+ALI_kirov_organization = {
+	name = SOV_kirov_organization
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_SOV_kirov
+	allowed = {
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+	
+}
+ALI_marmon_herrington_organization = {
+	name = USA_marmon_herrington_organization
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_marmon_herrington
+	
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_apx_organization = {
+	name = FRA_apx_organization
+	include = generic_medium_tank_organization
+	icon = GFX_idea_FRA_atelier_puteaux
+	
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_vauxhall_organization = {
+	name = ENG_vauxhall_organization
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_vauxhall
+	allowed = {
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_detroit_arsenal_organization = {
+	name = detroit_arsenal
+	include = generic_tank_organization
+	icon = GFX_idea_generic_industrial_concern_1
+	
+	allowed = {
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ALI_john_brown_organization = {
+	name = ENG_john_brown_organization
+	include = generic_raider_ship_organization
+	icon = GFX_idea_john_brown_company
+	
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_newport_news_shipbuilding_organization = {
+	name = USA_newport_news_shipbuilding_organization
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_newport_news_shipbuilding
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_acl_organization = {
+	name = FRA_acl_organization
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_FRA_acl
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_akers_mekaniske_verksted_organization = {
+	name = NOR_akers_mekaniske_verksted_organization
+	include = generic_escort_ship_organization
+	icon = GFX_idea_NOR_akers_mekaniske_verksted
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ALI_SNCAC_organization = {
+	name = SNCAC
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_FRA_sncac
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_mig_design_bureau_organization = {
+	name = SOV_mig_design_bureau_organization
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_mig_design_bureau
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_camco_bomber_organization = {
+	name = CHI_camco_bomber_organization
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_CHI_camco
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_flyvertroppernes_organization = {
+	name = DEN_flyvertroppernes_organization
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_DEN_flyvertroppernes_organization
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_fairey_aviation_organization = {
+	name = ENG_fairey_aviation_organization
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_fairey_aviation
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_boeing_organization = {
+	name = USA_boeing_organization
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_boeing
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_de_havilland_organization = {
+	name = ENG_de_havilland_organization
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_de_havilland
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_supermarine_organization = {
+	name = ENG_supermarine_organization
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_supermarine
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_north_american_aviation_organization = {
+	name = USA_north_american_aviation_organization
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_north_american_aviation
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+ALI_inglis_company_organization = {
+	name = CAN_inglis_company_organization
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_inglis_company
+	allowed = {
+		 OR = {
+		 	tag = ALI
+		 	tag = ALJ
+			tag = ALK
+		 }
+	}
+}
+ALI_schneider_organization = {
+	name = FRA_schneider_organization
+	include = generic_artillery_organization
+	icon = GFX_idea_schneider
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+} 
+ALI_ford_motor_company_organization = {
+	name = USA_ford_motor_company_organization
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_ford_motor_company
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_lysaghts_works_organization = {
+	name = AST_lysaghts_works_organization
+	include = generic_support_equipment_organization
+	icon = GFX_idea_lysaghts_works
+	allowed = {	
+		OR = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}
+ALI_scania_vabis_organization = {
+	name = SWE_scania_vabis_organization
+	include = generic_armored_car_organization
+	icon = GFX_idea_scania
+	allowed = {
+		OR = {
+		tag = ALI
+		tag = ALJ
+		tag = ALK
+		}
+	}	
+}
+ALI_mytishchy_machine_building_plant_organization = {
+	name = SOV_mytishchy_machine_building_plant_organization
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+	
+	allowed = {	 
+		OR = {
+			tag = ALI 
+			tag = ALJ
+			tag = ALK
+		}
+	}
+}

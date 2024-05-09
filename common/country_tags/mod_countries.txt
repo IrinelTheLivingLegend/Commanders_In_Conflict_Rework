@@ -1,0 +1,8 @@
+ALI	= "countries/Allies.txt"
+AXI = "countries/Axis.txt"
+ALJ	= "countries/Allies2.txt"
+AXJ = "countries/Axis2.txt"
+AXK = "countries/Axis3.txt"
+ALK = "countries/Allies3.txt"
+NEU = "countries/NeutralNation.txt"
+NOO = "countries/Nobody.txt"

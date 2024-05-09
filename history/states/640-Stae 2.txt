@@ -1,0 +1,40 @@
+
+state={
+	id=640
+	name="STATE_640" # Mandalay
+	manpower = 1 # = 2142858
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 5
+		chromium = 5
+	}
+	state_category = large_city
+	
+	history={
+
+
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+			#infrastructure = 3
+			#arms_factory = 2
+			#industrial_complex = 4
+		}
+		victory_points = {
+			1492 15
+		}
+		victory_points = {
+			4425 15
+		}
+
+	}
+
+	provinces={
+		1082 1170 1197 1492 1566 1607 1934 2061 4087 4175 4210 4318 4425 4585 4588 4654 4996 7400 7469 7562 7603 7647 7909 7974 8063 10386 10486 10920 12317 12335 12363 12404 12464 12492
+	}
+
+	local_supplies=0.0
+}

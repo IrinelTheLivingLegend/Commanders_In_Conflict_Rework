@@ -1,0 +1,43 @@
+
+state={
+	id=51
+	name="STATE_51"
+	manpower = 1 # = 1
+
+	state_category = metropolis
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+		victory_points = {
+			6469 1
+		}
+		victory_points = {
+			587 50
+		}
+		victory_points = {
+			3444 1
+		}
+		victory_points = {
+			3547 1
+		}
+		buildings = {
+			air_base = 3
+
+		}
+
+		set_demilitarized_zone = yes
+
+
+		1936.3.7 = {
+			set_demilitarized_zone = no
+		}
+	}
+
+	provinces={
+		529 587 3444 3512 3547 6469 6570 9482 9522
+	}
+
+
+	local_supplies=0.0
+}

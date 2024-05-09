@@ -1,0 +1,237 @@
+MOD_countdown_to_war = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+			original_tag = NEU
+		}
+
+	}
+}
+MOD_countdown_to_victory_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		NOT = {
+			has_global_flag = FiveVpMap
+		}
+	}
+}
+MOD_countdown_to_victory_5vp_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		has_global_flag = FiveVpMap
+	}
+}
+
+MOD_leader_school_cat = {
+
+	icon = border_conflicts
+
+	priority = 95
+	visible_when_empty = yes
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = AXI
+			original_tag = ALJ
+			original_tag = AXJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+	visible = {
+		OR={
+			has_completed_focus=INDUSTRY_siege_warfare_school
+			has_completed_focus=INDUSTRY_covert_warfare_school
+			has_completed_focus=INDUSTRY_advanced_warfare
+			#has_completed_focus=INDUSTRY_organizer
+
+		}
+	}
+}
+MOD_hide_other_focuses = {
+	icon = GFX_decision_generic_decision
+	allowed={
+		OR = {
+			original_tag = AXI
+			original_tag = ALI
+			original_tag = AXJ
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = AXK
+		}
+	}
+}
+
+AXI_ITA_missiolinis = { 
+
+	icon = decision_category_ITA_missiolinis
+
+	picture = GFX_decision_cat_picture_ITA_missiolinis
+	
+	allowed = {
+		OR={
+		original_tag = AXJ
+		original_tag = AXI
+		original_tag = AXK
+		}
+	}
+	
+	priority = 91
+
+	visible_when_empty = yes
+	
+	visible = {
+		ITA_missiolinis_system_available = yes
+	}
+}
+
+AXI_ITA_balance_of_power_category = {
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		OR={
+		original_tag = AXJ
+		original_tag = AXI
+		original_tag = AXK
+		}
+	}
+	
+	priority = 90
+	
+	visible = {
+		
+	}
+}
+AXI_the_il_duce_project_category = {
+	icon = GFX_decision_generic_construction
+	allowed={
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+	}
+	visible = {
+			has_completed_focus = AXI_german_research_teams
+}
+priority = 94
+}
+
+AXI_JAP_interservice_rivalry = {
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+	}
+	visible = {
+}
+priority = 93
+}
+MOD_industry_phase1_category = {
+	priority = 94
+
+	icon = generic_industry
+
+	picture = SOV_civil_puppet_interaction 
+
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+	}
+	visible = {
+		has_completed_focus = INDUSTRY_phase_1
+}
+}
+MOD_industry_phase2_category = {
+	priority = 94
+
+	
+
+	icon = generic_industry
+
+	picture = SOV_civil_puppet_interaction 
+
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+	}
+	visible = {
+		has_completed_focus = INDUSTRY_phase_2
+		has_country_flag = industrial_concern_upgraded_once_flag
+	}
+}
+
+#custom backgrounds
+MOD_custom_decisions = {
+	priority = 0
+
+	icon = GFX_idea_picture
+
+	allowed = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+		}
+	}
+	visible = {
+}
+}

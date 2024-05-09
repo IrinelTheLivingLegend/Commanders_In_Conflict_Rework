@@ -1,0 +1,391 @@
+#	Triggers to control if diplomatic actions are enabled:
+#		Format:
+#
+#		<diplomatic action tag>_enabled_trigger = {
+#			<trigger contents>
+#		}
+#
+#		ROOT is the country initiating the diplomatic action.
+#		FROM is the recipient or target of the diplomatic action.
+#
+#		Note:  For cleaner tooltips, it is recommended that you use
+#			if triggers within the enable triggers, and a single
+#			custom_trigger_tooltip trigger within each if trigger.
+#
+#		Example: (Germany is prevented from declaring war on the Soviet Union.)
+#
+#		DIPLOMACY_WAR_ENABLE_TRIGGER = {
+#			if = {
+#				limit = {
+#					tag = GER
+#				}
+#				custom_trigger_tooltip = {
+#					tooltip = PREVENT_GER_WAR_ON_SOV
+#					FROM = {
+#						NOT = {
+#							tag = SOV
+#						}
+#					}
+#				}
+#			}
+#		}
+
+# This specifically overrides the rule check as to whether or not you can guarantee other ideologies
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
+	always = no
+}
+
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+	always = no
+}
+
+DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
+	always = no
+}
+
+DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			
+		}
+		always = yes
+	}
+	if = {
+		limit = {
+			
+		}
+		always = yes #handled by game logic, see above
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_SAME_IDEOLOGY_TT
+			has_government = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_SAME_FACTION_TT
+			is_in_faction_with = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_BLOCKED_TT
+			always = no
+		}
+	}
+}
+DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			
+		}
+		always = yes
+	}
+	if = {
+		limit = {
+			
+		}
+		always = yes #handled by game logic, see above
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_SAME_IDEOLOGY_TT
+			has_government = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_SAME_FACTION_TT
+			is_in_faction_with = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LEND_LEASE_BLOCKED_TT
+			always = no
+		}
+	}
+}
+DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			
+		}
+		always = yes
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LICENSING_SAME_IDEOLOGY_TT
+			has_government = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LICENSING_SAME_FACTION_TT
+			is_in_faction_with = FROM
+		}
+	}
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_LICENSING_BLOCKED_TT
+			always = no
+		}
+	}
+}
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ASSUME_LEADERSHIP_BLOCKED_TOOLTIP
+			always = no
+		}
+	}
+}
+DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
+	always = no
+}
+
+game_weight_can_add_fascist = {
+	GER = {
+		AND = {
+			OR = {
+				check_variable = { fascist_game_weight < democratic_game_weight }
+				check_variable = { fascist_game_weight = democratic_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { fascist_game_weight < unaligned_game_weight }
+				check_variable = { fascist_game_weight = unaligned_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { fascist_game_weight < communist_game_weight }
+				check_variable = { fascist_game_weight = communist_game_weight }
+			}
+		}
+	}
+}
+
+game_weight_can_add_democratic = {
+	GER = {
+		AND = {
+			OR = {
+				check_variable = { democratic_game_weight < fascist_game_weight }
+				check_variable = { democratic_game_weight = fascist_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { democratic_game_weight < unaligned_game_weight }
+				check_variable = { democratic_game_weight = unaligned_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { democratic_game_weight < communist_game_weight }
+				check_variable = { democratic_game_weight = communist_game_weight }
+			}
+		}
+	}
+}
+
+game_weight_can_add_unaligned = {
+	GER = {
+		AND = {
+			OR = {
+				check_variable = { unaligned_game_weight < fascist_game_weight }
+				check_variable = { unaligned_game_weight = fascist_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { unaligned_game_weight < democratic_game_weight }
+				check_variable = { unaligned_game_weight = democratic_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { unaligned_game_weight < communist_game_weight }
+				check_variable = { unaligned_game_weight = communist_game_weight }
+			}
+		}
+	}
+}
+
+game_weight_can_add_communist = {
+	GER = {
+		AND = {
+			OR = {
+				check_variable = { communist_game_weight < fascist_game_weight }
+				check_variable = { communist_game_weight = fascist_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { communist_game_weight < democratic_game_weight }
+				check_variable = { communist_game_weight = democratic_game_weight }
+			}
+		}
+		AND = {
+			OR = {
+				check_variable = { communist_game_weight < unaligned_game_weight }
+				check_variable = { communist_game_weight = unaligned_game_weight }
+			}
+		}
+	}
+}
+
+DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
+	if = { # TODO_TA make more generic trigger
+		limit = {
+			NOT = { has_global_flag = ethiopia_recognized_flag }
+			FROM = {
+				tag = ETH 
+			}
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = LON_NON_INTERFERENCE_RESOLUTION_JOIN
+			always = no
+		}
+	}
+	if = { 
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+			ROOT = {
+				original_tag = ICE
+				has_idea = neutrality_idea
+				is_subject = yes 
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = ICELAND_HAS_DECLARED_NEUTRALITY_JOIN
+			always = no
+		}
+	}
+	if = { 
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+			ROOT = {
+				original_tag = DEN
+				has_country_flag = DEN_is_protectorate_flag
+				is_subject = yes 
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DENMARK_IS_A_PUPPET_JOIN
+			always = no
+		}
+	}
+}
+DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
+	if = { 
+		limit = {
+			NOT = { has_global_flag = ethiopia_recognized_flag }
+			ROOT = {
+				tag = ETH
+			}
+			
+		}
+		custom_trigger_tooltip = {
+			tooltip = LON_NON_INTERFERENCE_RESOLUTION_CALL
+			always = no
+		}
+	}
+	if = { 
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+			FROM = {
+				original_tag = ICE
+				has_idea = neutrality_idea
+				is_subject = yes 
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = ICELAND_HAS_DECLARED_NEUTRALITY_CALL
+			always = no
+		}
+	}
+	if = { 
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+			FROM = {
+				original_tag = DEN
+				has_country_flag = DEN_is_protectorate_flag
+				is_subject = yes 
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DENMARK_IS_A_PUPPET_CALL
+			always = no
+		}
+	}
+}
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+	always = no
+}
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+	always = no
+}

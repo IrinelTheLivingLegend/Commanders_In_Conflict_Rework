@@ -1,0 +1,47 @@
+state={
+	id=521
+	name="STATE_521"
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 5
+		chromium = 5
+	}
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		buildings = {
+			#infrastructure = 3
+			#dockyard = 3
+			air_base = 1
+			7564 = {
+				naval_base = 2
+			}
+			7566 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			7564 1
+		}
+		victory_points = {
+			7566 1
+		}
+
+
+	}
+
+	provinces={
+		1472 1557 1570 4481 4502 4517 4530 4546 4560 4632 5227 7522 7535 7564 7566 7592 7610 7651 7666 10430 10445 10458 10460 10475 10487 11006 12308 12382 12411 12424 12451
+	}
+	manpower = 1 #=1363636
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

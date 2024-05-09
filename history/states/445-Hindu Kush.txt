@@ -1,0 +1,36 @@
+
+state={
+	id=445
+	name="STATE_445" # Quetta
+
+	manpower = 1 # = 2142858
+	resources = {
+		oil = 5
+		aluminium = 5
+		tungsten = 5
+		rubber = 5
+		steel = 5
+		chromium = 5
+	}
+	state_category = large_city
+	history={
+		owner=NOO
+		add_core_of=NOO
+		victory_points = {
+			5105 1
+		}
+
+		buildings = {
+			#infrastructure = 3
+			#industrial_complex = 2
+			#arms_factory=2
+		}
+
+	}
+
+	provinces={
+		1107 4990 5105 7847 7903 7975 8044 8098 10813
+	}
+
+	local_supplies=0.0
+}

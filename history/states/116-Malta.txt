@@ -1,0 +1,26 @@
+state=
+{
+	id=116
+	name="STATE_116"
+	manpower = 1 # = 1
+	state_category = small_island
+	history= {
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = {
+			12003 50
+		}
+		buildings = {
+			#infrastructure = 3
+			air_base = 5
+			12003 = {
+				naval_base = 5
+			}
+		}
+	}
+	provinces= { 12003 }
+	
+
+	local_supplies=0.0
+}

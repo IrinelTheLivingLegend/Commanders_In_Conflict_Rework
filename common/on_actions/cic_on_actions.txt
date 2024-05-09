@@ -1,0 +1,1366 @@
+on_actions = {
+	#Not run on a specific country.
+	on_startup = {
+		effect = {
+			set_variable ={ Global.allies_points = 700 }
+			set_variable ={ Global.axis_points = 700 }
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+				}
+				set_variable={global.neutral_score=5}
+			}
+			else = {
+			set_variable={global.neutral_score=3}
+			}
+			NEU={refresh_topbar=yes}
+			set_variable_to_random = {
+				var = global.game_id
+				min = 1000000
+				max = 9999999
+				integer = yes
+			}
+		}
+	}
+	on_capitulation_immediate = {
+    	effect = {
+			if={
+				limit={
+					NOT={
+						OR={
+							has_global_flag = game_over 
+							has_global_flag = game_caribbean
+							has_global_flag = game_nanshin_ron
+							has_global_flag = game_spain
+							has_global_flag = game_valhalla
+							has_global_flag = game_red_october2v2
+							has_global_flag = game_barbarossa3v3
+							has_global_flag = game_great_war_3v3
+						}
+					}
+				}
+				set_global_flag = game_over
+				FROM = {
+					annex_country = {
+					target = ROOT
+					}
+				}
+				if = {
+					limit = {original_tag=AXI}
+					set_variable={
+						Global.super_event=2
+					}
+					set_variable={
+						Global.end_date=Global.date
+					}
+				}
+				else={
+					set_variable={Global.super_event=1}
+					set_variable={Global.end_date=Global.date}}
+			}
+			if = {
+				limit = {
+					NOT= {has_global_flag = game_over}
+					 OR={
+						has_global_flag = game_caribbean
+						has_global_flag = game_nanshin_ron
+						has_global_flag = game_spain
+						has_global_flag = game_valhalla
+						has_global_flag = game_red_october2v2
+						has_global_flag = game_barbarossa3v3
+						has_global_flag = game_great_war_3v3
+					} 
+					OR = {
+						AND={original_tag=AXI AXJ={has_capitulated=yes}}
+						AND={original_tag=AXI AXK={has_capitulated=yes}} 
+						AND={original_tag=AXJ AXI={has_capitulated=yes}} 
+						AND={original_tag=AXJ AXK={has_capitulated=yes}}
+						AND={original_tag=AXK AXI={has_capitulated=yes}}
+						AND={original_tag=AXK AXJ={has_capitulated=yes}}
+
+						AND={original_tag=ALI ALJ={has_capitulated=yes}} 
+						AND={original_tag=ALI ALK={has_capitulated=yes}}
+						AND={original_tag=ALJ ALI={has_capitulated=yes}}
+						AND={original_tag=ALJ ALK={has_capitulated=yes}} 
+						AND={original_tag=ALK ALI={has_capitulated=yes}}
+						AND={original_tag=ALK ALJ={has_capitulated=yes}}
+					}
+				}
+
+				set_global_flag = game_over
+				if={
+					limit={
+						OR = {
+							original_tag=AXI
+						 	original_tag=AXJ 
+							original_tag=AXK
+						}
+					}
+					ALI={annex_country = {target = AXI}}
+					ALJ={annex_country = {target = AXJ}}
+					ALK={annex_country = {target = AXK}}
+					set_variable={Global.super_event=2}
+					set_variable={Global.end_date=Global.date}
+				}
+				else_if ={
+					limit={
+						OR = {
+							original_tag=ALI
+							original_tag=ALJ
+							original_tag=ALK
+						}
+					}
+					AXI={annex_country = {target = ALI}}
+					AXJ={annex_country = {target = ALJ}}
+					AXK={annex_country = {target = ALK}}
+					set_variable={Global.super_event=1}	
+					set_variable={Global.end_date=Global.date}
+				}
+			}
+		}
+	}
+	on_daily_NOO = {
+		effect = {
+			if={
+				limit= {
+					NOT = {
+						has_global_flag = game_started
+					}
+				}
+				set_global_flag=game_started
+				every_country={
+					remove_ideas=starting_eff
+				}
+			}
+			if={
+				limit= { 
+					has_game_rule = {
+						rule = cic_alt_vp
+						option = yes
+					} 
+				}
+				set_variable={Global.timefactor=GLOBAL.num_days}
+				if = {
+					limit = {
+						has_global_flag = time_365 #360 days actually
+					}
+					subtract_from_variable={Global.timefactor=708460} #708465 days(1941 years)-5days
+				}
+				else = {
+						subtract_from_variable={Global.timefactor=708566} #708465 days(1941 years)+101 days(until april)
+				}
+				divide_variable={Global.timefactor=350} #was 365
+				add_to_variable={Global.timefactor=1}
+				
+
+				clamp_variable = {
+					var = global.axis_points
+					min = 0
+					max = 700
+				}
+							
+				clamp_variable = {
+					var = global.allies_points
+					min = 0
+					max = 700
+				}
+
+				if = { 
+					limit = { check_variable={Global.total_score=5 } } 
+					if = { 
+						limit = { check_variable={Global.axis_score > Global.allied_score } } 
+						set_variable = {axisremove = Global.axis_score}
+						subtract_from_variable = {axisremove = 1}
+						divide_variable={axisremove = 2}
+						multiply_variable={ axisremove = Global.timefactor}
+						subtract_from_variable={Global.allies_points=axisremove}
+					}
+					if = {
+						limit = { check_variable={Global.axis_score < Global.allied_score } } 
+						set_variable = {alliesremove = Global.allied_score}
+						subtract_from_variable = {alliesremove = 1}
+						divide_variable={alliesremove = 2}
+						multiply_variable={ alliesremove = Global.timefactor}
+						subtract_from_variable={Global.axis_points=alliesremove}
+					}	 
+				}
+				if = { 
+					limit = { check_variable={Global.total_score=3 } } 
+					if = { 
+						limit = { check_variable={Global.axis_score > Global.allied_score } } 
+						set_variable = {axisremove = Global.axis_score}
+						subtract_from_variable = {axisremove = 1}
+						multiply_variable={ axisremove = Global.timefactor}
+						subtract_from_variable={Global.allies_points=axisremove}
+					}
+					if = { 
+						limit = { check_variable={Global.axis_score < Global.allied_score } } 
+						set_variable = {alliesremove = Global.allied_score}
+						subtract_from_variable = {alliesremove = 1}
+						multiply_variable={ alliesremove = Global.timefactor}
+						subtract_from_variable={Global.axis_points=alliesremove}
+					}
+				}
+				if = {
+					limit = {
+						NOT= {has_global_flag = game_over}
+						check_variable={Global.axis_points=0}
+					}
+					set_variable={Global.super_event=2}
+					set_global_flag = game_over
+					set_variable={Global.end_date=Global.date}
+				}
+				if = {
+					limit = {
+						NOT= {has_global_flag = game_over}
+						check_variable={Global.allies_points=0}
+					}
+					set_variable={Global.super_event=1}
+					set_global_flag = game_over
+					set_variable={Global.end_date=Global.date}
+				}
+			}	 
+		}
+	}
+	#ROOT is new controller
+	#FROM is old controller
+	#FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+					NOT={has_global_flag = game_spain}
+					NOT={has_global_flag = game_red_october}
+					NOT={has_global_flag = game_barbarossa3v3}
+					NOT={has_global_flag = game_great_war_3v3}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 116
+								state = 665
+								state = 450
+								state = 910
+								state = 662
+								state = 7
+								state = 327
+								state = 335
+								state = 333
+								state = 608
+								state = 743
+								state = 615
+								state = 573
+								state = 669
+								state = 277
+								state = 312
+								state = 315
+								state = 474
+								state = 319
+								state = 144
+								state = 666
+								state = 141
+								state = 85
+								state = 808
+								state = 263
+								state = 219
+								state = 223
+								state = 260
+								state = 245
+								state = 6
+								state = 8
+								state = 51
+								state = 159
+								state = 217 #stalingrad1v1
+								state = 265 #stalingrad1v1
+								state = 257 #stalingrad1v1
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+					has_global_flag = game_red_october2v2
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 219 #stalingrad2v2
+								state = 257 #stalingrad2v2
+								state = 220 #stalingrad2v2
+								state = 245 #stalingrad2v2
+								state = 217 #stalingrad2v2
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+					has_global_flag = game_red_october
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 217 #stalingrad1v1
+								state = 265 #stalingrad1v1
+								state = 245 #stalingrad1v1
+								state = 257 #stalingrad1v1
+								state = 260 #stalingrad1v1
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}	
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+					has_global_flag = game_spain
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 458
+								state = 459
+								state = 114
+								state = 735
+								state = 31
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = FiveVpMap
+					has_global_flag = game_great_war_3v3
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 6
+								state = 7
+								state = 8
+								state = 51
+								state = 159
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 5
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit={
+					NOT={has_global_flag = FiveVpMap
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 116
+								state = 7
+								state = 327
+								state = 665
+								state = 51
+								state = 335
+								state = 450
+								state = 55
+								state = 333
+								state = 910
+								state = 662
+								state = 144
+								state = 666
+								state = 141
+								state = 608
+								state = 743
+								state = 615
+								state = 438
+								state = 435
+								state = 436
+								state = 202
+								state = 226
+								state = 221
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 3
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 3
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 3
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 3
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 3
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 3
+							}
+						}
+					}
+				}
+			}
+			refresh_topbar=yes
+		}
+	}
+	on_weekly = {
+		effect = {
+			if={
+				limit= { 
+					has_completed_focus=ALI_pan_africanism
+		 		} 
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 80
+				producer = ETH
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if={
+				limit= {
+					 has_completed_focus=ALI_arm_local_militias
+					 } 
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = USA
+				}
+			}
+			if={
+				limit= {
+					has_completed_focus = AXI_supplies_from_the_sky
+				} 
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 35
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 20
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = transport_plane_equipment
+					amount = 10
+					producer = GER
+				}
+			}
+		}
+	}
+
+	on_monthly = { #italian dynamic production growth debuff
+		effect = {
+			if = {
+				limit = {
+					or = {
+						original_tag = AXI
+						original_tag = AXJ
+						original_tag = AXK
+					}
+				}
+				ROOT= {
+					if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.30 }
+						}
+						ROOT = {
+							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
+						}	
+					}
+					else_if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.25 }
+						}
+						ROOT = {
+							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
+						}	
+					}
+					else_if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.2 }
+							}
+						ROOT = {
+							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
+						}	
+					}
+					else_if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.15 }
+						}
+						ROOT = {
+							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
+						}	
+					}
+					else_if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.1 }
+						}
+						ROOT = {
+							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
+						}	
+					}
+					else_if = {
+						limit = {
+							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.05 }
+							}
+						remove_dynamic_modifier = {modifier = AXI_aeronautica_machta_dinamic_idea}
+					}
+				}
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule ={ rule= cic_time_scale option = time_467}
+				}
+				set_global_flag = time_467	
+			}
+			if = {
+				limit = {
+					has_game_rule ={ rule= cic_time_scale option = time_365}
+				}
+				set_global_flag = time_365
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALK = {
+					set_cosmetic_tag = ALJ
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj_alk
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALK={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALK
+					add_core_of = ALI
+				}
+				ALI = {
+					set_cosmetic_tag = ALI_merged
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 16
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 255
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXK = {
+					set_cosmetic_tag = AXJ
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj_axk
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXK
+					add_core_of = AXI
+				}
+				AXI = {
+					set_cosmetic_tag = AXI_merged
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 64
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 194
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			ALI = {
+				send_embargo = AXI
+				send_embargo = AXJ
+				send_embargo = AXK
+			}
+			ALJ = {
+				send_embargo = AXI
+				send_embargo = AXJ
+				send_embargo = AXK
+			}
+			ALK = {
+				send_embargo = AXI
+				send_embargo = AXJ
+				send_embargo = AXK
+			}
+			AXI = {
+				send_embargo = ALI
+				send_embargo = ALJ
+				send_embargo = ALK
+			}
+			AXJ = {
+				send_embargo = ALI
+				send_embargo = ALJ
+				send_embargo = ALK
+			}
+			AXK = {
+				send_embargo = ALI
+				send_embargo = ALJ
+				send_embargo = ALK
+			}
+		}
+	}
+}

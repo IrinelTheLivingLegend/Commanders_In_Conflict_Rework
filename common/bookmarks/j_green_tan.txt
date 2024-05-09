@@ -1,0 +1,267 @@
+bookmarks = {
+	bookmark = {
+		name = "CARIBBEAN"
+		desc = "CARIBBEAN_DESC"
+		date = 1940.1.1.12
+		picture = "GFX_select_date_caribbean"
+		default_country = "ALI"
+		default = yes
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALJ"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXJ"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_caribbean
+			set_global_flag = FiveVpMap
+			AXI={
+				set_capital = {state = 306 }
+				set_oob = AXI_caribbean
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state = 375 }
+				set_oob = ALI_caribbean
+			}
+			AXJ={
+				set_capital = {state = 307 }
+				set_oob = AXJ_caribbean
+				AXJ_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALJ={
+				set_capital = {state = 365 }
+				set_oob = ALJ_caribbean
+			}
+
+			every_state = {
+				limit={OR={state=375 state=374 state=372 state=371}}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = megalopolis
+				
+			}
+
+
+			every_state = {
+				limit={OR={	state=482 state=480 state=481 state=479 state=478 state=485 state=277 state=477 state=476 state=475 state=474 state=311 state=313 state=314 state=312 state=317 state=316 state=304 state=685 state=315 state=689 state=690 state=693 state=318 state=319 state=686 state=308 state=694 state=692 state=691 state=695 state=649 state=915 state=914 state=913 state=912}}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+				add_manpower = 1000000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={state=306 state=493 state=486 state=305}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = megalopolis
+				
+			}
+			every_state = {
+				limit={OR={ state=489 state=307 state=488 state=687}}
+				AXJ={transfer_state=PREV}
+				add_core_of =AXJ
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = megalopolis
+				
+			}
+			every_state = {
+				limit={OR={	state=370 state=367 state=365 state=366}}
+				ALJ={transfer_state=PREV}
+				add_core_of =ALJ
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = megalopolis
+				
+			}
+			every_state = {
+				limit={OR={ state=375 state=374 state=372 state=371 #ALI
+				state=306 state=493 state=486 state=305 # AXI
+				state=489 state=307 state=488 state=687 # AXJ
+				state=370 state=367 state=365 state=366 #ALJ
+				 }}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={ state=375 state=371  #allies
+							state=365 state=366 #allies 2
+							state=489 state=307 #Axis 2
+							state=306 state=493 #Axis
+							}}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+			}
+			}
+
+		build_railway = {
+    		level = 1
+    	    path = { 10830 4898 1945 }
+			}
+
+		build_railway = {
+    		level = 1
+    	    path = { 13314 13315 12715 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 8017 13290 12865 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 13314 4904 13308 13304 13300 12753 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 10886 12823 13093 12865 12738 13092 13087 12878 4611 4624 7617 7630 10482 4969 2023 10747 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 5026 5056 8024 8113 }
+			}
+		build_railway = {
+    		level = 1
+    	    path = { 1944 1937 }
+			}
+
+			ALI = {
+				add_to_faction = ALJ
+			}
+			AXI = {
+				add_to_faction = AXJ
+			}
+
+			#Those nations are required to exist on map for the flags on industrial decisions to show properly
+		every_state = {
+				limit={state=270}
+				USA={transfer_state=PREV}
+				add_core_of =USA
+		}
+		every_state = {
+				limit={state=650}
+				ENG={transfer_state=PREV}
+				add_core_of =ENG
+		}
+		every_state = {
+				limit={state=631}
+				FRA={transfer_state=PREV}
+				add_core_of =FRA
+		}
+		every_state = {
+				limit={state=630}
+				SOV={transfer_state=PREV}
+				add_core_of =SOV
+		}
+		every_state = {
+				limit={state=713}
+				GER={transfer_state=PREV}
+				add_core_of =GER
+		}
+		every_state = {
+				limit={state=706}
+				ROM={transfer_state=PREV}
+				add_core_of =ROM
+		}
+		every_state = {
+				limit={state=707}
+				ITA={transfer_state=PREV}
+				add_core_of =ITA
+		}
+		every_state = {
+				limit={state=704}
+				JAP={transfer_state=PREV}
+				add_core_of =JAP
+		}
+		}
+	}
+}

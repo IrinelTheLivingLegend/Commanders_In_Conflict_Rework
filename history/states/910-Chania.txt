@@ -1,0 +1,35 @@
+state={
+	id=910
+	name="STATE_910"
+	provinces={
+		12058
+	}
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+		victory_points = {
+			12058 50
+		}
+		buildings = {
+			#infrastructure = 3
+			air_base = 5
+			12058 = {
+				naval_base = 5
+			}
+		}
+
+	}
+	resources = {
+		oil = 30
+		aluminium = 20
+		tungsten = 20
+		rubber = 20
+		steel = 20
+		chromium = 20
+	}
+	manpower = 1 #=1
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,936 @@
+
+ideas = {
+	hidden_ideas = {
+	
+		ALI_talented_young_officiers = {
+			removal_cost = -1
+
+			picture = generic_armor
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_factor = 1.0
+				army_leader_cost_factor = -0.75
+			}
+		}
+	}
+	country = {
+		ALI_cairo_branch = {
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				agency_upgrade_time = -0.3
+				decryption_power = 25
+				operative_slot = 1
+			}
+		}
+		ALI_tank_hunters_idea = {
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+		ALI_men_for_the_lines = {
+			removal_cost = -1
+
+			picture = SOV_war_heroes
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.15
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.12
+					instant = yes
+				}
+			}
+		}
+		ALI_katyushas = {
+			removal_cost = -1
+
+			picture = generic_artillery_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+		}
+		ALI_m1_garand = {
+			removal_cost = -1
+
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
+			}
+			#equipment_bonus = {
+			#	infantry_equipment = {
+			#		build_cost_ic = -0.1 instant = yes
+			#	}
+			#}
+		}
+		ALI_m3_halftracks = {
+			removal_cost = -1
+
+			picture = FRA_motorized_focus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		ALI_red_pilots = {
+			removal_cost = -1
+
+			picture = generic_air_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		ALI_arsenal_of_democracy = {
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				 
+				production_factory_max_efficiency_factor = 0.15
+					
+				#industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		ALI_roling_dunes = {
+			removal_cost = -1
+
+			picture = generic_armor
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				super_heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		ALI_no_step_back = {
+			removal_cost = -1
+
+			picture = generic_armor
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.05
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				out_of_supply_factor = -0.1
+				org_loss_at_low_org_factor = -0.25
+			}
+		}
+		ALI_maple_leaf_route_idea = {
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_supply_node_factor = 1.00
+				production_speed_rail_way_factor = 1.00
+				repair_speed_rail_way_factor = 0.25
+				supply_consumption_factor = -0.15
+			}
+		}
+		ALI_together_for_victory_idea = {
+			removal_cost = -1
+
+			picture = POL_ideology_drift_defence
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = { support_tech = 0.25 }
+			modifier = {
+				weekly_manpower = 2000
+			}
+		}
+		ALI_lessons_from_dieppe_idea = {
+			removal_cost = -1
+
+			picture = strategic_bombing_focus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				shore_bombardment_bonus = 0.15
+			}
+		}
+
+		ALI_rule_britania = {
+			removal_cost = -1
+
+			picture = eng_chiefs_of_staff_committee
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard =0.2
+				max_command_power = 20
+				naval_invasion_planning_bonus_speed =0.25
+				navy_max_range_factor = 0.5
+				convoy_escort_efficiency = 0.1
+				#acclimatization_hot_climate_gain_factor = 0.1
+			}
+
+			equipment_bonus = {
+				
+				screen_ship = {
+					naval_speed = 0.1 
+				}
+				carrier = {
+					naval_speed = 0.1 
+				}
+				capital_ship = {
+					naval_speed = 0.1 
+				}
+				submarine = {
+					naval_speed = 0.1
+				}
+			}
+		}
+		ALI_with_the_old_breed_idea = {
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+				
+			modifier = {
+				training_time_army_factor = -0.2
+				river_crossing_factor = -0.15
+				naval_invasion_penalty = -0.1
+				special_forces_attack_factor = 0.15
+			}
+		}
+		ALI_helmet_for_my_pillow_idea = {
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				pocket_penalty = -0.15
+				out_of_supply_factor = -0.25
+				supply_consumption_factor = -0.15
+			}
+		}
+		ALI_doolittle_raiders_idea = {
+			removal_cost = -1
+
+			picture = generic_bomber_production_diverted
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		ALI_island_hopping_equipment_idea = {
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				amphibious_mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		ALI_stalingrad_tractor_plant_idea = {
+			removal_cost = -1
+
+			picture = SOV_stakhanovite_movement
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+			}
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		ALI_united_we_conquer_idea = {
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_attack_factor = 0.10
+				naval_invasion_planning_bonus_speed = 0.25
+			}
+		}
+	ALI_bren_guns_idea = {
+			removal_cost = -1
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					breakthrough = 0.20
+				}
+				support_equipment= {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+		}
+		ALI_elverum_declaration_idea = {
+			removal_cost = -1
+
+			picture = hol_the_foundations_of_defense
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		ALI_fortitude_north_idea = {
+			removal_cost = -1
+
+			picture = generic_war_preparation
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					air_attack = 0.2
+				}
+			}
+
+		}
+		ALI_who_dares_wins_idea = {
+			removal_cost = -1
+
+			picture = generic_war_preparation
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_no_supply_grace = 72.0
+				special_forces_cap  = 0.15
+			}
+		}
+		ALI_milorg_idea = {
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_training_time_factor = -0.1
+				agency_upgrade_time = -0.3
+				decryption_power = 25
+				operative_slot = 1
+			}
+		}
+		ALI_rupertforce_idea = {
+			removal_cost = -1
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				special_forces_training_time_factor = -0.15
+				max_command_power = 20
+				command_power_gain_mult = 0.1
+			}
+		}
+		ALI_all_weather_training_idea = {
+			removal_cost = -1
+
+			picture = SOV_the_road_of_life
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				acclimatization_hot_climate_gain_factor = 0.25
+			}
+		}
+		ALI_fisher_body_design_works = {
+			removal_cost = -1
+
+			picture = man_five_year_plan_tank
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				medium_tank_destroyer_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+					maximum_speed = 0.15
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+					maximum_speed = 0.15
+				}
+			}
+		}
+		ALI_army_of_africa = {
+			removal_cost = -1
+
+			picture = por_colonial_army
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.25
+				non_core_manpower = 0.5
+				weekly_manpower = 2000
+			}
+		}
+		ALI_ffi = {
+			removal_cost = -1
+
+			picture = FRA_national_resistance_council
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				resistance_damage_to_garrison = -0.4
+				resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				equipment_capture = 0.1
+				recon_factor = 0.25
+				own_operative_detection_chance_factor = -0.6
+				own_operative_capture_chance_factor = -0.35
+			}
+		}
+		ALI_legacy_of_french_innovation = {
+			removal_cost = -1
+
+			picture = generic_license_production
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.12
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		
+		ALI_mobilise_the_people = {
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.2
+				org_loss_at_low_org_factor = -0.25
+			}
+		}
+		
+		ALI_guerilla_warfare = {
+			removal_cost = -1
+
+			picture = MEX_politicised_army_2
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				equipment_capture = 0.1
+				no_supply_grace = 72
+				supply_factor = 0.1
+				pocket_penalty = -0.15
+				cas_damage_reduction = 0.15
+			}
+		}
+		
+		ALI_the_hump = {
+			removal_cost = -1
+
+			picture = generic_air_payment
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		ALI_war_of_resistance = {
+			removal_cost = -1
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+				army_core_defence_factor = 0.3
+				breakthrough_factor = 0.1
+			}
+		}
+		oil_in_the_sand_idea = {
+			removal_cost = -1
+			picture = generic_fuel_reserves
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_fuel_consumption_factor = -0.15
+				navy_fuel_consumption_factor = -0.15
+				local_resources_factor = 0.1
+			}
+		}
+		maginot_expertise_idea = {
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fortification_damage = 0.15
+				fortification_collateral_chance = 0.15
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+			}
+
+		}
+		ALI_kongsberg_artillery = {
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		ALI_expand_the_coffee_industry_idea = {
+
+			picture = ETH_coffee_exports
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+		modifier = {
+			production_factory_start_efficiency_factor = 0.2
+			production_factory_max_efficiency_factor = 0.2
+		}
+
+		}
+	ALI_scavenging_tactics_idea = {
+
+			picture = ETH_scavenging_tactics
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				equipment_capture_factor = 0.15
+			}
+
+		}
+	ALI_bomb_proofing_idea = {
+
+			picture = strategic_bombing_focus
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				cas_damage_reduction = 0.15
+				enemy_army_bonus_air_superiority_factor = -0.1
+				industry_air_damage_factor = -0.5
+			}
+
+		}
+	ALI_pan_africanism_volunteers_idea = {
+
+			picture = generic_org_of_african_unity
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		modifier = {
+				weekly_manpower = 2500
+			}
+
+		}
+	ALI_promote_war_heroes_idea = {
+
+			picture = SWI_spirit_of_helvetia_aggressive_war
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		modifier = {
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.05
+				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.1
+			}
+
+		}
+		ALI_the_king_of_kings_idea = {
+
+			picture = ETH_the_common_soldier
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}			
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				modifier_army_sub_unit_infantry_defence_factor = 0.05
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.05
+			}
+		}
+	}
+}
