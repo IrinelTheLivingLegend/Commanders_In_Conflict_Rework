@@ -20,7 +20,6 @@ TODO: Infantry
 		# forest = {
 		# 	attack = 0.1
 		# }
-#test
 
 sub_units = {
 
