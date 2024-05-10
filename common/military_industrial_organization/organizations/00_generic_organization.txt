@@ -12,11 +12,11 @@
 @aircraft_air_defence = 0.1
 @aircraft_surface_detection = 0.15
 @aircraft_sub_detection = 0.15
-@artillery_production_cost_factor = -0.1
+@artillery_production_cost_factor = -0.07
 @infantry_equipment_production_cost_factor = -0.1
 @motorized_production_cost_factor = -0.1
-@materiel_production_efficiency_cap_factor = 0.1
-@materiel_production_capacity_factor = 0.1
+@materiel_production_efficiency_cap_factor = 0.07
+@materiel_production_capacity_factor = 0.07
 
 ########    ###    ##    ## ##    ##  ######  
    ##      ## ##   ###   ## ##   ##  ##    ## 
@@ -9352,6 +9352,97 @@ generic_support_equipment_organization = {
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = { 
+		token = SOV_mio_trait_merge_plant_no_172
+		name = SOV_merge_materiel_plant_1_artillery
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_department_icon_artillery_production
+		special_trait_background = yes
+
+		position = { x=9 y=2 }
+		
+		visible = {
+			FROM = { OR={
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK	
+			}}
+		}
+
+		available = {
+			has_mio_number_of_completed_traits > 3
+		}
+
+		production_bonus = {
+			production_cost_factor = @artillery_production_cost_factor
+		}
+	}
+	
+	trait = { 
+		token = SOV_mio_trait_merge_nkmz_plant
+		name = SOV_merge_materiel_plant_2
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x=9 y=3 }
+		
+		visible = {
+			FROM = { OR={
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK	
+			}}
+		}
+
+		available = {
+			has_mio_number_of_completed_traits > 3
+		}
+
+		on_complete={}
+
+		production_bonus = {
+			production_efficiency_cap_factor = @materiel_production_efficiency_cap_factor
+		}
+	}
+
+	trait = { 
+		token = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+		name = SOV_merge_materiel_plant_3
+		#icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=4 }
+		
+		visible = {
+			FROM = { OR={
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK	
+			}}
+		}
+
+available = {
+			has_mio_number_of_completed_traits > 3
+		}
+
+		on_complete={}
+
+		production_bonus = {
+			production_capacity_factor = @materiel_production_capacity_factor
 		}
 	}
 

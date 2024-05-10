@@ -2,30 +2,6 @@
 ideas = {
 	industrial_concern = {
 	
-		generic_electronics_concern = {
-			
-			picture = generic_electronics_concern_1
-
-			allowed = {
-				or = {
-					original_tag = ALI
-					original_tag = ALJ
-					original_tag = ALK
-					original_tag = AXI
-					original_tag = AXJ
-					original_tag = AXK
-				}
-			}
-			
-			cost = 50
-			removal_cost = 0
-			
-			modifier = {
-				research_speed_factor = 0.25
-			}
-			
-			traits = { electronics_concern }
-		}
 
 		generic_industrial_concern = {
 			
@@ -720,5 +696,65 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
-}
+
+		generic_electronics_concern = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			visible = {
+				not = {
+					has_country_flag = electronics_concern_upgraded_flag
+				}
+			}
+
+			cost = 50
+			removal_cost = 0
+			
+			modifier = {
+				research_speed_factor = 0.25
+			}
+			
+			traits = { electronics_concern }
+		}
+		electronics_concern_upgraded = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				or = {
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+				}
+			}
+			
+			visible = {
+				has_country_flag = electronics_concern_upgraded_flag
+			}
+
+			cost = 50
+			removal_cost = 0
+			
+			modifier = {
+				research_speed_factor = 0.4
+			}
+			
+			traits = { electronics_concern }
+		}
+
+	}
 }

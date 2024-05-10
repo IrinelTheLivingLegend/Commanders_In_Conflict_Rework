@@ -3,6 +3,7 @@ technologies = {
 	basic_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
 
 		
 		path = {
@@ -87,7 +88,7 @@ technologies = {
 	advanced_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.07
+		production_factory_start_efficiency_factor = 0.05
 		
 		path = {
 			leads_to_tech = assembly_line_production 
@@ -120,7 +121,7 @@ technologies = {
 	assembly_line_production = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
 		
 		#path = {
 		#	leads_to_tech = improved_machine_tools 
@@ -310,7 +311,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 2 }
+			position = { x = 6 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -378,7 +379,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 4 }
+			position = { x = 6 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -417,7 +418,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 6 }
+			position = { x = 6 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -455,7 +456,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 8 }
+			position = { x = 6 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -488,7 +489,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 10 }
+			position = { x = 6 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -517,8 +518,8 @@ technologies = {
 	
 	dispersed_industry = {
 
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.07
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.15
 		
 		path = {
@@ -530,7 +531,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 2 }
+			position = { x = 0 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -584,8 +585,8 @@ technologies = {
 	
 	dispersed_industry2 = {
 
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.07
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.15
 		
 		path = {
@@ -597,7 +598,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 4 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -621,8 +622,8 @@ technologies = {
 	
 	dispersed_industry3 = {
 
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.07
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.15
 		
 		path = {
@@ -636,7 +637,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 6 }
+			position = { x = 0 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -660,8 +661,8 @@ technologies = {
 	
 	dispersed_industry4 = {
 
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.07
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.15
 		
 		path = {
@@ -674,7 +675,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 8 }
+			position = { x = 0 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -698,8 +699,8 @@ technologies = {
 	
 	dispersed_industry5 = {
 
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.07
+		line_change_production_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		industry_air_damage_factor = -0.15
 		
 		research_cost = 1.5
@@ -707,7 +708,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 10 }
+			position = { x = 0 y = 10 }
 		}
 		
 		ai_will_do = {

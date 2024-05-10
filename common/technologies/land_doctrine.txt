@@ -1369,7 +1369,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
-		terrain_penalty_reduction = 0.1
+		terrain_penalty_reduction = 0.05
 		land_night_attack = 0.25
 
 		path = {

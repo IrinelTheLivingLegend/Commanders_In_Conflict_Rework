@@ -1,4 +1,0 @@
-AXI_aeronautica_machta_dinamic_idea = {
-			icon = "GFX_idea_generic_fighter_production_diverted"
-			production_factory_efficiency_gain_factor=AXI_aeronautica_machta_production_factory_efficiency_gain_factor
-		}

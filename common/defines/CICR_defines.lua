@@ -19,7 +19,7 @@ NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.5    -- vanilla 4.5 | Official C
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 10      -- vanilla 2.5 | Official CIC 5.0
 NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=1.15 -- vanilla 1 |  Official CIC 1.25
 
-NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 10	-- vanilla 10 | Base start efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 5	-- vanilla 10 | Base start efficiency for factories expressed in %.
 NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 40	-- vanilla 40 | Base max efficiency for factories expressed in %.
 
 NDefines.NBuildings.MAX_BUILDING_LEVELS=50 --vanilla 15 (you cant have more than 15 mils per state,problematic when having a lot of spawn in factories)
@@ -151,7 +151,7 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20 --vanilla 10
 NDefines.NTechnology.BASE_TECH_COST= 100                   -- vanilla 100
 NDefines.NTechnology.USE_BONUS_REGRET_TIMER=10            -- vanilla 7
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50      -- vanilla 30
-NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 2.5 -- vanilla 2.0
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3 -- vanilla 2.0
 
 --█▀▀ █▀█ ▄▀▄ █▀█ █▄█ ▀█▀ █▀▀ █▀▀ 
 --█▄█ █▀▄ █▀█ █▀▀ █ █ ▄█▄ █▄▄ ▄██ 
@@ -213,7 +213,8 @@ NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 15.0  	         -- 40 vanilla | cost
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 10        -- 15 vanilla
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- vanilla true
 
-NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2            -- vanilla 1
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2			-- vanilla 1
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 4			-- vanilla 5
 
 --▀█▀ █▀█ ▄▀▄ ▀█▀ █▄ █ ▀█▀ █▄ █ █▀▀ 
 -- █  █▀▄ █▀█ ▄█▄ █ ▀█ ▄█▄ █ ▀█ █▄█ 

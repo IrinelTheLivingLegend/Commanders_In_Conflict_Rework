@@ -1003,6 +1003,7 @@ shared_focus = {
 				days = 180
 			}
 		add_research_slot = 1
+		custom_effect_tooltip = electronics_concern_upgrade_tt
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 0.5

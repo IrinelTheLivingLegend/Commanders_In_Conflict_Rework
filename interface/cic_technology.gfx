@@ -61,6 +61,22 @@ spriteTypes = {
 		name = "GFX_tech_shocktroops3_medium"
 		texturefile = "gfx/interface/technologies/shocktroops_3.dds"
 	}
+	SpriteType = {
+		name = "GFX_tech_light_medium_modules_1_medium"
+		texturefile = "gfx/interface/technologies/tank_module_medium_cannon.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_light_medium_modules_2_medium"
+		texturefile = "gfx/interface/technologies/tank_module_medium_cannon_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_medium_heavy_modules_1_medium"
+		texturefile = "gfx/interface/technologies/tank_module_heavy_cannon.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_medium_heavy_modules_2_medium"
+		texturefile = "gfx/interface/technologies/tank_module_heavy_cannon_2.dds"
+	}
 	
 
 }

@@ -1,26 +1,3 @@
-README:
-
-TODO: Infantry
-#Add support equipment for cost on SPF
-#initiative = 0.01
-#supply_consumption = 0.07
-#supply_consumption_factor=-0.01
-#breakthrough = -0.1
-		# river = {
-		# 	attack = 0.3
-		# }
-		# jungle = {
-
-		# 	attack = 0.10
-		# }
-		# fort = {
-		# 	attack = 0.10
-		# 	movement = 0.1
-		# }
-		# forest = {
-		# 	attack = 0.1
-		# }
-
 sub_units = {
 
 	infantry = {
@@ -61,7 +38,9 @@ sub_units = {
 		suppression = 1.5
 		weight = 0.5
 		
-		supply_consumption = 0.06
+		initiative = 0.005
+		supply_consumption = 0.07
+		supply_consumption_factor=-0.01
 	
 		essential = {
 			infantry_equipment
@@ -108,7 +87,9 @@ sub_units = {
 		suppression = 2
 		weight = 0.5
 		
-		supply_consumption = 0.06
+		initiative = 0.005
+		supply_consumption = 0.07
+		supply_consumption_factor=-0.01
 	
 		essential = {
 			infantry_equipment
@@ -116,7 +97,7 @@ sub_units = {
 
 		need = {
 			infantry_equipment = 100
-			support_equipment = 10			
+			support_equipment = 5			
 		}
 
 		forest = {
@@ -186,7 +167,11 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.05
+		
+		initiative = 0.005
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
+
 		breakthrough = 0.3
 	
 		essential = {
@@ -194,7 +179,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 120
+			infantry_equipment = 100
+			support_equipment = 10
 		}
 
 		marsh = {
@@ -247,7 +233,11 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.05
+		
+		initiative = 0.005
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01		
+
 		breakthrough = 0.3
 	
 		essential = {
@@ -255,7 +245,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 120
+			infantry_equipment = 100
+			support_equipment = 10
 		}
 
 		marsh = {
@@ -308,7 +299,10 @@ sub_units = {
 		suppression = 1
 		weight = 0.5
 		
-		supply_consumption = 0.05
+		initiative = 0.005
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
+		
 		breakthrough = 0.3
 	
 		essential = {
@@ -316,7 +310,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 110
+			infantry_equipment = 100
+			support_equipment = 7
 		}
 
 		hills = {
@@ -368,7 +363,10 @@ sub_units = {
 		training_time = 150
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.05
+		
+		initiative = 0.005
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
 
 		can_be_parachuted = yes
 	
@@ -377,45 +375,10 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 105
+			infantry_equipment = 100
+			support_equipment = 4
 		}
 	}
-	TODO: Motorized
-# max_strength = 35
-# supply_consumption = 0.12
-# need = {
-# 			infantry_equipment = 100
-# 			motorized_equipment = 50
-# 		}
-# mountain = {
-# 			attack = -0.2
-# 			defence = -0.2
-# 			movement = -0.2
-# 		}
-# 		jungle = {
-# 			attack = -0.2
-# 			defence = -0.2
-# 			movement = -0.5
-# 		}
-# 		hills = {
-# 			attack = -0.1
-# 			defence = -0.1
-# 		}
-# 		marsh = {
-# 			attack = -0.1
-# 			movement = -0.3
-# 		}
-# 		urban = {
-# 			attack = -0.1
-# 		}
-# 		river = {
-# 			attack = -0.1
-# 			movement = -0.1
-# 		}
-# 		amphibious = {
-# 			attack = -0.2
-# 		}
-
 
 	motorized = {
 		abbreviation = "MOT"
@@ -451,7 +414,10 @@ sub_units = {
 		training_time = 90
 		suppression = 2.2
 		weight = 0.75
-		supply_consumption = 0.065
+		
+		initiative = 0.005
+		supply_consumption = 0.075
+		supply_consumption_factor=-0.01
 	
 		# this is what moves us and sets speed
 		transport = motorized_equipment
@@ -531,7 +497,9 @@ sub_units = {
 		suppression = 2
 		weight = 1
 		
-		supply_consumption = 0.14
+		initiative = 0.005
+		supply_consumption = 0.16
+		supply_consumption_factor=-0.01
 		
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
@@ -651,7 +619,9 @@ sub_units = {
 		suppression = 0.5 #1.5 -> Not for suppression roles
 		weight = 0.5
 		
-		supply_consumption = 0.05 #0.07 -> Don't need that much supply, and they have lower HP
+		initiative = 0.0025
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
 	
 		essential = {
 			infantry_equipment
@@ -686,40 +656,36 @@ sub_units = {
 		
 		combat_width = 2
 		
-		#Size Definitions
-		max_strength = 25 # reg inf 25
-		max_organisation = 45 # reg inf 60
-		default_morale = 0.2 #  reg inf 0.3
+		max_strength = 25
+		max_organisation = 45
+		default_morale = 0.2
 		manpower = 1000
 
-		#Misc Abilities
-		training_time = 30 # was 75  # reg inf 90
-		suppression = 1.5 # reg inf 1.5
+		training_time = 30
+		suppression = 1.5
 		weight = 0.5
 		
-		supply_consumption = 0.04 # reg inf  0.06
+		initiative = 0.005
+		supply_consumption = 0.07
+		supply_consumption_factor=-0.01
 
-		# generally not as drilled in modern warfare as regular troops 
 		soft_attack = -0.05
-		# breakthrough = -0.1  
-		defense = -0.15 # was -0.25 
+		defense = -0.15
 
-		# Terrain bonuses
-		# Attack bonuses higher as they thought defending was dishonourable
 		hills = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15
 			defence = 0.05
 		}
 		forest = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15
 			defence = 0.05
 		}
 		mountain = {
-			attack = 0.15 # was 0.1 
+			attack = 0.15
 			defence = 0.05
 		}
 		desert = {
-			attack = 0.25 # was 0.1 
+			attack = 0.25
 			defence = 0.10	
 		}
 		
@@ -729,7 +695,7 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 80 # was 100 
+			infantry_equipment = 80
 		}
 	}
 
@@ -758,18 +724,18 @@ sub_units = {
 		
 		combat_width = 2
 		
-		#Size Definitions
 		max_strength = 25
-		max_organisation = 45 #reg infantry 60
+		max_organisation = 45
 		default_morale = 0.3
 		manpower = 1000
 
-		#Misc Abilities
-		training_time = 80 #reg infantry 90
+		training_time = 80
 		suppression = 1.5
 		weight = 0.5
 		
+		initiative = 0.005
 		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
 	
 
 		essential = {
@@ -816,7 +782,11 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.05
+		
+		initiative = 0.005
+		supply_consumption = 0.06
+		supply_consumption_factor=-0.01
+
 		breakthrough = 0.3
 		recon = 0.2
 				
@@ -825,7 +795,8 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 120
+			infantry_equipment = 100
+			support_equipment = 15
 		}
 
 		marsh = {
@@ -872,15 +843,18 @@ sub_units = {
 		training_time = 150
 		suppression = 2
 		weight = 0.5
-		supply_consumption = 0.08
+		
+		initiative = 0.005
+		supply_consumption = 0.1
+		supply_consumption_factor=-0.01
 
 		essential = {
 			infantry_equipment
 		}
 	
 		need = {
-			infantry_equipment = 140
-			support_equipment = 5
+			infantry_equipment = 100
+			support_equipment = 20
 		}
 	}
 	
@@ -931,19 +905,20 @@ sub_units = {
 		training_time = 130
 		suppression = 2.5
 		weight = 0.5
-		supply_consumption = 0.10
-		initiative = 0.02
-	
-
+		
+		initiative = 0.01
+		supply_consumption = 0.12
+		supply_consumption_factor=-0.01
+		
 		essential = {
 			infantry_equipment
 			motorized_equipment
 		}
 
 		need = {
-			infantry_equipment = 140
-			motorized_equipment = 50
-			support_equipment = 5
+			infantry_equipment = 100
+			motorized_equipment = 35
+			support_equipment = 20
 		}
 
 		urban = {
@@ -1026,7 +1001,9 @@ sub_units = {
 		suppression = 2
 		weight = 1
 		
-		supply_consumption = 0.14
+		initiative = 0.01
+		supply_consumption = 0.16
+		supply_consumption_factor=-0.01
 		
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
@@ -1039,8 +1016,8 @@ sub_units = {
 
 		need = {
 			mechanized_equipment = 50
-			infantry_equipment = 150
-			support_equipment = 10
+			infantry_equipment = 100
+			support_equipment = 20
 		}
 
 		forest = {
@@ -1066,7 +1043,5 @@ sub_units = {
 		amphibious = {
 			attack = -0.4
 		}
-
-		#hardness = 0.2 moving these buffs to unit stats
 	}
 }

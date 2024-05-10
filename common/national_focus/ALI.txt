@@ -957,7 +957,7 @@ focus_tree = {
 						engineer = { x = 0 y = 1 }
                         maintenance_company = { x = 0 y = 2 }
                         logistics_company = { x = 0 y = 3}
-						anti_air = { x = 0 y = 4}
+						anti_air = { x = 1 y = 0}
 
 					}
 				}
@@ -2307,28 +2307,14 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = 	nuclear_reactor
-					}
-				}
-				set_technology = {
-					nuclear_reactor = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = 	nukes
-					}
-				}
-				set_technology = {
-					nukes = 1
-				}
-			}
-			#American Buff (Division Speed & Maybe factory output?)
 			add_ideas = ALI_arsenal_of_democracy
+			add_tech_bonus = {
+			name = industrial_bonus
+			ahead_reduction = 2
+			bonus = 1.0
+			uses = 1
+			category = nuclear
+		}
 			
 		}
 		search_filters = {FOCUS_FILTER_STABILITY}

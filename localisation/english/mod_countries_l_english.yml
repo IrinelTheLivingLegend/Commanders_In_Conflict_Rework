@@ -101,7 +101,7 @@ navy_focuses_completion_tt:0 "Adds 3 §YDockyards§! and 20 §CNavy §!experienc
 
 MOD_industry_interservice_rivalry_tt:0 "A rivalry between the military branches of §GArmy§! and §CNavy§! will break out over the nation's resources."
 
-industrial_concern_tt1:0 "Decisions to upgrade the §OIndustrial Concern§! will become available."
+industrial_concern_tt1:0 "Decisions to upgrade the §OIndustrial Concern§! will be available."
 industrial_concern_tt2:0 "This focus will unlock decisions to invite §OForeign  Industrial Experts.§!"
 
 MOD_industry_phase1_category:0 "Industry Specialisation"

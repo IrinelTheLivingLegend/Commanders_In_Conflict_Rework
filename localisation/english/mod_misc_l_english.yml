@@ -302,11 +302,6 @@ organized_cavalry_desc: "We must train our officers to lead our cavalry. Our wel
 
 mod_no_enemy_trade:0 "No trade with the enemy"
 
-AXI_aeronautica_machta_dinamic_idea:0 "Retool the Industry for New Aircraft Designs"
-AXI_aeronautica_machta_dinamic_idea_tt:0 "Each month, the debuff will decay by §G5%§!."
-initial_prod_debuff_tt:0 "Production Efficiency growth: §R-30%§!"
-AXI_aeronautica_machta_dinamic_idea_desc:0 "Each month, the debuff will decay by §G5%§!."
-
 mechanized_design_cost_discount_tt:0 "§YMechanised Equipment§! design cost: §G-50%§!"
 
  POWDER_KEG:0 "Powder Keg (1v1)"
@@ -393,9 +388,14 @@ idea_industry_phase_2:0 "Phase II: Armaments Production"
 
 idea_industry_phase_3:0 "Phase III: Research & Development"
 
-INDUSTRY_cooldown_1:0 "Has completed focus §Y$INDUSTRY_start_rapid_industralisation$§!"
-INDUSTRY_cooldown_1_tt:0 "Current days are: [?INDUSTRY_start_rapid_industralisation:days|Y0]"
-INDUSTRY_cooldown_2:0 "Has completed focus §Y$INDUSTRY_phase_1$§!"
-INDUSTRY_cooldown_2_tt:0 "Current days are: [?INDUSTRY_phase_1:days|Y0]"
-INDUSTRY_cooldown_3:0 "Has completed focus §Y$INDUSTRY_phase_2$§!"
-INDUSTRY_cooldown_3_tt:0 "Current days are: [?INDUSTRY_phase_2:days|Y0]"
+
+tech_light_medium_modules_1:0 "Improved Medium Guns"
+tech_light_medium_modules_2:0 "Advanced Medium Guns"
+tech_medium_heavy_modules_1:0 "Improved Heavy Guns"
+tech_medium_heavy_modules_2:0 "Advanced Heavy Guns"
+
+clr_picture:0 "Clear Background"
+
+electronics_concern_upgraded:0 "Electronics Concern"
+electronics_concern_upgrade_tt:0 "Upgading the §CElectronics Concern§! will be available."
+AXI_italian_plane_penalty: "Retooling the Aviation Industry"

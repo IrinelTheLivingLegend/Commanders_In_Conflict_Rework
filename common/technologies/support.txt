@@ -137,7 +137,7 @@ technologies = {
 	tech_engineers2 = {
 
 		engineer = {	
-			entrenchment = 0.50
+			entrenchment = 0.25
 			fort = {
 				defence = 0.10
 				attack = 0.10
@@ -213,7 +213,7 @@ technologies = {
 	tech_engineers3 = {
 
 		engineer = {
-			entrenchment = 0.50
+			entrenchment = 0.25
 			river = {
 				attack = 0.1	
 				defence = 0.10
@@ -289,7 +289,7 @@ technologies = {
 	tech_engineers4 = {
 
 		engineer = {
-			entrenchment = 0.50
+			entrenchment = 0.25
 			urban = {
 				attack = 0.1	
 				defence = 0.1
@@ -320,7 +320,7 @@ technologies = {
 			}
 		}
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1945 }
@@ -502,7 +502,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1945 }
@@ -671,7 +671,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1945 }
@@ -853,7 +853,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1945 }
@@ -1031,7 +1031,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 8 y = @1945 }
@@ -1239,7 +1239,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @1945 }
@@ -1407,7 +1407,7 @@ technologies = {
 		}
 
 		research_cost = 2.0
-		start_year = 1945
+		start_year = 1943
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @1945 }

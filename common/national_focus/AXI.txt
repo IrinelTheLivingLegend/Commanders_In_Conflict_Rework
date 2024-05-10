@@ -1002,7 +1002,7 @@ focus_tree = {
 						engineer = { x = 0 y = 1 }
                         maintenance_company = { x = 0 y = 2 }
                         logistics_company = { x = 0 y = 3}
-						anti_air = { x = 0 y = 4}
+						anti_air = { x = 1 y = 0}
 
 					}
 				}
@@ -1061,7 +1061,7 @@ focus_tree = {
 						engineer = { x = 0 y = 1 }
                         maintenance_company = { x = 0 y = 2 }
                         logistics_company = { x = 0 y = 3}
-						anti_air = { x = 0 y = 4}
+						anti_air = { x = 1 y = 0}
 
 					}
 				}
@@ -2278,25 +2278,12 @@ focus_tree = {
 					engines_4 = 1
 				}
 			}
-		add_dynamic_modifier = {modifier = AXI_aeronautica_machta_dinamic_idea}
-		if = {
-			limit = {
-				check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0 }
-			}
-			custom_effect_tooltip = initial_prod_debuff_tt
+		add_timed_idea = {
+			idea = AXI_italian_plane_penalty
+			days = 135
 		}
-		custom_effect_tooltip = AXI_aeronautica_machta_dinamic_idea_tt
 		 
 		hidden_effect = {
-			if = {
-					limit = {
-						check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0 }
-						}
-					ROOT = {
-		subtract_from_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.3 }	
-		}
-				}
-
 			if = {
 				limit = {
 					has_tech = aa_hmg
@@ -2403,27 +2390,13 @@ focus_tree = {
 			}
 		}
 	else = {
-	custom_effect_tooltip = AXI_jet_fighter_tech_no_dlc_tt
-	add_ideas = AXI_aeronautica_machta_idea
-	add_dynamic_modifier = {modifier = AXI_aeronautica_machta_dinamic_idea}
-		if = {
-			limit = {
-				check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0 }
-			}
-			custom_effect_tooltip = initial_prod_debuff_tt
+	add_timed_idea = {
+			idea = AXI_italian_plane_penalty
+			days = 135
 		}
-		custom_effect_tooltip = AXI_aeronautica_machta_dinamic_idea_tt
 	hidden_effect = {
-		if = {
-					limit = {
-						check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0 }
-						}
-					ROOT = {
-		subtract_from_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.3 }	
-		}
-				}
 	set_technology = {
-					jet_fighter1 = 1
+					modern_small_airframe = 1
 				}
 			}
 	}
@@ -6228,7 +6201,7 @@ focus_tree = {
 				create_unit = {
 					division = "division_template = \"Ranger Division\" start_experience_factor = 0.9 start_equipment_factor = 1.0"
 					owner = ROOT
-					count = 8
+					count = 6
 				}
 			}
 		}
@@ -6272,7 +6245,7 @@ focus_tree = {
 				create_unit = {
 					division = "division_template = \"Cavalry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 					owner = ROOT
-					count = 8
+					count = 6
 				}
 			}
 		}
