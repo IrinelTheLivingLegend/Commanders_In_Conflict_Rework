@@ -5892,6 +5892,15 @@ available = {
 		completion_reward = {
 			custom_effect_tooltip = ALI_avonforce_tt
 			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
 				division_template = {
 					name = "Avonforce"
 					division_names_group = ENG_MNT_01
@@ -6099,6 +6108,15 @@ available = {
 		completion_reward = {
 			custom_effect_tooltip = ALI_royal_marines_tt
 			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = marines }
+					}
+					set_technology ={ 
+						marines = 1
+						popup = no
+					}
+				}
 				division_template = {
 					name = "Royal Marines"
 					division_names_group = ENG_MAR_01
@@ -6424,6 +6442,15 @@ available = {
 		completion_reward = {
 			custom_effect_tooltip = ALI_no1_commandos_tt
 			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
 				division_template = {
 					name = "No. 1 Commandos"
 					division_names_group = ENG_MAR_01
@@ -7042,6 +7069,15 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = ALI_somali_camel_corps_tt
 			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = camelry }
+					}
+					set_technology ={ 
+						camelry = 1
+						popup = no
+					}
+				}
 		division_template = {
 				name = "Somali Camel Corps"
 				#division_names_group = FIN_INF_01

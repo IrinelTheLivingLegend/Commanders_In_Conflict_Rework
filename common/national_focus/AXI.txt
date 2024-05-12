@@ -1654,6 +1654,15 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = AXI_132nd_artillery_regiment_tt
 			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
 				division_template = {
 					name = "Divisione di Fanteria"
 					division_names_group = ITA_INF_01
@@ -4858,7 +4867,16 @@ focus_tree = {
 				add_trait = {
 					trait = trait_mountaineer
 				}
-			}
+				}
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
 				division_template = {
 					name = "Vanatori de Munte"
 					division_names_group = ROM_MTN_01

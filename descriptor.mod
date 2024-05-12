@@ -4,7 +4,7 @@ tags={
 	"National Focuses"
 	"Fixes"
 }
-name="Commanders in Conflict Rework -dev"
+name="Commanders in Conflict Rework"
 picture="thumbnail.png"
 replace_path="gfx/loadingscreens"
 replace_path="common/bookmarks"

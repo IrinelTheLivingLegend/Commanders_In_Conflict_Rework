@@ -112,8 +112,8 @@ NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.7        -- vanilla 0
 --  █   █   █ █   █ █   █     █   █ █   █ █   █  ███  █   █ 
 
 --Encourages mixing of tanks with infantry or low armoured light tanks with high armour heavy tanks, witch is unique
-NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.6	--vanilla 0.4
-NDefines.NMilitary.PEN_VS_AVERAGE = 0.6		--vanilla 0.4
+NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.45	--vanilla 0.4
+NDefines.NMilitary.PEN_VS_AVERAGE = 0.45	--vanilla 0.4
 
 NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
 		1.00,
