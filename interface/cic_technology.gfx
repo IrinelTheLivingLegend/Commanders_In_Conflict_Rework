@@ -77,6 +77,10 @@ spriteTypes = {
 		name = "GFX_tech_medium_heavy_modules_2_medium"
 		texturefile = "gfx/interface/technologies/tank_module_heavy_cannon_2.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_guerilla_warfare_bg"
+		textureFile = "gfx/interface/technologies/guerilla_warfare_bg.dds"
+		allwaystransparent = yes		
+	}
 
 }

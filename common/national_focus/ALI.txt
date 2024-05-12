@@ -5612,6 +5612,10 @@ available = {
 			#Buff for Soviets (Not sure on what  it should include, open to suggestions)
 			add_ideas = ALI_no_step_back
 			add_political_power = 150
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
 		}
 		search_filters = {FOCUS_FILTER_STABILITY}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -6959,7 +6963,7 @@ available = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_mass_assault
+				category = cat_guerilla_warfare
 			}
 			army_experience = 100
 			navy_experience = 100

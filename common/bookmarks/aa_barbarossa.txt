@@ -344,7 +344,7 @@ bookmarks = {
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -352,7 +352,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis
@@ -368,7 +368,7 @@ bookmarks = {
 				add_manpower = 500000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 			}
@@ -377,7 +377,7 @@ bookmarks = {
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -385,7 +385,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis
@@ -396,7 +396,7 @@ bookmarks = {
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -404,7 +404,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis
@@ -417,7 +417,7 @@ bookmarks = {
 				remove_core_of =NOO
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = rural
@@ -428,7 +428,7 @@ bookmarks = {
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -436,7 +436,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis
@@ -447,7 +447,7 @@ bookmarks = {
 				ALK={transfer_state=PREV}
 				add_core_of =ALK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -455,7 +455,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis
@@ -466,7 +466,7 @@ bookmarks = {
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 2
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -474,7 +474,7 @@ bookmarks = {
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 				set_state_category = megalopolis

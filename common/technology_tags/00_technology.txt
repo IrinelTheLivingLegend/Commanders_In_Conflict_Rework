@@ -62,6 +62,7 @@ technology_categories = {
 	cat_superior_firepower
 	cat_grand_battle_plan
 	cat_mass_assault
+	cat_guerilla_warfare
 	cat_base_strike
 	cat_trade_interdiction
 	cat_fleet_in_being

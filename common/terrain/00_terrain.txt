@@ -25,14 +25,14 @@ categories =  {
 	
 	forest = {
 		color = { 89 199 85 }
-		movement_cost = 1.25
+		movement_cost = 1.375
 		combat_width = 60
 		combat_support_width = 30
 		match_value = 5
 		sound_type = forest
 
 		units = {
-			attack = -0.07
+			attack = -0.12
 		}
 
 		enemy_army_bonus_air_superiority_factor = -0.1
@@ -41,46 +41,50 @@ categories =  {
 
 	hills = {
 		color = { 248 255 153 }
-		movement_cost = 1.25
+		movement_cost = 1.375
 		combat_width = 60
 		combat_support_width = 30
 		match_value = 2
 		sound_type = desert
 
 		units = {
-			attack = -0.12
+			attack = -0.18
 		}
 		enemy_army_bonus_air_superiority_factor = -0.05
+		supply_flow_penalty_factor = 0.075
+		truck_attrition_factor = 0.15
 	}
 	
 	mountain = {
 		color = { 157 192 208 }
-		movement_cost = 1.5
+		movement_cost = 1.75
 		attrition = 0.1
-		combat_width = 45
+		combat_width = 60
 		combat_support_width = 15
 		match_value = 10
 		sound_type = desert
 
 		units = {
-			attack = -0.25
+			attack = -0.375
 		}
 
-		enemy_army_bonus_air_superiority_factor = -0.20
+		enemy_army_bonus_air_superiority_factor = -0.15
+		supply_flow_penalty_factor = 0.09
+		truck_attrition_factor = 0.75
 	}
 	
 	plains = {
 		color = { 255 129 66 }
 		movement_cost = 1.0
 		combat_width = 60
-		combat_support_width = 45
+		combat_support_width = 60
 		match_value = 0.5
 		sound_type = plains
 	}
 	
 	urban = {
 		color = { 120 120 120 }
-		movement_cost = 1.1
+		movement_cost = 1.15
 		ai_terrain_importance_factor = 4.0
 		combat_width = 60
 		combat_support_width = 30
@@ -88,18 +92,18 @@ categories =  {
 		sound_type = plains
 
 		units = {
-			attack = -0.15
+			attack = -0.225
 		}
 
-		enemy_army_bonus_air_superiority_factor = -0.3
+		enemy_army_bonus_air_superiority_factor = -0.375
+		supply_flow_penalty_factor = -0.15
 	}
 	
 	jungle = {
 		color = { 127 191 0 }
-		movement_cost = 1.25
-		attrition = 0.1
-		# combat_width = -0.25
-		combat_width = 45
+		movement_cost = 1.375
+		attrition = 0.15
+		combat_width = 60
 		combat_support_width = 15
 
 		ai_terrain_importance_factor = 6.0
@@ -107,36 +111,45 @@ categories =  {
 		sound_type = forest
 
 		units = {
-			attack = -0.15
+			attack = -0.225
 		}
 
-		enemy_army_bonus_air_superiority_factor = -0.15
+		enemy_army_bonus_air_superiority_factor = -0.18
+		sickness_chance = 0.75
+		supply_flow_penalty_factor = 0.12
+		truck_attrition_factor = 2.25
 	}	
 	
 	marsh = {
 		color = { 76 96 35 }
-		movement_cost = 1.25
-		attrition = 0.1
-		combat_width = 45
-		combat_support_width = 30
+		movement_cost = 1.75
+		attrition = 0.26
+		combat_width = 60
+		combat_support_width = 15
 		ai_terrain_importance_factor = 8.0
 		match_value = 8
 		sound_type = forest
 
 		units = {
-			attack = -0.2
+			attack = -0.3
 		}
+		sickness_chance = 0.75
+		supply_flow_penalty_factor = 0.12
+		truck_attrition_factor = 3.0
 	}
 	
 	desert = {
 		color = { 255 127 0 }
 		movement_cost = 1.05
-		attrition = 0.05
+		attrition = 0.1
 		combat_width = 60
-		combat_support_width = 45
+		combat_support_width = 60
 		ai_terrain_importance_factor = 8.0
 		match_value = 8
 		sound_type = desert
+		sickness_chance = 0.75
+		supply_flow_penalty_factor = 0.11
+		truck_attrition_factor = 0.375
 	}
 	
 	water_fjords = {

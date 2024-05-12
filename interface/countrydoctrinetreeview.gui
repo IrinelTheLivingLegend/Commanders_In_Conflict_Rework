@@ -63,6 +63,11 @@ guiTypes = {
 				name ="mass_assault_bg"
 				spriteType = "GFX_mass_assault_bg"
 				position = { x=1535 y=33 }
+			}
+			iconType = {
+				name ="guerilla_warfare_bg"
+				spriteType = "GFX_guerilla_warfare_bg"
+				position = { x=2013 y=33 }
 			}		
 			
 			instantTextBoxType = {
@@ -168,6 +173,31 @@ guiTypes = {
 				format = center
 				Orientation = "UPPER_LEFT"
 			}
+			instantTextBoxType = {
+				name = "guerilla_warfare_desc"
+				position = { x = 2100 y = 90 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "ASYMMETRICAL_WARFARE_DOCTRINE_DESC"
+				maxWidth = 300
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "guerilla_warfare_title"
+				position = { x = 2050 y = 35 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "Asymmetrical Warfare Doctrine"
+				maxWidth = 404
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}	
 			
 			instantTextBoxType = {
 				name = "mob_warfare_subtitle1"
@@ -390,6 +420,61 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				pdx_tooltip = "CIC_CONT_OFFENSIVE_TT"
 			}
+			instantTextBoxType = {
+				name = "guerilla_warfare_subtitle1"
+				position = { x = 2050 y = 314 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "DEEP_INFILTRATION_LABEL"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "INFILTRATION_LABEL_TT"
+			}
+
+			instantTextBoxType = {
+				name = "guerilla_warfare_subtitle2"
+				position = { x = 2290 y = 314 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "MILITA_LABEL"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MILITA_LABEL_TT"
+			}
+
+			instantTextBoxType = {
+				name = "guerilla_warfare_subtitle3"
+				position = { x = 2050 y = 679 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "LAST_STAND_LABEL"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "LAST_STAND_LABEL_TT"
+			}
+
+			instantTextBoxType = {
+				name = "guerilla_warfare_subtitle4"
+				position = { x = 2290 y = 679 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "BREAKOUT_LABEL"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "BREAKOUT_LABEL_TT"
+			}
 				
 			gridboxtype = {
 				name = "mobile_warfare_tree"
@@ -447,6 +532,19 @@ guiTypes = {
 					position = { x=0 y=-150 }					
 				}					
 				
+			}
+			gridboxtype = {
+				name = "second_guerilla_warfare_tree"
+				position = { x=2000 y=172 }
+				size = { width = 480 height = 880 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+				
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+					position = { x=0 y=-150 }					
+				}					
 			}
 		}
 

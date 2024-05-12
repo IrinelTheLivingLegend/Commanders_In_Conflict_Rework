@@ -880,8 +880,7 @@ tactic_barrage = { #Superior firepower attacker tactic
 	defender = -0.2	
 }
 
-tactic_masterful_blitz = { #Improved version of Blitz for Soviets
-	only_show_for = SOV
+tactic_masterful_blitz = {
 	
 	is_attacker = yes
 	trigger = {
@@ -915,4 +914,23 @@ tactic_masterful_blitz = { #Improved version of Blitz for Soviets
 	combat_width = 0.1
 	attacker = 0.2
 	defender = -0.2
+}
+tactic_double_envelopment = { #Asymmetrical warfare attacker tactic #revisit, make sure has tech works 
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		OWNER = { NOT = { has_tech = masterful_double_envelopment } } #Fin improved version of Double Envelopment will replace this
+	}
+	
+	active = no
+	
+	base =  { factor = 4 }
+	picture = double_envelopement
+
+	attacker = 0.1
+	attacker_movement_speed = 0.1
+	defender = -0.15
+
+	countered_by = tactic_overwhelming_fire
 }
