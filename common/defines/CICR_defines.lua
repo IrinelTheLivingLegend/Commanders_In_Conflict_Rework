@@ -98,8 +98,8 @@ NDefines.NMilitary.CHANCE_TO_AVOID_HIT_AT_NO_DEF = 0             -- vanilla 60| 
 --▄▀█ █ █▀█ ▄▄ █   ▄▀█ █▄ █ █▀▄   █▀▄ ▄▀█ █▀▄▀█ ▄▀█ █▀▀ █▀▀
 --█▀█ █ █▀▄    █▄▄ █▀█ █ ▀█ █▄▀   █▄▀ █▀█ █ ▀ █ █▀█ █▄█ ██▄
 
-NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 2   -- vanilla 3     | How many CAS/TAC can enter a combat depending on enemy width there
-NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.04       -- vanilla 0.032 | Air global damage modifier
+NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 3   -- vanilla 3     | How many CAS/TAC can enter a combat depending on enemy width there
+NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.048      -- vanilla 0.032 | Air global damage modifier
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.032      -- vanilla 0.032 | global damage modifier
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 0.3      -- vanilla 1.0   | 1.0(vanilla requires 11 Air attack)/0.3(now will require 35 Air attack for maximum damage reduction)| Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.7        -- vanilla 0.75  | Maximum damage reduction factor applied to incoming air attacks against units with AA.

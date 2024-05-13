@@ -60,6 +60,15 @@ bookmarks = {
 			#123 = { rain_light = yes }
 			set_global_flag = game_barbarossa3v3
 			set_global_flag=FiveVpMap
+
+			ALI={set_cosmetic_tag= ALI_SOV_def_name}
+			ALJ={set_cosmetic_tag= ALI_SOV_def_name}
+			ALK={set_cosmetic_tag= ALI_SOV_def_name}
+			
+			AXI={set_cosmetic_tag=AXI_greater_german_reich_def_name}
+			AXJ={set_cosmetic_tag=AXI_greater_german_reich_def_name}
+			AXK={set_cosmetic_tag=AXI_greater_german_reich_def_name}
+
 			set_victory_points = {
 				province = 6380 # Moscow
 				value = 50
@@ -299,10 +308,6 @@ bookmarks = {
 				province = 105 #Naryan Mar
 				value = 20
 			}
-			set_victory_points = {
-				province = 11241 #Vitebsk
-				value = 20
-			}
 			
 			
 			AXI={
@@ -361,7 +366,7 @@ bookmarks = {
 
 
 			every_state = {
-				limit={OR={state=237 state=236 state=238 state=245 state = 217 state=218 state =265 state=228 state=227 state=221 state=260 state=265 state=239 state=257 state=258 state=220 state=221 state=240 state=225 state=222 state=224 state=254 state=223 state=205 state=219 state=253 state=248 state=242 state=246 state=210 state=263 state=247 state=264 state=244 state=195 state=208 state=209 state=191 state=813 state=13 state=812 state=811}}
+				limit={OR={state=207  state=237 state=236 state=238 state=245 state = 217 state=218 state =265 state=228 state=227 state=221 state=260 state=265 state=239 state=257 state=258 state=220 state=221 state=240 state=225 state=222 state=224 state=254 state=223 state=205 state=219 state=253 state=248 state=242 state=246 state=210 state=263 state=247 state=264 state=244 state=195 state=208 state=209}}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO
@@ -392,7 +397,20 @@ bookmarks = {
 				
 			}
 			every_state = {
-				limit={OR={ state=201 state=202 state=193 state=194 state=241 state = 204 state=206}}
+				limit={OR={ state=192 state=198 state=834}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				set_state_category = rural
+				
+			}
+			every_state = {
+				limit={OR={ state=94 state=201 state=202 state=193 state=194 state=241 state = 204 state=206}}
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
@@ -411,7 +429,7 @@ bookmarks = {
 				
 			}
 			every_state = {
-				limit={OR={ state=243}}
+				limit={OR={ state=95 state=93 state=243}}
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
@@ -462,7 +480,7 @@ bookmarks = {
 				
 			}
 			every_state = {
-				limit={OR={state=207 state=96 state=815 state=809 state=12 state=808 state=810}}
+				limit={OR={ state=96 state=815 state=809 state=12 state=808 state=810}}
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
@@ -478,6 +496,19 @@ bookmarks = {
    					instant_build = yes
 				}
 				set_state_category = megalopolis
+				
+			}
+			every_state = {
+				limit={OR={ state=811 state=191 state=813 state=13 state=812 state=190 state=188 state=189 state=11 state=814 state=784}}
+				AXK={transfer_state=PREV}
+				add_core_of =AXK
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				set_state_category = rural
 				
 			}
 			every_state = {

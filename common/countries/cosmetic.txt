@@ -1089,3 +1089,21 @@ AXI_romania = {
 	color = rgb { 215 196 72 }
 	color_ui = rgb { 255 255 120 }
 }
+
+################################################################################################
+ALI_france_def_name = { #default name(Allies I ; Allies II ; Allies III ; Allies IV)
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+AXI_german_empire_def_name = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+ALI_SOV_def_name = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+AXI_greater_german_reich_def_name = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}

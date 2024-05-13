@@ -24,16 +24,17 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			anti_tank_equipment = 36
+			anti_tank_equipment = 18
 		}
-		manpower = 500
+		manpower = 250
 		max_organisation = 5
 		default_morale = 0
 		max_strength = 0.6
 		training_time = 120
 		weight = 0.5
+		initiative = 0.005
 
-		supply_consumption = 0.1
+		supply_consumption = 0.05
 
 		forest = {
 			attack = -0.2
@@ -100,17 +101,18 @@ sub_units = {
 			motorized_equipment
 		}
 		need = {
-			anti_tank_equipment = 36
+			anti_tank_equipment = 18
 			motorized_equipment = 50
 		}
-		manpower = 500
+		manpower = 250
 		max_organisation = 5
 		default_morale = 0
 		max_strength = 0.6
 		training_time = 120
 		weight = 0.5
+		initiative = 0.005
 
-		supply_consumption = 0.15
+		supply_consumption = 0.075
 
 		forest = {
 			attack = -0.2

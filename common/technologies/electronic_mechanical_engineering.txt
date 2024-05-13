@@ -934,6 +934,10 @@ technologies = {
 			leads_to_tech = rocket_engines 
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = jet_engines 
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1943
@@ -986,10 +990,6 @@ technologies = {
 		
 		path = {
 			leads_to_tech = improved_rocket_engines 
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = jet_engines 
 			research_cost_coeff = 1
 		}
 		
@@ -1125,10 +1125,10 @@ technologies = {
 	
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 2 }
+			position = { x = 2 y = 0 }
 		}
 		
-		start_year = 1944
+		start_year = 1943
 		research_cost = 2
 		enable_equipment_modules = {
 			tank_gas_turbine_engine

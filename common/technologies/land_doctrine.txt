@@ -2132,6 +2132,7 @@ technologies = {
 
 	cas_damage_reduction = 0.07
 	enemy_army_bonus_air_superiority_factor = -0.05
+	terrain_penalty_reduction = 0.05
 
 		category_recon = { 
 			equipment_capture_factor = 0.05

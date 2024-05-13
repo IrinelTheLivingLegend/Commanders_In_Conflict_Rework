@@ -61,8 +61,14 @@ bookmarks = {
 
 			set_global_flag = game_great_war_3v3
 			set_global_flag=FiveVpMap
-			
 
+			ALI={set_cosmetic_tag= ALI_france_def_name}
+			ALJ={set_cosmetic_tag= ALI_france_def_name}
+			ALK={set_cosmetic_tag= ALI_france_def_name}
+			
+			AXI={set_cosmetic_tag=AXI_german_empire_def_name}
+			AXJ={set_cosmetic_tag=AXI_german_empire_def_name}
+			AXK={set_cosmetic_tag=AXI_german_empire_def_name}
 
 			set_victory_points = {
 				province = 3211 # The Hague
@@ -242,7 +248,7 @@ bookmarks = {
 				
 			}
 			every_state = {
-				limit={state=62}
+				limit={or = {state=62 state=918}}
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO

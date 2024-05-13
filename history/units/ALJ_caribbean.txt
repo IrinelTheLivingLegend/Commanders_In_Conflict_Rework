@@ -1,25 +1,25 @@
-﻿
-division_template = {
+﻿division_template = {
 	name = "Infantry Division"
-	division_names_group = USA_INF_01
+	division_names_group = ENG_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		infantry = { x = 1 y = 4 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4}
 	}
 	support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 1 y = 0 }
+		anti_tank = { x = 1 y = 1 }
+		anti_air = { x = 1 y = 2 }
+	}
 }
 
 units = {
@@ -123,6 +123,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_mytishchy_machine_building_plant_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -132,6 +133,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_ford_motor_company_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -141,6 +143,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_schneider_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -150,6 +153,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_schneider_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -159,6 +163,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_schneider_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -168,6 +173,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_lysaghts_works_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -177,6 +183,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:ALI_inglis_company_organization
 	}
 	add_equipment_production = {
 		equipment = {

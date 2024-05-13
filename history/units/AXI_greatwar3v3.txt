@@ -1,27 +1,26 @@
-
 division_template = {
 	name = "Infantry Division"
-	division_names_group = ENG_INF_01
+	division_names_group = GER_Inf_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		infantry = { x = 1 y = 4 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 1 y = 4}
 	}
 	support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 1 y = 0 }
+		anti_tank = { x = 1 y = 1 }
+		anti_air = { x = 1 y = 2 }
+	}
 }
-
 units = {
 	division= {
 		division_name = {
@@ -170,6 +169,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_valtion_panssaritehdas_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -179,6 +179,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_opel_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -188,6 +189,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_osaka_army_arsenal_artillery_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -197,6 +199,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_osaka_army_arsenal_artillery_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -206,6 +209,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_osaka_army_arsenal_artillery_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -215,6 +219,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_brescia_arsenal_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -224,6 +229,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.1
 		efficiency = 100
+		industrial_manufacturer = mio:AXI_mauser_organization
 	}
 	add_equipment_production = {
 		equipment = {

@@ -180,7 +180,7 @@ bookmarks = {
 				
 			}
 			every_state = {
-				limit={OR={state=99 state=37 state=138 state=62}}
+				limit={OR={state=99 state=37 state=138 state=62 state=918}}
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
