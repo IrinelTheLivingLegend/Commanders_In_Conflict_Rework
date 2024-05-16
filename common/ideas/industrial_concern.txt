@@ -15,6 +15,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				 }
 			 
 			}
@@ -52,6 +54,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			visible = {
@@ -89,6 +93,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -127,6 +133,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 				has_country_flag = industrial_concern_dock_flag
 			}
@@ -167,6 +175,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			
@@ -211,6 +221,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			
@@ -255,6 +267,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -301,6 +315,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			
@@ -346,6 +362,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -390,6 +408,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -434,6 +454,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -478,6 +500,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -524,6 +548,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -569,6 +595,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -616,6 +644,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -661,6 +691,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 
@@ -709,6 +741,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			
@@ -739,6 +773,8 @@ ideas = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL
 				}
 			}
 			

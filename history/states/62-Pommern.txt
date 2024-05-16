@@ -2,22 +2,21 @@
 state={
 	id=62
 	name="STATE_62"
-	manpower = 1 # = 1
-
-
-	state_category = large_city
 
 	history={
 		victory_points = {
-			9388 1
+			9388 1 
 		}
 		owner = NOO
 		add_core_of = NOO
+
 	}
 
 	provinces={
-		349 3207 3258 3312 3340 9388
+		349 3207 3258 3312 3340 6282 9388 
 	}
-
-	local_supplies=3.0
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=3.000
 }

@@ -123,7 +123,9 @@ generic_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
    
@@ -154,7 +156,9 @@ generic_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -184,7 +188,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -449,7 +455,9 @@ generic_infantry_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -479,7 +487,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -509,7 +519,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -801,7 +813,9 @@ generic_mobile_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -831,7 +845,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -861,7 +877,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1120,7 +1138,9 @@ generic_medium_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1150,7 +1170,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1180,7 +1202,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1448,7 +1472,9 @@ generic_heavy_tank_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1478,7 +1504,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1508,7 +1536,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1801,7 +1831,9 @@ generic_tank_refurbishment_plant_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1831,7 +1863,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -1861,7 +1895,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -2173,7 +2209,9 @@ generic_task_force_ship_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -2209,7 +2247,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -2242,7 +2282,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -2528,7 +2570,9 @@ generic_battle_line_ship_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -2565,7 +2609,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -2598,7 +2644,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -2941,7 +2989,9 @@ generic_escort_ship_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -2977,7 +3027,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -3009,7 +3061,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -3255,7 +3309,9 @@ generic_raider_ship_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -3292,7 +3348,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -3325,7 +3383,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -3651,7 +3711,9 @@ generic_submarine_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -3688,7 +3750,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -3721,7 +3785,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4086,7 +4152,9 @@ generic_black_sea_fleet_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4123,7 +4191,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4156,7 +4226,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4492,7 +4564,9 @@ generic_refurbishment_repair_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4529,7 +4603,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4562,7 +4638,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4918,7 +4996,9 @@ generic_general_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -4948,7 +5028,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -4978,7 +5060,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -5284,7 +5368,9 @@ generic_light_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -5314,7 +5400,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -5345,7 +5433,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -5717,7 +5807,9 @@ generic_medium_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -5747,7 +5839,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -5778,7 +5872,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6128,7 +6224,9 @@ generic_heavy_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -6158,7 +6256,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6189,7 +6289,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6521,7 +6623,9 @@ generic_cas_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -6551,7 +6655,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6582,7 +6688,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6872,7 +6980,9 @@ generic_naval_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -6902,7 +7012,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -6932,7 +7044,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -7233,7 +7347,9 @@ generic_multi_role_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -7263,7 +7379,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -7294,7 +7412,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -7683,7 +7803,9 @@ generic_high_agility_fighter_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -7713,7 +7835,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -7744,7 +7868,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -8055,7 +8181,9 @@ generic_range_focused_aircraft_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -8085,7 +8213,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -8116,7 +8246,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -8538,7 +8670,9 @@ generic_artillery_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -8567,7 +8701,9 @@ generic_artillery_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -8598,7 +8734,9 @@ generic_artillery_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9002,7 +9140,9 @@ generic_infantry_equipment_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9031,7 +9171,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9062,7 +9204,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9371,7 +9515,9 @@ generic_support_equipment_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9400,7 +9546,9 @@ generic_support_equipment_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9431,7 +9579,9 @@ generic_support_equipment_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9788,7 +9938,9 @@ generic_motorized_mechanized_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9817,7 +9969,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -9848,7 +10002,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 
@@ -10188,7 +10344,9 @@ generic_armored_car_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
    
@@ -10219,7 +10377,9 @@ generic_armored_car_organization = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {
@@ -10249,7 +10409,9 @@ available = {
 				original_tag = ALK
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = AXK	
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALL	
 			}}
 		}
 available = {

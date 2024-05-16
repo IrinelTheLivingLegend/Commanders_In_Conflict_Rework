@@ -124,7 +124,7 @@ bookmarks = {
 				}
 			}
 			every_state = {
-				limit={OR={state=200 state=227 state=221 state=234 state=225 state=220 state=137 state=196 state=240 state=226 state=259}}
+				limit={OR={ state=200 state=227 state=221 state=234 state=225 state=220 state=137 state=196 state=240 state=226 state=259}}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
@@ -137,6 +137,19 @@ bookmarks = {
    					instant_build = yes
 				}
 				set_state_category = large_city
+				
+			}
+			every_state = {
+				limit={OR={ state=920 state=921 state=924}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				set_state_category = rural
 				
 			}
 			every_state = {

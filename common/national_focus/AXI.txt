@@ -10,6 +10,7 @@ focus_tree = {
 				tag = AXI
 				tag = AXJ
 				tag = AXK
+				tag = AXL
 			}
 		}
 	}
@@ -792,6 +793,22 @@ focus_tree = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+					original_tag = AXL
+				}
+			AXL_erwin_rommel = {
+				promote_leader = yes
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1965.1.1.1"
+						traits = { desert_fox }
+					}
+				}
+			}
+		}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = AXI_5th_panzer_army
@@ -1138,7 +1155,7 @@ focus_tree = {
 				meta_effect = {
 					text = {
 						create_equipment_variant = {
-							name = "Ju 87-[TAG]"
+							name = "Henschel Hs 129 - [TAG]"
 							type = small_plane_cas_airframe_2
 							modules = {
 								fixed_main_weapon_slot = heavy_bomb_locks
@@ -1155,7 +1172,7 @@ focus_tree = {
 							type = small_plane_cas_airframe_2
 							producer = ROOT
 							amount = 150
-							variant_name = "Ju 87-[TAG]"
+							variant_name = "Henschel Hs 129 - [TAG]"
 						}
 						}
 					TAG = "[?random_num]"
@@ -1168,7 +1185,7 @@ focus_tree = {
 				meta_effect = {
 					text = {
 						create_equipment_variant = {
-							name = "Ju 87-[TAG]"
+							name = "Henschel Hs 129 - [TAG]"
 							type = small_plane_cas_airframe_2
 							modules = {
 								fixed_main_weapon_slot = bomb_locks
@@ -1185,7 +1202,7 @@ focus_tree = {
 							type = small_plane_cas_airframe_2
 							producer = ROOT
 							amount = 150
-							variant_name = "Ju 87-[TAG]"
+							variant_name = "Henschel Hs 129 - [TAG]"
 						}
 						}
 					TAG = "[?random_num]"
@@ -1195,7 +1212,7 @@ focus_tree = {
 				meta_effect = {
 					text = {
 						create_equipment_variant = {
-							name = "Ju 87-[TAG]"
+							name = "Henschel Hs 129 - [TAG]"
 							type = small_plane_cas_airframe_2
 							modules = {
 								fixed_main_weapon_slot = bomb_locks
@@ -1212,7 +1229,7 @@ focus_tree = {
 							type = small_plane_cas_airframe_2
 							producer = ROOT
 							amount = 150
-							variant_name = "Ju 87-[TAG]"
+							variant_name = "Henschel Hs 129 - [TAG]"
 						}
 						}
 					TAG = "[?random_num]"
@@ -1385,6 +1402,21 @@ focus_tree = {
 					original_tag = AXK
 				}
 				AXK_von_kluge = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { clever_hans }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_von_kluge = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
@@ -2503,6 +2535,22 @@ focus_tree = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_giovanni_messe = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { governatori_generali }
+						}
+					}
+				}
+			}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = AXI_italian_1st_army
@@ -2963,6 +3011,22 @@ focus_tree = {
 					original_tag = AXK
 				}
 				AXK_rodolfo_graziani = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { the_pacifier }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_rodolfo_graziani = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -3916,6 +3980,21 @@ focus_tree = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_isoroku_yamamoto = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { naval_air_expert }
+						}
+					}
+				}
+			}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = AXI_ijn
@@ -4209,6 +4288,21 @@ focus_tree = {
 					original_tag = AXK
 				}
 				AXK_hisaichi_terauchi= {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { count_general}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_hisaichi_terauchi= {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
@@ -4737,6 +4831,22 @@ focus_tree = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_miklos_horthy = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { regent_admiral }
+						}
+					}
+				}
+			}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = AXI_hungary
@@ -5166,6 +5276,22 @@ focus_tree = {
 					original_tag = AXJ
 				}
 				AXJ_ion_antonescu = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { conducator }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = AXK
+				}
+				AXK_ion_antonescu = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -6065,6 +6191,22 @@ focus_tree = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_mannerheim = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { marshall_of_finland }
+						}
+					}
+				}
+			}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = AXI_nfg
@@ -6381,6 +6523,22 @@ focus_tree = {
 					original_tag = AXK
 				}
 				AXK_motti_matti = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { motti_matti }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = AXL
+				}
+				AXL_motti_matti = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes

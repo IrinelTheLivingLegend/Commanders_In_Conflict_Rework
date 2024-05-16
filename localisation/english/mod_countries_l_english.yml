@@ -16,13 +16,21 @@
  AXJ_DEF: "the Axis Powers 2"
  AXJ_ADJ: "Axis 2"
 
-ALK: "Allies III"
+ ALK: "Allies III"
  ALK_DEF: "the Allied Nations 3"
  ALK_ADJ: "Allied 3"
 
  AXK: "Axis III"
  AXK_DEF: "the Axis Powers 3"
  AXK_ADJ: "Axis 3"
+
+ ALL: "Allies IV"
+ ALL_DEF: "the Allied Nations 4"
+ ALL_ADJ: "Allied 4"
+
+ AXL: "Axis IV"
+ AXL_DEF: "the Axis Powers 4"
+ AXL_ADJ: "Axis 4"
 
  NEU: ""
  NEU_DEF: "the League of Neutrality"
@@ -32,9 +40,6 @@ ALK: "Allies III"
  NOO: ""
  NOO_DEF: ""
  NOO_ADJ: ""
-
-ALI_merged: "Allies"
-AXI_merged: "Axis"
 
  MOD_countdown_to_war:0 "The War"
  MOD_countdown_to_war_mission:0 "Countdown to War"

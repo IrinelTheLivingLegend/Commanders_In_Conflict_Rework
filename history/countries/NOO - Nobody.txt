@@ -1,4 +1,4 @@
-﻿capital = 126
+﻿capital = 302
 
 #set_oob = "AXI_1936"
 #set_naval_oob = "AXI_1936_Naval"

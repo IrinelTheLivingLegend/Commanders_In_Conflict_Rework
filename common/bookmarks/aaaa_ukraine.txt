@@ -114,7 +114,7 @@ bookmarks = {
 
 
 			every_state = {
-				limit={OR={state=197 state=227 state=221 state=240 state=220 state=225 state=259 state=226 state=200 state=196 state=203 state=193 state=202 state=192 state=834 state=198 state=201}}
+				limit={OR={state=920 state=921 state=924 state=197 state=227 state=221 state=240 state=220 state=225 state=259 state=226 state=200 state=196 state=203 state=193 state=202 state=192 state=834 state=198 state=201}}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO

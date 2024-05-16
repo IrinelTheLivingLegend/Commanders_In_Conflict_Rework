@@ -16,6 +16,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -80,6 +81,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -122,6 +124,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -186,6 +189,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -225,6 +229,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -299,6 +304,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -338,6 +344,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -411,6 +418,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -450,6 +458,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -502,6 +511,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -563,6 +573,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -625,6 +636,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -687,6 +699,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -749,6 +762,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -799,6 +813,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -856,6 +871,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -913,6 +929,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -969,6 +986,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 
@@ -1018,6 +1036,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 		}
 

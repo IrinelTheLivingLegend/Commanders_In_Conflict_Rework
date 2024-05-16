@@ -12,6 +12,8 @@ MOD_countdown_to_war = {
 			original_tag = AXJ
 			original_tag = ALK
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 			original_tag = NEU
 		}
 
@@ -31,6 +33,8 @@ MOD_countdown_to_victory_cat = {
 			original_tag = AXJ
 			original_tag = ALK
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -53,6 +57,8 @@ MOD_countdown_to_victory_5vp_cat = {
 			original_tag = AXJ
 			original_tag = ALK
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -74,6 +80,8 @@ MOD_leader_school_cat = {
 			original_tag = AXJ
 			original_tag = ALK
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -96,6 +104,8 @@ MOD_hide_other_focuses = {
 			original_tag = ALJ
 			original_tag = ALK
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 }
@@ -111,6 +121,7 @@ AXI_ITA_missiolinis = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 	}
 	
@@ -131,6 +142,7 @@ AXI_ITA_balance_of_power_category = {
 		original_tag = AXJ
 		original_tag = AXI
 		original_tag = AXK
+		original_tag = AXL
 		}
 	}
 	
@@ -147,6 +159,7 @@ AXI_the_il_duce_project_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -164,6 +177,8 @@ AXI_JAP_interservice_rivalry = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -185,6 +200,8 @@ MOD_industry_phase1_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -208,6 +225,8 @@ MOD_industry_phase2_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {
@@ -230,6 +249,8 @@ MOD_custom_decisions = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = ALL
+			original_tag = AXL
 		}
 	}
 	visible = {

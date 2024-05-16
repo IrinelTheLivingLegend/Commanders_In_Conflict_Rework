@@ -2,27 +2,24 @@
 state={
 	id=222
 	name="STATE_222"
-	manpower = 1 # = 1
-
-	state_category = rural
-
 
 	history={
 		owner = NOO
 		add_core_of = NOO
-
 		victory_points = {
-			9355 10
+			9355 10 
 		}
 		buildings = {
-			#infrastructure = 3 #was: 5
+
 		}
 
 	}
 
 	provinces={
-		302 328 384 6355 9328 9355 9384 9411 11214 11283 11310 11337 11368
+		288 302 328 384 3306 6355 6386 6411 9328 9355 9384 9411 11214 11283 11310 11337 11368 
 	}
-
-	local_supplies=0.0
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

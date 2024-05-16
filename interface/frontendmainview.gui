@@ -429,7 +429,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_discord_logo"
 			clicksound = click_default
 			pdx_tooltip = "DISCORD_COMMANDERS"
-			web_link = "https://discord.gg/hoi4commanders"
+			web_link = "https://discord.gg/UFEb4WdQYK"
 			scale = 0.125
 		}
 		
@@ -439,7 +439,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_discord_logo_red"
 			clicksound = click_default
 			pdx_tooltip = "DISCORD_VANGUARD"
-			web_link = "https://discord.gg/KUUqHVEz3W"
+			web_link = "https://discord.gg/fMxW33cFGC"
 			scale = 0.125
 		}
 	}

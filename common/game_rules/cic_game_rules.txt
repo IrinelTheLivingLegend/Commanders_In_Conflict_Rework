@@ -48,6 +48,11 @@ cic_ali_annexations = {
 	}
 	option = {
 		name = merge_ali_alj_alk
+		text = "Merge Allies I , Allies II and Allies III"
+		desc = ""
+	}
+	option = {
+		name = merge_ali_alj_alk_all
 		text = "Merge all Allied Nations"
 		desc = ""
 	}
@@ -69,6 +74,11 @@ cic_axi_annexations = {
 	}
 	option = {
 		name = merge_axi_axj_axk
+		text = "Merge Axis I , Axis II and Axis III"
+		desc = ""
+	}
+	option = {
+		name = merge_axi_axj_axk_axl
 		text = "Merge all Axis Nations"
 		desc = ""
 	}

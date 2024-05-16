@@ -22,6 +22,7 @@ focus_tree = {
 				tag = ALI
 				tag = ALJ
 				tag = ALK
+				tag = ALL
 			}
 		}
 	}
@@ -567,6 +568,23 @@ focus_tree = {
 				}
 				retire_country_leader = yes
 				ALK_bernard_montgomery = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {desert_rat}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_bernard_montgomery = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -1375,6 +1393,23 @@ focus_tree = {
 				}
 				retire_country_leader = yes
 				ALK_guy_simonds = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {canadian_wonder }
+						}
+					}
+				}
+			}
+			else_if = {
+			limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_guy_simonds = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -2283,6 +2318,23 @@ focus_tree = {
 				}
 				
 			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_dwight_d_eisenhower = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {supreme_commander}
+						}
+					}
+				}
+				
+			}
 			add_political_power = 150
 			hidden_effect = {
 				set_cosmetic_tag = ALI_us_army
@@ -2783,6 +2835,23 @@ focus_tree = {
 				}
 				retire_country_leader = yes
 				ALK_charles_de_gaulle = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = { hero_of_france }
+						}
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_charles_de_gaulle = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
@@ -3503,6 +3572,23 @@ available = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_charles_de_gaulle = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = { hero_of_france }
+						}
+					}
+				}
+				
+			}
 			hidden_effect = {
 			}
 		}
@@ -4185,6 +4271,23 @@ available = {
 				}
 				retire_country_leader = yes
 				ALK_douglas_macarthur = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {dugout_doug}
+						}
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				retire_country_leader = yes
+				ALL_douglas_macarthur = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
@@ -5453,6 +5556,21 @@ available = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				ALL_konstantin_rokossovsky = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = stalinism
+							expire = "1965.1.1.1"
+							traits = {cavalry_clique}
+						}
+					}
+				}
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = 1
@@ -5555,6 +5673,21 @@ available = {
 					original_tag = ALK
 				}
 				ALK_georgy_zhukov = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = stalinism
+							expire = "1965.1.1.1"
+							traits = {battle_of_berlin}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				ALL_georgy_zhukov = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
@@ -6016,6 +6149,22 @@ available = {
 					original_tag = ALK
 				}
 				ALK_haakon_vii= {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {grace_of_god}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				ALL_haakon_vii= {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -6591,6 +6740,22 @@ available = {
 					original_tag = ALK
 				}
 				ALK_mountbatten = {
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = {commando_leader}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				ALL_mountbatten = {
 					promote_leader = yes
 					add_country_leader_role = {
 						promote_leader = yes
@@ -7257,6 +7422,21 @@ focus = {
 					original_tag = ALK
 				}
 				ALK_haile_selassie = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader={
+							ideology=despotism
+							traits={ lion_of_africa }
+							expire="1965.1.1.1"
+						}
+					}
+				}
+		}
+		else_if = {
+				limit = {
+					original_tag = ALL
+				}
+				ALL_haile_selassie = {
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader={

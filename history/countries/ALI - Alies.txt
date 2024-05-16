@@ -456,4 +456,34 @@ set_country_flag = industrial_concern_flag
 	#	clr_global_flag = game_across_the_rhine
 	#}
 
-### Ship Variants ###
+
+### Plane Variants ###
+if ={
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Hawker Hurricane"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "GFX_ENG_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "Fairey Battle"
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon="GFX_ENG_light_plane_1_medium"
+	}
+}

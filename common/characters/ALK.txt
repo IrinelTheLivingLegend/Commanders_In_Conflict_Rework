@@ -3255,4 +3255,3 @@ ALK_nasibu_zeamanuel = {
 		}
 	}
 }
-}

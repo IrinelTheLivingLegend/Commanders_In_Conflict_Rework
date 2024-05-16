@@ -3,7 +3,6 @@ technologies = {
 	basic_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.05
 
 		
 		path = {
@@ -20,24 +19,12 @@ technologies = {
 			leads_to_tech = dispersed_industry
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = improved_equipment_conversion
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = construction1
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = excavation1
-			research_cost_coeff = 1
-		}
 		
-		research_cost = 1.5
+		research_cost = 3
 		start_year = 1936
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 0 }
+			position = { x = 0 y = 0 }
 		}
 		
 		ai_will_do = {
@@ -54,20 +41,23 @@ technologies = {
 	improved_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.05
 
 		path = {
 			leads_to_tech = advanced_machine_tools 
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = improved_equipment_conversion
+			research_cost_coeff = 1
+		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1937
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 4 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -88,19 +78,18 @@ technologies = {
 	advanced_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.05
 		
 		path = {
 			leads_to_tech = assembly_line_production 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1939
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 6 }
+			position = { x = 0 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -121,7 +110,6 @@ technologies = {
 	assembly_line_production = {
 	
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_start_efficiency_factor = 0.05
 		
 		#path = {
 		#	leads_to_tech = improved_machine_tools 
@@ -139,12 +127,12 @@ technologies = {
 		}
 		
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1941
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 8 }
+			position = { x = 0 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -167,12 +155,16 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.1
 		line_change_production_efficiency_factor = 0.2
 		
-		research_cost = 1.5
+		research_cost = 3
 		start_year = 1943
+		
+		XOR = {
+			streamlined_line
+		}
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 10 }
+			position = { x = -1 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -195,14 +187,16 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.1
 		production_factory_efficiency_gain_factor = 0.1
 			
-		research_cost = 1.5
+		research_cost = 3
 		start_year = 1943
 		
-
+		XOR = {
+			flexible_line
+		}
 		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 10 }
+			position = { x = 1 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -235,12 +229,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 2
 		start_year = 1937
 		
 		folder = {
 			name = industry_folder
-			position = { x = -2 y = 4 }
+			position = { x = 2 y = 4 }
 		}
 
 		ai_will_do = {
@@ -267,12 +261,12 @@ technologies = {
 		
 		equipment_conversion_speed = 0.40
 
-		research_cost = 1
+		research_cost = 2
 		start_year = 1939
 		
 		folder = {
 			name = industry_folder
-			position = { x = -2 y = 6 }
+			position = { x = 2 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -299,7 +293,7 @@ technologies = {
 	concentrated_industry = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -307,11 +301,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
+		
+		XOR = {
+			dispersed_industry
+		}
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 2 }
+			position = { x = 4 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -321,22 +319,6 @@ technologies = {
 				factor = 2
 				NOT = { tag = GER }
 			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-
 			modifier = {
 				factor = 0
 				has_tech = dispersed_industry
@@ -366,7 +348,7 @@ technologies = {
 	concentrated_industry2 = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -374,12 +356,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1937
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 4 }
+			position = { x = 4 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -405,7 +387,7 @@ technologies = {
 	concentrated_industry3 = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -413,12 +395,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1939
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 6 }
+			position = { x = 4 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -443,20 +425,20 @@ technologies = {
 	concentrated_industry4 = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
-			leads_to_tech = concentrated_industry5 
+			leads_to_tech = concentrated_industry5
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1941
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 8 }
+			position = { x = 4 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -481,15 +463,15 @@ technologies = {
 	concentrated_industry5 = {
 
 		industrial_capacity_factory = 0.15
-		industrial_capacity_dockyard = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
-		research_cost = 1.5
+		research_cost = 3
 		start_year = 1943
 		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 10 }
+			position = { x = 4 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -518,20 +500,27 @@ technologies = {
 	
 	dispersed_industry = {
 
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.15
+		global_building_slots_factor = 0.2
 		
 		path = {
-			leads_to_tech = dispersed_industry2
+			leads_to_tech = dispersed_industry2 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
+		
+		XOR = {
+			concentrated_industry
+		}
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 2 }
+			position = { x = 6 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -585,20 +574,24 @@ technologies = {
 	
 	dispersed_industry2 = {
 
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.05
-		industry_air_damage_factor = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		global_building_slots_factor = 0.2
 		
 		path = {
 			leads_to_tech = dispersed_industry3 
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+		
+		research_cost = 3
 		start_year = 1937
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 4 }
+			position = { x = 6 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -622,22 +615,24 @@ technologies = {
 	
 	dispersed_industry3 = {
 
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.05
-		industry_air_damage_factor = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		global_building_slots_factor = 0.2
 		
 		path = {
 			leads_to_tech = dispersed_industry4 
 			research_cost_coeff = 1
 		}
-
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1939
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 6 }
+			position = { x = 6 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -661,21 +656,24 @@ technologies = {
 	
 	dispersed_industry4 = {
 
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.05
-		industry_air_damage_factor = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		global_building_slots_factor = 0.2
 		
 		path = {
 			leads_to_tech = dispersed_industry5 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3
 		start_year = 1941
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 8 }
+			position = { x = 6 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -699,16 +697,20 @@ technologies = {
 	
 	dispersed_industry5 = {
 
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.05
-		industry_air_damage_factor = -0.15
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		global_building_slots_factor = 0.2
 		
-		research_cost = 1.5
+		
+		research_cost = 3
 		start_year = 1943
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 10 }
+			position = { x = 6 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -747,7 +749,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = industry_folder
@@ -826,6 +828,7 @@ technologies = {
 			}
 		}
 	}
+
 	fuel_refining = {
 
 		fuel_gain_factor = 0.2
@@ -836,7 +839,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = industry_folder
@@ -849,11 +852,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				tag = USA
-				factor = 0.5
-			}
+			factor = 0.5
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -901,7 +900,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1937
 		folder = {
 			name = industry_folder
@@ -914,11 +913,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
+			factor = 0.1
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -957,7 +952,7 @@ technologies = {
 			leads_to_tech = fuel_refining4 
 			research_cost_coeff = 1
 		}
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1939
 		folder = {
 			name = industry_folder
@@ -970,11 +965,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
+			factor = 0.2
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1004,7 +995,7 @@ technologies = {
 			leads_to_tech = fuel_refining5
 			research_cost_coeff = 1
 		}
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1941
 		folder = {
 			name = industry_folder
@@ -1017,11 +1008,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
+			factor = 2
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1047,7 +1034,7 @@ technologies = {
 		fuel_gain_factor = 0.20
 		fuel_gain_factor_from_states = 0.1
 
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1943
 		folder = {
 			name = industry_folder
@@ -1060,11 +1047,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				tag = USA
-				factor = 0.5
-			}
+			factor = 0.2
 			modifier = {
 				has_war = yes
 				factor = 2
@@ -1101,7 +1084,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = industry_folder
@@ -1155,7 +1138,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		
 		folder = {
 			name = industry_folder
@@ -1209,7 +1192,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1939
 		
 		folder = {
@@ -1269,7 +1252,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1941
 		
 		folder = {
@@ -1319,7 +1302,7 @@ technologies = {
 
 		fuel_gain_factor_from_states = 0.5
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1943
 		
 		folder = {
@@ -1372,7 +1355,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1937
 		
 		folder = {
@@ -1432,7 +1415,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1939
 		
 		folder = {
@@ -1492,7 +1475,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1941
 		
 		folder = {
@@ -1547,7 +1530,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 0.75
+		research_cost = 1.5
 		start_year = 1943
 		
 		folder = {
@@ -1594,6 +1577,10 @@ technologies = {
 			leads_to_tech = construction2
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = excavation1
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1936
@@ -1604,15 +1591,16 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 2 }
+			position = { x = 0 y = 0 }
 		}
 		
 		ai_will_do = {
-			factor = 50
-			
+			factor = 5
 			modifier = {
-				factor = 5
-				date > "1937.1.1"
+				has_tech_bonus = {
+					category = industry 
+				}
+				factor = 0
 			}
 		}
 	}
@@ -1624,13 +1612,8 @@ technologies = {
 		path = {
 			research_cost_coeff = 1
 		}
-
-		path = {
-			leads_to_tech = excavation2 
-			research_cost_coeff = 1
-		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		
 		categories = {
 			industry
@@ -1640,7 +1623,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 10 y = 2 }
+			position = { x = 2 y = 0 }
 		}
 		
 		ai_will_do = {
@@ -1681,6 +1664,10 @@ technologies = {
 			leads_to_tech = construction3 
 			research_cost_coeff = 1
 		}		
+		path = {
+			leads_to_tech = excavation2 
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1937
@@ -1692,16 +1679,11 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 4 }
+			position = { x = 0 y = 2 }
 		}
 		
 		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 10
-				date > "1937.1.1"
-			}			
+			factor = 5
 		}
 	}
 
@@ -1712,12 +1694,8 @@ technologies = {
 		path = {
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = excavation3
-			research_cost_coeff = 1
-		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1937
 		
 		categories = {
@@ -1728,7 +1706,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 10 y = 4 }
+			position = { x = 2 y = 2 }
 		}
 		
 		ai_will_do = {
@@ -1770,6 +1748,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 				
+		path = {
+			leads_to_tech = excavation3
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1939
@@ -1781,26 +1763,11 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 6 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {
-			factor = 10
-			
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-			
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1940.1.1"
-			}
+			factor = 5
 		}
 	}
 
@@ -1812,12 +1779,8 @@ technologies = {
 		path = {
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = excavation4
-			research_cost_coeff = 1
-		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1939
 		
 		categories = {
@@ -1828,7 +1791,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 10 y = 6 }
+			position = { x = 2 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -1869,6 +1832,10 @@ technologies = {
 			leads_to_tech = construction5 
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = excavation4
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1941
@@ -1880,16 +1847,11 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 8 }
+			position = { x = 0 y = 6 }
 		}
 		
 		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 10
-				date > "1941.1.1"
-			}
+			factor = 5
 		}
 	}
 
@@ -1900,13 +1862,8 @@ technologies = {
 		path = {
 			research_cost_coeff = 1
 		}
-
-		path = {
-			leads_to_tech = excavation5
-			research_cost_coeff = 1
-		}
 		
-		research_cost = 0.75
+		research_cost = 1
 		start_year = 1941
 		
 		categories = {
@@ -1917,7 +1874,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 10 y = 8 }
+			position = { x = 2 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -1954,6 +1911,10 @@ technologies = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		
+		path = {
+			leads_to_tech = excavation5
+			research_cost_coeff = 1
+		}
 
 		
 		research_cost = 1.5
@@ -1966,16 +1927,11 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 10 }
+			position = { x = 0 y = 8 }
 		}
 		
 		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 10
-				date > "1943.1.1"
-			}
+			factor = 5
 		}
 	}
 
@@ -1988,7 +1944,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 0.75
+		research_cost = 2
 		start_year = 1943
 		
 		categories = {
@@ -1999,7 +1955,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 10 y = 10 }
+			position = { x = 2 y = 8 }
 		}
 		
 		ai_will_do = {

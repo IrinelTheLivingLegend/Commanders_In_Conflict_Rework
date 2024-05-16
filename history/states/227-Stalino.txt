@@ -7,7 +7,6 @@ state={
 		owner = NOO
 		add_core_of = NOO
 		buildings = {
-			#infrastructure = 3
 
 		}
 		victory_points = {
@@ -17,9 +16,9 @@ state={
 	}
 
 	provinces={
-		502 3421 3449 3466 3479 3491 6420 6445 6474 6493 6776 
+		502 3449 3466 3479 3491 6474 6530 6554 9531 
 	}
-	manpower = 1 #=1
+	manpower=1
 	buildings_max_level_factor=1.000
 	state_category=city
 	local_supplies=10.000

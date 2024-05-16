@@ -1,0 +1,9 @@
+﻿air_wings = {
+	810 = {
+		small_plane_airframe_1 = { owner = "AXK" amount = 100 version_name = "Bf 109 D" }
+		small_plane_airframe_1 = { owner = "AXK" amount = 100 version_name = "Bf 109 D" }
+		small_plane_airframe_1 = { owner = "AXK" amount = 100 version_name = "Bf 109 D" }
+		small_plane_airframe_1 = { owner = "AXK" amount = 50 version_name = "Bf 109 D" }
+		small_plane_cas_airframe_1 = { owner = "AXK" amount = 50 version_name = "Ju 87" }
+	}
+}

@@ -19,7 +19,7 @@ NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.5    -- vanilla 4.5 | Official C
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 10      -- vanilla 2.5 | Official CIC 5.0
 NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=1.15 -- vanilla 1 |  Official CIC 1.25
 
-NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 5	-- vanilla 10 | Base start efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 10	-- vanilla 10 | Base start efficiency for factories expressed in %.
 NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 40	-- vanilla 40 | Base max efficiency for factories expressed in %.
 
 NDefines.NBuildings.MAX_BUILDING_LEVELS=50 --vanilla 15 (you cant have more than 15 mils per state,problematic when having a lot of spawn in factories)

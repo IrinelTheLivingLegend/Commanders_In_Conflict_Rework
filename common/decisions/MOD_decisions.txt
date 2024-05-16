@@ -20,6 +20,8 @@ MOD_countdown_to_war = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			has_global_flag = time_467
 		}
@@ -56,6 +58,8 @@ MOD_countdown_to_war = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			has_global_flag = time_365
 			
@@ -120,6 +124,10 @@ MOD_countdown_to_war = {
 					target = ALK
 					type = annex_everything
 				}
+				declare_war_on = {
+					target = ALL
+					type = annex_everything
+				}
 				if = {
 					limit = {
 						ALJ ={exists=yes}
@@ -162,6 +170,33 @@ MOD_countdown_to_war = {
 					}
 					}
 				}
+				if = {
+					limit = {
+						ALL = {exists = yes}
+					}
+				AXL = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
 			}
 			ALI = {
 				declare_war_on = {
@@ -186,6 +221,17 @@ MOD_countdown_to_war = {
 						ALK ={exists=yes}
 					}
 					ALK = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALL ={exists=yes}
+					}
+					ALL = {
 					add_to_war = {
     					targeted_alliance = ALI
     					enemy = NEU
@@ -246,6 +292,10 @@ MOD_countdown_to_war = {
 					target = ALK
 					type = annex_everything
 				}
+				declare_war_on = {
+					target = ALL
+					type = annex_everything
+				}
 				if = {
 					limit = {
 						ALJ ={exists=yes}
@@ -288,6 +338,33 @@ MOD_countdown_to_war = {
 					}
 					}
 				}
+				if = {
+					limit = {
+						ALL = {exists = yes}
+					}
+				AXL = {
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALI
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALJ
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = NEU
+					}
+					}
+				}
 			}
 			ALI = {
 				declare_war_on = {
@@ -312,6 +389,17 @@ MOD_countdown_to_war = {
 						ALK ={exists=yes}
 					}
 					ALK = {
+					add_to_war = {
+    					targeted_alliance = ALI
+    					enemy = NEU
+					}
+					}
+				}
+				if = {
+					limit = {
+						ALL ={exists=yes}
+					}
+					ALL = {
 					add_to_war = {
     					targeted_alliance = ALI
     					enemy = NEU
@@ -348,6 +436,8 @@ MOD_countdown_to_victory_cat = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			has_game_rule = { rule = cic_alt_vp option = no }
 			has_war = yes
@@ -390,7 +480,18 @@ MOD_countdown_to_victory_cat = {
 	Surrender = {
  		icon = generic_naval
  		fire_only_once = no
- 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = ALK original_tag = AXK} }
+ 		allowed = { 
+			OR={
+				original_tag = AXI
+				original_tag = ALI
+				original_tag = AXJ
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
+			}
+		}
  		
  		cost = 0
  		complete_effect = {
@@ -416,6 +517,8 @@ MOD_leader_school_cat = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			}
  target_root_trigger = {
@@ -468,6 +571,8 @@ MOD_leader_school_cat = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			}
  target_root_trigger = {
@@ -519,6 +624,8 @@ MOD_leader_school_fortress_buster = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			}
  target_root_trigger = {
@@ -598,6 +705,8 @@ MOD_countdown_to_victory_5vp_cat = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 			has_game_rule = { rule = cic_alt_vp option = no }
 			has_war = yes
@@ -642,6 +751,8 @@ MOD_hide_other_focuses = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 		}
 		visible = {
@@ -665,6 +776,8 @@ MOD_hide_other_focuses = {
 				original_tag = ALJ
 				original_tag = ALK
 				original_tag = AXK
+				original_tag = ALL
+				original_tag = AXL
 			}
 		}
 		visible = {
@@ -686,6 +799,7 @@ AXI_the_il_duce_project_category = {
 				original_tag = AXI
 				original_tag = AXJ
 				original_tag = AXK
+				original_tag = AXL
 			}
 		}
 		fire_only_once = yes
@@ -782,116 +896,249 @@ MOD_custom_decisions = {
 	}
 	hun_picture = {
 	priority = 8
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 16 }}}}
 	}
 	rom_picture = {
 	priority = 7
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 15 }}}}
 	}
 	ger1_picture = {
 	priority = 2
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 3 }}}}
 	}
 	ger2_picture = {
 	priority = 1
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 11 }}}}
 	}
 	ita1_picture = {
 	priority = 4
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 4 }}}}
 	}
 	ita2_picture = {
 	priority = 3
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 14 }}}}
 	}
 	fin_picture = {
 	priority = 6
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 13 }}}}
 	}
 	jap_picture = {
 	priority = 5
-	visible = { OR = { original_tag = AXI original_tag = AXJ original_tag = AXK}}
+	visible = {
+		OR = {
+			original_tag = AXI
+			original_tag = AXJ
+			original_tag = AXK
+			original_tag = AXL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 5 }}}}
 	}
 
 	fra_picture = {
 	priority = 9
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 2 }}}}
 	}
 	chi_picture = {
 	priority = 8
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 8}}}}
 	}
 	eth_picture = {
 	priority = 7
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 17 }}}}
 	}
 	nor_picture = {
 	priority = 6
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 12 }}}}
 	}
 	usa1_picture = {
 	priority = 6
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 18 }}}}
 	}
 	usa2_picture = {
 	priority = 5
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 7 }}}}
 	}
 	fra_picture = {
 	priority = 4
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 2 }}}}
 	}
 	eng1_picture = {
 	priority = 3
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 1 }}}}
 	}
 	eng2_picture = {
 	priority = 2
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 9 }}}}
 	}
 	sov1_picture = {
 	priority = 1
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 6 }}}}
 	}
 	sov2_picture = {
 	priority = 0
-	visible = { OR = { original_tag = ALI original_tag = ALJ original_tag = ALK}}
+	visible = {
+		OR = {
+			original_tag = ALI
+			original_tag = ALJ
+			original_tag = ALK
+			original_tag = ALL
+		}
+	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 10 }}}}
 	}
@@ -1146,6 +1393,7 @@ MOD_industry_phase2_category = {
 			original_tag = ALI
 			original_tag = ALJ
 			original_tag = ALK
+			original_tag = ALL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1242,6 +1490,7 @@ MOD_industry_phase2_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = AXL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1339,6 +1588,7 @@ MOD_industry_phase2_category = {
 			original_tag = ALI
 			original_tag = ALJ
 			original_tag = ALK
+			original_tag = ALL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1435,6 +1685,7 @@ MOD_industry_phase2_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = AXL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1531,6 +1782,7 @@ MOD_industry_phase2_category = {
 			original_tag = ALI
 			original_tag = ALJ
 			original_tag = ALK
+			original_tag = ALL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1627,6 +1879,7 @@ MOD_industry_phase2_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = AXL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1725,6 +1978,7 @@ MOD_industry_phase2_category = {
 			original_tag = ALI
 			original_tag = ALJ
 			original_tag = ALK
+			original_tag = ALL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }
@@ -1822,6 +2076,7 @@ MOD_industry_phase2_category = {
 			original_tag = AXI
 			original_tag = AXJ
 			original_tag = AXK
+			original_tag = AXL
 		}
 			has_completed_focus = INDUSTRY_phase_2
 			not = { has_country_flag = already_upgraded_flag }

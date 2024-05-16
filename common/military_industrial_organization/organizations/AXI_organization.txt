@@ -17,6 +17,7 @@ AXI_porsche_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -30,6 +31,7 @@ AXI_henschel_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -43,6 +45,7 @@ AXI_man_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -55,6 +58,7 @@ AXI_leonidas_works_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -68,6 +72,7 @@ AXI_fiat_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -91,6 +96,7 @@ AXI_blohm_und_voss_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -103,6 +109,7 @@ AXI_yokosuka_naval_arsenal_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -115,6 +122,7 @@ AXI_crda_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -127,6 +135,7 @@ AXI_maizuru_naval_arsenal_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -150,6 +159,7 @@ AXI_valtion_lentokonetehdas_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -162,6 +172,7 @@ AXI_messerschmitt_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -174,6 +185,7 @@ AXI_junkers_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -187,6 +199,7 @@ AXI_savoia_marchetti_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -199,6 +212,7 @@ AXI_set_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -211,6 +225,7 @@ AXI_piaggio_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -224,6 +239,7 @@ AXI_imam_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -236,6 +252,7 @@ AXI_mitsubishi_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -248,6 +265,7 @@ AXI_aichi_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -285,6 +303,7 @@ AXI_osaka_army_arsenal_artillery_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 } 
@@ -297,6 +316,7 @@ AXI_opel_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -309,6 +329,7 @@ AXI_brescia_arsenal_organization = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }

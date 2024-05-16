@@ -1103,7 +1103,11 @@ ALI_SOV_def_name = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
 }
-AXI_greater_german_reich_def_name = {
+AXI_german_reich_def_name = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
+}
+AXI_greater_german_reich_def_name = {
+	color = rgb { 54 54 54 }
+	color_ui = rgb { 115 115 115 }
 }

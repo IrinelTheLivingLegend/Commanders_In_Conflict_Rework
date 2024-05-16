@@ -90,6 +90,19 @@ bookmarks = {
 				
 			}
 			every_state = {
+				limit={state=925}
+				ALI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				set_state_category = rural
+				
+			}
+			every_state = {
 				limit={OR={ state=4 state=152 state=102 state=736 state=153 state=160 state=852}}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
@@ -270,6 +283,7 @@ bookmarks = {
 				JAP={transfer_state=PREV}
 				add_core_of =JAP
 		}
+		
 		
 		}
 	}

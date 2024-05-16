@@ -1,0 +1,466 @@
+capital = 351
+
+set_oob = "ALL_1936"
+#set_naval_oob = "ALJ_1936_Naval"
+#set_air_oob = "ALJ_1936_Air"
+
+set_research_slots = 5
+
+set_stability = 0.36
+set_war_support = 0.51
+
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	interwar_artillery = 1
+	interwar_antitank = 1
+	antitank1 = 1
+	antiair1 = 1
+	fuel_silos = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+		basic_large_airframe = 1
+		improved_small_airframe = 1
+		aa_cannon_1 = 1
+		engines_3 = 1
+		improved_large_airframe = 1
+		improved_medium_airframe =1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			fighter1 = 1
+			cv_fighter1 = 1
+			fighter2 = 1
+			cv_fighter2 = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+			CAS2 = 1
+			heavy_fighter1 = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+		}
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_medium_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		improved_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		improved_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		improved_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		improved_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		improved_depth_charges = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_submarine = 1
+		improved_airplane_launcher = 1
+		improved_naval_mines = 1
+		basic_light_shell = 1
+		basic_medium_shell = 1
+		basic_heavy_shell = 1
+		magnetic_detonator = 1
+		improved_ship_torpedo_launcher = 1
+		ship_hull_super_heavy = 1
+		improved_ship_hull_heavy = 1
+		improved_ship_hull_light = 1
+		improved_ship_hull_cruiser = 1
+		improved_ship_hull_submarine = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+add_ideas = {
+	civilian_economy
+	closed_economy
+	limited_conscription
+	starting_eff
+	no_day1_paradrop
+	peace_supply_grace
+}
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 100
+	fascism = 0
+	communism = 0
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Nancy Wake"
+		GFX = GFX_portrait_nancy_wake
+		traits = { operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALL }
+	}
+
+	create_operative_leader = {
+		name = "Diana Rowden"
+		GFX = GFX_portrait_diana_rowden
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALL }
+	}
+
+	create_operative_leader = {
+		name = "Juan Pujol"
+		GFX = GFX_portrait_juan_pujol
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALL AXL }
+	}
+
+	create_operative_leader = {
+		name = "Dusko Popov"
+		GFX = GFX_portrait_dusko_popov
+		traits = { operative_double_agent }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALL AXL }
+	}
+
+	create_operative_leader = {
+		name = "Josephine Baker"
+		GFX = GFX_portrait_josephine_baker
+		traits = { operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALL }
+	}
+
+	create_operative_leader = {
+		name = "Virginia Hall"
+		GFX = GFX_portrait_virginia_hall
+		traits = { operative_demolition_expert }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { ALL }
+	}
+
+	create_operative_leader = {
+		name = "Richard Sorge"
+		GFX = GFX_portrait_richard_sorge
+		traits = { operative_well_groomed }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ALL AXL }
+	}
+}
+
+recruit_character = ALL_high_command
+recruit_character = ALL_archibald_wavell
+recruit_character = ALL_bernard_montgomery
+recruit_character = ALL_claude_auchinleck
+recruit_character = ALL_harold_alexander
+recruit_character = ALL_richard_oconnor
+recruit_character = ALL_kenneth_anderson
+recruit_character = ALL_alan_cunningham
+recruit_character = ALL_henry_wilson
+recruit_character = ALL_neil_ritchie
+recruit_character = ALL_leslie_morshead
+recruit_character = ALL_philippe_leclerc
+recruit_character = ALL_david_stirling
+recruit_character = ALL_oliver_leese
+recruit_character = ALL_frank_messervy
+recruit_character = ALL_bernard_freyberg
+recruit_character = ALL_william_gott
+recruit_character = ALL_george_edwin_brink
+recruit_character = ALL_henry_harwood
+recruit_character = ALL_andrew_cunningham
+recruit_character = ALL_john_cunningham
+recruit_character = ALL_dwight_d_eisenhower
+recruit_character = ALL_george_s_patton
+recruit_character = ALL_omar_bradley
+recruit_character = ALL_lloyd_fredendall
+recruit_character = ALL_lucian_truscott
+recruit_character = ALL_mark_clark
+recruit_character = ALL_ernest_king
+recruit_character = ALL_frank_jack_fletcher
+recruit_character = ALL_semyon_timoshenko
+recruit_character = ALL_konstantin_rokossovsky
+recruit_character = ALL_georgy_zhukov
+recruit_character = ALL_filipp_oktyabrsky
+recruit_character = ALL_maxwell_aitken
+recruit_character = ALL_nikolay_voznesensky
+recruit_character = ALL_robert_taft
+recruit_character = ALL_ernest_bevin
+recruit_character = ALL_donald_nelson
+recruit_character = ALL_henry_morgenthau
+recruit_character = ALL_edmund_ironside
+recruit_character = ALL_cyril_newall
+recruit_character = ALL_charles_portal
+recruit_character = ALL_edward_ellington
+recruit_character = ALL_george_marshall
+recruit_character = ALL_henry_arnold
+recruit_character = ALL_carl_spaatz
+recruit_character = ALL_george_kenney
+recruit_character = ALL_konstantin_vershinin
+recruit_character = ALL_guy_simonds
+recruit_character = ALL_douglas_macarthur
+recruit_character = ALL_thomas_victor_anderson
+recruit_character = ALL_charles_foulkes
+recruit_character = ALL_percival_john_montague
+recruit_character = ALL_bert_hoffmeister
+recruit_character = ALL_leonard_w_murray
+recruit_character = ALL_ht_bailliegrohman
+recruit_character = ALL_james_d_prentice
+recruit_character = ALL_harry_dewolf
+recruit_character = ALL_walter_krueger
+recruit_character = ALL_thomas_kinkaid
+recruit_character = ALL_william_halsey_jr
+recruit_character = ALL_alexander_vandegrift
+recruit_character = ALL_chester_w_nimitz
+recruit_character = ALL_raymond_a_spruance
+recruit_character = ALL_arleigh_burke
+recruit_character = ALL_charles_m_cooke_jr
+recruit_character = ALL_kuzma_galitsky
+recruit_character = ALL_nikandr_chibisov
+recruit_character = ALL_vasily_kuznetsov
+recruit_character = ALL_harry_crerar
+recruit_character = ALL_harry_wickwire_foster
+recruit_character = ALL_frederic_franklin_worthington
+recruit_character = ALL_stewart_menzies
+recruit_character = ALL_laycock
+recruit_character = ALL_harald_ohquist
+recruit_character = ALL_mountbatten
+recruit_character = ALL_haakon_vii
+recruit_character = ALL_carl_gustav
+recruit_character = ALL_otto_ruge
+recruit_character = ALL_rasmus
+recruit_character = ALL_lord_lovat
+recruit_character = ALL_jack_churchill
+recruit_character = ALL_alexander_patch
+recruit_character = ALL_kirill_meretskov
+recruit_character = ALL_nikolay_berzarin
+recruit_character = ALL_leonid_govorov
+recruit_character = ALL_grigory_kulik
+recruit_character = ALL_charles_de_gaulle
+recruit_character = ALL_henri_giraud
+recruit_character = ALL_jean_de_lattre_de_tassigny
+recruit_character = ALL_alphonse_juin
+recruit_character = ALL_philippe_leclerc
+recruit_character = ALL_chiang_kaishek
+recruit_character = ALL_tu_yuming
+recruit_character = ALL_hsueh_yueh
+recruit_character = ALL_tai_anlan
+recruit_character = ALL_wang_yaowu
+recruit_character = ALL_sun_li_jen
+recruit_character = ALL_hu_zongnan
+recruit_character = ALL_gu_zhutong
+recruit_character = ALL_wei_lihuang
+recruit_character = ALL_fu_zuoyi
+recruit_character = ALL_zhang_xueliang
+recruit_character = ALL_mao_zedong
+recruit_character = ALL_zhu_de
+recruit_character = ALL_chen_yi
+recruit_character = ALL_peng_dehuai
+recruit_character = ALL_lin_biao
+recruit_character = ALL_marc_mitscher
+recruit_character = ALL_haile_selassie
+recruit_character = ALL_haile_selassie_gugsa
+recruit_character = ALL_hailu_tekle_haymanot
+recruit_character = ALL_abba_jofir
+recruit_character = ALL_amha_selassie
+recruit_character = ALL_desta_damtew
+recruit_character = ALL_mulugeta_yeggazu_of_illubabor
+recruit_character = ALL_ras_kassa
+recruit_character = ALL_abebe_aregai
+recruit_character = ALL_ayalew_birru
+recruit_character = ALL_balcho_safo
+recruit_character = ALL_nasibu_zeamanuel
+recruit_character = ALL_mech
+recruit_character = ALL_artillery
+recruit_character = ALL_francois_darlan
+recruit_character = ALL_jeanmarie_charles_abrial
+recruit_character = ALL_jeanpierre_esteva
+recruit_character = ALL_rene_emile_godfroy
+recruit_character = ALL_jean_de_laborde
+
+
+set_country_flag = industrial_concern_flag
+
+#1940.1.1 = {
+	#	set_global_flag = game_sonnenblum
+	#	clr_global_flag = game_nanshin_ron
+	#	clr_global_flag = game_across_the_rhine
+	#}
+#1940.1.2 = {
+	#	capital = 64
+	#	set_oob = ALJ_across_the_rhine
+	#	clr_global_flag = game_sonnenblum
+	#	clr_global_flag = game_nanshin_ron
+	#	set_global_flag = game_across_the_rhine
+	#}
+#1940.1.3 = {
+	#	capital = 285
+	#	set_oob = ALJ_nanshin_ron
+	#	set_global_flag = game_nanshin_ron
+	#	clr_global_flag = game_sonnenblum
+	#	clr_global_flag = game_across_the_rhine
+	#}
+
+if ={
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Hawker Hurricane"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "GFX_ENG_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "Fairey Battle"
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon="GFX_ENG_light_plane_1_medium"
+	}
+}
+

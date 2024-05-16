@@ -90,5 +90,21 @@ ideas = {
 				lend_lease_tension = 1000
 			}
 		}
+		no_navy = {
+			picture = generic_navy
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_dockyard_factor = -1000
+				industrial_capacity_dockyard = -1000
+				naval_damage_factor = -1000
+				navy_max_range_factor = -1000
+			}
+		}
 	}
 }

@@ -1,0 +1,395 @@
+capital = 808
+
+set_oob = "AXL_1936"
+#set_naval_oob = "AXJ_1936_Naval"
+#set_air_oob = "AXJ_1936_Air"
+
+set_research_slots = 5
+
+set_stability = 0.36
+set_war_support = 0.51
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	interwar_artillery = 1
+	interwar_antitank = 1
+	antitank1 = 1
+	antiair1 = 1
+	fuel_silos = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+		basic_large_airframe = 1
+		improved_small_airframe = 1
+		aa_cannon_1 = 1
+		engines_3 = 1
+		improved_large_airframe = 1
+		improved_medium_airframe =1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			fighter1 = 1
+			cv_fighter1 = 1
+			fighter2 = 1
+			cv_fighter2 = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+			CAS2 = 1
+			heavy_fighter1 = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+		}
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_medium_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+		armor_tech_1 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		improved_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		improved_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		improved_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		improved_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		improved_depth_charges = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_submarine = 1
+		improved_airplane_launcher = 1
+		improved_naval_mines = 1
+		basic_light_shell = 1
+		basic_medium_shell = 1
+		basic_heavy_shell = 1
+		magnetic_detonator = 1
+		improved_ship_torpedo_launcher = 1
+		ship_hull_super_heavy = 1
+		improved_ship_hull_heavy = 1
+		improved_ship_hull_light = 1
+		improved_ship_hull_cruiser = 1
+		improved_ship_hull_submarine = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+add_ideas = {
+	civilian_economy
+	closed_economy
+	limited_conscription
+	starting_eff
+	no_day1_paradrop
+	peace_supply_grace
+}
+
+recruit_character = AXL_high_command
+recruit_character = AXL_rodolfo_graziani
+recruit_character = AXL_mario_berti
+recruit_character = AXL_italo_gariboldi
+recruit_character = AXL_annibale_bergonzoli
+recruit_character = AXL_giuseppe_tellera
+recruit_character = AXL_ettore_bastico
+recruit_character = AXL_giovanni_messe
+recruit_character = AXL_erwin_rommel
+recruit_character = AXL_albert_kesselring
+recruit_character = AXL_wilhelm_ritter_von_thoma
+recruit_character = AXL_karl_donitz
+recruit_character = AXL_erich_raeder
+recruit_character = AXL_inigo_campioni
+recruit_character = AXL_alberto_da_zara
+recruit_character = AXL_giuseppe_fioravanzo
+recruit_character = AXL_isoroku_yamamoto
+recruit_character = AXL_shigeyoshi_inoue
+recruit_character = AXL_nobutake_kondo
+recruit_character = AXL_walther_funk
+recruit_character = AXL_alberto_beneduce
+recruit_character = AXL_mitsumasa_yonai
+recruit_character = AXL_giovanni_marinelli
+recruit_character = AXL_paolo_thaon_di_revel
+recruit_character = AXL_albert_speer
+recruit_character = AXL_guido_jung
+recruit_character = AXL_wilhelm_canaris
+recruit_character = AXL_shunroku_hata
+recruit_character = AXL_hitoshi_imamura
+recruit_character = AXL_hisaichi_terauchi
+recruit_character = AXL_ludwig_beck
+recruit_character = AXL_wilhelm_keitel
+recruit_character = AXL_franz_halder
+recruit_character = AXL_walther_von_brauchitsch
+recruit_character = AXL_italo_balbo
+recruit_character = AXL_alberto_pariani
+recruit_character = AXL_domenico_cavagnari
+recruit_character = AXL_arturo_riccardi
+recruit_character = AXL_raffaele_de_courten
+recruit_character = AXL_kenji_doihara
+recruit_character = AXL_kanin_kotohito
+recruit_character = AXL_hajime_sugiyama
+recruit_character = AXL_hideki_tojo
+recruit_character = AXL_fushimi_hiroyasu
+recruit_character = AXL_osami_nagano
+recruit_character = AXL_shigetaro_shimada
+recruit_character = AXL_torashiro_kawabe
+recruit_character = AXL_korechika_anami
+recruit_character = AXL_von_kluge
+recruit_character = AXL_erich_von_manstein
+recruit_character = AXL_heinz_guderian
+recruit_character = AXL_georg_von_kuchler
+recruit_character = AXL_johannes_blaskowitz
+recruit_character = AXL_kanji_ishiwara
+recruit_character = AXL_shizuichi_tanaka
+recruit_character = AXL_toshizo_nishio
+recruit_character = AXL_rikichi_ando
+recruit_character = AXL_hermann_boehm
+recruit_character = AXL_chuichi_nagumo
+recruit_character = AXL_emilio_de_bono
+recruit_character = AXL_rino_corso_fougier
+recruit_character = AXL_alfredo_guzzoni
+recruit_character = AXL_gunther_lutjens
+recruit_character = AXL_carlo_bergamini
+recruit_character = AXL_motti_matti
+recruit_character = AXL_mannerheim
+recruit_character = AXL_erik_heinrichs
+recruit_character = AXL_vilho_petter_nenonen
+recruit_character = AXL_harald_ohquist
+recruit_character = AXL_wiljo_tuompo
+recruit_character = AXL_woldemar_hagglund
+recruit_character = AXL_eero_rahola
+recruit_character = AXL_hugo_ostermann
+recruit_character = AXL_miklos_horthy
+recruit_character = AXL_geza_lakatos
+recruit_character = AXL_ivan_hindy
+recruit_character = AXL_karoly_beregfy
+recruit_character = AXL_lajos_veress
+recruit_character = AXL_ferenc_feketehalmyczeydner
+recruit_character = AXL_petre_dumitrescu
+recruit_character = AXL_ioan_mihail_racovita
+recruit_character = AXL_constantin_sanatescu
+recruit_character = AXL_ion_antonescu
+recruit_character = AXL_horia_macellariu
+recruit_character = AXL_gheorghe_avramescu
+recruit_character = AXL_shvoy_kalman
+recruit_character = AXL_mech
+recruit_character = AXL_artillery
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 0
+	fascism = 100
+	communism = 0
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Otto Skorzeny"
+		GFX = GFX_portrait_otto_skorenzy
+		traits = { operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { AXL }
+	}
+	create_operative_leader = {
+		name = "Nikolaus Ritter"
+		GFX = GFX_portrait_nikolaus_ritter
+		traits = { operative_safe_cracker }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { AXL }
+	}
+	create_operative_leader = {
+		name = "Francesco de Martini"
+		GFX = GFX_portrait_ITA_francesco_de_martini
+		traits = { operative_commando operative_demolition_expert operative_linguist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { AXL }
+	}
+	create_operative_leader = {
+		name = "Paolo Caccia Dominioni"
+		GFX = GFX_portrait_ITA_paolo_caccia_dominioni
+		traits = { operative_safe_cracker operative_tough operative_escape_artist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { AXL ALL }
+	}
+	create_operative_leader = {
+		name = "Takeo Yoshikawa"
+		GFX = GFX_portrait_takeo_yoshikawa
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { AXL }
+	}
+}
+
+
+set_country_flag = industrial_concern_flag
+
+#
+#1940.1.2 = {
+	#	capital = 16
+	#	set_oob = AXJ_across_the_rhine
+	#	AXJ_high_command = {
+		#		set_character_name = AXJ_high_command_ger
+		#	}
+	#}
+#1940.1.3 = {
+	#	capital = 289
+	#	set_oob = AXJ_nanshin_ron
+	#	AXJ_high_command = {
+		#		set_character_name = AXJ_high_command_jap
+		#	}
+	#}
+
+if ={
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "Bf 109 D"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "GFX_GER_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ju 87"
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "GFX_GER_CAS1_medium"
+	}
+}
+

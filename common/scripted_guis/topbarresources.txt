@@ -53,6 +53,12 @@ scripted_gui = {
 			vp5={
 				frame = Global.vp5_status
 			}
+			vp6={
+				frame = Global.vp6_status
+			}
+			vp7={
+				frame = Global.vp7_status
+			}
 		}
 	}
 	topbar_resource= {
@@ -88,6 +94,12 @@ scripted_gui = {
 
 			vp5={
 				frame = Global.vp5_status
+			}
+			vp6={
+				frame = Global.vp6_status
+			}
+			vp7={
+				frame = Global.vp7_status
 			}
 		}
 	}

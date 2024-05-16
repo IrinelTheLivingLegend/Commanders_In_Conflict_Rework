@@ -1,13 +1,5 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_select_date_a_ukraine"
-		texturefile = "gfx/interface/select_date_a_ukraine.dds"
-	}
-	spriteType = {
-		name = "GFX_select_date_barbarossa3v3"
-		texturefile = "gfx/interface/select_date_barbarossa3v3.dds"
-	}
-	spriteType = {
 		name = "GFX_select_date_across_the_rhine"
 		texturefile = "gfx/interface/select_date_across_the_rhine.dds"
 	}
@@ -54,16 +46,41 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_select_date_powder_keg"
 		texturefile = "gfx/interface/select_date_powder_keg.dds"
-	}spriteType = {
-		name = "GFX_select_date_liberation3v3"
-		texturefile = "gfx/interface/select_date_liberation3v3.dds"
 	}
 	spriteType = {
-		name = "GFX_discord_logo_red"
-		texturefile = "gfx/interface/discord_logo_red.dds"
+		name = "GFX_select_date_allegiance"
+		texturefile = "gfx/interface/select_date_allegiance.dds"
 	}
 	spriteType = {
 		name = "GFX_discord_logo"
 		texturefile = "gfx/interface/discord_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo2"
+		texturefile = "gfx/interface/discord_logo2.dds"
+	}
+	spriteType = {
+		name = "GFX_discord_logo3"
+		texturefile = "gfx/interface/discord_logo3.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_a_ukraine"
+		texturefile = "gfx/interface/select_date_a_ukraine.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_barbarossa3v3"
+		texturefile = "gfx/interface/select_date_barbarossa3v3.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_liberation3v3"
+		texturefile = "gfx/interface/select_date_liberation3v3.dds"
+	}
+	spriteType = {
+		name = "GFX_select_date_totalwar_4v4"
+		texturefile = "gfx/interface/select_date_totalwar_4v4.tga"
+	}
+	spriteType = {
+		name = "GFX_discord_logo_red"
+		texturefile = "gfx/interface/discord_logo_red.dds"
 	}
 }

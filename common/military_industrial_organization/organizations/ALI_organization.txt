@@ -17,6 +17,7 @@ ALI_kirov_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 	
@@ -31,6 +32,7 @@ ALI_marmon_herrington_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -44,6 +46,7 @@ ALI_apx_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -56,6 +59,7 @@ ALI_vauxhall_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -69,6 +73,7 @@ ALI_detroit_arsenal_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -92,6 +97,7 @@ ALI_john_brown_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -104,6 +110,7 @@ ALI_newport_news_shipbuilding_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -116,6 +123,7 @@ ALI_acl_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -128,6 +136,7 @@ ALI_akers_mekaniske_verksted_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -151,6 +160,7 @@ ALI_SNCAC_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -163,6 +173,7 @@ ALI_mig_design_bureau_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -175,6 +186,7 @@ ALI_camco_bomber_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -187,6 +199,7 @@ ALI_flyvertroppernes_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -199,6 +212,7 @@ ALI_fairey_aviation_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -211,6 +225,7 @@ ALI_boeing_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -223,6 +238,7 @@ ALI_de_havilland_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -235,6 +251,7 @@ ALI_supermarine_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -247,6 +264,7 @@ ALI_north_american_aviation_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -284,6 +302,7 @@ ALI_schneider_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 } 
@@ -296,6 +315,7 @@ ALI_ford_motor_company_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }
@@ -308,6 +328,7 @@ ALI_lysaghts_works_organization = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }

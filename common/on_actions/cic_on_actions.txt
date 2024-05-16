@@ -9,6 +9,12 @@ on_actions = {
 				}
 				set_variable={global.neutral_score=5}
 			}
+			else_if = {
+				limit = {
+					has_global_flag = SevenVpMap
+				 }
+				 set_variable={global.neutral_score=7}
+			}
 			else = {
 			set_variable={global.neutral_score=3}
 			}
@@ -35,6 +41,8 @@ on_actions = {
 							has_global_flag = game_red_october2v2
 							has_global_flag = game_barbarossa3v3
 							has_global_flag = game_great_war_3v3
+							has_global_flag = game_great_war_3v3
+							has_global_flag = game_totalwar_4v4
 						}
 					}
 				}
@@ -68,21 +76,34 @@ on_actions = {
 						has_global_flag = game_red_october2v2
 						has_global_flag = game_barbarossa3v3
 						has_global_flag = game_great_war_3v3
+						has_global_flag = game_totalwar_4v4
 					} 
 					OR = {
 						AND={original_tag=AXI AXJ={has_capitulated=yes}}
-						AND={original_tag=AXI AXK={has_capitulated=yes}} 
+						AND={original_tag=AXI AXK={has_capitulated=yes}}
+						AND={original_tag=AXI AXL={has_capitulated=yes}}
 						AND={original_tag=AXJ AXI={has_capitulated=yes}} 
 						AND={original_tag=AXJ AXK={has_capitulated=yes}}
+						AND={original_tag=AXJ AXL={has_capitulated=yes}}
 						AND={original_tag=AXK AXI={has_capitulated=yes}}
 						AND={original_tag=AXK AXJ={has_capitulated=yes}}
+						AND={original_tag=AXK AXL={has_capitulated=yes}}
+						AND={original_tag=AXL AXI={has_capitulated=yes}}
+						AND={original_tag=AXL AXJ={has_capitulated=yes}}
+						AND={original_tag=AXL AXK={has_capitulated=yes}}
 
 						AND={original_tag=ALI ALJ={has_capitulated=yes}} 
 						AND={original_tag=ALI ALK={has_capitulated=yes}}
+						AND={original_tag=ALI ALL={has_capitulated=yes}}
 						AND={original_tag=ALJ ALI={has_capitulated=yes}}
 						AND={original_tag=ALJ ALK={has_capitulated=yes}} 
+						AND={original_tag=ALJ ALL={has_capitulated=yes}}
 						AND={original_tag=ALK ALI={has_capitulated=yes}}
 						AND={original_tag=ALK ALJ={has_capitulated=yes}}
+						AND={original_tag=ALK ALL={has_capitulated=yes}}
+						AND={original_tag=ALL ALI={has_capitulated=yes}}
+						AND={original_tag=ALL ALJ={has_capitulated=yes}}
+						AND={original_tag=ALL ALK={has_capitulated=yes}}
 					}
 				}
 
@@ -93,11 +114,13 @@ on_actions = {
 							original_tag=AXI
 						 	original_tag=AXJ 
 							original_tag=AXK
+							original_tag=AXL
 						}
 					}
 					ALI={annex_country = {target = AXI}}
 					ALJ={annex_country = {target = AXJ}}
 					ALK={annex_country = {target = AXK}}
+					ALL={annex_country = {target = AXL}}
 					set_variable={Global.super_event=2}
 					set_variable={Global.end_date=Global.date}
 				}
@@ -112,6 +135,7 @@ on_actions = {
 					AXI={annex_country = {target = ALI}}
 					AXJ={annex_country = {target = ALJ}}
 					AXK={annex_country = {target = ALK}}
+					ALL={annex_country = {target = AXL}}
 					set_variable={Global.super_event=1}	
 					set_variable={Global.end_date=Global.date}
 				}
@@ -184,6 +208,25 @@ on_actions = {
 					}	 
 				}
 				if = { 
+					limit = { check_variable={Global.total_score=7 } } 
+					if = { 
+						limit = { check_variable={Global.axis_score > Global.allied_score } } 
+						set_variable = {axisremove = Global.axis_score}
+						subtract_from_variable = {axisremove = 1}
+						divide_variable={axisremove = 3}
+						multiply_variable={ axisremove = Global.timefactor}
+						subtract_from_variable={Global.allies_points=axisremove}
+					}
+					if = {
+						limit = { check_variable={Global.axis_score < Global.allied_score } } 
+						set_variable = {alliesremove = Global.allied_score}
+						subtract_from_variable = {alliesremove = 1}
+						divide_variable={alliesremove = 3}
+						multiply_variable={ alliesremove = Global.timefactor}
+						subtract_from_variable={Global.axis_points=alliesremove}
+					}	 
+				}
+				if = { 
 					limit = { check_variable={Global.total_score=3 } } 
 					if = { 
 						limit = { check_variable={Global.axis_score > Global.allied_score } } 
@@ -233,6 +276,7 @@ on_actions = {
 					NOT={has_global_flag = game_red_october}
 					NOT={has_global_flag = game_barbarossa3v3}
 					NOT={has_global_flag = game_great_war_3v3}
+					NOT={has_global_flag = game_totalwar_4v4}
 				}
 				if = {
 					limit = {
@@ -284,6 +328,7 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -302,6 +347,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							add_to_variable = {
@@ -336,6 +382,8 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
+									
 								}
 							}
 							subtract_from_variable = {
@@ -354,6 +402,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -406,6 +455,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -423,6 +474,8 @@ on_actions = {
 								OR = {
 									original_tag = AXI
 									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							add_to_variable = {
@@ -457,6 +510,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							subtract_from_variable = {
@@ -474,6 +529,8 @@ on_actions = {
 								OR = {
 									original_tag = AXI
 									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -528,6 +585,7 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -546,6 +604,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							add_to_variable = {
@@ -580,6 +639,7 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							subtract_from_variable = {
@@ -598,6 +658,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -651,6 +712,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -702,6 +765,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							subtract_from_variable = {
@@ -719,6 +784,8 @@ on_actions = {
 								OR = {
 									original_tag = AXI
 									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -773,6 +840,7 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -805,6 +873,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							add_to_variable = {
@@ -825,6 +894,7 @@ on_actions = {
 									original_tag = ALI
 									original_tag = ALJ
 									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							subtract_from_variable = {
@@ -843,6 +913,7 @@ on_actions = {
 									original_tag = AXI
 									original_tag = AXJ
 									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -867,6 +938,135 @@ on_actions = {
 								var = global.neutral_score
 								min = 0
 								max = 5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = SevenVpMap
+					has_global_flag = game_totalwar_4v4
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 808 #Riga
+								state = 85  #Danzig
+								state = 87 	#Lodz
+								state = 94	#Pinsk
+								state = 80 	#Cernauti
+								state = 46 	#Bucharest
+								state = 797 #Istanbul
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
+								}
+							}
+							add_to_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 7
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							add_to_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 7
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
+								}
+							}
+							add_to_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 7
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								OR = {
+									original_tag = ALI
+									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
+								}
+							}
+							subtract_from_variable = {
+								var = global.allied_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.allied_score
+								min = 0
+								max = 7
+							}
+						}
+						else_if = {
+							limit = {
+								OR = {
+									original_tag = AXI
+									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
+								}
+							}
+							subtract_from_variable = {
+								var = global.axis_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.axis_score
+								min = 0
+								max = 7
+							}
+						}
+						else_if = {
+							limit = {
+								original_tag = NEU
+							}
+							subtract_from_variable = {
+								var = global.neutral_score
+								value = 1
+							}
+							clamp_variable = {
+								var = global.neutral_score
+								min = 0
+								max = 7
 							}
 						}
 					}
@@ -913,6 +1113,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							add_to_variable = {
@@ -930,6 +1132,8 @@ on_actions = {
 								OR = {
 									original_tag = AXI
 									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							add_to_variable = {
@@ -963,6 +1167,8 @@ on_actions = {
 								OR = {
 									original_tag = ALI
 									original_tag = ALJ
+									original_tag = ALK
+									original_tag = ALL
 								}
 							}
 							subtract_from_variable = {
@@ -980,6 +1186,8 @@ on_actions = {
 								OR = {
 									original_tag = AXI
 									original_tag = AXJ
+									original_tag = AXK
+									original_tag = AXL
 								}
 							}
 							subtract_from_variable = {
@@ -1065,69 +1273,6 @@ on_actions = {
 			}
 		}
 	}
-
-	on_monthly = { #italian dynamic production growth debuff
-		effect = {
-			if = {
-				limit = {
-					or = {
-						original_tag = AXI
-						original_tag = AXJ
-						original_tag = AXK
-					}
-				}
-				ROOT= {
-					if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.30 }
-						}
-						ROOT = {
-							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
-						}	
-					}
-					else_if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.25 }
-						}
-						ROOT = {
-							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
-						}	
-					}
-					else_if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.2 }
-							}
-						ROOT = {
-							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
-						}	
-					}
-					else_if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.15 }
-						}
-						ROOT = {
-							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
-						}	
-					}
-					else_if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.1 }
-						}
-						ROOT = {
-							add_to_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = 0.05 }	
-						}	
-					}
-					else_if = {
-						limit = {
-							check_variable = { AXI_aeronautica_machta_production_factory_efficiency_gain_factor = -0.05 }
-							}
-						remove_dynamic_modifier = {modifier = AXI_aeronautica_machta_dinamic_idea}
-					}
-				}
-			}
-		}
-	}
-
 	on_startup = {
 		effect = {
 			if = {
@@ -1217,7 +1362,6 @@ on_actions = {
 					add_core_of = ALI
 				}
 				ALI = {
-					set_cosmetic_tag = ALI_merged
 					if = {
 						limit = {
 							has_global_flag = game_great_war_3v3
@@ -1232,6 +1376,91 @@ on_actions = {
 						}
 						set_capital = {
 							state = 255
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj_alk_all
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALK={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALK
+					add_core_of = ALI
+				}
+				ALL={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALL
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALL
+					add_core_of = ALI
+				}
+				ALI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 16
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 255
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_totalwar_4v4
+						}
+						set_capital = {
+							state = 219 #Moscow
 						}
 					}
 				}
@@ -1306,7 +1535,6 @@ on_actions = {
 					add_core_of = AXI
 				}
 				AXI = {
-					set_cosmetic_tag = AXI_merged
 					if = {
 						limit = {
 							has_global_flag = game_great_war_3v3
@@ -1325,6 +1553,91 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj_axk_axl
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXK
+					add_core_of = AXI
+				}
+				AXL ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXL
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXL
+					add_core_of = AXI
+				}
+				AXI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 64
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 194
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_totalwar_4v4
+						}
+						set_capital = {
+							state = 4 #Vienna
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1334,31 +1647,49 @@ on_actions = {
 				send_embargo = AXI
 				send_embargo = AXJ
 				send_embargo = AXK
+				send_embargo = AXL
 			}
 			ALJ = {
 				send_embargo = AXI
 				send_embargo = AXJ
 				send_embargo = AXK
+				send_embargo = AXL
 			}
 			ALK = {
 				send_embargo = AXI
 				send_embargo = AXJ
 				send_embargo = AXK
+				send_embargo = AXL
+			}
+			ALL = {
+				send_embargo = AXI
+				send_embargo = AXJ
+				send_embargo = AXK
+				send_embargo = AXL
 			}
 			AXI = {
 				send_embargo = ALI
 				send_embargo = ALJ
 				send_embargo = ALK
+				send_embargo = ALL
 			}
 			AXJ = {
 				send_embargo = ALI
 				send_embargo = ALJ
 				send_embargo = ALK
+				send_embargo = ALL
 			}
 			AXK = {
 				send_embargo = ALI
 				send_embargo = ALJ
 				send_embargo = ALK
+				send_embargo = ALL
+			}
+			AXL = {
+				send_embargo = ALI
+				send_embargo = ALJ
+				send_embargo = ALK
+				send_embargo = ALL
 			}
 		}
 	}
