@@ -5,6 +5,8 @@ state={
 	manpower = 1 #=871202
 
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		victory_points = {
 			5074 1

@@ -123,9 +123,10 @@ bookmarks = {
 					state = 851 #Toulon
 					state = 25 #Bordeaux
 					state = 31 #Toulouse
+					state = 29 # Calais
 
 				}}
-				add_building_construction = {
+				set_building_level = {
 				type = air_base
 				level = 3
 				instant_build = yes
@@ -140,6 +141,32 @@ bookmarks = {
 				type = air_base
 				level = 5
 				instant_build = yes
+				}
+			}
+			every_state = {
+				limit={
+					OR={
+						state = 15 #Normandy
+						state = 29 #Calais
+					}
+				}
+				set_building_level = {
+					province = 6449 #Cherbourg
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 9434 #Lahrave
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 11548 #Calais
+					type = naval_base
+					level = 3
+					instant_build = yes
 				}
 			}
 

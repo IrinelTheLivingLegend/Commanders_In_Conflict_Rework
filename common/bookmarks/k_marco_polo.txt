@@ -39,6 +39,9 @@ bookmarks = {
 				set_oob = ALI_marco_polo
 			}
 
+			ALI={set_cosmetic_tag= ALI_china_def_name}	
+  			AXI={set_cosmetic_tag= AXI_chinese_empire_def_name}
+
 			every_state = {
 				limit={OR={state=598 state=606 state=749 state=596 state=613}}
 				ALI={transfer_state=PREV}
@@ -75,7 +78,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 

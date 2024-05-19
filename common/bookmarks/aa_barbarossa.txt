@@ -313,6 +313,7 @@ bookmarks = {
 			AXI={
 				set_capital = {state = 203}
 				set_oob = AXI_barbarossa3v3
+				add_ideas = no_navy
 				if = {
 					limit = {
 						has_dlc = "By Blood Alone"
@@ -403,7 +404,7 @@ bookmarks = {
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -436,7 +437,7 @@ bookmarks = {
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -460,7 +461,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -468,7 +469,7 @@ bookmarks = {
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -492,7 +493,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -500,7 +501,7 @@ bookmarks = {
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -519,7 +520,7 @@ bookmarks = {
 				ALK={transfer_state=PREV}
 				add_core_of =ALK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -538,7 +539,7 @@ bookmarks = {
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -562,7 +563,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -608,7 +609,7 @@ bookmarks = {
 				state=201 state=202 state=193 state=194 state=241 state = 204 state=206 # AXJ
 				state=255 state=250 state=252 state=256 state=249 state=833 state=400 #ALJ
 				state=351 state=880 state=879 state=214 state=825 state=262  state=397 #ALK
-				state=207 state=96 state=815 state=809 state=12 state=808 state=810 #AXK
+				state=190 state=207 state=96 state=815 state=809 state=12 state=808 state=810 #AXK
 				 }}
 				add_resource = {
 					type = oil
@@ -642,6 +643,19 @@ bookmarks = {
 				
 				add_building_construction = {
 					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit={
+					OR={
+						state=879 state=214 #Allies 3
+						state=809 state=808 #axis 3
+					}
+				}
+				add_building_construction = {
+					type = dockyard
 					level = 3
 					instant_build = yes
 				}
@@ -690,6 +704,62 @@ bookmarks = {
 					instant_build = yes
 				}	
 			}
+
+			every_state = {
+				limit={
+					OR={
+						state = 137 #Sevastopol
+						state = 192 #Odessa
+						state = 189 #West Lituania
+						state = 190 #West Latvia
+						state = 812 #Talin
+						state = 879 #West ALK
+					}
+				}
+				set_building_level = {
+					province = 3686 #Sevastopol
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 9680 #Kerch
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 11570 #Odessa
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 9262 # West latvia
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 6314 #West Lituania
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 3152 #Talin
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 6109 # West ALK
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+			}
+
 			ALI = {
 				add_to_faction = ALJ
 				add_to_faction = ALK

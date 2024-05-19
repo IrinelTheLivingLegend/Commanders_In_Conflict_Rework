@@ -12,13 +12,6 @@ state = {
 		owner = NOO
 		add_core_of = NOO
 
-				buildings = {
-			6626 = {
-				naval_base = 3
-
-			}
-		}
-
 	}
 
 	provinces = {

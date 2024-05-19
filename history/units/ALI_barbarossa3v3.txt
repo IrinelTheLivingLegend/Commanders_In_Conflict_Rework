@@ -322,13 +322,4 @@ instant_effect = {
 		efficiency = 100
 		industrial_manufacturer = mio:ALI_inglis_company_organization
 	}
-	add_equipment_production = {
-		equipment = {
-			type = convoy_1
-			creator = "ALI"
-		}
-		requested_factories = 15
-		progress = 0.1
-		efficiency = 100
-	}
 }

@@ -1,9 +1,9 @@
 bookmarks = {
 	bookmark = {
-		name = "INDIAN_SUNRISE"
-		desc = "INDIAN_SUNRISE_DESC"
+		name = "SCANDINAVIA_GAME"
+		desc = "SCANDINAVIA_GAME_DESC"
 		date = 1940.1.1.12
-		picture = "GFX_select_date_indian_sunrise"
+		picture = "GFX_select_date_scandinavia"
 		default_country = "ALI"
 		default = yes
 
@@ -26,26 +26,30 @@ bookmarks = {
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
-			set_global_flag = game_indian_sunrise
+			set_global_flag = game_scandinavia
 			AXI={
-				set_capital = {state = 430}
-				set_oob = AXI_indian_sunrise
+				set_capital = {state =  111}
+				set_oob = AXI_scandinavia
 				AXI_high_command = {
-					set_character_name = AXI_high_command_jap
+					set_character_name = AXI_high_command_fin
 				}
 			}
 			ALI={
-				set_capital = {state = 439}
-				set_oob = ALI_indian_sunrise
+				set_capital = {state =  110}
+				set_oob = ALI_scandinavia
 			}
+
+			ALI={set_cosmetic_tag= ALI_norway_def_name}	
+			AXI={set_cosmetic_tag=AXI_finland_def_name}
+
 			every_state = {
-				limit={OR={state=433 state = 445 state=439 state=440 state=443 state=428}}
+				limit={OR={state=142	state=110	state=143	state=140}}
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
 				set_building_level = {
     				type = infrastructure
-    				level = 3
+    				level = 4
    					instant_build = yes
 				}
 				
@@ -53,53 +57,67 @@ bookmarks = {
 
 
 			every_state = {
-				limit={OR={state=431 state=323 state=438 state=436 state=437 state=435 state=426}}
+				limit={OR={state=138 state=139 state=124 state=141 state=38 state=666 state=144 state=148 state=722 state=147 state=145}}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO
 				add_manpower = 1000000
 				set_building_level = {
     				type = infrastructure
-    				level = 3
+    				level = 4
    					instant_build = yes
 				}
 			}
 			every_state = {
-				limit={OR={state=430 state=324 state=434 state=640 state=288 state=432}}
+				limit={OR={state=111 state=149 state=150 state=146}}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
 				set_building_level = {
     				type = infrastructure
-    				level = 3
+    				level = 4
    					instant_build = yes
 				}
 				
 			}
+			every_state = {
+				limit={OR={state=215 state=213}}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_building_level = {
+    				type = infrastructure
+    				level = 4
+   					instant_build = yes
+				}
+				set_state_category = wasteland
+				
+			}
 
 			every_state = {
-				limit={OR={ state=433 state = 445 state=439 state=440 state=443 state=428 #ALI
-				state=430 state=324 state=434 state=640 state=288 state=432 # AXI
+				limit={OR={ state=142	state=110	state=143	state=140 #ALI
+				state=111 state=149 state=150 state=146 # AXI
 				 }}
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
-				add_manpower = 1000000
-				add_extra_state_shared_building_slots = 3
+				add_manpower = 500000
+				add_manpower = 250000
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 				
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 1
 					instant_build = yes
 			}
 				set_building_level = {
@@ -108,25 +126,6 @@ bookmarks = {
    					instant_build = yes
 				}
 			}
-
-		build_railway = {
-    		level = 1
-    	    path = { 12338 8010 }
-			}
-
-		build_railway = {
-    		level = 1
-    	    path = { 12338 5310 4987 4386 7374 10021 5002 11955 2086 }
-			}
-		build_railway = {
-    		level = 1
-    	    path = { 12464 10486 1581 10514 12395 12366 7455 }
-			}
-		build_railway = {
-    		level = 1
-    	    path = { 1492 12404 4541 7163 10033 7122 9991 }
-			}
-
 			#Those nations are required to exist on map for the flags on industrial decisions to show properly
 		every_state = {
 				limit={state=270}

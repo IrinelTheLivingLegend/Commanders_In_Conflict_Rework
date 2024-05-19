@@ -15,12 +15,7 @@ state = {
 			11564 1
 		}
 
-		buildings = {
-			11564 = {
-				naval_base = 3
-
-			}
-		}
+		
 
 
 

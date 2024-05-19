@@ -321,6 +321,7 @@ on_actions = {
 								state = 217 #stalingrad1v1
 								state = 265 #stalingrad1v1
 								state = 257 #stalingrad1v1
+								state = 673 #Nanshin Hon
 							}
 						}
 					}
@@ -1342,6 +1343,45 @@ on_actions = {
 				send_embargo = ALJ
 				send_embargo = ALK
 				send_embargo = ALL
+			}
+		}
+	}
+	on_startup = {
+		effect = { #Militraize the narvik area if demilitarized
+			if = {
+				limit = {
+					144 = { 
+						is_demilitarized_zone = yes 
+						#controller = { tag = SWE }
+					}
+				}
+				144 = {
+					set_demilitarized_zone = no
+				}
+			}
+
+			if = {
+				limit = {
+					924 = { 
+						is_demilitarized_zone = yes 
+						#controller = { tag = SWE }
+					}
+				}
+
+				924 = {
+					set_demilitarized_zone = no
+				}
+			}
+			if = {
+				limit = {
+					925 = { 
+						is_demilitarized_zone = yes 
+						#controller = { tag = SWE }
+					}
+				}
+				925 = {
+					set_demilitarized_zone = no
+				}
 			}
 		}
 	}

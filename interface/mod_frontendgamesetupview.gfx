@@ -1,55 +1,51 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_select_date_across_the_rhine"
-		texturefile = "gfx/interface/select_date_across_the_rhine.dds"
+		texturefile = "gfx/interface/select_date_across_the_rhine.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_nashin_ron"
-		texturefile = "gfx/interface/select_date_nashin_ron.dds"
+		texturefile = "gfx/interface/select_date_nashin_ron.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_sonnenblum"
-		texturefile = "gfx/interface/select_date_sonnenblum.dds"
+		texturefile = "gfx/interface/select_date_sonnenblum.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_indian_sunrise"
-		texturefile = "gfx/interface/select_date_indian_sunrise.dds"
+		texturefile = "gfx/interface/select_date_indian_sunrise.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_marco_polo"
-		texturefile = "gfx/interface/select_date_marco_polo.dds"
+		texturefile = "gfx/interface/select_date_marco_polo.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_scandinavia"
-		texturefile = "gfx/interface/select_date_scandinavia.dds"
+		texturefile = "gfx/interface/select_date_scandinavia.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_spain"
-		texturefile = "gfx/interface/select_date_spain.dds"
+		texturefile = "gfx/interface/select_date_spain.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_caribbean"
-		texturefile = "gfx/interface/select_date_caribbean.dds"
+		texturefile = "gfx/interface/select_date_caribbean.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_valhalla"
-		texturefile = "gfx/interface/select_date_valhalla.dds"
+		texturefile = "gfx/interface/select_date_valhalla.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_red_october2v2"
-		texturefile = "gfx/interface/select_date_red_october2v2.dds"
+		texturefile = "gfx/interface/select_date_red_october2v2.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_red_october"
-		texturefile = "gfx/interface/select_date_red_october.dds"
+		texturefile = "gfx/interface/select_date_red_october.tga"
 	}
 	spriteType = {
 		name = "GFX_select_date_powder_keg"
-		texturefile = "gfx/interface/select_date_powder_keg.dds"
-	}
-	spriteType = {
-		name = "GFX_select_date_allegiance"
-		texturefile = "gfx/interface/select_date_allegiance.dds"
+		texturefile = "gfx/interface/select_date_powder_keg.tga"
 	}
 	spriteType = {
 		name = "GFX_discord_logo"

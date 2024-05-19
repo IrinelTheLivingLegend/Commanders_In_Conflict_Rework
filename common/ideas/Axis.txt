@@ -12,7 +12,7 @@ ideas = {
 
 			modifier= {
 				production_speed_industrial_complex_factor = 0.05
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.15
 				production_speed_infrastructure_factor = 0.25
 			}
 
@@ -31,7 +31,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				local_resources_factor = 0.1
-				production_oil_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 				
 			}
 
@@ -46,8 +46,9 @@ ideas = {
 
 			modifier= {
 				research_speed_factor = 0.05
-				production_factory_max_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.05
+				production_factory_max_efficiency_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+				global_building_slots_factor = 0.15
 			}
 
 	}

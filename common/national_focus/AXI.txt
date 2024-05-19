@@ -2321,7 +2321,7 @@ focus_tree = {
 			}
 		add_timed_idea = {
 			idea = AXI_italian_plane_penalty
-			days = 135
+			days = 160
 		}
 		 
 		hidden_effect = {
@@ -2433,7 +2433,7 @@ focus_tree = {
 	else = {
 	add_timed_idea = {
 			idea = AXI_italian_plane_penalty
-			days = 135
+			days = 160
 		}
 	hidden_effect = {
 	set_technology = {

@@ -4,6 +4,8 @@ state={
 	name="STATE_544"
 	manpower = 1 # = 231000
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 2

@@ -227,17 +227,17 @@ adjacency_rule =
 	}
 	contested =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	enemy =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	friend =
 	{
@@ -254,7 +254,7 @@ adjacency_rule =
 		trade = yes
 	}
 	
-	required_provinces = { 9833 11829 }
+	required_provinces = { }
 
 	is_disabled = {
 		has_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY
@@ -439,17 +439,17 @@ adjacency_rule =
 
 	contested =
 	{
-		army = no
-		navy = no
+		army = yes
+		navy = yes
 		submarine = yes
-		trade = no
+		trade = yes
 	}
 	enemy =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	friend =
 	{
@@ -477,17 +477,17 @@ adjacency_rule =
 
 	contested =
 	{
-		army = no
-		navy = no
+		army = yes
+		navy = yes
 		submarine = yes
-		trade = no
+		trade = yes
 	}
 	enemy =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	friend =
 	{
@@ -515,17 +515,17 @@ adjacency_rule =
 
 	contested =
 	{
-		army = no
-		navy = no
+		army = yes
+		navy = yes
 		submarine = yes
-		trade = no
+		trade = yes
 	}
 	enemy =
 	{
-		army = no
-		navy = no
-		submarine = no
-		trade = no
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
 	}
 	friend =
 	{

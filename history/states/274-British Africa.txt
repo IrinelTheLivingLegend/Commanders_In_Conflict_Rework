@@ -4,6 +4,8 @@ state={
 
 	history={
 
+		owner = NOO
+		add_core_of = NOO
 
 		victory_points = {
 			10862 1

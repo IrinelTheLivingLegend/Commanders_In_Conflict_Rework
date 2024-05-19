@@ -201,7 +201,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -245,7 +245,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {

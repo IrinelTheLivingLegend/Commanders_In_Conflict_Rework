@@ -7,6 +7,8 @@ state={
 	state_category = rural
 
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 3 #was: 5

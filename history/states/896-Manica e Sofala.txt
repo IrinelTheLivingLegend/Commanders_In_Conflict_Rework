@@ -4,6 +4,8 @@ state={
 	manpower = 1 # = 92400
 	state_category = pastoral
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 2

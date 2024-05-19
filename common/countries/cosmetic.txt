@@ -1111,3 +1111,47 @@ AXI_greater_german_reich_def_name = {
 	color = rgb { 54 54 54 }
 	color_ui = rgb { 115 115 115 }
 }
+AXI_spanish_empire_def_name = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 255 255 122 }
+}
+ALI_USA_def_name = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+AXI_chinese_empire_def_name = {
+	color = rgb { 237 152 18 }
+	color_ui = rgb { 224 139 5 }
+}
+AXI_japan_def_name = {
+	color = hsv { 0.05 0.3 1 }
+	color_ui = hsv { 0.05 0.25 1.2 }
+}
+ALI_australia_def_name = {
+	color = rgb { 57 143 97 }
+	color_ui = rgb { 57 143 97 }
+}
+ALI_new_zeeland_def_name = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 152 130 191 }
+}
+ALI_raj_def_name = {
+	color = rgb { 170  10  10 }
+	color_ui = rgb { 200  10  10 }
+}
+ALI_norway_def_name = {
+	color = rgb { 111 71 71 }
+	color_ui = rgb { 0 47 131 }
+}
+AXI_finland_def_name = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 0 83 142 }
+}
+ALI_china_def_name = {
+	color = hsv { 0.18 0.6 0.9 }
+	color_ui = hsv { 0.18 0.3 0.9 }
+}
+ALI_third_bulgarian_empire_def_name = {
+	color = rgb { 138 249 195 }
+	color_ui = rgb { 138 249 195 }
+}

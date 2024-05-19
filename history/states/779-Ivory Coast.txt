@@ -6,16 +6,12 @@ state={
 
 	state_category = pastoral
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 
 		victory_points = {
 			10803 1
-		}
-		buildings = {
-			#infrastructure = 2
-			10803 = {
-				naval_base = 1
-			}
 		}
 	}
 

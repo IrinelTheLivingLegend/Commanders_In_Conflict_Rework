@@ -5,6 +5,8 @@ state={
 	state_category = small_island
 
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 1

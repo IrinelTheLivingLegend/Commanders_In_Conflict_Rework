@@ -167,7 +167,7 @@ bookmarks = {
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -201,7 +201,7 @@ bookmarks = {
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -225,7 +225,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -233,7 +233,7 @@ bookmarks = {
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -257,7 +257,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -265,7 +265,7 @@ bookmarks = {
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -289,7 +289,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -297,7 +297,7 @@ bookmarks = {
 				ALK={transfer_state=PREV}
 				add_core_of =ALK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -316,7 +316,7 @@ bookmarks = {
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_manpower = 1000000
 				add_manpower = 1000000
 				add_manpower = 1000000
@@ -340,7 +340,7 @@ bookmarks = {
     				level = 3
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			
@@ -469,6 +469,28 @@ bookmarks = {
 
 				add_extra_state_shared_building_slots = 3
 			}
+
+			every_state = {
+				limit={
+					OR={
+						state = 852 #Fiume
+						state = 736 #Trieste
+					}
+				}
+				add_building_construction = {
+					province = 11564 #Fiume
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					province = 6626 #Trieste
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}	
+
 			ALI = {
 				add_to_faction = ALJ
 				add_to_faction = ALK

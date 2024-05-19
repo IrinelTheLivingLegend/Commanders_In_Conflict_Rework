@@ -18,13 +18,6 @@ state={
 			3924 3
 		}
 
-				buildings = {
-			6889 = {
-				naval_base = 3
-
-			}
-		}
-
 		#add_claim_by = ITA #added by focus
 
 	}

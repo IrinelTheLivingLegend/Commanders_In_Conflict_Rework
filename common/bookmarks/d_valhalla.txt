@@ -127,7 +127,7 @@ bookmarks = {
     				level = 4
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -158,7 +158,7 @@ bookmarks = {
     				level = 4
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			every_state = {
@@ -189,7 +189,7 @@ bookmarks = {
     				level = 4
    					instant_build = yes
 				}
-				set_state_category = rural
+				set_state_category = wasteland
 				
 			}
 			
@@ -314,32 +314,76 @@ bookmarks = {
 				}
 			}
 			every_state = {
-			limit = {or = {state = 59 state = 74 state = 58  state = 61 }}
+			limit = {or = {state = 59 state = 64 state = 58  state = 61 }}
 		add_resource = {
     		type = oil
-    		amount = 8
+    		amount = 5
 		}
 		add_resource = {
     		type = aluminium
-    		amount = 8
+    		amount = 5
 		}
 		add_resource = {
     		type = tungsten
-    		amount = 8
+    		amount = 5
 		}
 		add_resource = {
     		type = rubber
-    		amount = 8
+    		amount = 5
 		}
 		add_resource = {
     		type = steel
-    		amount = 27
+    		amount = 15
 		}
 		add_resource = {
     		type = chromium
-    		amount = 8
+    		amount = 5
 		}
 		}
+		every_state = {
+			limit = {or = { state = 64 state = 58 }}
+		add_resource = {
+    		type = steel
+    		amount = 1
+		}
+		}
+
+
+		every_state = {
+				limit={
+					OR={
+						state = 189 #West Lituania
+						state = 190 #West Latvia
+						state = 812 #Talin
+						state = 879 #West ALK
+					}
+				}
+				set_building_level = {
+					province = 9262 # West latvia
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 6314 #West Lituania
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 3152 #Talin
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 6109 # West ALK
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+		}
+
 			ALI = {
 				add_to_faction = ALJ
 			}

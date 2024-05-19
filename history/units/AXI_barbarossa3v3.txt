@@ -321,13 +321,4 @@ instant_effect = {
 		efficiency = 100
 		industrial_manufacturer = mio:AXI_mauser_organization
 	}
-	add_equipment_production = {
-		equipment = {
-			type = convoy_1
-			creator = "AXI"
-		}
-		requested_factories = 15
-		progress = 0.1
-		efficiency = 100
-	}
 }

@@ -23,6 +23,3 @@ is_diplomatic_action_valid_reduce_autonomy = { always = no }
 is_diplomatic_action_valid_create_faction = { always = no }
 is_diplomatic_action_valid_generate_wargoal = { always = no } 
 is_diplomatic_action_valid_send_volunteers = { always = no } 
-is_diplomatic_action_valid_embargo_revoke = { always = no }
-is_diplomatic_action_valid_revoke_embargo = { always = no }
-is_diplomatic_action_valid_EFFECT_BREAK_EMBARGO = { always = no }

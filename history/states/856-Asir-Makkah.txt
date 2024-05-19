@@ -5,8 +5,8 @@ state={
 		1923 2090 5037 8073 10786 12883
 	}
 	history = {
-
-		add_core_of	= SAU
+		owner = NOO
+		add_core_of = NOO
 		buildings = {
 			#infrastructure = 1
 			12883 = {

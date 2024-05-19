@@ -6,11 +6,9 @@ state={
 
 	state_category = wasteland
 
-	resources={
-		chromium=90 # was: 168
-	}
-
 	history={
+		owner = NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 1

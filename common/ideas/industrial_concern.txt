@@ -346,7 +346,7 @@ ideas = {
 			industrial_capacity_factory = 0.1
 			production_speed_arms_factory_factor = 0.05
 			line_change_production_efficiency_factor = 0.15
-			production_lack_of_resource_penalty_factor = -0.15
+			production_lack_of_resource_penalty_factor = -0.3
 			}
 			traits = { industrial_concern }
 		}
@@ -531,7 +531,7 @@ ideas = {
 			modifier= {
 			industrial_capacity_factory = 0.05
 			production_speed_industrial_complex_factor = 0.1
-			production_lack_of_resource_penalty_factor = -0.15
+			production_lack_of_resource_penalty_factor = -0.3
 			line_change_production_efficiency_factor = 0.15
 			}
 			traits = { industrial_concern }
@@ -722,7 +722,7 @@ ideas = {
 			industrial_capacity_factory = 0.05
 			industrial_capacity_dockyard = 0.05
 			production_speed_dockyard_factor = 0.05
-			production_lack_of_resource_penalty_factor = -0.15
+			production_lack_of_resource_penalty_factor = -0.3
 			line_change_production_efficiency_factor = 0.15
 			}
 			traits = { industrial_concern }

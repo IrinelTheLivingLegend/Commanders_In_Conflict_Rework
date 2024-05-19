@@ -297,6 +297,19 @@ on_actions = {
 						stockpile_ratio = 1.0
 					}
 				}
+
+
+				if = {
+					limit = {
+						has_global_flag = game_totalwar_4v4
+					}
+					ALK = {
+						add_ideas = no_navy
+					}
+					AXK = {
+						remove_ideas = no_navy
+					}
+				}
 			}
 		}
 	}
