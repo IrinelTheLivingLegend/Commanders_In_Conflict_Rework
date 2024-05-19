@@ -1,10 +1,10 @@
 ﻿l_english:
  ### Country Names ###
- ALI_add_SOV_units_tt:0 "Adds §Ythree 20 width§!§O Infantry Divisions§! and a §CFleet§!."
+ ALI_add_SOV_units_tt:0 "Adds §Ytwo veteran 40 width§!§O Infantry Divisions§! and a §CFleet§!."
  ALI_add_sov_equipment_tt:0 "Adds §HSoviet§! designs for:§G Tanks§!,§C Ships§!,§O Planes§!."
- ALI_add_usa_units_tt:0 "Adds §Ythree 20 width§!§O Infantry Divisions§! and a §CFleet§!."
+ ALI_add_usa_units_tt:0 "Adds §Ytwo veteran 40 width§!§O Infantry Divisions§! and a §CFleet§!."
  ALI_add_usa_equipment_tt:0 "Adds §HAmerican§! designs for:§G Tanks§!,§C Ships§!,§O Planes§!."
- ALI_add_commonwelth_units_tt:0 "Adds:\n-§YThree 20 width§!§O Infantry Divisions§!;\n-§YOne 40 width§!§O tank division§!;\n-A §CFleet§!."
+ ALI_add_commonwelth_units_tt:0 "Adds:\n-§Ytwo veteran 40 width§!§O Infantry Divisions§!;\n-§YOne 40 width§!§O tank division§!;\n-A §CFleet§!."
  ALI_add_british_equipment_tt:0 "Adds §HBritish§! designs for:§G Tanks§!,§C Ships§!,§O Planes§!."
  ALI_add_commonwelth_generals_tt:0 "Adds British and Commonwealth §Ygenerals§! and §Ycharacters§!.\n"
  ALI_add_usa_generals_tt:0 "§7ADDS§! §YAMERICAN§! §7DESIGNS FOR§!:\n§GTanks§!\n§CShips§!\n§OPlanes§!"
@@ -30,7 +30,7 @@
  ALI_royal_engineers_tt:0 "Adds§Y two 20 width§! §OMotorized Infantry Divisions§!."
  ALI_first_infantry_tt:0 "Adds a §Y20-width Marine Division§!.\n"
  ALI_11th_artillery_tt:0 "Adds §Ytwo 40 width§! §OMarine Divisions§!."
- ALI_79th_infantry_tt:0 "Adds §Ythree 20 width§! §OInfantry Divisions§!."
+ ALI_79th_infantry_tt:0 "Adds §Ytwo veteran 40 width§! §OInfantry Divisions§!."
  ALI_USA_cas_tt:0 "Adds §3150 CAS§! (P-47 variant)."
  ALI_unlock_generals:0 "New §YGenerals§! will become available.\n"
  ALI_together_for_victory_tt:0 "Adds §Ytwo 40 width§! §OMedium Tank Divisiosn§!.\n"
@@ -67,11 +67,8 @@ ALI_elverum_declaration_idea:0 "Elverum Declaration"
  battle_of_berlin:0 "Battle Of Berlin"
  canadian_wonder:0 "Canadian Wonder"
  motorized_rocket_unit:"Motorized Rocket Artillery"
- ALI_high_command:0 "Allied High Command"
- ALJ_high_command:0 "Second Allied High Command"
 commando_leader:0 "Commando Leader"
 grace_of_god:0 "By the Grace of God"
-ALK_high_command:0 "Third Allied High Command"
 
 
  ALI_commonwelth:0 "The Commonwealth"
@@ -448,7 +445,7 @@ ALI_bomb_proofing_idea:0 "Bomb Proofing"
 ALI_african_guns_tt:0 "Adds §Y80 Basic Infantry Equipment§! every week."
 lion_of_africa:0 "Lion of Africa"
 ALI_ethiopia:0 "Abbisinian Empire"
-ALI_add_eastern_units_tt:0 "Adds §Ythree 20 width§!§O Infantry Divisions§! and a §CFleet§!."
+ALI_add_eastern_units_tt:0 "Adds §Ytwo veteran 40 width§!§O Infantry Divisions§! and a §CFleet§!."
 ALI_add_eastern_equipment_tt:0 "Adds §HEastern§! designs for:§G Tanks§!,§C Ships§!,§O Planes§!."
 ALI_flying_tigers_tt:0 "Adds §3150 Fighters§! (P-40 variant)."
 
@@ -460,3 +457,8 @@ ALI_lynx_armored_car_tt: "Enables §YLynx armored car§! which yields: \n§YArmo
 ALI_lynx_armored_car_recon_company_tt: "\n§Y$armored_car_recon$§!:\n§YForest:§!\n Movement Effective Change: §G+5%§!\n Attack Effective change: §G+5%§! \n§YDesert:§!\n  Movement Effective Change: §R-5%§!\n  Attack Effective Change: §R-5%§!\n§YSnow:§!\n Movement Effective Change: §G+8%§!\n Attack Effective change: §G+5%§!\n\n"
 
 bomb_lock_prioritization_tt:0 "§3Heavy Bomb Locks§! will be prioritized if researched."
+
+ ALI_high_command:0 "Allied High Command"
+ ALJ_high_command:0 "Second Allied High Command"
+ ALK_high_command:0 "Third Allied High Command"
+ ALL_high_command:0 "Fourth Allied High Command"

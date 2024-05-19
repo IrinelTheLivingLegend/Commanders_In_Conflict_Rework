@@ -43,17 +43,32 @@ cic_ali_annexations = {
 	}
 	option = {
 		name = merge_ali_alj
-		text = "Merge Allies I with Allies II"
+		text = "1 + 2"
+		desc = ""
+	}
+	option = {
+		name = merge_alj_alk
+		text = "2 + 3"
+		desc = ""
+	}
+	option = {
+		name = merge_alk_all
+		text = "3 + 4"
 		desc = ""
 	}
 	option = {
 		name = merge_ali_alj_alk
-		text = "Merge Allies I , Allies II and Allies III"
+		text = "1 + 2 + 3"
 		desc = ""
 	}
 	option = {
 		name = merge_ali_alj_alk_all
-		text = "Merge all Allied Nations"
+		text = "1 + 2 + 3 + 4"
+		desc = ""
+	}
+	option = {
+		name = merge_ali_alj_alk_all_duo
+		text = "1 + 2 and 3 + 4"
 		desc = ""
 	}
 }
@@ -69,17 +84,48 @@ cic_axi_annexations = {
 	}
 	option = {
 		name = merge_axi_axj
-		text = "Merge Axis I with Axis II"
+		text = "1 + 2"
+		desc = ""
+	}
+	option = {
+		name = merge_axj_axk
+		text = "2 + 3"
+		desc = ""
+	}
+	option = {
+		name = merge_axk_axl
+		text = "3 + 4"
 		desc = ""
 	}
 	option = {
 		name = merge_axi_axj_axk
-		text = "Merge Axis I , Axis II and Axis III"
+		text = "1 + 2 + 3"
 		desc = ""
 	}
 	option = {
 		name = merge_axi_axj_axk_axl
-		text = "Merge all Axis Nations"
+		text = "1 + 2 + 3 + 4"
+		desc = ""
+	}
+	option = {
+		name = merge_axi_axj_axk_axl_duo
+		text = "1 + 2 and 3 + 4"
+		desc = ""
+	}
+}
+flip_position = {
+	name = "Flip faction positions"
+	group = "CIC Rules"
+	icon = "GFX_leave_faction"
+
+	default = {
+		name = flip_no
+		text = "No"
+		desc = ""
+	}
+	option = {
+		name = flip_yes
+		text = "Yes"
 		desc = ""
 	}
 }

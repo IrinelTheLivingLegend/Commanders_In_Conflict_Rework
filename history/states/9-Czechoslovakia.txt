@@ -2,10 +2,6 @@
 state={
 	id=9
 	name="STATE_9"
-	resources={
-		steel=5.000
-	}
-
 	history={
 		owner = NOO
 		add_core_of = NOO
@@ -17,11 +13,6 @@ state={
 		}
 		victory_points = {
 			9569 5 
-		}
-		buildings = {
-			anti_air_building = 5
-			air_base = 5
-
 		}
 
 	}

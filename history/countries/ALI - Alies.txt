@@ -192,6 +192,7 @@ add_ideas = {
 	starting_eff
 	no_day1_paradrop
 	peace_supply_grace
+	global_production_control
 }
 
 set_convoys = 100

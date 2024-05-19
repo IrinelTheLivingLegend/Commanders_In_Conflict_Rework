@@ -291,6 +291,7 @@ AXI_mauser_organization = {
 			tag = AXI 
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }
@@ -341,6 +342,7 @@ AXI_scania_vabis_organization = {
 		tag = AXI
 		tag = AXJ
 		tag = AXK
+		tag = AXL
 	}	
 }
 AXI_valtion_panssaritehdas_organization = {
@@ -353,6 +355,7 @@ AXI_valtion_panssaritehdas_organization = {
 			tag = AXI 
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 }

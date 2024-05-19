@@ -339,6 +339,12 @@ shared_focus = {
 		}
 		add_tech_bonus = {
 			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category =  dispersed_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
 			bonus = 1.0
 			uses = 1
 			category = construction_tech
@@ -428,6 +434,12 @@ shared_focus = {
 		}
 		add_tech_bonus = {
 			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category =  dispersed_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
 			bonus = 1.0
 			uses = 1
 			category = construction_tech
@@ -493,6 +505,13 @@ shared_focus = {
 			ahead_reduction = 2.0
 			uses = 1
 			category = concentrated_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			ahead_reduction = 2.0
+			uses = 1
+			category =  dispersed_industry_category
 		}
 		add_tech_bonus = {
 			name = industrial_bonus
@@ -565,6 +584,12 @@ shared_focus = {
 			bonus = 1.0
 			uses = 1
 			category = dispersed_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category =  concentrated_industry_category
 		}
 		random_owned_controlled_state = {
 			limit = {
@@ -645,6 +670,12 @@ shared_focus = {
 			bonus = 1.0
 			uses = 1
 			category = dispersed_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category =  concentrated_industry_category
 		}
 		random_owned_controlled_state = {
 			limit = {
@@ -731,6 +762,13 @@ shared_focus = {
 			ahead_reduction = 2.0
 			uses = 1
 			category = dispersed_industry_category
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			ahead_reduction = 2.0
+			uses = 1
+			category =  concentrated_industry_category
 		}
 		random_owned_controlled_state = {
 			limit = {

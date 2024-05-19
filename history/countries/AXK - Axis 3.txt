@@ -193,6 +193,7 @@ add_ideas = {
 	starting_eff
 	no_day1_paradrop
 	peace_supply_grace
+	global_production_control
 }
 
 recruit_character = AXK_high_command

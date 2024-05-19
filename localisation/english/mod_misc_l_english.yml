@@ -256,9 +256,11 @@ CIC_CONT_OFFENSIVE_TT:0 "Work behind the lines of the enemy to disrupt their pat
 custom_diff_strong_ali:0 "Strengthen Allied Player 1"
 custom_diff_strong_alj:0 "Strengthen Allied Player 2"
 custom_diff_strong_alk:0 "Strengthen Allied Player 3"
+custom_diff_strong_all:0 "Strengthen Allied Player 4"
 custom_diff_strong_axi:0 "Strengthen Axis Player 1"
 custom_diff_strong_axj:0 "Strengthen Axis Player 2"
 custom_diff_strong_axk:0 "Strengthen Axis Player 3"
+custom_diff_strong_axl:0 "Strengthen Axis Player 4"
 
 human_infantry_offensive_tt:0 "        Required Infantry Equipment: §G-10§!"
 INDUSTRY_TITLE_JUGGLE:0 "JUGGLE"
@@ -451,3 +453,6 @@ operational_concentration_desc:0 "Achieving overwhelming local superiority is pa
  tactic_double_envelopment_preferred_weight_factor:0 "Additional §Y$tactic_double_envelopment$§! Tactic Chance if it is Preferred tactic"
 
 tactic_double_envelopment:0 "Sudden Envelopment"
+
+no_navy:0 "No Navy"
+global_production_control:0 "Global Production Control"

@@ -143,6 +143,14 @@ MOD_countdown_to_war = {
 					}
 					add_to_war = {
     					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
     					enemy = NEU
 					}
 					}
@@ -163,6 +171,10 @@ MOD_countdown_to_war = {
 					add_to_war = {
     					targeted_alliance = AXI
     					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
 					}
 					add_to_war = {
     					targeted_alliance = AXI
@@ -311,6 +323,14 @@ MOD_countdown_to_war = {
 					}
 					add_to_war = {
     					targeted_alliance = AXI
+    					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
     					enemy = NEU
 					}
 					}
@@ -331,6 +351,10 @@ MOD_countdown_to_war = {
 					add_to_war = {
     					targeted_alliance = AXI
     					enemy = ALK
+					}
+					add_to_war = {
+    					targeted_alliance = AXI
+    					enemy = ALL
 					}
 					add_to_war = {
     					targeted_alliance = AXI

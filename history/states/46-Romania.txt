@@ -12,17 +12,6 @@ state={
 		victory_points = {
 			3663 5 
 		}
-		victory_points = {
-			657 3 
-		}
-		buildings = {
-			657 = {
-				naval_base = 3
-
-			}
-
-		}
-
 	}
 
 	provinces={

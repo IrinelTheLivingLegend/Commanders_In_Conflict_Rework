@@ -195,9 +195,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3675;668;impassable;-1;-1;-1;-1;-1;;austrian alps
 3674;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
 3674;6691;impassable;-1;-1;-1;-1;-1;;austrian alps
-6691;6687;impassable;-1;-1;-1;-1;-1;;austrian alps
-6691;9650;impassable;-1;-1;-1;-1;-1;;austrian alps
-9650;3684;impassable;-1;-1;-1;-1;-1;;austrian alps
 3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
 12299;12168;sea;5539;-1;-1;4412;654;;Singapore Sumatra
 4211;4409;sea;5641;-1;-1;-1;-1;;Kalimantan Sumatra

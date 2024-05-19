@@ -290,6 +290,7 @@ ALI_inglis_company_organization = {
 		 	tag = ALI
 		 	tag = ALJ
 			tag = ALK
+			tag = ALL
 		 }
 	}
 }
@@ -341,6 +342,7 @@ ALI_scania_vabis_organization = {
 		tag = ALI
 		tag = ALJ
 		tag = ALK
+		tag = ALL
 		}
 	}	
 }
@@ -354,6 +356,7 @@ ALI_mytishchy_machine_building_plant_organization = {
 			tag = ALI 
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 }

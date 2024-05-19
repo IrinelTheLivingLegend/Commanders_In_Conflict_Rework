@@ -1,0 +1,531 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_alj_alk
+					}
+				}
+				ALK ={
+					transfer_units_fraction = {
+						target = ALJ
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = ALJ
+					remove_core_of = ALK
+					add_core_of = ALJ
+				}
+
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_alk_all
+					}
+				}
+				ALL ={
+					transfer_units_fraction = {
+						target = ALK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALL
+					}
+					transfer_state_to = ALK
+					remove_core_of = ALL
+					add_core_of = ALK
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj_alk
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALK={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALK
+					add_core_of = ALI
+				}
+				ALI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 16
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 255
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj_alk_all
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALK={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALK
+					add_core_of = ALI
+				}
+				ALL={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALL
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALL
+					add_core_of = ALI
+				}
+				ALI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 16
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 255
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_totalwar_4v4
+						}
+						set_capital = {
+							state = 219 #Moscow
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_ali_annexations 
+						option = merge_ali_alj_alk_all_duo
+					}
+				}
+				ALJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = ALI
+					remove_core_of = ALJ
+					add_core_of = ALI
+				}
+				ALL={
+					transfer_units_fraction = {
+						target = ALK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALL
+					}
+					transfer_state_to = ALK
+					remove_core_of = ALL
+					add_core_of = ALK
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axj_axk
+					}
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = AXJ
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = AXJ
+					remove_core_of = AXK
+					add_core_of = AXJ
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axk_axl
+					}
+				}
+				AXL ={
+					transfer_units_fraction = {
+						target = AXK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXL
+					}
+					transfer_state_to = AXK
+					remove_core_of = AXL
+					add_core_of = AXK
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj_axk
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXK
+					add_core_of = AXI
+				}
+				AXI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 64
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 194
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj_axk_axl
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXK
+					add_core_of = AXI
+				}
+				AXL ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXL
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXL
+					add_core_of = AXI
+				}
+				AXI = {
+					if = {
+						limit = {
+							has_global_flag = game_great_war_3v3
+						}
+						set_capital = {
+							state = 64
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_barbarossa3v3
+						}
+						set_capital = {
+							state = 194
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = game_totalwar_4v4
+						}
+						set_capital = {
+							state = 4 #Vienna
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= cic_axi_annexations 
+						option = merge_axi_axj_axk_axl_duo
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = AXI
+					remove_core_of = AXJ
+					add_core_of = AXI
+				}
+				AXL ={
+					transfer_units_fraction = {
+						target = AXK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXL
+					}
+					transfer_state_to = AXK
+					remove_core_of = AXL
+					add_core_of = AXK
+				}
+			}
+		}
+	}
+}

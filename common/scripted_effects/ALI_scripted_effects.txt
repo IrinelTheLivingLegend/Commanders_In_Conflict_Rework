@@ -1035,27 +1035,6 @@ ALI_add_british_equipment = {
 }
 ALI_add_commonwelth_units = {
 	hidden_effect = {
-			division_template = {
-			name = "Infantry Division"
-			division_names_group = ENG_INF_01
-				regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 0 y = 3 }
-				infantry = { x = 0 y = 4 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-				infantry = { x = 1 y = 3 }
-				infantry = { x = 1 y = 4 }
-			}
-			support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-		}
 		division_template = {
 			name = "Armoured Division" 				# 1st Armoured Division, 7th Armoured 'Desert
 			division_names_group = ENG_ARM_01
@@ -1088,19 +1067,43 @@ ALI_add_commonwelth_units = {
 						artillery = { x = 0 y = 2 }
 					}
 		}
+		division_template = {
+			name = "CONVERTS"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				infantry = { x = 0 y = 4 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 }
+				infantry = { x = 1 y = 4 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 2 y = 3 }
+				infantry = { x = 2 y = 4 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+				infantry = { x = 3 y = 3 }
+				infantry = { x = 3 y = 4 }
+			}
+		}
 		random_owned_controlled_state = {
 			limit = { ROOT = { has_full_control_of_state = PREV } }
-			create_unit = {
-				division = "division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
 			create_unit = {
 				division = "name = \"7th Armoured Division\" division_template = \"Armoured Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { light_tank_chassis_1 = { owner = ALI version_name = \"Light Tank Mk. VI\" } }"
 				owner = ROOT
 			}
+			create_unit = {
+				division = "division_template = \"CONVERTS\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+				owner = ROOT
+				count = 2
+			}
 		}
-
 
 		if = {
 			limit = {
@@ -1899,9 +1902,7 @@ ALI_add_usa_equipment = {
 ALI_add_usa_units = {
 	hidden_effect = {
 		division_template = {
-			name = "Infantry Division"
-			division_names_group = USA_INF_01
-
+			name = "CONVERTS"
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
@@ -1913,24 +1914,24 @@ ALI_add_usa_units = {
 				infantry = { x = 1 y = 2 }
 				infantry = { x = 1 y = 3 }
 				infantry = { x = 1 y = 4 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 2 y = 3 }
+				infantry = { x = 2 y = 4 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+				infantry = { x = 3 y = 3 }
+				infantry = { x = 3 y = 4 }
 			}
-			support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
 		}
-		random_owned_controlled_state = {
-			limit = { ROOT = { has_full_control_of_state = PREV } }
-			prioritize = { 907 }
-			create_unit = {
-				division = "division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
+		create_unit = {
+			division = "division_template = \"CONVERTS\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
 		}
 
-		
 	if = {
 			limit = {
 				has_dlc = "Man the Guns"
@@ -2574,9 +2575,7 @@ if = {
 ALI_add_sov_units = {
 	hidden_effect = {
 		division_template = {
-			name = "Infantry Division"
-			division_names_group = SOV_INF_01
-
+			name = "CONVERTS"
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
@@ -2588,21 +2587,22 @@ ALI_add_sov_units = {
 				infantry = { x = 1 y = 2 }
 				infantry = { x = 1 y = 3 }
 				infantry = { x = 1 y = 4 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 2 y = 3 }
+				infantry = { x = 2 y = 4 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+				infantry = { x = 3 y = 3 }
+				infantry = { x = 3 y = 4 }
 			}
-			support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
 		}
-		random_owned_controlled_state = {
-			limit = { ROOT = { has_full_control_of_state = PREV } }
-			prioritize = { 907 }
-			create_unit = {
-				division = "division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
+		create_unit = {
+			division = "division_template = \"CONVERTS\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
 		}
 
 		if = {
@@ -3624,9 +3624,7 @@ if = {
 ALI_add_norwegian_units = {
 	hidden_effect = {
 		division_template = {
-			name = "Infantry Division"
-			division_names_group = NOR_INF_01
-
+			name = "CONVERTS"
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
@@ -3638,20 +3636,22 @@ ALI_add_norwegian_units = {
 				infantry = { x = 1 y = 2 }
 				infantry = { x = 1 y = 3 }
 				infantry = { x = 1 y = 4 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 2 y = 3 }
+				infantry = { x = 2 y = 4 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+				infantry = { x = 3 y = 3 }
+				infantry = { x = 3 y = 4 }
 			}
-			support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
 		}
-		random_owned_controlled_state = {
-			limit = { ROOT = { has_full_control_of_state = PREV } }
-			create_unit = {
-				division = "division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 3
-			}
+		create_unit = {
+			division = "division_template = \"CONVERTS\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
 		}
 
 		if = {

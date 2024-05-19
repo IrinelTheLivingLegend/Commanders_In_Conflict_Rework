@@ -1076,6 +1076,10 @@ technologies = {
 			leads_to_tech = improved_heavy_tank_chassis
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = super_heavy_tank_chassis
+			research_cost_coeff = 1
+		}
 
 		research_cost = 2
 		start_year = 1934
@@ -1138,11 +1142,6 @@ technologies = {
 
 		path = {
 			leads_to_tech = advanced_heavy_tank_chassis
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = super_heavy_tank_chassis
 			research_cost_coeff = 1
 		}
 
@@ -1292,10 +1291,10 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1942
+		start_year = 1939
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 10 y = @1942 }
+			position = { x = 10 y = @1938 }
 		}
 
 		on_research_complete = {

@@ -927,6 +927,19 @@ bookmarks = {
 				set_state_category = rural
 				
 			}
+
+			every_state = {
+				limit={OR={state=208 state=195  #allies
+						   state=137 state=200 #Allies 4
+						   state=61 state=62  #axis
+						   state=44 state=731 #axis 4
+							}}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+			}
+			}
 			every_state = {
 				limit={OR={state=240 state = 227 state=234 state = 407 state=401 state=255 state=829 state = 257 state = 265 state = 245 state =260 state =217 state =228}}
 				add_building_construction = {
@@ -995,7 +1008,7 @@ bookmarks = {
 				}
 				add_resource = {
 					type = steel
-					amount = 15
+					amount = 20
 				}
 				add_resource = {
 					type = chromium
@@ -1032,6 +1045,9 @@ bookmarks = {
 						state = 76  #North Transilvania
 						state = 212 #Plodviv
 						state = 46 #Bucharest
+						state = 75 #Brno
+						state = 9 #Prague
+						state = 4 #Vienna
 					}
 				}
 				add_building_construction = {

@@ -113,6 +113,35 @@ bookmarks = {
    					instant_build = yes
 				}
 			}
+			every_state = {
+				limit={OR={
+					state = 158 #Piedmont
+					state = 160 #Venzia
+					state = 59 #Munich
+					state = 4 #Vienna
+					state = 27 #Djon
+					state = 851 #Toulon
+					state = 25 #Bordeaux
+					state = 31 #Toulouse
+
+				}}
+				add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+				}
+			}
+			every_state = {
+				limit={OR={
+					state = 17 #Paris
+					state =15 #Normandy
+				}}
+				add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+				}
+			}
 
 			#Those nations are required to exist on map for the flags on industrial decisions to show properly
 		every_state = {

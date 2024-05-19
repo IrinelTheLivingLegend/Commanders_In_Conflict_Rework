@@ -234,7 +234,7 @@ NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1		      -- vanilla the same | 
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 30			  -- 24 vanilla | how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5			      -- vanilla the same | how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 
-NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.1     -- vanilla 0.5
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0       -- vanilla 0.5
 NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.9               -- vanilla 1.0  | percentage of experienced solders who die when manpower is removed
 
 
@@ -282,6 +282,12 @@ NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE=-0.3 --vanilla 0.6
 --█▀▀ █ █ █▀█ █▀█ █   ▀▄▀    █▀█ █▀▀ █▄ █ ▄▀▄ █   ▀█▀ ▀█▀ █▀▀ █▀▀ 
 --▄██ █▄█ █▀▀ █▀▀ █▄▄  █     █▀▀ ██▄ █ ▀█ █▀█ █▄▄  █  ▄█▄ ██▄ ▄██ 
 
+NDefines.NSupply.CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.38 -- starting penalty that will be added as supply moves away from its origin (modified by stuff like terrain)
+-- defines that are used for supply reach for built nodes
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 2.8
+NDefines.NSupply.NODE_STARTING_PENALTY_PER_PROVINCE = 0.7
+NDefines.NSupply.NODE_ADDED_PENALTY_PER_PROVINCE = 0.25
+
 --Better stats for attacker compared to vanilla
 NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = -0.15      -- vanilla -0.25 | attack combat penalty for attacker if out of supply
 NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_DEFEND = -0.5       -- vanilla -0.65 | defend combat penalty for attacker if out of supply
@@ -311,6 +317,7 @@ NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.6    -- vanilla 0.3
 --█     █     █   █ █  ██ █         █ 
 --█     █████ █   █ █   █ █████ █████ 
 
+NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 300
 NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT=1500
 NDefines.NAir.AIR_WING_BOMB_DAMAGE_FACTOR = 5 --2 was vanilla
 NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR=0.5
@@ -591,6 +598,5 @@ NDefines.NMilitary.WAR_SCORE_AIR_MONTHLY_FALLOFF = 0
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0				
 NDefines.NMilitary.WAR_SCORE_LOSSES_MULT_IF_CAPITULATED = 0 
 
-NDefines.NDiplomacy.EMBARGO_COST = 2000	
-NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 2000
-
+NDefines.NDiplomacy.EMBARGO_COST = 2000
+NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 0

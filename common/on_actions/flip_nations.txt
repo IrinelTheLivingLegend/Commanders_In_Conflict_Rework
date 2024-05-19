@@ -1,0 +1,303 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule ={ 
+						rule= flip_position
+						option = flip_yes
+					}
+				}
+
+				#flip ALI-AXI
+				ALI ={
+					transfer_units_fraction = {
+						target = USA
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				AXI ={
+					transfer_units_fraction = {
+						target = GER
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALI
+					}
+					transfer_state_to = AAA
+					remove_core_of = ALI
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXI
+					}
+					transfer_state_to = BBB
+					remove_core_of = AXI
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AAA
+					}
+					transfer_state_to = AXI
+					add_core_of = AXI
+				}
+				every_state = {
+					limit = {
+						is_owned_by = BBB
+					}
+					transfer_state_to = ALI
+					add_core_of = ALI
+				}
+
+				#flip ALJ-AXJ
+				ALJ ={
+					transfer_units_fraction = {
+						target = ENG
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				AXJ ={
+					transfer_units_fraction = {
+						target = ITA
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALJ
+					}
+					transfer_state_to = CCC
+					remove_core_of = ALJ
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXJ
+					}
+					transfer_state_to = DDD
+					remove_core_of = AXJ
+				}
+				every_state = {
+					limit = {
+						is_owned_by = CCC
+					}
+					transfer_state_to = AXJ
+					add_core_of = AXJ
+				}
+				every_state = {
+					limit = {
+						is_owned_by = DDD
+					}
+					transfer_state_to = ALJ
+					add_core_of = ALJ
+				}
+
+				#flip ALK-AXK
+				ALK ={
+					transfer_units_fraction = {
+						target = SOV
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				AXK ={
+					transfer_units_fraction = {
+						target = JAP
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALK
+					}
+					transfer_state_to = EEE
+					remove_core_of = ALK
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXK
+					}
+					transfer_state_to = FFF
+					remove_core_of = AXK
+				}
+				every_state = {
+					limit = {
+						is_owned_by = EEE
+					}
+					transfer_state_to = AXK
+					add_core_of = AXK
+				}
+				every_state = {
+					limit = {
+						is_owned_by = FFF
+					}
+					transfer_state_to = ALK
+					add_core_of = ALK
+				}
+
+				#flip ALL-AXL
+				ALL ={
+					transfer_units_fraction = {
+						target = FRA
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				AXL ={
+					transfer_units_fraction = {
+						target = ROM
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = ALL
+					}
+					transfer_state_to = GGG
+					remove_core_of = ALL
+				}
+				every_state = {
+					limit = {
+						is_owned_by = AXL
+					}
+					transfer_state_to = HHH
+					remove_core_of = AXL
+				}
+				every_state = {
+					limit = {
+						is_owned_by = GGG
+					}
+					transfer_state_to = AXL
+					add_core_of = AXL
+				}
+				every_state = {
+					limit = {
+						is_owned_by = HHH
+					}
+					transfer_state_to = ALL
+					add_core_of = ALL
+				}
+			}
+		}
+	}
+	on_daily_NOO = {
+		effect = {
+			if={
+				limit= {
+					has_game_rule ={ 
+						rule= flip_position
+						option = flip_yes
+					}
+					has_global_flag = game_started
+					not = {
+						has_global_flag = transfered_once
+					}
+				}
+				set_global_flag = transfered_once
+
+				#flip ALI-AXI
+				USA ={
+					transfer_units_fraction = {
+						target = AXI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				GER ={
+					transfer_units_fraction = {
+						target = ALI
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+					
+				#flip ALJ-AXJ
+				ENG ={
+					transfer_units_fraction = {
+						target = AXJ
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				ITA ={
+					transfer_units_fraction = {
+						target = ALJ
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+
+				#flip ALK-AXK
+				SOV ={
+					transfer_units_fraction = {
+						target = AXK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				JAP ={
+					transfer_units_fraction = {
+						target = ALK
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+
+				#flip ALL-AXL
+				FRA ={
+					transfer_units_fraction = {
+						target = AXL
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+				ROM ={
+					transfer_units_fraction = {
+						target = ALL
+						army_ratio = 1.0
+						air_ratio = 1.0
+						navy_ratio = 1.0
+						stockpile_ratio = 1.0
+					}
+				}
+			}
+		}
+	}
+}

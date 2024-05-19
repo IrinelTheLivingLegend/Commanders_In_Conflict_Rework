@@ -45,8 +45,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.6
 		breakthrough = -0.6
-		soft_attack = -0.6
-		hard_attack = -0.6
+		soft_attack = -0.5
+		hard_attack = -0.5
 		armor_value = -0.6
 		ap_attack = -0.2
 		
@@ -121,8 +121,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.6
 		breakthrough = -0.6
-		soft_attack = -0.6
-		hard_attack = -0.6
+		soft_attack = -0.5
+		hard_attack = -0.5
 		armor_value = -0.6
 		ap_attack = -0.2
 		
@@ -204,8 +204,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.6
 		breakthrough = -0.6
-		soft_attack = -0.6
-		hard_attack = -0.6
+		soft_attack = -0.5
+		hard_attack = -0.5
 		armor_value = -0.6
 		ap_attack = -0.2
 		
@@ -289,8 +289,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.6
 		breakthrough = -0.6
-		soft_attack = -0.6
-		hard_attack = -0.6
+		soft_attack = -0.5
+		hard_attack = -0.5
 		armor_value = -0.6
 		ap_attack = -0.2
 		
@@ -369,8 +369,8 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.6
 		breakthrough = -0.6
-		soft_attack = -0.6
-		hard_attack = -0.6
+		soft_attack = -0.5
+		hard_attack = -0.5
 		armor_value = -0.6
 		ap_attack = -0.2
 		

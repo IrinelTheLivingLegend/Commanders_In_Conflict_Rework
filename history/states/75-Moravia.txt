@@ -2,10 +2,6 @@
 state={
 	id=75
 	name="STATE_75"
-	resources={
-		steel=4.000
-		oil=2.000
-	}
 
 	history={
 		owner = NOO
@@ -15,10 +11,6 @@ state={
 		}
 		victory_points = {
 			6562 5 
-		}
-		buildings = {
-			air_base = 5
-
 		}
 
 	}
