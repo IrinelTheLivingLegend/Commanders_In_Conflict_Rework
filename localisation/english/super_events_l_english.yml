@@ -17,5 +17,5 @@
   allies_player2_1v1_text:0 ""
   allies_player2_2v2_text:0 "Allies2 Player chose [ALJ.GetFactionPick]"
   ending_date:0 "The End Date was [?Global.end_date.GetDateStringNoHour]"
-  gameid:0 "Gameid: [?Global.game_id]"
+
   map_pick:0"[GetMap]"
