@@ -93,7 +93,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -173,7 +173,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -249,7 +249,7 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -319,7 +319,7 @@ technologies = {
 				attack = 0.10
 			}
 		}
-		research_cost = 2.0
+		research_cost = 2
 		start_year = 1943
 		folder = {
 			name = support_folder
@@ -370,7 +370,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -422,7 +422,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -464,7 +464,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -544,7 +544,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -611,7 +611,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -643,7 +643,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -717,7 +717,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -765,7 +765,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -814,7 +814,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -899,7 +899,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -945,7 +945,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -990,7 +990,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -1097,7 +1097,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1148,7 +1148,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1198,7 +1198,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -1289,7 +1289,7 @@ technologies = {
 			motorised_infantry = 1
 		}
 
-		research_cost = 1.25
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1325,7 +1325,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1368,7 +1368,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.75
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -1444,7 +1444,7 @@ technologies = {
 			train_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1910
 		folder = {
 			name = support_folder
@@ -1493,7 +1493,7 @@ technologies = {
 			railway_gun_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1528,7 +1528,7 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1581,7 +1581,7 @@ technologies = {
 			has_dlc = "No Step Back"
 		}
 		
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1936
 		folder = {
 			name = support_folder

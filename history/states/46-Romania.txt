@@ -12,6 +12,9 @@ state={
 		victory_points = {
 			3663 5 
 		}
+		victory_points = {
+			3639 5 #Pitesti 
+		}
 	}
 
 	provinces={

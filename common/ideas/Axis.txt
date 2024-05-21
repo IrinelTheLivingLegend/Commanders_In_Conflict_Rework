@@ -669,7 +669,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_strength_factor = 0.2
+				army_strength_factor = 0.1
 				land_reinforce_rate = 0.05
 				army_morale_factor = 0.2
 			}

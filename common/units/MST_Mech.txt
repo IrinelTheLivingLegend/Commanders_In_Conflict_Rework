@@ -24,10 +24,14 @@ sub_units = {
 		}
 		
 		combat_width = 0
-		
-		#Offensive Abilities
-		soft_attack = 0.1
-		hard_attack = 4.0
+
+		# Support nerfs to combat abilities
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.6
+		hard_attack = -0.6
+		armor_value = -0.6
+		ap_attack = -0.3
 		
 		#Size Definitions
 		max_strength = 3
@@ -52,8 +56,8 @@ sub_units = {
 		transport = mechanized_equipment
 
 		need = {
-			mechanized_equipment = 20
-			infantry_equipment = 50
+			mechanized_equipment = 12
+			infantry_equipment = 30
 		}
 
 		forest = {

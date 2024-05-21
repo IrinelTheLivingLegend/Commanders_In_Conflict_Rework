@@ -38,7 +38,7 @@ sub_units = {
 		supply_consumption = 0.1
 
 		need = {
-			anti_air_equipment = 30
+			anti_air_equipment = 12
 		}
 
 		forest = {
@@ -104,7 +104,7 @@ sub_units = {
 		}
 
 		need = {
-			anti_air_equipment = 30
+			anti_air_equipment = 12
 			motorized_equipment = 50
 		}
 

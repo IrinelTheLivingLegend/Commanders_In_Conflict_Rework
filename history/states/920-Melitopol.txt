@@ -7,6 +7,10 @@ state={
 		owner = NOO
 		add_core_of = NOO
 
+		victory_points = {
+			721 1 
+		}
+
 	}
 
 	provinces={

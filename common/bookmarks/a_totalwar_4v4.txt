@@ -93,7 +93,11 @@ bookmarks = {
 				value = 50
 			}
 			set_victory_points = {
-				province = 9617 #Bucharest
+				province = 6706 #Galati
+				value = 50
+			}
+			set_victory_points = {
+				province = 11479 #Lwow
 				value = 50
 			}
 			set_victory_points = {
@@ -106,10 +110,6 @@ bookmarks = {
 			}
 			set_victory_points = {
 				province = 9508 #Lodz
-				value = 50
-			}
-			set_victory_points = {
-				province = 577 #Cernauti
 				value = 50
 			}
 			set_victory_points = {
@@ -197,6 +197,14 @@ bookmarks = {
 			set_victory_points = {
 				province = 11586 #Belgrade
 				value = 25
+			}
+			set_victory_points = {
+				province = 577 #Cernauti
+				value = 5
+			}
+			set_victory_points = {
+				province = 9617 #Bucharest
+				value = 5
 			}
 			set_victory_points = {
 				province = 949 #Sofia
@@ -943,9 +951,13 @@ bookmarks = {
 				}
 			}
 			every_state = {
-				limit = {
-					state = 208
-				}
+			limit={
+					OR={state=208 state=195  #allies
+						state=137 state=200 #Allies 4
+						state=61 state=62  #axis
+						state=44 state=731 #axis 4
+						}
+					}
 				add_extra_state_shared_building_slots = 3
 			}
 			every_state = {
@@ -959,7 +971,7 @@ bookmarks = {
 			
 			#resources
 			every_state = {
-				limit={OR={state=362 state=808 state=87 state=94 state=80 state=46 state=797 }}
+				limit={OR={state=362 state=808 state=87 state=94 state=91 state=79 state=797 }}
 				add_resource = {
 					type = oil
 					amount = 50

@@ -10,6 +10,10 @@ state={
 		owner = NOO
 		add_core_of = NOO
 
+		victory_points = {
+			657 5 
+		}
+
 		buildings = {
 			657 = {
 				naval_base = 3

@@ -151,7 +151,7 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20 --vanilla 10
 NDefines.NTechnology.BASE_TECH_COST= 100                   -- vanilla 100
 NDefines.NTechnology.USE_BONUS_REGRET_TIMER=10            -- vanilla 7
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50      -- vanilla 30
-NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3 -- vanilla 2.0
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 4 -- vanilla 2.0
 
 --█▀▀ █▀█ ▄▀▄ █▀█ █▄█ ▀█▀ █▀▀ █▀▀ 
 --█▄█ █▀▄ █▀█ █▀▀ █ █ ▄█▄ █▄▄ ▄██ 
@@ -219,10 +219,10 @@ NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 4			-- vanilla 5
 --▀█▀ █▀█ ▄▀▄ ▀█▀ █▄ █ ▀█▀ █▄ █ █▀▀ 
 -- █  █▀▄ █▀█ ▄█▄ █ ▀█ ▄█▄ █ ▀█ █▄█ 
 
-NDefines.NMilitary.FIELD_EXPERIENCE_SCALE=0.006               -- vanilla 0.0015 (4 times less) 
+NDefines.NMilitary.FIELD_EXPERIENCE_SCALE=0.007               -- vanilla 0.0015 (2 times less) 
 NDefines.NMilitary.LEADER_EXPERIENCE_SCALE=1.5                -- vanilla 1.0
 
-NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0025  -- vanilla 0.0015
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.003  -- vanilla 0.0015
 NDefines.NMilitary.TRAINING_ORG = 0.5                         -- vanilla 0.2
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2             -- vanilla 1
@@ -235,7 +235,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 30			  -- 24 vanilla | how many
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5			      -- vanilla the same | how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0       -- vanilla 0.5
-NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.9               -- vanilla 1.0  | percentage of experienced solders who die when manpower is removed
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.85               -- vanilla 1.0  | percentage of experienced solders who die when manpower is removed
 
 
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 15000000
@@ -598,5 +598,4 @@ NDefines.NMilitary.WAR_SCORE_AIR_MONTHLY_FALLOFF = 0
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0				
 NDefines.NMilitary.WAR_SCORE_LOSSES_MULT_IF_CAPITULATED = 0 
 
-NDefines.NDiplomacy.EMBARGO_COST = 2000
 NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 0

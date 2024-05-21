@@ -256,3 +256,14 @@ MOD_custom_decisions = {
 	visible = {
 }
 }
+
+pre_made_template_decisions = {
+		priority = 93
+
+	icon = GFX_decision_category_military_operation
+
+	allowed = {
+	}
+	visible = {
+	}
+}

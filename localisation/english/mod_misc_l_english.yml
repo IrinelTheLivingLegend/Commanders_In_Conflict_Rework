@@ -456,3 +456,6 @@ tactic_double_envelopment:0 "Sudden Envelopment"
 
 no_navy:0 "No Navy"
 global_production_control:0 "Global Production Control"
+
+pre_made_template_decisions:0 "Pre-Made Templates"
+infantry_template_40w: "Infantry Template 12INF/4ART/3AT/1AA"

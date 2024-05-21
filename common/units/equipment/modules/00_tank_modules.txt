@@ -1270,7 +1270,7 @@ equipment_modules = {
  		forbid_equipment_type_exact_match = armor
 
 		add_stats = {
-			soft_attack = 66 # vanilla 55 | 20% increase
+			soft_attack = 60.5 # vanilla 55 | 10% increase
 			hard_attack = 2
 			ap_attack = 60
 			build_cost_ic = 7

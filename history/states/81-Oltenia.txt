@@ -10,7 +10,10 @@ state={
 		owner = NOO
 		add_core_of = NOO
 		victory_points = {
-			6652 1
+			6652 5
+		}
+		victory_points = {
+			690 5
 		}
 
 	}

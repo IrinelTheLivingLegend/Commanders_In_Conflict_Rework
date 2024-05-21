@@ -1586,8 +1586,8 @@ on_actions = {
 								state = 85  #Danzig
 								state = 87 	#Lodz
 								state = 94	#Pinsk
-								state = 80 	#Cernauti
-								state = 46 	#Bucharest
+								state = 91  #Lwow
+								state = 79  #Galati
 								state = 797 #Istanbul
 							}
 						}

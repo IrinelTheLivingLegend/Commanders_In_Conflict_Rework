@@ -532,7 +532,6 @@ bookmarks = {
    					instant_build = yes
 				}
 				set_state_category = megalopolis
-				
 			}
 			every_state = {
 				limit={OR={ state=190 state=96 state=815 state=809 state=12 state=808 state=810}}
