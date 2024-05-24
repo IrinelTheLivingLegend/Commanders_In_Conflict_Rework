@@ -33,7 +33,7 @@ bookmarks = {
 				set_cosmetic_tag = AXI_spanish_empire_def_name
 			}
 			set_victory_points = {
-				province = 13326				#Boa Vista
+				province = 13429				#Boa Vista
 				value = 50
 			}
 			set_victory_points = {
@@ -178,19 +178,11 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 942
 						state = 941
 						state = 488
 						state = 487
 						state = 935
 						state = 495
-						state = 933
-						state = 928
-						state = 929
-						state = 930
-						state = 934
-						state = 931
-						state = 932
 						state = 310
 						state = 309
 						state = 687
@@ -210,6 +202,31 @@ bookmarks = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 928
+						state = 929
+						state = 930
+						state = 931
+						state = 932
+						state = 933
+						state = 934
+						state = 942
+						state = 516
+					}
+				}
+				IMP = {
+					transfer_state = PREV
+				}
+				add_core_of = IMP
+				remove_core_of = NOO
+			}
+			IMP = {
+				set_capital = {
+					state = 516
 				}
 			}
 			every_state = {

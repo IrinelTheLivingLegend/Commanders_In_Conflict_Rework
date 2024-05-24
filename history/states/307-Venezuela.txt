@@ -6,7 +6,7 @@ state={
 		owner = NOO
 		add_core_of = NOO
 		buildings = {
-			air_base = 10
+			air_base = 3
 			8113 = {
 				naval_base = 3
 

@@ -2,10 +2,7 @@
 state={
 	id=486
 	name="STATE_486"
-	manpower = 1 # = 3750000
 
-	state_category = megalopolis
-	
 	history={
 		owner = NOO
 		add_core_of = NOO
@@ -13,8 +10,10 @@ state={
 	}
 
 	provinces={
-		1887 2007 5026 10792 12729 12770 12825
+		1887 2007 5026 10792 12729 12770 12825 13398 13399 13405 
 	}
-
-	local_supplies=0.0
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
 }

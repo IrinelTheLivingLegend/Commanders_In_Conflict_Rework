@@ -11,12 +11,12 @@ state={
 		}
 
 	}
-	manpower=1
-	state_category=pastoral
 
 	provinces={
-		2142 2160 10924 10982 11010 12902 12916 12973 
+		2160 10924 10982 11010 12902 12916 12973 13391 13392 13393 13394 13395 13396 13404 13408 13420 
 	}
+	manpower=1
 	buildings_max_level_factor=1.000
+	state_category=pastoral
 	local_supplies=0.000
 }

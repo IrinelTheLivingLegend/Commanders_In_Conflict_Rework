@@ -1,16 +1,19 @@
+
 state={
 	id=936
 	name="STATE_936"
-	provinces={
-		13325 13326 13327 13329 
-	}
+
 	history={
 		owner = NOO
 		add_core_of = NOO
 
 	}
+
+	provinces={
+		13324 13325 13326 13327 13329 13330 13388 13429 
+	}
 	manpower=1
-	state_category=pastoral
 	buildings_max_level_factor=1.000
+	state_category=pastoral
 	local_supplies=0.000
 }
