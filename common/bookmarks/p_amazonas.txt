@@ -28,77 +28,84 @@ bookmarks = {
 			set_global_flag = game_amazonas
 			ALI = {
 				set_cosmetic_tag = ALI_brazil_def_name
-				}
+			}
 			AXI = {
 				set_cosmetic_tag = AXI_spanish_empire_def_name
 			}
-
 			set_victory_points = {
-				province = 13326 #Boa Vista
+				province = 13326				#Boa Vista
 				value = 50
 			}
 			set_victory_points = {
-				province = 13363 #El Dorado
+				province = 13363				#El Dorado
 				value = 50
 			}
 			set_victory_points = {
-				province = 10924 #Santa Cruz
+				province = 10924				#Santa Cruz
 				value = 50
 			}
 			set_victory_points = {
-				province = 13350 #Manaus
+				province = 13350				#Manaus
 				value = 5
 			}
 			set_victory_points = {
-				province = 4980 #Macapa
+				province = 4980				#Macapa
 				value = 15
 			}
 			set_victory_points = {
-				province = 13355 #Rio Branco
+				province = 13355				#Rio Branco
 				value = 5
 			}
 			set_victory_points = {
-				province = 12939 #Porto Velho
+				province = 12939				#Porto Velho
 				value = 5
 			}
 			set_victory_points = {
-				province = 2204 #Cuiaba
+				province = 2204				#Cuiaba
 				value = 25
 			}
 			set_victory_points = {
-				province = 10879 #Ciudad Guyana
+				province = 10879				#Ciudad Guyana
 				value = 5
 			}
 			set_victory_points = {
-				province = 4982 #Georgetown
+				province = 4982				#Georgetown
 				value = 5
 			}
 			set_victory_points = {
-				province = 10906 #Paramaabiro
+				province = 10906				#Paramaabiro
 				value = 5
 			}
 			set_victory_points = {
-				province = 12885 #Cayenne
+				province = 12885				#Cayenne
 				value = 5
 			}
 			set_victory_points = {
-				province = 12970 #Cartagena
+				province = 12970				#Cartagena
 				value = 15
 			}
 			set_victory_points = {
-				province = 1944 #Maracaibo
+				province = 1944				#Maracaibo
 				value = 15
 			}
 			set_victory_points = {
-				province = 8113 #Caracas
+				province = 8113				#Caracas
 				value = 15
 			}
-			
 			AXI = {
 				set_capital = {
 					state = 306
 				}
 				set_oob = AXI_amazonas
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					set_air_oob = AXI_amazonas_air
+				}
+				else = {
+					set_air_oob = AXI_amazonas_4v4_air_legacy
+				}
 				AXI_high_command = {
 					set_character_name = AXI_high_command_ger
 				}
@@ -108,6 +115,15 @@ bookmarks = {
 					state = 501
 				}
 				set_oob = ALI_amazonas
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					set_air_oob = ALI_amazonas_air
+				}
+				else = {
+					set_air_oob = ALI_amazonas_air_legacy
+				}
 			}
 			NOO = {
 				set_capital = {
@@ -117,7 +133,6 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 938
 						state = 498
 						state = 499
 						state = 496
@@ -151,6 +166,18 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
+						state = 938
+					}
+				}
+				ALI = {
+					transfer_state = PREV
+				}
+				add_core_of = ALI
+				remove_core_of = NOO
+			}
+			every_state = {
+				limit = {
+					OR = {
 						state = 942
 						state = 941
 						state = 488
@@ -179,7 +206,6 @@ bookmarks = {
 				add_core_of = NEU
 				remove_core_of = NOO
 				add_manpower = 250000
-				set_state_category = pastoral
 				set_building_level = {
 					type = infrastructure
 					level = 2
@@ -189,6 +215,7 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
+						state = 307
 						state = 490
 						state = 491
 						state = 494
@@ -218,7 +245,6 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 307
 						state = 486
 					}
 				}
@@ -272,7 +298,6 @@ bookmarks = {
 						state = 490
 						state = 491
 						state = 494
-						state = 927
 						state = 489
 						state = 306
 						state = 493
@@ -320,9 +345,9 @@ bookmarks = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 495 #El Dorado
-						state = 936 #Boa Vista
-						state = 487 #Santa Cruz
+						state = 495						#El Dorado
+						state = 936						#Boa Vista
+						state = 487						#Santa Cruz
 					}
 				}
 				add_resource = {
@@ -371,59 +396,97 @@ bookmarks = {
 				}
 			}
 			every_state = {
-
 				set_building_level = {
-					province = 12997				#Lima
+					province = 12997					#Lima
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 8252				#Guayquil
+					province = 8252					#Guayquil
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 5112				#Sao Paulo
+					province = 5112					#Sao Paulo
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 10980				#Rio de Janiero
+					province = 10980					#Rio de Janiero
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 10946				#Salvador
+					province = 10946					#Salvador
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 10999				#Vila Velha
+					province = 10999					#Vila Velha
 					type = naval_base
 					level = 0
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 12853				#Belem
+					province = 12853					#Belem
 					type = naval_base
 					level = 3
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 4980 #Macapa
+					province = 4980					#Macapa
 					type = naval_base
 					level = 3
 					instant_build = yes
 				}
 				set_building_level = {
-					province = 153	#Curacao
+					province = 153					#Curacao
 					type = naval_base
 					level = 0
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 935						#Rondonia
+						state = 936						#Rio Branco
+						state = 937 					#Amapa
+						state = 504 					#Iguacu
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					state = 492						#Arequipa
+					state = 207						#Miranda
+				}
+				set_building_level = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 935						#Rondonia
+						state = 936						#Rio Branco
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
 					instant_build = yes
 				}
 			}

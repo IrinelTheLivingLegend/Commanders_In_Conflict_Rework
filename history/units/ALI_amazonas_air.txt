@@ -1,0 +1,9 @@
+﻿air_wings = {
+	937 = {
+		small_plane_airframe_1 = { owner = "ALI" amount = 100 version_name = "Hawker Hurricane" }
+		small_plane_airframe_1 = { owner = "ALI" amount = 100 version_name = "Hawker Hurricane" }
+		small_plane_airframe_1 = { owner = "ALI" amount = 100 version_name = "Hawker Hurricane" }
+		small_plane_airframe_1 = { owner = "ALI" amount = 50 version_name = "Hawker Hurricane" }
+		small_plane_cas_airframe_1 = { owner = "ALI" amount = 50 version_name = "Fairey Battle" }
+	}
+}

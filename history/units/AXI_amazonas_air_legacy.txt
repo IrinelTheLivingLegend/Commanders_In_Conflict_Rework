@@ -1,23 +1,23 @@
 ﻿air_wings = {
-	937 = { 
+	307 = { 
 		fighter_equipment_1 = {
-			owner = "ALI" 
+			owner = "AXI" 
 			amount = 100
 		}
 		fighter_equipment_1 = {
-			owner = "ALI" 
+			owner = "AXI" 
 			amount = 100
 		}
 		fighter_equipment_1 = {
-			owner = "ALI" 
+			owner = "AXI" 
 			amount = 100
 		}
 		fighter_equipment_1 = {
-			owner = "ALI" 
+			owner = "AXI" 
 			amount = 50
 		}
 		CAS_equipment_1 = {
-			owner = "ALI" 
+			owner = "AXI" 
 			amount = 50
 		}
 	}	

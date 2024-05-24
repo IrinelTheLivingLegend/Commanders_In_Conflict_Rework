@@ -808,7 +808,7 @@ sub_units = {
 			movement = 0.1
 		}
 		jungle = {
-			attack = 0.2
+			attack = 0.12
 			movement = 0.1
 		}
 	}
