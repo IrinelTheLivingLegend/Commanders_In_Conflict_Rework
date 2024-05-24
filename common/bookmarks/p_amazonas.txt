@@ -1,0 +1,505 @@
+bookmarks = {
+	bookmark = {
+		name = "AMAZONAS"
+		desc = "AMAZONAS_DESC"
+		date = 1940.1.1.12
+		picture = "GFX_select_date_amazonas"
+		default_country = "ALI"
+		default = yes
+		"ALI" = {
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI" = {
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345			# <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+			set_global_flag = game_amazonas
+			ALI = {
+				set_cosmetic_tag = ALI_brazil_def_name
+				}
+			AXI = {
+				set_cosmetic_tag = AXI_spanish_empire_def_name
+			}
+
+			set_victory_points = {
+				province = 13326 #Boa Vista
+				value = 50
+			}
+			set_victory_points = {
+				province = 13363 #El Dorado
+				value = 50
+			}
+			set_victory_points = {
+				province = 10924 #Santa Cruz
+				value = 50
+			}
+			set_victory_points = {
+				province = 13350 #Manaus
+				value = 5
+			}
+			set_victory_points = {
+				province = 4980 #Macapa
+				value = 15
+			}
+			set_victory_points = {
+				province = 13355 #Rio Branco
+				value = 5
+			}
+			set_victory_points = {
+				province = 12939 #Porto Velho
+				value = 5
+			}
+			set_victory_points = {
+				province = 2204 #Cuiaba
+				value = 25
+			}
+			set_victory_points = {
+				province = 10879 #Ciudad Guyana
+				value = 5
+			}
+			set_victory_points = {
+				province = 4982 #Georgetown
+				value = 5
+			}
+			set_victory_points = {
+				province = 10906 #Paramaabiro
+				value = 5
+			}
+			set_victory_points = {
+				province = 12885 #Cayenne
+				value = 5
+			}
+			set_victory_points = {
+				province = 12970 #Cartagena
+				value = 15
+			}
+			set_victory_points = {
+				province = 1944 #Maracaibo
+				value = 15
+			}
+			set_victory_points = {
+				province = 8113 #Caracas
+				value = 15
+			}
+			
+			AXI = {
+				set_capital = {
+					state = 306
+				}
+				set_oob = AXI_amazonas
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			ALI = {
+				set_capital = {
+					state = 501
+				}
+				set_oob = ALI_amazonas
+			}
+			NOO = {
+				set_capital = {
+					state = 7
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 938
+						state = 498
+						state = 499
+						state = 496
+						state = 500
+						state = 501
+						state = 504
+						state = 926
+						state = 497
+						state = 940
+						state = 939
+						state = 505
+						state = 280
+						state = 504
+						state = 937
+					}
+				}
+				ALI = {
+					transfer_state = PREV
+				}
+				add_core_of = ALI
+				remove_core_of = NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_category = town
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 942
+						state = 941
+						state = 488
+						state = 487
+						state = 935
+						state = 495
+						state = 933
+						state = 928
+						state = 929
+						state = 930
+						state = 934
+						state = 931
+						state = 932
+						state = 310
+						state = 309
+						state = 687
+						state = 936
+						state = 944
+						state = 302
+						state = 927
+					}
+				}
+				NEU = {
+					transfer_state = PREV
+				}
+				add_core_of = NEU
+				remove_core_of = NOO
+				add_manpower = 250000
+				set_state_category = pastoral
+				set_building_level = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 490
+						state = 491
+						state = 494
+						state = 489
+						state = 306
+						state = 493
+						state = 305
+						state = 303
+						state = 492
+						state = 695
+					}
+				}
+				AXI = {
+					transfer_state = PREV
+				}
+				add_core_of = AXI
+				remove_core_of = NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_category = town
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 307
+						state = 486
+					}
+				}
+				AXI = {
+					transfer_state = PREV
+				}
+				add_core_of = AXI
+				remove_core_of = NOO
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				add_manpower = 1000000
+				set_building_level = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_category = town
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 218
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			#resources
+			every_state = {
+				limit = {
+					OR = {
+						state = 498
+						state = 499
+						state = 496
+						state = 500
+						state = 501
+						state = 504
+						state = 926
+						state = 497
+						state = 940
+						state = 939
+						state = 505
+						state = 280
+						state = 504						#ALI
+						state = 307
+						state = 486
+						state = 490
+						state = 491
+						state = 494
+						state = 927
+						state = 489
+						state = 306
+						state = 493
+						state = 305
+						state = 303
+						state = 695
+						state = 492						#AXI              
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 3
+				}
+				add_resource = {
+					type = aluminium
+					amount = 3
+				}
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+				add_resource = {
+					type = rubber
+					amount = 3
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 3
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 495 #El Dorado
+						state = 936 #Boa Vista
+						state = 487 #Santa Cruz
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 30
+				}
+				add_resource = {
+					type = aluminium
+					amount = 30
+				}
+				add_resource = {
+					type = tungsten
+					amount = 30
+				}
+				add_resource = {
+					type = rubber
+					amount = 30
+				}
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+				add_resource = {
+					type = chromium
+					amount = 30
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 307
+						state = 489
+						state = 493
+						state = 306
+						state = 937
+						state = 926
+						state = 497
+						state = 940
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+
+				set_building_level = {
+					province = 12997				#Lima
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 8252				#Guayquil
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 5112				#Sao Paulo
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 10980				#Rio de Janiero
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 10946				#Salvador
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 10999				#Vila Velha
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 12853				#Belem
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 4980 #Macapa
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				set_building_level = {
+					province = 153	#Curacao
+					type = naval_base
+					level = 0
+					instant_build = yes
+				}
+			}
+			#Those nations are required to exist on map for the flags on industrial decisions to show properly
+			every_state = {
+				limit = {
+					state = 270
+				}
+				USA = {
+					transfer_state = PREV
+				}
+				add_core_of = USA
+			}
+			every_state = {
+				limit = {
+					state = 650
+				}
+				ENG = {
+					transfer_state = PREV
+				}
+				add_core_of = ENG
+			}
+			every_state = {
+				limit = {
+					state = 631
+				}
+				FRA = {
+					transfer_state = PREV
+				}
+				add_core_of = FRA
+			}
+			every_state = {
+				limit = {
+					state = 630
+				}
+				SOV = {
+					transfer_state = PREV
+				}
+				add_core_of = SOV
+			}
+			every_state = {
+				limit = {
+					state = 713
+				}
+				GER = {
+					transfer_state = PREV
+				}
+				add_core_of = GER
+			}
+			every_state = {
+				limit = {
+					state = 706
+				}
+				ROM = {
+					transfer_state = PREV
+				}
+				add_core_of = ROM
+			}
+			every_state = {
+				limit = {
+					state = 707
+				}
+				ITA = {
+					transfer_state = PREV
+				}
+				add_core_of = ITA
+			}
+			every_state = {
+				limit = {
+					state = 704
+				}
+				JAP = {
+					transfer_state = PREV
+				}
+				add_core_of = JAP
+			}
+		}
+	}
+}

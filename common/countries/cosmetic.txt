@@ -1155,3 +1155,7 @@ ALI_third_bulgarian_empire_def_name = {
 	color = rgb { 138 249 195 }
 	color_ui = rgb { 138 249 195 }
 }
+ALI_brazil_def_name = {
+	color = rgb { 76 145 63 }
+	color_ui = rgb { 76 145 63 }
+}

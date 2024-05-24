@@ -1,0 +1,20 @@
+
+state={
+	id=928
+	name="STATE_928"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+	}
+
+	provinces={
+		10960 13382 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	impassable = yes
+	local_supplies=0.000
+}

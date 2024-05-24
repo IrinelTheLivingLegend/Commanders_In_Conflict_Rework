@@ -1,0 +1,16 @@
+state={
+	id=935
+	name="STATE_935"
+	provinces={
+		12939 13373 13374 
+	}
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+	}
+	manpower=1
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

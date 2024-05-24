@@ -2,24 +2,21 @@
 state={
 	id=494
 	name="STATE_494"
-	manpower = 1 # = 735826
-
-	state_category = rural
-
 
 	history={
-
 		owner = NOO
 		add_core_of = NOO
 		buildings = {
-			#infrastructure = 2
+
 		}
 
 	}
 
 	provinces={
-		2212 2226 5166 8160 8191 10940
+		2212 2226 5166 8160 8191 10940 13351 
 	}
-
-	local_supplies=0.0
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

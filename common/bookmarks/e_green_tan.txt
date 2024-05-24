@@ -175,6 +175,30 @@ bookmarks = {
 					level = 3
 					instant_build = yes
 				}
+								add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
 			}
 			every_state = {
 				limit={OR={ state=375 state=371  #allies

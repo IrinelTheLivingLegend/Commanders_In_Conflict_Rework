@@ -13325,7 +13325,7 @@
 13324;223;59;76;land;false;jungle;3
 13325;201;243;229;land;false;jungle;3
 13326;95;17;247;land;false;jungle;3
-13327;69;138;150;land;false;jungle;3
+13327;69;138;150;land;false;mountain;3
 13328;1;39;146;land;false;jungle;3
 13329;43;26;194;land;false;jungle;3
 13330;126;124;246;land;false;jungle;3
@@ -13381,3 +13381,4 @@
 13380;76;42;13;land;false;jungle;3
 13381;37;162;111;land;false;jungle;3
 13382;115;101;190;land;false;jungle;3
+13383;151;231;108;land;false;jungle;3

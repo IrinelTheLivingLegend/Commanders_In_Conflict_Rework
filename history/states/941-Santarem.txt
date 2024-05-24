@@ -1,0 +1,19 @@
+
+state={
+	id=941
+	name="STATE_941"
+
+	history={
+		owner = NOO
+		add_core_of = NOO
+
+	}
+
+	provinces={
+		13321 13322 13370 13371 13372 13375 13376 13380 13383 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

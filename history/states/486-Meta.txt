@@ -5,25 +5,10 @@ state={
 	manpower = 1 # = 3750000
 
 	state_category = megalopolis
-
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 20
-		chromium = 5
-	}
 	
 	history={
 		owner = NOO
 		add_core_of = NOO
-
-		buildings = {
-			#infrastructure = 3
-			#industrial_complex = 5
-			#arms_factory = 5
-		}
 
 	}
 

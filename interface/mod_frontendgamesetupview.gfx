@@ -76,6 +76,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/select_date_totalwar_4v4.tga"
 	}
 	spriteType = {
+		name = "GFX_select_date_amazonas"
+		texturefile = "gfx/interface/select_date_amazonas.tga"
+	}
+	spriteType = {
 		name = "GFX_discord_logo_red"
 		texturefile = "gfx/interface/discord_logo_red.dds"
 	}

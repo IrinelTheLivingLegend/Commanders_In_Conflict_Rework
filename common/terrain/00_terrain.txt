@@ -102,7 +102,7 @@ categories =  {
 	jungle = {
 		color = { 127 191 0 }
 		movement_cost = 1.375
-		attrition = 0.15
+		attrition = 0.1
 		combat_width = 60
 		combat_support_width = 15
 
@@ -111,14 +111,14 @@ categories =  {
 		sound_type = forest
 
 		units = {
-			attack = -0.225
+			attack = -0.18
 		}
 
-		enemy_army_bonus_air_superiority_factor = -0.18
-		sickness_chance = 0.75
-		supply_flow_penalty_factor = 0.12
-		truck_attrition_factor = 2.25
-	}	
+		enemy_army_bonus_air_superiority_factor = -0.14
+		sickness_chance = 0.25
+		supply_flow_penalty_factor = 0.08
+		truck_attrition_factor = 1.5
+	}
 	
 	marsh = {
 		color = { 76 96 35 }

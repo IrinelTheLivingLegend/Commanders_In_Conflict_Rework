@@ -10,7 +10,8 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				production_speed_dockyard_factor = -100
+				production_speed_dockyard_factor = -1000
+				production_speed_naval_base_factor = -1000
 				industrial_capacity_dockyard = -100
 				naval_damage_factor = -100
 				navy_max_range_factor = -100
