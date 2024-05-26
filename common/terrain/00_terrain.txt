@@ -116,7 +116,7 @@ categories =  {
 
 		enemy_army_bonus_air_superiority_factor = -0.14
 		sickness_chance = 0.25
-		supply_flow_penalty_factor = 0.08
+		supply_flow_penalty_factor = 0.15
 		truck_attrition_factor = 1.5
 	}
 	
