@@ -66,11 +66,6 @@ ability = {
 		allowed = {
 			is_leading_army_group = no
 			is_border_war = no
-			OWNER = {
-				NOT = {
-					has_completed_focus = AXI_warrior_spirit
-				}
-			}
 		}
 		
 		cost = 0.66
@@ -157,7 +152,7 @@ ability = {
 		
 		unit_modifiers = {
 			fort = {
-				attack = 0.2
+				attack = 0.1
 			}
 			fortification_damage = 2.0
 			fortification_collateral_chance = 2.0
@@ -196,7 +191,7 @@ ability = {
 		}
 		
 		unit_modifiers = {
-			paratrooper_count_per_plane = 1.0
+			paratrooper_weight_factor = -0.10
 			paradrop_organization_factor = 2.0
 			paratrooper_aa_defense = 0.5
 		}

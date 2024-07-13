@@ -33,7 +33,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.5
@@ -115,7 +115,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.66
@@ -200,7 +200,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.75
@@ -241,8 +241,8 @@ sub_units = {
 			defence = -0.02
 		}
 		river = { 
-			attack = -0.04 
-			movement = -0.04
+			attack = -0.03 
+			movement = -0.03
 		}
 		amphibious = { 
 			attack = -0.08 
@@ -285,7 +285,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.87
@@ -326,7 +326,7 @@ sub_units = {
 			defence = -0.02
 		}
 		river = { 
-			attack = -0.05
+			attack = -0.04
 			movement = -0.04
 		}
 		amphibious = { 
@@ -370,7 +370,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.75

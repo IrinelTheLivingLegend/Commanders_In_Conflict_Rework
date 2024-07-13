@@ -5,18 +5,6 @@ default_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
 		always = yes
-		NOT = {
-			OR = {
-				original_tag = GER
-				original_tag = FRA
-				original_tag = CHI
-				original_tag = ENG
-				original_tag = CZE
-				tag = SOV
-				original_tag = ITA
-				original_tag = JAP
-			}
-		}
 	}
 	abort_when_not_enabled = yes
 
@@ -179,15 +167,6 @@ default_role_ratios = {
 default_role_ratios = {
 	enable = {
 		has_dlc = "Man the Guns"
-		not = {
-			OR = {
-				original_tag = GER
-				original_tag = ENG
-				original_tag = USA
-				original_tag = JAP
-				original_tag = SOV
-				original_tag = ITA
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -306,8 +285,6 @@ bba_air_prod_1 = {
 
 	enable = {
 		always = yes
-		NOT = { original_tag = GER } 
-		NOT = { original_tag = ENG }
 	}
 
 	abort_when_not_enabled = yes
@@ -534,7 +511,6 @@ default_pp_spend_amount = {
 
 default_paratroopers_production = {
 	enable = {
-		NOT = { original_tag = GER }
 		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
 	}
 	abort = {
@@ -577,15 +553,6 @@ default_major_SF_marines = {
 
 default_garrison_production = {
 	enable = {
-		NOT = {
-			original_tag = GER
-			original_tag = SOV
-			original_tag = USA
-			original_tag = CHI
-			original_tag = FRA
-			original_tag = JAP
-			original_tag = ENG
-		}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
 	}
@@ -610,7 +577,6 @@ default_garrison_production = {
 
 default_mountaineers_production = {
 	enable = {
-		NOT = { original_tag = GER }
 		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
 	}
 	abort = {
@@ -648,7 +614,6 @@ default_mountaineers_production = {
 
 default_mobile_production = {
 	enable = {
-		NOT = { original_tag = GER }
 		ai_wants_divisions > 11
 		has_tech = motorised_infantry
 	}
@@ -665,13 +630,6 @@ default_mobile_production = {
 
 default_armored_production = {
 	enable = {
-		NOT = {
-			OR = {
-				original_tag = GER
-				original_tag = CZE
-				original_tag = SOV
-			}
-		}
 		ai_wants_divisions > 49
 	}
 	abort = {
@@ -687,7 +645,6 @@ default_armored_production = {
 
 highered_armored_production = {
 	enable = {
-		NOT = { original_tag = GER }
 		num_of_military_factories > 69
 	}
 	abort = {
@@ -703,13 +660,6 @@ highered_armored_production = {
 
 slightly_naval_focused_nation = {
 	enable = {
-		OR = {
-			tag = JAP
-			tag = USA
-			tag = ENG
-			tag = FRA
-			tag = ITA
-		}
 	}
 	abort_when_not_enabled = yes
 
@@ -740,11 +690,6 @@ slightly_naval_focused_nation = {
 
 more_naval_focused_nation = {
 	enable = {
-		OR = {
-			tag = JAP
-			tag = USA
-			tag = ENG
-		}
 		date > "1941.1.1"  # Delaying it by a couple of years
 	}
 	abort_when_not_enabled = yes
@@ -776,11 +721,6 @@ more_naval_focused_nation = {
 
 
 default_area_priority = {
-	enable = {
-		NOT = { original_tag = GER }
-		NOT = { original_tag = FRA }
-		NOT = { original_tag = JAP }
-	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -880,10 +820,6 @@ default_stockpile_management = {
 
 
 default_market_stockpile_management = {
-	enable = {
-		always = yes
-		# NOT = { original_tag = GER } # commented until actually needs override
-	}
 	abort_when_not_enabled = yes
 
 	# Hold your trains there, partner
@@ -953,7 +889,7 @@ default_market_stockpile_management_if_at_war = {
 	enable = {
 		has_war = yes
 		# something something preparing for war?
-		# NOT = { original_tag = GER } # commented until actually needs override
+	
 	}
 	abort_when_not_enabled = yes
 
@@ -1010,15 +946,9 @@ default_market_convoy_purchases = {
 
 dont_build_capitals_if_on_treaty = {
 	enable = {
-		has_idea = MTG_naval_treaty_adherent
 	}
 
-	abort = {
-		OR = {
-				original_tag = ITA
-				original_tag = ENG
-				NOT = { has_idea = MTG_naval_treaty_adherent }
-			}	
+	abort = {	
 	}
 
 	ai_strategy = {
@@ -1043,15 +973,6 @@ dont_build_capitals_if_on_treaty = {
 DEFAULT_midlate_template_design = {
 	enable = {
 		NOT = {
-			OR = {
-				tag = GER
-				tag = ENG
-				tag = SOV
-				tag = ITA
-				tag = JAP
-				tag = USA
-				tag = POL
-			}
 		}
 		date > 1940.1.1
 	}
@@ -1142,10 +1063,6 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 		OR = {
 			manpower_per_military_factory > 500
 			has_war = no
-			AND = {
-				original_tag = ETH
-				is_government_in_exile = yes
-			}
 		}
 	}
 
@@ -1446,7 +1363,18 @@ cic_start_strategy = {
 
 }
 cic_start_strategy_AXI = {
-	enable = { original_tag = AXI }
+	enable = { 
+		or = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+			tag = ALL
+			tag = AXI
+			tag = AXJ
+			tag = AXK
+			tag = AXL
+		}
+	}
 	abort_when_not_enabled = yes
 	
 	ai_strategy = {
@@ -1462,7 +1390,14 @@ cic_start_strategy_AXI = {
 	}
 }
 cic_start_strategy_ALI = {
-	enable = { original_tag = ALI }
+	enable = { 
+		or = {
+			tag = ALI
+			tag = ALJ
+			tag = ALK
+			tag = ALL
+		}
+ 	}
 	abort_when_not_enabled = yes
 	
 	ai_strategy = {
@@ -1576,11 +1511,14 @@ war_preparation = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
+	abort = { always = no }
 	enable= {
 		is_ai = yes
 		date > 1941.03.01
@@ -1598,11 +1536,14 @@ no_divisions_to_ALI_nations = {
 			tag = ALI
 			tag = ALJ
 			tag = ALK
+			tag = ALL
 		}
 	}
 	enable= {
 		is_ai = yes
 	}
+
+	abort = { always = no }
 
 	ai_strategy = {
 		type = force_defend_ally_borders  
@@ -1628,11 +1569,14 @@ no_divisions_to_AXI_nations = {
 			tag = AXI
 			tag = AXJ
 			tag = AXK
+			tag = AXL
 		}
 	}
 	enable= {
 		is_ai = yes
 	}
+
+	abort = { always = no }
 
 	ai_strategy = {
 		type = force_defend_ally_borders 
@@ -1663,6 +1607,7 @@ allowed = {
 		is_ai = yes
 		has_global_flag = game_sonnenblum
 	}
+	abort = { always = no }
 
 ai_strategy = {
     type = front_control

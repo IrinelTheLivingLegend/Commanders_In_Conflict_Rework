@@ -18,6 +18,91 @@ focus_tree = {
 	continuous_focus_position = { x = 5000 y = 1400 }
 	shared_focus = INDUSTRY_start_rapid_industralisation
 
+	focus = {
+		id = AXI_hr_start
+		icon = GFX_focus_CIC_hungary_romania
+		cost = 2
+		x = 4
+		y = 0
+		text_icon = land_focus_style
+		available = {
+				and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_wehrmacht
+						focus_progress = {
+							focus = AXI_wehrmacht
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_royal_italian
+						focus_progress = {
+							focus = AXI_royal_italian
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_winter_is_coming
+						focus_progress = {
+							focus = AXI_winter_is_coming
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_IJA
+						focus_progress = {
+							focus = AXI_IJA
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_okh
+						focus_progress = {
+							focus = AXI_okh
+							progress > 0
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		allow_branch = {
+			OR = {
+				NOT = {
+				has_country_flag = AAA_hide_focus_tree
+				}
+				has_completed_focus = AXI_winter_is_coming
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = AXI_add_hungarian_equipment_tt
+			AXI_add_hungarian_equipment = yes
+			AXI_add_hungarian_units = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
 	### Germany ###
 	focus = {
 		id = AXI_wehrmacht
@@ -29,6 +114,7 @@ focus_tree = {
 		relative_position_id = AXI_hr_start
 		x = 15
 		y = 0
+		text_icon = land_focus_style
 		completion_reward = {
 			custom_effect_tooltip = AXI_add_german_equipment_tt
 			custom_effect_tooltip = AXI_add_german_units_tt
@@ -79,7 +165,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_okh
+						focus_progress = {
+							focus = AXI_okh
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		allow_branch = {
 			OR = {
@@ -91,32 +188,6 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	#focus = {
-	#	id = AXI_panzer_elite
-	#	icon = GFX_goal_generic_defence
-	##	relative_position_id = AXI_wehrmacht
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	prerequisite = {
-	#		focus = AXI_wehrmacht
-	#	}
-	#	ai_will_do = {
-	##		factor = 1
-	#	}
-	#	completion_reward = {
-	#		add_doctrine_cost_reduction = {
-	#			name = land_doc_bonus
-	#			cost_reduction = 0.5
-	#			uses = 2
-	#			category = cat_mobile_warfare
-	#		}
-	#		army_experience = 100
-	#		navy_experience = 100
-	#		air_experience = 100
-	#
-	#	}
-	#}
 
 # ████ █████ ████  █   █  ███  █   █ █   █     █     █████ █████ █████ 
 #█     █     █   █ ██ ██ █   █ ██  █  █ █      █     █     █       █   
@@ -180,8 +251,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Leichte-Division"
-					division_names_group = GER_LTARM_01
-
 					regiments = {
 						motorized = { x = 0 y = 0 }
 						motorized = { x = 0 y = 1 }
@@ -278,8 +347,6 @@ focus_tree = {
 			}
 				division_template = {
 					name = "Panzer-Division"
-					division_names_group = GER_Arm_01
-
 					regiments = {
 						heavy_armor = { x = 0 y = 0 }
 						heavy_armor = { x = 0 y = 1 }
@@ -334,7 +401,7 @@ focus_tree = {
 		set_technology = { tech_signal_company = 1 popup = no }
 			division_template = {
 					name = "Panzer-Division"
-					division_names_group = GER_Arm_01
+					#division_names_group = GER_Arm_01
 
 					regiments = {
 						heavy_armor = { x = 0 y = 0 }
@@ -430,12 +497,12 @@ focus_tree = {
 		id = AXI_silent_hunters
 		icon = GFX_focus_BRA_german_submarine_development
 		prerequisite ={
-			focus = AXI_hr_start
-			focus = AXI_wehrmacht
+			focus = AXI_luftwaffe_ground_forces
+			focus = AXI_9th_army_wehrmacht
 		}
-		relative_position_id = AXI_hr_start
-		x = 8
-		y = 3
+		relative_position_id = AXI_okh
+		x = 0
+		y = 2
 		cost = 5
 		text_icon = navy_focus_style
 
@@ -579,7 +646,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -606,7 +673,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -637,7 +704,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -665,7 +732,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -687,7 +754,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = fighter_equipment_2
-				producer = ROOT
+				producer = AXI
 				amount = 200
 			}
 			}
@@ -882,7 +949,7 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Panzer-Grenadier-Division"
-					division_names_group = GER_ALTINF_01
+					#division_names_group = GER_ALTINF_01
 
 					regiments = {
 						motorized = { x = 0 y = 0 }
@@ -990,7 +1057,7 @@ focus_tree = {
 			}
 				division_template = {
 					name = "Panzer Division"
-					division_names_group = GER_Arm_01
+					#division_names_group = GER_Arm_01
 
 					regiments = {
 						light_armor = { x = 0 y = 0 }
@@ -1049,7 +1116,7 @@ focus_tree = {
 		        }
 	division_template = {
 					name = "Panzer Division"
-					division_names_group = GER_Arm_01
+					#division_names_group = GER_Arm_01
 
 					regiments = {
 						light_armor = { x = 0 y = 0 }
@@ -1170,7 +1237,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 150
 							variant_name = "Henschel Hs 129 - [TAG]"
 						}
@@ -1200,7 +1267,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 150
 							variant_name = "Henschel Hs 129 - [TAG]"
 						}
@@ -1227,7 +1294,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 150
 							variant_name = "Henschel Hs 129 - [TAG]"
 						}
@@ -1243,7 +1310,7 @@ focus_tree = {
 	hidden_effect = {
 				add_equipment_to_stockpile = {
 				type = CAS_equipment_2
-				producer = ROOT
+				producer = AXI
 				amount = 150
 			}
 			}
@@ -1460,13 +1527,14 @@ focus_tree = {
 	focus = {
 		id = AXI_royal_italian
 		icon = GFX_focus_ITA_italian_irredentism
+		text_icon = land_focus_style
 		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
 		relative_position_id = AXI_hr_start
-		x = 30
-		y = 0
+		x = 31
+		y = 6
 		completion_reward = {
 			custom_effect_tooltip = AXI_add_italian_equipment_tt
 			custom_effect_tooltip = AXI_add_italian_units_tt
@@ -1524,7 +1592,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_okh
+						focus_progress = {
+							focus = AXI_okh
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		allow_branch = {
 			OR = {
@@ -1539,33 +1618,6 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	#focus = {
-	#	id = AXI_siege_the_allies
-	#	icon = GFX_goal_fortify_the_westwall
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	relative_position_id = AXI_royal_italian
-	#	prerequisite = {
-	#		focus = AXI_royal_italian
-#		}
-##
-#		ai_will_do = {
-#			factor = 1
-#		}
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				name = land_doc_bonus
-#				cost_reduction = 0.5
-#				uses = 2
-#				category = cat_superior_firepower
-#			}
-#			army_experience = 100
-#			navy_experience = 100
-#			air_experience = 100
-#
-#		}
-#	}
 #█████ █████  ███  █     █   █     █     █████ █████ █████ 
 #  █     █   █   █ █      █ █      █     █     █       █   
 #  █     █   █████ █       █       █     ████  ████    █   
@@ -1631,7 +1683,7 @@ focus_tree = {
 			hidden_effect = {
 			division_template = {
 							name = "Camicie Nere"		
-							division_names_group = ITA_ARM_01
+							#division_names_group = ITA_ARM_01
 							is_locked = yes
 							force_allow_recruiting = yes
 							regiments = {
@@ -1668,67 +1720,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	focus = {
-		id = AXI_132nd_artillery_regiment
-		icon = GFX_focus_ITA_alpine_division
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_tankettes
-		prerequisite = {
-			focus = AXI_tankettes
-		}
 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = AXI_132nd_artillery_regiment_tt
-			hidden_effect = {
-				if = {
-					limit ={
-						not = { has_tech = tech_mountaineers }
-					}
-					set_technology ={ 
-						tech_mountaineers = 1
-						popup = no
-					}
-				}
-				division_template = {
-					name = "Divisione di Fanteria"
-					division_names_group = ITA_INF_01
-
-					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 0 y = 2 }
-						mountaineers = { x = 0 y = 3 }
-						mountaineers = { x = 0 y = 4 }
-						mountaineers = { x = 1 y = 0 }
-						mountaineers = { x = 1 y = 1 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64 }
-					create_unit = {
-						division = "division_template = \"Divisione di Fanteria\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { medium_tank_chassis_1 = { owner = ROOT version_name = \"M11/39\" } }"
-						owner = ROOT
-						count = 4
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
 	focus = {
 		id = AXI_tankettes
 		icon = GFX_focus_NZL_bob_semple_tank
@@ -1756,32 +1748,32 @@ focus_tree = {
 		          improved_light_tank_chassis = 1 
 		        }
 		      }
-			 enable_equipment_modules = { 
-			tank_radio_2
-			 }
 			custom_effect_tooltip = AXI_32nd_tank_infantry_regiment_tt
 			hidden_effect = {
-				 create_equipment_variant = {
-				name = "L3/35"
-				type = light_tank_chassis_2
-				modules = {
-					main_armament_slot = tank_auto_cannon_2
-					turret_type_slot = tank_light_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_gasoline_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = additional_machine_guns
-					special_type_slot_3 = expanded_fuel_tank
+				set_technology = {
+					enable_radio_two = 1
 				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 14
-					tank_nsb_armor_upgrade = 0
+				create_equipment_variant = {
+					name = "L3/35"
+					type = light_tank_chassis_2
+					modules = {
+						main_armament_slot = tank_auto_cannon_2
+						turret_type_slot = tank_light_three_man_tank_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = expanded_fuel_tank
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 14
+						tank_nsb_armor_upgrade = 0
+					}
 				}
-			}
 				division_template = {
 					name = "Divisione Corazzata"
-					division_names_group = ITA_ARM_01
+					#division_names_group = ITA_ARM_01
 
 					regiments = {
 						light_armor = { x = 0 y = 0 }
@@ -1818,7 +1810,7 @@ focus_tree = {
 	hidden_effect = {
 	division_template = {
 					name = "Divisione Corazzata"
-					division_names_group = ITA_ARM_01
+					#division_names_group = ITA_ARM_01
 
 					regiments = {
 						light_armor = { x = 0 y = 0 }
@@ -1861,6 +1853,68 @@ focus_tree = {
 	}
 	search_filters = {FOCUS_FILTER_RESEARCH}
 	}
+	focus = {
+		id = AXI_132nd_artillery_regiment
+		icon = GFX_focus_ITA_alpine_division
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_tankettes
+		prerequisite = {
+			focus = AXI_tankettes
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = AXI_132nd_artillery_regiment_tt
+			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
+				division_template = {
+					name = "Divisione di Fanteria"
+					#division_names_group = ITA_INF_01
+
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+						mountaineers = { x = 0 y = 4 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 458 289 64 }
+					create_unit = {
+						division = "division_template = \"Divisione di Fanteria\" start_experience_factor = 0.3 start_equipment_factor = 1.0 force_equipment_variants = { medium_tank_chassis_1 = { owner = ROOT version_name = \"M11/39\" } }"
+						owner = ROOT
+						count = 4
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+
 	focus = {
 		id = AXI_the_breakout_fleet
 		icon = GFX_goal_generic_navy_battleship
@@ -1974,7 +2028,7 @@ focus_tree = {
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_super_heavy_1
-						creator = "ROOT"
+						creator = ROOT
 						version_name = "Roma Class"
 					}
 					name = "Roma"
@@ -2030,7 +2084,7 @@ focus_tree = {
 				add_equipment_production = {
 					equipment = {
 						type = SH_battleship_1
-						creator = "ROOT"
+						creator = ROOT
 					}
 					requested_factories = 5
 					progress = 0.45
@@ -2104,7 +2158,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Re.2000 - [TAG]"
 						}
@@ -2131,7 +2185,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Re.2000 - [TAG]"
 						}
@@ -2162,7 +2216,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Re.2000 - [TAG]"
 						}
@@ -2190,7 +2244,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Re.2000 - [TAG]"
 						}
@@ -2210,7 +2264,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = fighter_equipment_2
-				producer = ROOT
+				producer = AXI
 				amount = 200
 			}
 			}
@@ -2223,61 +2277,6 @@ focus_tree = {
 			}
 	}
 }
-	focus = {
-		id = AXI_colonial_garrison
-		icon = GFX_focus_ITA_a_colonial_empire
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_decima_flotilla
-		prerequisite = {
-			focus = AXI_decima_flotilla
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = AXI_colonial_garrison_tt
-			every_controlled_state = {
-				limit = {
-					resistance > 0
-					is_fully_controlled_by = ROOT
-				}
-				add_compliance = 5
-				add_resistance_target = -30
-			}
-			hidden_effect = {
-				division_template = {
-					name = "Banda Irregolare"
-					division_names_group = ITA_COL_02
-					override_model = ITA_irregular_infantry_alt_0_entity
-					template_counter = 66
-					force_allow_recruiting = yes
-
-					regiments = {
-						irregular_infantry = { x = 0 y = 0 }
-						irregular_infantry = { x = 0 y = 1 }
-						irregular_infantry = { x = 0 y = 2 }
-						irregular_infantry = { x = 0 y = 3 }
-						irregular_infantry = { x = 0 y = 4 }
-					}
-					priority = 0
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64 }
-					create_unit = {
-						division = "division_template = \"Banda Irregolare\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 20
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
 	focus = {
 		id = AXI_aeronautica_machta
 		icon = GFX_focus_generic_multi_role_aircraft
@@ -2578,46 +2577,6 @@ focus_tree = {
 			add_ideas = AXI_by_blood_alone
 		}
 	}
-	focus = {
-		id = AXI_special_forces_training
-		icon = GFX_focus_SMB_special_forces_option_1
-		x = 7
-		y = 2
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_winter_is_coming
-		prerequisite = {
-			focus = AXI_winter_is_coming
-			focus = AXI_IJA
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = AXI_special_forces_training
-		}
-	}
-	focus = {
-		id = AXI_terrain_adaption
-		icon = GFX_focus_GRE_a_land_of_mountains
-		x = -7
-		y = 3
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_IJA
-		prerequisite = {
-			focus = AXI_IJA
-			focus = AXI_winter_is_coming
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = AXI_terrain_adaption
-		}
-	}
 
 # █████ █████  ███  █     █   █     ████  █████  ████ █   █ █████ 
 #   █     █   █   █ █      █ █      █   █   █   █     █   █   █   
@@ -2660,6 +2619,25 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 	}
 	focus = {
+		id = AXI_alfa_romero
+		icon = GFX_focus_ITA_redirect_alfa_romeo_production
+		cost = 5
+		relative_position_id = AXI_army_of_the_po
+		x = 1
+		y = 1
+		text_icon = industry_focus_style
+		prerequisite = {
+			focus = AXI_army_of_the_po
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = AXI_alfa_romero_idea
+		}
+		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+	}
+	focus = {
 		id = AXI_101st_motorized
 		icon = GFX_focus_BRA_joint_italian_motor_development
 		cost = 5
@@ -2682,7 +2660,7 @@ focus_tree = {
 			set_technology = {ita_mod_cic=1 popup=no}
 				division_template = {
 					name = "Divisione Autotrasportabile"
-					division_names_group = ITA_MOT_01
+					#division_names_group = ITA_MOT_01
 
 					regiments = {
 
@@ -2734,7 +2712,7 @@ focus_tree = {
 			hidden_effect ={
 			division_template = {
 				name = "Divisioni di Cavalleria"
-				division_names_group = ITA_CAV_01
+				#division_names_group = ITA_CAV_01
 	
 				regiments = {
 					cavalry = { x = 0 y = 0 }
@@ -2840,6 +2818,61 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = AXI_colonial_garrison
+		icon = GFX_focus_ITA_a_colonial_empire
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_decima_flotilla
+		prerequisite = {
+			focus = AXI_decima_flotilla
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = AXI_colonial_garrison_tt
+			every_controlled_state = {
+				limit = {
+					resistance > 0
+					is_fully_controlled_by = ROOT
+				}
+				add_compliance = 5
+				add_resistance_target = -30
+			}
+			hidden_effect = {
+				division_template = {
+					name = "Banda Irregolare"
+					#division_names_group = ITA_COL_02
+					override_model = ITA_irregular_infantry_alt_0_entity
+					template_counter = 66
+					force_allow_recruiting = yes
+
+					regiments = {
+						irregular_infantry = { x = 0 y = 0 }
+						irregular_infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 0 y = 2 }
+						irregular_infantry = { x = 0 y = 3 }
+						irregular_infantry = { x = 0 y = 4 }
+					}
+					priority = 0
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 458 289 64 }
+					create_unit = {
+						division = "division_template = \"Banda Irregolare\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 20
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
 		id = AXI_102nd_motorized
 		icon = GFX_focus_generic_truck
 		cost = 5
@@ -2871,7 +2904,7 @@ focus_tree = {
 			}
 				division_template = {
 					name = "Divisione Artiglieria Autotrasportabile"
-					division_names_group = ITA_MOT_01
+					#division_names_group = ITA_MOT_01
 
 					regiments = {
 
@@ -2924,25 +2957,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	focus = {
-		id = AXI_alfa_romero
-		icon = GFX_focus_ITA_redirect_alfa_romeo_production
-		cost = 5
-		relative_position_id = AXI_army_of_the_po
-		x = 1
-		y = 1
-		text_icon = industry_focus_style
-		prerequisite = {
-			focus = AXI_army_of_the_po
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = AXI_alfa_romero_idea
-		}
-		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
-	}
+
 	focus = {
 		id = AXI_supremo_graziana
 		icon = GFX_focus_ITA_by_blood_alone
@@ -3053,10 +3068,9 @@ focus_tree = {
 		y = 2
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_wehrmacht
+		relative_position_id = AXI_royal_italian
 		prerequisite = {
 			focus = AXI_royal_italian
-			focus = AXI_wehrmacht
 		}
 
 		ai_will_do = {
@@ -3101,13 +3115,13 @@ focus_tree = {
 	focus = {
 		id = AXI_intergrated_axis_command
 		icon = GFX_focus_chi_mission_to_germany
-		x = 8
+		x = -7
 		y = 3
 		cost = 5
 		text_icon = politics_focus_style
-		relative_position_id = AXI_wehrmacht
+		relative_position_id = AXI_royal_italian
 		prerequisite = {
-			focus = AXI_wehrmacht
+			focus = AXI_IJA
 			focus = AXI_royal_italian
 		}
 
@@ -3129,8 +3143,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		x = 15
+		x = 16
 		y = 6
+		text_icon = land_focus_style
 		completion_reward = {
 			custom_effect_tooltip = AXI_add_japanese_equipment_tt
 			custom_effect_tooltip = AXI_add_japanese_units_tt
@@ -3181,7 +3196,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_okh
+						focus_progress = {
+							focus = AXI_okh
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		allow_branch = {
 			OR = {
@@ -3193,33 +3219,26 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	#focus = {
-	#	id = AXI_infiltration_assaults
-	#	icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
-	#	x = 0
-#		y = 1
-	#	cost = 5
-	#	relative_position_id = AXI_IJA
-	#	prerequisite = {
-	#		focus = AXI_IJA
-	#	}
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#		completion_reward = {
-#			add_doctrine_cost_reduction = {
-#				name = land_doc_bonus
-#				cost_reduction = 0.5
-#				uses = 2
-#				category = cat_grand_battle_plan
-#			}
-#			army_experience = 100
-#			navy_experience = 100
-#			air_experience = 100
-#
-#		}
-#	}
+	focus = {
+		id = AXI_terrain_adaption
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = -7
+		y = 3
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_IJA
+		prerequisite = {
+			focus = AXI_IJA
+			focus = AXI_winter_is_coming
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = AXI_terrain_adaption
+		}
+	}
 
 # █████  ███  ████   ███  █   █ █████ █████ █████     █   █  ███  █   █ █   █ 
 #   █   █   █ █   █ █   █ ██  █ █     █     █         ██  █ █   █ █   █  █ █  
@@ -3290,7 +3309,7 @@ focus_tree = {
 				}
 				division_template = {
 					name = "Yokosuka SNLF"
-					division_names_group = JAP_MAR_01
+					#division_names_group = JAP_MAR_01
 
 					regiments = {
 						marine = { x = 0 y = 0 }
@@ -3341,7 +3360,7 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Maizuru SNLF"
-					division_names_group = JAP_MAR_01
+					#division_names_group = JAP_MAR_01
 
 					regiments = {
 						marine = { x = 0 y = 0 }
@@ -3386,7 +3405,10 @@ focus_tree = {
 	focus = {
 		id = JAP_national_defense_state
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = AXI_IJA }
+		prerequisite = { 
+			focus = AXI_IJA
+			focus = AXI_royal_italian
+		}
 		x = 7
 		y = 2
 		text_icon = industry_focus_style
@@ -3409,179 +3431,6 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = AXI_carriers_through_the_staits
-		icon = GFX_goal_generic_navy_carrier
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = navy_focus_style
-		relative_position_id = AXI_skimp_on_resources
-		prerequisite = {
-			focus = AXI_skimp_on_resources
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = AXI_carriers_through_the_staits_tt
-		if = {
-				limit = {
-					has_dlc = "Man the Guns" 
-				}
-			hidden_effect = {
-				add_equipment_to_stockpile = {
-					type = cv_small_plane_naval_bomber_airframe_1
-					producer = ROOT
-					amount = 100
-					variant_name = "B5N"
-				}
-				add_equipment_to_stockpile = {
-					type = cv_small_plane_airframe_1
-					producer = ROOT
-					amount = 100
-					variant_name = "A5M"
-				}
-				add_equipment_to_stockpile = {
-					type = cv_small_plane_cas_airframe_0
-					producer = ROOT
-					amount = 50
-					variant_name = "Aichi D1A2"
-				}
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
-
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-
-
-				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Tenryu Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-
-				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
-				if = {
-					limit = {
-						NOT = {
-							has_tech = ship_hull_super_heavy
-						}
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
-				create_ship = {
-					type = ship_hull_super_heavy_1
-					equipment_variant = "Yamato Class"
-					creator = ROOT
-					name = "Yamato"
-				}
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
-				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
-			}
-		}
-	else = {
-		hidden_effect = {
-				set_technology = {
-		        cv_naval_bomber1 = 1
-		        }
-				set_technology = {
-		        cv_fighter1 = 1
-		        }
-				set_technology = {
-					cv_CAS1 = 1
-				}
-				set_technology = {
-		        heavy_battleship = 1
-		        }
-				add_equipment_to_stockpile = {
-					type = cv_nav_bomber_equipment_1
-					producer = ROOT
-					amount = 100
-				}
-				add_equipment_to_stockpile = {
-					type = cv_fighter_equipment_1
-					producer = ROOT
-					amount = 100
-				}
-				add_equipment_to_stockpile = {
-					type = cv_CAS_equipment_1
-					producer = ROOT
-					amount = 50
-				}
-
-				for_loop_effect = {
- 						end = 5
- 						create_ship = { type = submarine_2 equipment_variant = "Submarine II" creator = ROOT }
-			
- 						}
-				for_loop_effect = {
- 						end = 10
- 						create_ship = { type = destroyer_2 equipment_variant = "Destroyer II" creator = ROOT }
-			
- 						}
-				for_loop_effect = {
- 						end = 4
- 						create_ship = { type = destroyer_1 equipment_variant = "Destroyer I" creator = ROOT }
-			
- 						}
-				for_loop_effect = {
- 						end = 3
- 						create_ship = { type = light_cruiser_2 equipment_variant = "Light Cruiser II" creator = ROOT }
- 						}
-				for_loop_effect = {
- 						end = 2
- 						create_ship = { type = heavy_cruiser_2 equipment_variant = "Heavy Cruiser II" creator = ROOT }
- 						}
-				for_loop_effect = {
- 						end = 1
- 						create_ship = { type = SH_battleship_1 equipment_variant = "Super-Heavy Battleship I" creator = ROOT }
- 						}
-				for_loop_effect = {
- 						end = 3
- 						create_ship = { type = carrier_1 equipment_variant = "Carrier I" creator = ROOT }
- 						}
-			}
-	}
-	if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-			mio:AXI_yokosuka_naval_arsenal_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.15
-				}
-			}	
-	}
-}
 	focus = {
 		id = AXI_naval_aviation
 		icon = GFX_focus_jap_zero
@@ -3631,7 +3480,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = cv_small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "A6M Zero-Sen - [TAG]"
 						}
@@ -3659,7 +3508,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = cv_small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "A6M Zero-Sen - [TAG]"
 						}
@@ -3691,7 +3540,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = cv_small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "A6M Zero-Sen - [TAG]"
 						}
@@ -3720,7 +3569,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = cv_small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "A6M Zero-Sen - [TAG]"
 						}
@@ -3739,7 +3588,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = cv_fighter_equipment_2
-				producer = ROOT
+				producer = AXI
 				amount = 200
 			}
 			}
@@ -3852,7 +3701,7 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Bicycle Infantry"
-					division_names_group = JAP_INF_01
+					#division_names_group = JAP_INF_01
 
 					regiments = {
 						bicycle_battalion = { x = 0 y = 0 }
@@ -3901,6 +3750,179 @@ focus_tree = {
 			add_ideas = AXI_skimp_on_resources
 		}
 	}
+	focus = {
+		id = AXI_carriers_through_the_staits
+		icon = GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = navy_focus_style
+		relative_position_id = AXI_skimp_on_resources
+		prerequisite = {
+			focus = AXI_skimp_on_resources
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = AXI_carriers_through_the_staits_tt
+		if = {
+				limit = {
+					has_dlc = "Man the Guns" 
+				}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = cv_small_plane_naval_bomber_airframe_1
+					producer = AXI
+					amount = 100
+					variant_name = "B5N"
+				}
+				add_equipment_to_stockpile = {
+					type = cv_small_plane_airframe_1
+					producer = AXI
+					amount = 100
+					variant_name = "A5M"
+				}
+				add_equipment_to_stockpile = {
+					type = cv_small_plane_cas_airframe_0
+					producer = AXI
+					amount = 50
+					variant_name = "Aichi D1A2"
+				}
+				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
+				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
+				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
+				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
+				create_ship = { type = ship_hull_submarine_1 equipment_variant = "Kaidai III Class" creator = ROOT }
+
+
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Kagero Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+
+
+				create_ship = { type = ship_hull_light_2 equipment_variant = "Asashio Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
+				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_light_1 equipment_variant = "Fubuki Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Tenryu Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
+				create_ship = { type = ship_hull_cruiser_1 equipment_variant = "Kuma/Nagara Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
+				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
+
+				create_ship = { type = ship_hull_carrier_1 equipment_variant = "Ryujo Class" creator = ROOT }
+				if = {
+					limit = {
+						NOT = {
+							has_tech = ship_hull_super_heavy
+						}
+					}
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
+				create_ship = {
+					type = ship_hull_super_heavy_1
+					equipment_variant = "Yamato Class"
+					creator = ROOT
+					name = "Yamato"
+				}
+				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
+				create_ship = { type = ship_hull_cruiser_2 equipment_variant = "Tone Class" creator = ROOT }
+			}
+		}
+	else = {
+		hidden_effect = {
+				set_technology = {
+		        cv_naval_bomber1 = 1
+		        }
+				set_technology = {
+		        cv_fighter1 = 1
+		        }
+				set_technology = {
+					cv_CAS1 = 1
+				}
+				set_technology = {
+		        heavy_battleship = 1
+		        }
+				add_equipment_to_stockpile = {
+					type = cv_nav_bomber_equipment_1
+					producer = AXI
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = cv_fighter_equipment_1
+					producer = AXI
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = cv_CAS_equipment_1
+					producer = AXI
+					amount = 50
+				}
+
+				for_loop_effect = {
+ 						end = 5
+ 						create_ship = { type = submarine_2 equipment_variant = "Submarine II" creator = ROOT }
+			
+ 						}
+				for_loop_effect = {
+ 						end = 10
+ 						create_ship = { type = destroyer_2 equipment_variant = "Destroyer II" creator = ROOT }
+			
+ 						}
+				for_loop_effect = {
+ 						end = 4
+ 						create_ship = { type = destroyer_1 equipment_variant = "Destroyer I" creator = ROOT }
+			
+ 						}
+				for_loop_effect = {
+ 						end = 3
+ 						create_ship = { type = light_cruiser_2 equipment_variant = "Light Cruiser II" creator = ROOT }
+ 						}
+				for_loop_effect = {
+ 						end = 2
+ 						create_ship = { type = heavy_cruiser_2 equipment_variant = "Heavy Cruiser II" creator = ROOT }
+ 						}
+				for_loop_effect = {
+ 						end = 1
+ 						create_ship = { type = SH_battleship_1 equipment_variant = "Super-Heavy Battleship I" creator = ROOT }
+ 						}
+				for_loop_effect = {
+ 						end = 3
+ 						create_ship = { type = carrier_1 equipment_variant = "Carrier I" creator = ROOT }
+ 						}
+			}
+	}
+	if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+			mio:AXI_yokosuka_naval_arsenal_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.15
+				}
+			}	
+	}
+}
 	focus = {
 		id = AXI_yamamoto_supreme
 		icon = GFX_focus_jap_pacific_guardian
@@ -4349,79 +4371,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 	}
 	#finland trees begins here
-	focus = {
-		id = AXI_hr_start
-		icon = GFX_focus_CIC_hungary_romania
-		cost = 2
-		x = 4
-		y = 0
-		available = {
-				and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = AXI_wehrmacht
-						focus_progress = {
-							focus = AXI_wehrmacht
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = AXI_royal_italian
-						focus_progress = {
-							focus = AXI_royal_italian
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = AXI_winter_is_coming
-						focus_progress = {
-							focus = AXI_winter_is_coming
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = AXI_IJA
-						focus_progress = {
-							focus = AXI_IJA
-							progress > 0
-						}
-					}
-				}
-		}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		allow_branch = {
-			OR = {
-				NOT = {
-				has_country_flag = AAA_hide_focus_tree
-				}
-				has_completed_focus = AXI_winter_is_coming
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = AXI_add_hungarian_equipment_tt
-			AXI_add_hungarian_equipment = yes
-			AXI_add_hungarian_units = yes
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
 
 #█   █ █   █ █   █  ████  ███  ████  █   █ 
 #█   █ █   █ ██  █ █     █   █ █   █  █ █  
@@ -4459,113 +4408,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 	}
-	focus = {
-		id = AXI_modern_hussars
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_hungarian_armord_divisions
-		prerequisite = {
-			focus = AXI_hungarian_armord_divisions
-		}
 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			set_technology = {
-				bicycle_infantry = 1
-			}
-			
-			custom_effect_tooltip = AXI_modern_hussars_tt
-
-			hidden_effect = {
-				division_template = {
-					name = "Bicycle Infantry"
-					division_names_group = HUN_INF_01
-
-					regiments = {
-						bicycle_battalion = { x = 0 y = 0 }
-						bicycle_battalion = { x = 0 y = 1 }
-						bicycle_battalion = { x = 0 y = 2 }
-						bicycle_battalion = { x = 1 y = 0 }
-						bicycle_battalion = { x = 1 y = 1 }
-						bicycle_battalion = { x = 1 y = 2 }
-						bicycle_battalion = { x = 2 y = 0 }
-						bicycle_battalion = { x = 2 y = 1 }
-						bicycle_battalion = { x = 2 y = 2 }
-						bicycle_battalion = { x = 2 y = 3 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64}
-					create_unit = {
-						division = "division_template = \"Bicycle Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1.0 }"
-						owner = ROOT
-						count = 3
-					}
-				}
-				
-				division_template = {
-					name = "Motorized Division"
-					division_names_group = HUN_MOT_01
-
-					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-						motorized = { x = 0 y = 3 }
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-						mot_artillery_brigade = { x = 1 y = 3}
-						mot_artillery_brigade = { x = 1 y = 4}
-					}
-					support = {
-						mot_recon = { x = 0 y = 0 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 458 289 64 }
-					create_unit = {
-						division = "division_template = \"Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
-	focus = {
-		id = AXI_legacy_of_atilla
-		icon = GFX_goal_generic_allies_build_infantry
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_hungarian_cavalry
-		prerequisite = {
-			focus = AXI_hungarian_cavalry
-		}
-		x = 0
-		y = 1
-		completion_reward = {
-			add_ideas = AXI_legacy_of_atilla
-			hidden_effect = {
-				set_technology = {
-					AXI_cav_bonus = 1
-				}
-			}
-			custom_effect_tooltip = AXI_legacy_of_atilla_tt
-		}
-		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
-	}
 	focus = {
 		id = AXI_hungarian_armord_divisions
 		icon = GFX_focus_generic_army_tanks2
@@ -4618,7 +4461,7 @@ focus_tree = {
 			}
 				division_template = {
 					name = "Páncéloshadosztály"
-					division_names_group = HUN_ARM_01
+					#division_names_group = HUN_ARM_01
 
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
@@ -4662,6 +4505,91 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
 	focus = {
+		id = AXI_modern_hussars
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_hungarian_armord_divisions
+		prerequisite = {
+			focus = AXI_hungarian_armord_divisions
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_technology = {
+				bicycle_infantry = 1
+			}
+			
+			custom_effect_tooltip = AXI_modern_hussars_tt
+
+			hidden_effect = {
+				division_template = {
+					name = "Bicycle Infantry"
+					#division_names_group = HUN_INF_01
+
+					regiments = {
+						bicycle_battalion = { x = 0 y = 0 }
+						bicycle_battalion = { x = 0 y = 1 }
+						bicycle_battalion = { x = 0 y = 2 }
+						bicycle_battalion = { x = 1 y = 0 }
+						bicycle_battalion = { x = 1 y = 1 }
+						bicycle_battalion = { x = 1 y = 2 }
+						bicycle_battalion = { x = 2 y = 0 }
+						bicycle_battalion = { x = 2 y = 1 }
+						bicycle_battalion = { x = 2 y = 2 }
+						bicycle_battalion = { x = 2 y = 3 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 458 289 64}
+					create_unit = {
+						division = "division_template = \"Bicycle Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1.0 }"
+						owner = ROOT
+						count = 3
+					}
+				}
+				
+				division_template = {
+					name = "Motorized Division"
+					#division_names_group = HUN_MOT_01
+
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						motorized = { x = 0 y = 3 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						mot_artillery_brigade = { x = 1 y = 3}
+						mot_artillery_brigade = { x = 1 y = 4}
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 458 289 64 }
+					create_unit = {
+						division = "division_template = \"Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
 		id = AXI_hungarian_cavalry
 		icon = GFX_goal_generic_cavalry
 		cost = 5
@@ -4677,7 +4605,7 @@ focus_tree = {
 			hidden_effect ={
 				division_template = {
 					name = "Cavalry Division"
-					division_names_group = HUN_CAV_01
+					#division_names_group = HUN_CAV_01
 		
 					regiments = {
 						cavalry = { x = 0 y = 0 }
@@ -4708,6 +4636,28 @@ focus_tree = {
 			}
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
+		id = AXI_legacy_of_atilla
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_hungarian_cavalry
+		prerequisite = {
+			focus = AXI_hungarian_cavalry
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = AXI_legacy_of_atilla
+			hidden_effect = {
+				set_technology = {
+					AXI_cav_bonus = 1
+				}
+			}
+			custom_effect_tooltip = AXI_legacy_of_atilla_tt
+		}
+		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
 	focus = {
 		id = AXI_hungarian_industry
@@ -4958,84 +4908,7 @@ focus_tree = {
 			add_ideas = AXI_siege_warfare
 		}
 	}
-	focus = {
-		id = AXI_romanian_infantry
-		icon = GFX_focus_vanatori_de_munte
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_tacam
-		prerequisite = {
-			focus = AXI_tacam
-		}
-		x = 0
-		y = 1
-
-
-		completion_reward = {
-			custom_effect_tooltip = AXI_romanian_infantry_tt
-			hidden_effect = {
-				every_army_leader = {
-				limit = {
-					NOT = {
-						has_trait = trait_mountaineer
-					}
-				}
-				add_trait = {
-					trait = trait_mountaineer
-				}
-				}
-				if = {
-					limit ={
-						not = { has_tech = tech_mountaineers }
-					}
-					set_technology ={ 
-						tech_mountaineers = 1
-						popup = no
-					}
-				}
-				division_template = {
-					name = "Vanatori de Munte"
-					division_names_group = ROM_MTN_01
-					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 0 y = 2 }
-						mountaineers = { x = 0 y = 3 }
-						mountaineers = { x = 0 y = 4 }
-						mountaineers = { x = 1 y = 0 }
-						mountaineers = { x = 1 y = 1 }
-						mountaineers = { x = 1 y = 2 }
-						mountaineers = { x = 1 y = 3 }
-						mountaineers = { x = 1 y = 4 }
-						mountaineers = { x = 2 y = 0 }
-						mountaineers = { x = 2 y = 1 }
-						mountaineers = { x = 2 y = 2 }
-						mountaineers = { x = 2 y = 3 }
-						artillery_brigade = { x = 3 y = 0 }
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						anti_air = { x= 0 y = 2 }
-						anti_tank = { x = 0 y = 3}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 907 }
-					create_unit = {
-						division = "name = \"Vanatori de Munte\" division_template = \"Vanatori de Munte\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-						owner = ROOT
-						count=2
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
+	
 	focus = {
 		id = AXI_tacam
 		icon = GFX_focus_generic_self_propelled_gun
@@ -5091,7 +4964,7 @@ focus_tree = {
 			
 			division_template = {
 				name = "Tank Destroyer Division" 				# 1st Armoured Division, 7th Armoured 'Desert
-				division_names_group = ROM_ARM_01
+				#division_names_group = ROM_ARM_01
 
 				regiments = {
 					light_tank_destroyer_brigade = { x = 0 y = 0 }
@@ -5139,7 +5012,7 @@ focus_tree = {
 		        }
 	division_template = {
 				name = "Tank Destroyer Division" 				# 1st Armoured Division, 7th Armoured 'Desert
-				division_names_group = ROM_ARM_01
+				#division_names_group = ROM_ARM_01
 
 				regiments = {
 					light_tank_destroyer_brigade = { x = 0 y = 0 }
@@ -5183,6 +5056,99 @@ focus_tree = {
 	}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 }
+focus = {
+		id = AXI_romanian_infantry
+		icon = GFX_focus_vanatori_de_munte
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_tacam
+		prerequisite = {
+			focus = AXI_tacam
+		}
+		x = 0
+		y = 1
+
+
+		completion_reward = {
+			custom_effect_tooltip = AXI_romanian_infantry_tt
+			hidden_effect = {
+				every_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = trait_mountaineer
+					}
+				}
+				add_trait = {
+					trait = trait_mountaineer
+				}
+				}
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
+				division_template = {
+					name = "Vanatori de Munte"
+					#division_names_group = ROM_MTN_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+						mountaineers = { x = 0 y = 4 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+						mountaineers = { x = 1 y = 4 }
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 3 }
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						artillery_brigade = { x = 3 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x= 0 y = 2 }
+						anti_tank = { x = 0 y = 3}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 907 }
+					create_unit = {
+						division = "name = \"Vanatori de Munte\" division_template = \"Vanatori de Munte\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+						owner = ROOT
+						count=2
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
+		id = AXI_from_the_carpathians
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_romania
+		prerequisite = {
+			focus = AXI_romania
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			add_ideas = AXI_from_the_carpathians_idea
+		}
+	}
 	focus = {
 		id = AXI_romanian_oil
 		icon = GFX_goal_generic_oil_refinery
@@ -5206,21 +5172,6 @@ focus_tree = {
 					state = ROOT.capital
 				}
 			}
-		}
-	}
-	focus = {
-		id = AXI_from_the_carpathians
-		icon = GFX_goal_generic_position_armies
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = AXI_romania
-		prerequisite = {
-			focus = AXI_romania
-		}
-		x = 3
-		y = 1
-		completion_reward = {
-			add_ideas = AXI_from_the_carpathians_idea
 		}
 	}
 	focus = {
@@ -5400,7 +5351,7 @@ focus_tree = {
 		    }
 			add_equipment_to_stockpile = {
 						type = medium_tank_equipment_2 
-						producer = ROOT
+						producer = AXI
 						amount = 250
 					}	
 			}
@@ -5437,8 +5388,8 @@ focus_tree = {
 		prerequisite = {
 			focus = AXI_royal_italian
 		}
-		x = 7
-		y = 2
+		x = 8
+		y = 3
 		
 		completion_reward = {
 		activate_decision = AXI_the_il_duce_project
@@ -5451,6 +5402,7 @@ focus_tree = {
 	focus = {
 		id = AXI_winter_is_coming
 		icon = GFX_focus_CIC_finland
+		text_icon = land_focus_style
 		cost = 2
 		ai_will_do = {
 			factor = 100
@@ -5510,7 +5462,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_okh
+						focus_progress = {
+							focus = AXI_okh
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = AXI_add_finnish_equipment_tt
@@ -5522,6 +5485,26 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
+		id = AXI_special_forces_training
+		icon = GFX_focus_SMB_special_forces_option_1
+		x = 8
+		y = 2
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = AXI_winter_is_coming
+		prerequisite = {
+			focus = AXI_winter_is_coming
+			focus = AXI_IJA
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = AXI_special_forces_training
+		}
 	}
 
 #█████ █████ █   █ █      ███  █   █ ████      █     █████ █████ █████ 
@@ -5543,7 +5526,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AXI_from_within
 		}
-		x = -2
+		x = -3
 		y = 1
 		available = {
 		}
@@ -5702,7 +5685,7 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Panssaridivisioona"
-					division_names_group = FIN_Arm_01
+					#division_names_group = FIN_Arm_01
 
 					regiments = {
 						light_sp_artillery_brigade = { x = 0 y = 0 }
@@ -5769,7 +5752,7 @@ focus_tree = {
 				}
 			division_template = {
 					name = "Panssaridivisioona"
-					division_names_group = FIN_Arm_01
+					#division_names_group = FIN_Arm_01
 
 					regiments = {
 						light_sp_artillery_brigade = { x = 0 y = 0 }
@@ -5843,7 +5826,7 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Jalkaväkidivisioona"
-					division_names_group = FIN_INF_01
+					#division_names_group = FIN_INF_01
 
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -5948,7 +5931,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -5975,7 +5958,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -6006,7 +5989,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -6034,7 +6017,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = AXI
 							amount = 200
 							variant_name = "Focke-Wulf 190 - [TAG]"
 						}
@@ -6051,7 +6034,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = fighter_equipment_2
-				producer = ROOT
+				producer = AXI
 				amount = 200
 			}
 			}
@@ -6234,7 +6217,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AXI_from_abroad
 		}
-		x = 2
+		x = 3
 		y = 1
 		available = {
 		}
@@ -6348,7 +6331,7 @@ focus_tree = {
 				}
 			division_template = {
 				name = "Ranger Division"
-				division_names_group = FIN_INF_01
+				#division_names_group = FIN_INF_01
 
 				regiments = {
 					light_infantry = { x = 0 y = 0 }
@@ -6396,7 +6379,7 @@ focus_tree = {
 			hidden_effect ={
 			division_template = {
 				name = "Cavalry Division"
-				division_names_group = FIN_CAV_01
+				#division_names_group = FIN_CAV_01
 	
 				regiments = {
 					cavalry = { x = 0 y = 0 }
@@ -6569,6 +6552,9 @@ focus_tree = {
 			focus = AXI_appoint_motti_matti
 			focus = AXI_marshall_of_finland
 		}
+		prerequisite = {
+			focus = AXI_hakka_paalle
+		}
 		completion_reward = { 
 			add_ideas = AXI_sisu_idea_2
 		}
@@ -6632,7 +6618,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_oy_alkoholiliike
 		cost = 5
 		relative_position_id = AXI_winter_is_coming
-		x = -7
+		x = -8
 		y = 2
 		text_icon = land_focus_style
 		prerequisite ={
@@ -6671,4 +6657,921 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
+
+		### OKH ###
+		focus = {
+			id = AXI_okh
+			icon = GFX_focus_CIC_wehrmacht
+			
+			cost = 5
+			ai_will_do = {
+				factor = 100
+			}
+			x = 34
+			y = 0
+
+			available = {
+				and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_hr_start
+						focus_progress = {
+							focus = AXI_hr_start
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_wehrmacht
+						focus_progress = {
+							focus = AXI_wehrmacht
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_winter_is_coming
+						focus_progress = {
+							focus = AXI_winter_is_coming
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_IJA
+						focus_progress = {
+							focus = AXI_IJA
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = AXI_royal_italian
+						focus_progress = {
+							focus = AXI_royal_italian
+							progress > 0
+						}
+					}
+				}
+			}
+		}
+
+			completion_reward = {
+				AXI_add_german_equipment = yes
+				AXI_add_german_units = yes
+			}
+			allow_branch = {
+				OR = {
+					NOT = {
+						has_country_flag = AAA_hide_focus_tree
+					}
+					has_completed_focus = AXI_wehrmacht
+				}
+			}
+		}
+		focus = {
+			id = AXI_luftwaffe_ground_forces
+			icon = GFX_focus_CIC_luftwaffe
+			
+			relative_position_id = AXI_okh
+			x = -3
+			y = 1
+			cost = 5
+			prerequisite = {
+				focus = AXI_okh
+			}
+			mutually_exclusive = {
+				focus = AXI_9th_army_wehrmacht
+			}
+			ai_will_do = {
+				factor = 1.2
+			}
+			available = {
+							NOT={has_global_flag = AXI_luftwaffe_ground_forces_banned}
+				if = {
+					limit = {
+						any_allied_country = {
+							exists = yes
+						}
+					}
+					any_allied_country = {
+						NOT = {
+							has_completed_focus = AXI_luftwaffe_ground_forces
+							focus_progress = {
+								focus = AXI_luftwaffe_ground_forces
+								progress > 0
+							}
+						}
+					}
+				}
+			}
+			completion_reward = {
+				custom_effect_tooltip = new_generals_tt
+	
+				set_variable = { var_doctrine = 3 } # AI DOCTRINE
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_grand_battle_plan
+				}
+				army_experience = 100
+				navy_experience = 100
+				air_experience = 100
+			}
+		}
+		
+		focus = {
+			id = AXI_1st_parachute_division
+			icon = GFX_focus_generic_paratrooper
+			
+			x = -3
+			y = 1
+			cost = 5
+			relative_position_id = AXI_luftwaffe_ground_forces
+			prerequisite = {
+				focus = AXI_luftwaffe_ground_forces
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = transport_plane_equipment
+					amount = 100
+					producer = GER
+				}
+				custom_effect_tooltip = AXI_1st_parachute_division_units_tt
+				hidden_effect = {
+					division_template = {
+						name = "Paratrooper Division"
+						division_names_group = GER_PAR_01
+	
+						regiments = {
+							paratrooper = { x = 0 y = 0 }
+							paratrooper = { x = 0 y = 1 }
+							paratrooper = { x = 0 y = 2 }
+							paratrooper = { x = 1 y = 0 }
+							paratrooper = { x = 1 y = 1 }
+							paratrooper = { x = 1 y = 2 }
+							paratrooper = { x = 2 y = 0 }
+							paratrooper = { x = 2 y = 1 }
+							paratrooper = { x = 2 y = 2 }
+						}
+						support = {
+							anti_tank = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "division_template = \"Paratrooper Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+							count = 3
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_luftwaffe_field_divisions
+			icon = GFX_goal_generic_axis_build_infantry
+			
+			x = 0
+			y = 1
+			cost = 5
+			relative_position_id = AXI_1st_parachute_division
+			prerequisite = {
+				focus = AXI_1st_parachute_division
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = AXI_luftwaffe_field_divisions_units_tt
+				hidden_effect = {
+					division_template = {
+						name = "Luftwaffe Field Division"
+						division_names_group = GER_INF_01
+	
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							anti_air_brigade = { x = 2 y = 1 }
+						}
+						support = {
+							anti_air = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "division_template = \"Luftwaffe Field Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+							count = 5
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_the_fg42
+			icon = GFX_goal_generic_small_arms
+			
+			x = -1
+			y = 1
+			cost = 5
+			relative_position_id = AXI_luftwaffe_ground_forces
+			prerequisite = {
+				focus = AXI_luftwaffe_ground_forces
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_the_fg42
+			}
+		}
+		focus = {
+			id = AXI_zerstorergeschwader
+			icon = GFX_goal_expand_the_luftwaffe
+			
+			x = 0
+			y = 1
+			cost = 5
+			relative_position_id = AXI_the_fg42
+			prerequisite = {
+				focus = AXI_the_fg42
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = AXI_zerstorergeschwader_tt
+				hidden_effect = {
+					set_variable_to_random = {
+					var = random_num
+					max = 999
+					integer = yes
+					}		
+					meta_effect = {
+						text = {
+						create_equipment_variant = {
+							name = "Bristol Beaufighter - [TAG]"
+							type = medium_plane_fighter_airframe_2
+							modules={
+								fixed_main_weapon_slot=aircraft_cannon_1_2x
+								fixed_auxiliary_weapon_slot_1=aircraft_cannon_1_2x
+								engine_type_slot=engine_3_2x
+								special_type_slot_1=hmg_defense_turret_2x
+								fixed_auxiliary_weapon_slot_2=heavy_mg_4x
+								special_type_slot_3=self_sealing_fuel_tanks_medium
+								fixed_auxiliary_weapon_slot_3=heavy_mg_2x
+							}
+						}
+				
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe_2
+							producer = ROOT
+							amount = 100
+							variant_name ="Bristol Beaufighter - [TAG]"
+						}
+						}
+						TAG = "[?random_num]"
+					}
+				}
+			}	
+		}
+		
+		
+		focus = {
+			id = AXI_technisches_amt
+			icon = GFX_goal_generic_air_production
+			
+			x = 1
+			y = 1
+			relative_position_id = AXI_luftwaffe_ground_forces
+			prerequisite = {
+				focus = AXI_luftwaffe_ground_forces
+			}
+			
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_technisches_amt
+			}
+		}
+		focus = {
+			id = AXI_amerikabomber
+			icon = GFX_goal_generic_air_bomber
+			
+			x = 0
+			y = 1
+			relative_position_id = AXI_technisches_amt
+			prerequisite = {
+				focus = AXI_technisches_amt
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_amerikabomber
+				custom_effect_tooltip = AXI_amerikabomber_tt
+	
+				hidden_effect = {
+					set_variable_to_random = {
+					var = random_num
+					max = 999
+					integer = yes
+					}		
+					meta_effect = {
+						text = {
+							create_equipment_variant = {
+								name = "B-17-[TAG]" #
+								type = large_plane_airframe_1
+								modules = {
+									fixed_main_weapon_slot = large_bomb_bay
+									fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+									engine_type_slot = engine_3_4x
+									special_type_slot_1 = hmg_defense_turret_2x
+									special_type_slot_2 = hmg_defense_turret_2x
+									special_type_slot_3 = bomb_sights_1
+								}
+							}
+							add_equipment_to_stockpile = {
+								type = large_plane_airframe_1
+								producer = ROOT
+								amount = 50
+								variant_name = "B-17-[TAG]"
+							}
+						}
+						TAG = "[?random_num]"
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_the_teacher
+			icon = GFX_focus_RAJ_seek_help_from_germany
+			
+			x = 3
+			y = 1
+			cost = 8
+			relative_position_id = AXI_luftwaffe_field_divisions
+			prerequisite = {
+				focus = AXI_luftwaffe_field_divisions
+			}
+			prerequisite = {
+				focus = AXI_zerstorergeschwader
+			}
+			prerequisite = {
+				focus = AXI_amerikabomber
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				
+				retire_country_leader = yes
+				meta_effect = {
+					text = {
+					[TAG]_august_schulleiter = { #PLACEHOLDER
+					promote_leader = yes
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1965.1.1.1"
+							traits = { the_teacher }
+						}
+					}
+					}
+					
+	
+					}
+					TAG = "[THIS.GetTag]"
+				}	
+				add_political_power = 150
+				hidden_effect = {
+					#set_cosmetic_tag = AXI_5th_panzer_army
+				}
+			}
+		}
+		focus = {
+			id = AXI_9th_army_wehrmacht
+			icon = GFX_focus_CIC_9th_army
+			relative_position_id = AXI_okh
+			
+			x = 3
+			y = 1
+			available = {
+							NOT={has_global_flag = AXI_9th_army_wehrmacht_banned}
+				if = {
+					limit = {
+						any_allied_country = {
+							exists = yes
+						}
+					}
+					any_allied_country = {
+						NOT = {
+							has_completed_focus = AXI_9th_army_wehrmacht
+							focus_progress = {
+								focus = AXI_9th_army_wehrmacht
+								progress > 0
+							}
+						}
+					}
+				}
+			}
+			prerequisite = {
+				focus = AXI_okh
+			}
+			mutually_exclusive = {
+				focus = AXI_luftwaffe_ground_forces
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1.2
+			}
+			completion_reward = {
+				custom_effect_tooltip = new_generals_tt
+	
+				set_variable = { var_doctrine = 4 } # AI DOCTRINE
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_mass_assault
+				}
+				army_experience = 100
+				navy_experience = 100
+				air_experience = 100
+			}
+		}
+		focus = {
+			id = AXI_ostlegionen
+			icon = GFX_goal_generic_political_pressure
+			
+			relative_position_id = AXI_9th_army_wehrmacht
+			x = -1
+			y = 1
+			prerequisite = {
+				focus = AXI_9th_army_wehrmacht
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = AXI_ostlegionen_units_tt
+				set_technology = {
+					penal_infantry = 1
+					popup = no
+				}
+				hidden_effect = {
+					division_template = {
+						name = "Reservist Division"
+						division_names_group = GER_INF_01
+	
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "division_template = \"Reservist Division\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+							count = 6
+							owner = ROOT
+						}
+					}
+					division_template = {
+						name = "Penal Division"
+						division_names_group = GER_INF_01
+	
+						regiments = {
+							penal_battalion = { x = 0 y = 0 }
+							penal_battalion = { x = 0 y = 1 }
+							penal_battalion = { x = 1 y = 0 }
+							penal_battalion = { x = 1 y = 1 }
+						}
+						support = {
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "division_template = \"Penal Division\" start_experience_factor = 0 start_equipment_factor = 1.0"
+							count = 8
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_bellowing_cows
+			icon = GFX_focus_rocketry
+			
+			relative_position_id = AXI_ostlegionen
+			x = 0
+			y = 1
+			prerequisite = {
+				focus = AXI_ostlegionen
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = AXI_bellowing_cows_tt
+				
+				if = {
+					limit = {
+						NOT = {
+							has_tech = motorized_rocket_unit
+						}
+					}
+					set_technology = {
+						motorized_rocket_unit=1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = rocket_artillery
+						}
+					}
+					set_technology = {
+						rocket_artillery=1
+					}
+				}
+				custom_effect_tooltip = AXI_bellowing_cows_units_tt
+				hidden_effect = { 
+					set_technology = {
+						CIC_bellowing_cows = 1
+						popup = no
+					}
+					division_template = {
+						name = "Motorized Rocket Corps"
+						regiments = {
+							motorized = { x = 0 y = 0 }
+							motorized = { x = 0 y = 1 }
+							motorized = { x = 0 y = 2 }
+							motorized = { x = 0 y = 3 }						
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							motorized = { x = 1 y = 2 }
+							motorized_rocket_brigade = { x = 2 y = 0 }
+							motorized_rocket_brigade = { x = 2 y = 1 }
+							motorized_rocket_brigade = { x = 2 y = 2 }
+							motorized_rocket_brigade = { x = 3 y = 0 }
+							motorized_rocket_brigade = { x = 3 y = 1 }
+							motorized_rocket_brigade = { x = 3 y = 2 }						
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 907 }
+						create_unit = {
+							division = "name = \"8th Mechanized Corps\" division_template = \"Motorized Rocket Corps\" start_experience_factor = 0.5 start_equipment_factor = 1.1"
+							owner = ROOT
+							count = 3
+						}
+					}
+				
+				}
+			}
+		}
+		
+		focus = {
+			id = AXI_lessons_of_kursk
+			icon = GFX_goal_generic_build_tank
+			
+			x = 1
+			y = 1
+			cost = 5
+			relative_position_id = AXI_9th_army_wehrmacht
+			prerequisite = {
+				focus = AXI_9th_army_wehrmacht
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_lessons_of_kursk
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					producer = ROOT
+					amount = 600
+				}
+			}
+		}
+		focus = {
+			id = AXI_grenadier_upgrade_package
+			icon = GFX_goal_generic_construction2
+			
+			x = 0
+			y = 1
+			cost = 5
+			relative_position_id = AXI_lessons_of_kursk
+			prerequisite = {
+				focus = AXI_lessons_of_kursk
+			}
+	
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = AXI_grenadier_upgrade_package_tt
+				add_tech_bonus = {
+					name = AXI_blocking_force
+					bonus = 2.0
+					uses = 2
+					technology = support_weapons
+					technology = support_weapons2
+					technology = support_weapons3
+					technology = support_weapons4
+				}
+				hidden_effect = {
+					set_technology = {
+						CIC_grenadier_upgrade_package = 1
+						popup = no
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_opel
+			icon = GFX_goal_generic_army_motorized
+			
+			relative_position_id = AXI_9th_army_wehrmacht
+			x = 3
+			y = 1
+			prerequisite = {
+				focus = AXI_9th_army_wehrmacht
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_opel
+				add_equipment_to_stockpile = {
+					producer = ROOT
+					type = motorized_equipment
+					amount = 750
+				}
+			}
+		}
+		focus = {
+			id = AXI_veterans_of_the_western_front
+			icon = GFX_goal_generic_demand_territory
+			
+			relative_position_id = AXI_opel
+			x = 0
+			y = 1
+			prerequisite = {
+				focus = AXI_opel
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				army_experience = 50
+				add_ideas = AXI_veterans_of_the_western_front
+			}
+		}
+		focus = {
+			id = AXI_the_wolf
+			icon = GFX_focus_ger_oppose_hitler
+			
+			relative_position_id = AXI_grenadier_upgrade_package
+			x = -1
+			y = 1
+			prerequisite = {
+				focus = AXI_bellowing_cows
+			}
+			prerequisite = {
+				focus = AXI_grenadier_upgrade_package
+			}
+			prerequisite = {
+				focus = AXI_veterans_of_the_western_front
+			}
+			cost = 8
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				retire_country_leader = yes
+				meta_effect = {
+					text = {
+					[TAG]_rolf_huber = {
+						promote_leader = yes
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1965.1.1.1"
+								traits = { the_wolf }
+							}
+						}
+					}
+					
+	
+					}
+					TAG = "[THIS.GetTag]"
+				}
+				custom_effect_tooltip = AXI_der_wolf_tt
+				hidden_effect = {
+					set_technology = { CIC_der_wolf = 1 popup = no }
+				}
+				add_political_power = 150
+				hidden_effect = {
+					#set_cosmetic_tag = AXI_ger_4th_army
+				}
+			}
+		}
+		focus = {
+			id = AXI_case_by_case
+			icon = GFX_focus_ger_reichskommisariats
+			
+			relative_position_id = AXI_okh
+			x = 0
+			y = 5
+			prerequisite = {
+				focus = AXI_the_teacher
+				focus = AXI_the_wolf
+			}
+			prerequisite = {
+				focus = AXI_mefo
+			}
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = AXI_case_by_case
+			}
+		}
+
+		focus = {
+			id = AXI_mauser
+			icon = GFX_goal_generic_production
+			
+			prerequisite ={
+				focus = AXI_silent_hunters
+			}
+			relative_position_id = AXI_silent_hunters
+			x = 0
+			y = 1
+			cost = 5
+	
+			ai_will_do = {
+				factor = 0.8
+			}
+			completion_reward = {
+				add_ideas = AXI_mauser
+			}
+		}
+		focus = {
+			id = AXI_mefo
+			icon = GFX_focus_generic_industry_3
+			
+			prerequisite ={
+				focus = AXI_mauser
+			}
+			relative_position_id = AXI_mauser
+			x = 0
+			y = 1
+			cost = 5
+	
+			ai_will_do = {
+				factor = 0.8
+			}
+			completion_reward = {
+				add_ideas = AXI_mefo
+			}
+		}
+		focus = {
+			id = AXI_deeper_cooperation
+			icon = GFX_goal_generic_small_arms
+			
+			cost = 5
+			prerequisite ={
+				focus = AXI_from_abroad
+				focus = AXI_from_within
+			}
+			relative_position_id = AXI_winter_is_coming
+			x = 0
+			y = 2
+	
+			ai_will_do = {
+				factor = 0.8
+			}
+	
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					producer = AXI
+					amount = 2500
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					producer = AXI
+					amount = 200
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					producer = AXI
+					amount = 200
+				}
+			}
+		}
+		focus = {
+			id = AXI_ski_infantry
+			icon = GFX_focus_generic_little_entente
+			
+			cost = 5
+			prerequisite ={
+				focus = AXI_deeper_cooperation
+			}
+			relative_position_id = AXI_deeper_cooperation
+			x = 0
+			y = 1
+	
+			ai_will_do = {
+				factor = 0.8
+			}
+	
+			completion_reward = {
+				custom_effect_tooltip = AXI_ski_infantry_tt
+				hidden_effect = {
+					set_technology = {
+						CIC_ski_infantry = 1
+					}
+				}
+			}
+		}
+		focus = {
+			id = AXI_hakka_paalle
+			icon = GFX_goal_generic_army_doctrines
+			
+			cost = 5
+			prerequisite ={
+				focus = AXI_ski_infantry
+			}
+			relative_position_id = AXI_ski_infantry
+			x = 0
+			y = 1
+	
+			ai_will_do = {
+				factor = 0.8
+			}
+	
+			completion_reward = {
+				add_ideas = AXI_hakka_paalle
+			}
+		}
 }

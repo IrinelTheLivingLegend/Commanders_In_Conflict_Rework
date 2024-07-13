@@ -632,12 +632,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
-			}
 		}
 
 		unit_type = {
@@ -653,10 +647,6 @@ leader_traits = {
 				division_has_majority_template = irregular_infantry
 			}
 			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
 				NOT = {
 					OR = {
 						has_idea = best_of_the_best_spirit
@@ -681,10 +671,6 @@ leader_traits = {
 			modifier = {
 				add = 0.5
 				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = ETH
-					}
 				}
 			}
 			modifier = { #ITALY
@@ -711,9 +697,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = {
-				original_tag = ITA
-			}
 		}
 
 		unit_type = {
@@ -723,7 +706,6 @@ leader_traits = {
 		unit_trigger = {
 			division_has_majority_template = infantry
 			owner = {
-				original_tag = ITA
 				NOT = {
 					OR = {
 						has_idea = best_of_the_best_spirit
@@ -746,9 +728,6 @@ leader_traits = {
 			base = 0
 			modifier = {
 				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					original_tag = ITA
-				}
 			}
 			modifier = { #ITALY
 				factor = 2
@@ -774,12 +753,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
-			}
 		}
 
 		unit_type = {
@@ -789,10 +762,6 @@ leader_traits = {
 		unit_trigger = {
 			division_has_majority_template = militia
 			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
 				NOT = {
 					OR = {
 						has_idea = best_of_the_best_spirit
@@ -813,10 +782,6 @@ leader_traits = {
 			modifier = {
 				add = 0.5
 				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = SWI
-					}
 				}
 			}
 			modifier = { #ITALY
@@ -847,7 +812,6 @@ leader_traits = {
 		trait_type = personality_trait 
 
 		allowed = {
-			FROM = { original_tag = FIN }
 		}
 				
 		trait_xp_factor = {
@@ -1349,7 +1313,7 @@ leader_traits = {
 				attack = 0.1
 			}
 			fort = {
-                attack = 0.15
+                attack = 0.08
             }
 		}
 		
@@ -1694,7 +1658,7 @@ leader_traits = {
 		cost = 700
 		modifier = {
 			fort = {
-				attack = 0.2
+				attack = 0.1
 			}
 		}
 		enable_ability = siege_artillery
@@ -3254,7 +3218,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = BUL }
 		}
 
 		new_commander_weight = {
@@ -3272,7 +3235,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = BUL }
 		}
 
 		new_commander_weight = {
@@ -3301,7 +3263,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = BUL }
 		}
 
 		new_commander_weight = {
@@ -3322,7 +3283,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = TUR }
 		}
 
 		new_commander_weight = {
@@ -3336,7 +3296,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = GRE }
 		}
 
 		new_commander_weight = {
@@ -3350,7 +3309,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = GRE }
 		}
 
 		new_commander_weight = {
@@ -3364,7 +3322,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = GRE }
 		}
 
 		new_commander_weight = {
@@ -3378,7 +3335,6 @@ leader_traits = {
 		trait_type = personality_trait
 
 		allowed = {
-			FROM = { original_tag = GRE }
 		}
 
 		new_commander_weight = {

@@ -8,6 +8,7 @@ frontline_defensive = {
 					original_tag = ALI
 					original_tag = ALJ
 					original_tag = ALK
+					original_tag = ALL
 				}
 				check_variable = { Global.allies_points > 300 }
 			}
@@ -16,6 +17,7 @@ frontline_defensive = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
 				}
 				check_variable = { Global.axis_points > 300 }
 			}
@@ -30,9 +32,11 @@ frontline_defensive = {
 				original_tag= AXI
 				original_tag= AXJ
 				original_tag = AXK
+				original_tag = AXL
 				original_tag= ALI
 				original_tag= ALJ
 				original_tag = ALK
+				original_tag = ALL
 				original_tag= NEU
 			}
 		}
@@ -52,6 +56,7 @@ frontline_offensive = {
 					original_tag = ALI
 					original_tag = ALJ
 					original_tag = ALK
+					original_tag = ALL
 				}
 				check_variable = { Global.allies_points < 500 }
 			}
@@ -60,6 +65,7 @@ frontline_offensive = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
 				}
 				check_variable = { Global.axis_points < 500 }
 			}
@@ -73,8 +79,12 @@ frontline_offensive = {
 			OR = {
 				original_tag= AXI
 				original_tag= AXJ
+				original_tag = AXK
+				original_tag = AXL
 				original_tag= ALI
 				original_tag= ALJ
+				original_tag = ALK
+				original_tag = ALL
 				original_tag= NEU
 			}
 		}
@@ -94,6 +104,7 @@ desperate_attack = {
 					original_tag = ALI
 					original_tag = ALJ
 					original_tag = ALK
+					original_tag = ALL
 				}
 				check_variable = { Global.allies_points < 150 }
 			}
@@ -102,6 +113,7 @@ desperate_attack = {
 					original_tag = AXI
 					original_tag = AXJ
 					original_tag = AXK
+					original_tag = AXL
 				}
 				check_variable = { Global.axis_points < 150 }
 			}
@@ -113,11 +125,15 @@ desperate_attack = {
 		type = front_control
 		country_trigger = { 
 			OR = {
-				original_tag= AXI
-				original_tag= AXJ
-				original_tag= ALI
-				original_tag= ALJ
-				original_tag= NEU
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = ALL
+				original_tag = NEU
 			}
 		}
 		ratio = 0.1
@@ -137,13 +153,15 @@ rush_vps_strat = {
 		type = front_control
 		country_trigger = { 
 			OR = {
-				original_tag= AXI
-				original_tag= AXJ
+				original_tag = AXI
+				original_tag = AXJ
 				original_tag = AXK
-				original_tag= ALI
-				original_tag= ALJ
+				original_tag = AXL
+				original_tag = ALI
+				original_tag = ALJ
 				original_tag = ALK
-				original_tag= NEU
+				original_tag = ALL
+				original_tag = NEU
 			}
 		}
 		#ratio = 0.1

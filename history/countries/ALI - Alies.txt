@@ -487,4 +487,18 @@ if ={
 		}
 		icon="GFX_ENG_light_plane_1_medium"
 	}
+	
+		create_equipment_variant = {
+		name = "Heavy Fighter I"
+		type = medium_plane_fighter_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			fixed_auxiliary_weapon_slot_2 = light_mg_4x
+			fixed_auxiliary_weapon_slot_3 = light_mg_4x
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+	}
 }

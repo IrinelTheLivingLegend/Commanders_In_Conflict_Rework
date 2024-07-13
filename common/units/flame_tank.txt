@@ -30,7 +30,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 300
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -70,11 +70,8 @@ sub_units = {
 			attack = 0.1
 		}
 		fort = {
-			attack = 0.1
+			attack = 0.06
 			movement = 0.1
-		}
-		river = {
-			attack = 0.1
 		}
 		amphibious = {
 			attack = 0.1
@@ -154,11 +151,8 @@ sub_units = {
 			attack = 0.15
 		}
 		fort = {
-			attack = 0.2
-			movement = 0.1
-		}
-		river = {
 			attack = 0.1
+			movement = 0.1
 		}
 		amphibious = {
 			attack = 0.1
@@ -235,11 +229,8 @@ sub_units = {
 			attack = 0.1
 		}
 		fort = {
-			attack = 0.25
+			attack = 0.12
 			movement = 0.1
-		}
-		river = {
-			attack = 0.05
 		}
 		amphibious = {
 			attack = 0.05

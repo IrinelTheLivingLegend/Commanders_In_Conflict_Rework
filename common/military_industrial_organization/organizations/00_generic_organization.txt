@@ -62,23 +62,24 @@ generic_tank_organization = {
 	trait = { 
 		token = SOV_mio_trait_merge_plant_no_174
 		name = SOV_merge_tank_plant
-		#icon = GFX_generic_mio_department_icon_facilities
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 		special_trait_background = yes
 
 		position = { x=9 y=4 }
 		
 		visible = {
-			FROM = { OR={
-				original_tag = ALI
-				original_tag = ALJ
-				original_tag = ALK
-				original_tag = AXI
-				original_tag = AXJ
-				original_tag = AXK
-				original_tag = AXL
-				original_tag = ALL	
-			}}
+			FROM = { 
+				OR={
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL	
+				}
+			}
 		}
    
 		available = {
@@ -95,23 +96,24 @@ generic_tank_organization = {
 	trait = { 
 		token = SOV_mio_trait_merge_plant_no_112
 		name = SOV_merge_tank_plant_2
-		#icon = GFX_generic_mio_department_icon_facilities
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		special_trait_background = yes
 
 		position = { x=9 y=3 }
 		
 		visible = {
-			FROM = { OR={
-				original_tag = ALI
-				original_tag = ALJ
-				original_tag = ALK
-				original_tag = AXI
-				original_tag = AXJ
-				original_tag = AXK
-				original_tag = AXL
-				original_tag = ALL	
-			}}
+			FROM = { 
+				OR={
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL	
+				}
+			}
 		}
 available = {
 			has_mio_number_of_completed_traits > 3
@@ -127,23 +129,23 @@ available = {
 	trait = { 
 		token = SOV_mio_trait_merge_ural_heavy_machine_building_plant
 		name = SOV_merge_tank_plant_3
-		#icon = GFX_generic_mio_department_icon_facilities
 		icon = GFX_generic_mio_trait_icon_soft_attack
 		special_trait_background = yes
 
 		position = { x=9 y=2 }
 		
 		visible = {
-			FROM = { OR={
-				original_tag = ALI
-				original_tag = ALJ
-				original_tag = ALK
-				original_tag = AXI
-				original_tag = AXJ
-				original_tag = AXK
-				original_tag = AXL
-				original_tag = ALL	
-			}}
+			FROM = { 
+				OR={
+					original_tag = ALI
+					original_tag = ALJ
+					original_tag = ALK
+					original_tag = AXI
+					original_tag = AXJ
+					original_tag = AXK
+					original_tag = AXL
+					original_tag = ALL	
+				}}
 		}
 available = {
 			has_mio_number_of_completed_traits > 3

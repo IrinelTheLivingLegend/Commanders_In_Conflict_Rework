@@ -1037,7 +1037,7 @@ ALI_add_commonwelth_units = {
 	hidden_effect = {
 		division_template = {
 			name = "Armoured Division" 				# 1st Armoured Division, 7th Armoured 'Desert
-			division_names_group = ENG_ARM_01
+			#division_names_group = ENG_ARM_01
 
 			regiments = {
 						light_armor = { x = 0 y = 0 }

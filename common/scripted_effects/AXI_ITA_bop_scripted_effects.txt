@@ -96,5 +96,3 @@ AXI_ITA_bop_very_low_decrease_effect = {
 AXI_ITA_bop_remove_bop_effect = {
 	remove_power_balance = { id = AXI_ITA_power_balance }
 }
-
-variable = { AXI_ITA_re_supply_node_range = AXI.AXI_ITA_re_supply_node_range }

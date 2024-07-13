@@ -11,7 +11,7 @@ state={
 		owner = NOO
 		add_core_of = NOO
 		#
-		#add_claim_by = SOV # Removed because of too much aggression
+		##add_claim_by = SOV # Removed because of too much aggression
 		buildings = {
 			#infrastructure = 2
 			1399 = {

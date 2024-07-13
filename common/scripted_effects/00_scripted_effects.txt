@@ -1,0 +1,691 @@
+#Country scope
+ROOT_inherit_current_scope_wars_effect = {
+	custom_effect_tooltip = ROOT_inherit_current_scope_wars_effect
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_defensive_war_with = PREV
+			}
+			ROOT = { declare_war_on = { target = PREV type = annex_everything } }
+		}
+		every_country = {
+			limit = {
+				has_offensive_war_with = PREV
+			}
+			declare_war_on = { target = ROOT type = annex_everything }
+		}
+	}
+}
+
+print_variable_log_effect = {
+	print_variables = {
+		file = variables_yug
+		append = yes
+	}
+}
+
+get_best_alliance_match_democratic_effect = { #arguably a trigger, but it does stuff so we keep it in here. If this is your first time seeing this, welcome to my personal hell.
+	if = {
+		limit = {
+			any_other_country = {
+				is_faction_leader = yes
+				is_major = yes
+				has_government = democratic
+				not = { has_war_with = ROOT }
+				set_temp_variable = { ROOT.best_leader = this }
+				set_temp_variable = { ROOT.best_leader_score = 0 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			all_other_country = {
+				is_faction_leader = yes
+				is_major = yes
+				has_government = democratic
+				not = { has_war_with = ROOT }
+				set_temp_variable = { this.leader_score = num_of_factories }
+				add_to_temp_variable = { this.leader_score = num_battalions }
+				all_of_scopes = {
+					array = allies
+					add_to_temp_variable = { PREV.leader_score = num_of_factories }
+					add_to_temp_variable = { PREV.leader_score = num_battalions }
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_on_continent = ROOT
+						}
+					}
+					multiply_temp_variable = { leader_score = 2 }
+				}
+				if = {
+					limit = {
+						any_neighbor_country = { tag = ROOT }
+					}
+					multiply_temp_variable = { leader_score = 1.25 }
+				}
+				if = {
+					limit = {
+						check_variable = { ROOT.best_leader_score < leader_score }
+						set_temp_variable = { ROOT.best_leader = this }
+						set_temp_variable = { ROOT.best_leader_score = leader_score }
+					}
+				}
+			}
+		}
+	}
+}
+
+get_best_alliance_match_fascism_effect = { #arguably a trigger, but it does stuff so we keep it in here. If this is your first time seeing this, welcome to my personal hell.
+	if = {
+		limit = {
+			any_other_country = {
+				is_faction_leader = yes
+				is_major = yes
+				has_government = fascism
+				not = { has_war_with = ROOT }
+				set_temp_variable = { ROOT.best_leader = this }
+				set_temp_variable = { ROOT.best_leader_score = 0 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			all_other_country = {
+
+				is_faction_leader = yes
+				is_major = yes
+				has_government = fascism
+				not = { has_war_with = ROOT }
+
+				set_temp_variable = { this.leader_score = num_of_factories }
+				add_to_temp_variable = { this.leader_score = num_battalions }
+				all_of_scopes = {
+					array = allies
+					add_to_temp_variable = { PREV.leader_score = num_of_factories }
+					add_to_temp_variable = { PREV.leader_score = num_battalions }
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_on_continent = ROOT
+						}
+					}
+					multiply_temp_variable = { this.leader_score = 2 }
+				}
+				if = {
+					limit = {
+						any_neighbor_country = { tag = ROOT }
+					}
+					multiply_temp_variable = { this.leader_score = 1.25 }
+				}
+				if = {
+					limit = {
+						check_variable = { ROOT.best_leader_score < this.leader_score }
+					}
+					set_temp_variable = { ROOT.best_leader = this }
+					set_temp_variable = { ROOT.best_leader_score = this.leader_score }
+				}
+			}
+		}
+	}
+}
+
+get_best_alliance_match_communism_effect = { #arguably a trigger, but it does stuff so we keep it in here. If this is your first time seeing this, welcome to my personal hell.
+	if = {
+		limit = {
+			any_other_country = {
+				is_faction_leader = yes
+				is_major = yes
+				has_government = communism
+				not = { has_war_with = ROOT }
+				set_temp_variable = { ROOT.best_leader = this }
+				set_temp_variable = { ROOT.best_leader_score = 0 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			all_other_country = {
+				is_faction_leader = yes
+				is_major = yes
+				has_government = communism
+				not = { has_war_with = ROOT }
+				set_temp_variable = { this.leader_score = num_of_factories }
+				add_to_temp_variable = { this.leader_score = num_battalions }
+				all_of_scopes = {
+					array = allies
+					add_to_temp_variable = { PREV.leader_score = num_of_factories }
+					add_to_temp_variable = { PREV.leader_score = num_battalions }
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_on_continent = ROOT
+						}
+					}
+					multiply_temp_variable = { leader_score = 2 }
+				}
+				if = {
+					limit = {
+						any_neighbor_country = { tag = ROOT }
+					}
+					multiply_temp_variable = { leader_score = 1.25 }
+				}
+				if = {
+					limit = {
+						check_variable = { ROOT.best_leader_score < leader_score }
+						set_temp_variable = { ROOT.best_leader = this }
+						set_temp_variable = { ROOT.best_leader_score = leader_score }
+					}
+				}
+			}
+		}
+	}
+}
+upgrade_economy_law = {
+	if = {
+		limit = {
+			has_idea = civilian_economy
+		}
+		add_ideas = low_economic_mobilisation
+	}
+	else_if = {
+		limit = {
+			has_idea = low_economic_mobilisation
+		}
+		add_ideas = partial_economic_mobilisation
+	}
+	else_if = {
+		limit = {
+			has_idea = partial_economic_mobilisation
+		}
+		add_ideas = war_economy
+	}
+	else_if = {
+		limit = {
+			has_idea = war_economy
+		}
+		add_ideas = tot_economic_mobilisation
+	}
+	else = {
+		add_political_power = 150
+	}
+}
+
+gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free agency if one has not yet been established
+	custom_effect_tooltip = free_agency_upgrade_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_intelligence_agency = no
+			}
+			create_intelligence_agency = yes
+		}
+		else = {
+			random_list = {
+				1 = {
+					upgrade_intelligence_agency = upgrade_economy_civilian
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_economy_civilian
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_army_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_army_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_naval_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_naval_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_airforce_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_airforce_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_passive_defense
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_passive_defense
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_anti_partisan
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_anti_partisan
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_blueprint_stealing
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_blueprint_stealing
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_portable_radios
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_portable_radios
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_invisible_ink
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_invisible_ink
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_plastic_explosives
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_plastic_explosives
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_suicide_pills
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_suicide_pills
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_training_centers
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_training_centers
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_commando_training
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_commando_training
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_interrogation_techniques
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_interrogation_techniques
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_diplo_training
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_diplo_training
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_psycho_warfare
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_psycho_warfare
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_form_department
+					modifier = {
+						factor = 0
+						has_done_agency_upgrade = upgrade_form_department
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_decryption_boost
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_decryption_boost
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_decryption_boost_2
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_decryption_boost_2
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+							NOT = { has_done_agency_upgrade = upgrade_decryption_boost }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_crypto_strength
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_crypto_strength
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+						}
+					}
+				}
+				1 = {
+					upgrade_intelligence_agency = upgrade_crypto_strength_2
+					modifier = {
+						factor = 0
+						OR = {
+							has_done_agency_upgrade = upgrade_crypto_strength_2
+							NOT = { has_done_agency_upgrade = upgrade_form_department }
+							NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+remove_any_country_role_from_character = { #Expected to be used inside the character scope
+	#log = "I am [THIS.GetName]"
+	if = {
+		limit = {
+			is_character_slot = air_chief
+		}
+		remove_advisor_role = { slot = air_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = army_chief
+		}
+		remove_advisor_role = { slot = army_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = navy_chief
+		}
+		remove_advisor_role = { slot = navy_chief }
+	}
+	if = {
+		limit = {
+			is_character_slot = high_command
+		}
+		remove_advisor_role = { slot = high_command }
+	}
+	if = {
+		limit = {
+			is_character_slot = theorist
+		}
+		remove_advisor_role = { slot = theorist }
+	}
+	if = {
+		limit = {
+			is_character_slot = political_advisor
+		}
+		remove_advisor_role = { slot = political_advisor }
+	}
+}
+
+### Paratroopers
+SF_PARA_sabotage_effect = { #When changing this, update the research tooltip
+	damage_building = {
+		type = infrastructure
+		damage = 2
+	}
+	damage_building = {
+		type = industrial_complex
+		damage = 1
+	}
+	damage_building = {
+		type = arms_factory
+		damage = 1
+	}
+	set_state_flag = {
+		flag = para_drop_effect
+		days = 30
+	}
+}
+
+SF_PARA_combat_effect = { #When changing this, update the research tooltip
+	every_state_division = {
+		limit = { 
+			OWNER = { has_war_with = FROM }
+		}
+		set_unit_organization = 0.50
+	}
+	set_state_flag = {
+		flag = para_drop_effect
+		days = 30
+	}
+}
+
+### Muuuurrrriiinnnnneeeeessssss
+SF_marine_demoliton_effect = { #When changing this, update the research tooltip
+	damage_building = {
+		type = radar_station
+		damage = 1
+	}
+	damage_building = {
+		type = naval_base
+		damage = 1
+	}
+	damage_building = {
+		type = dockyard
+		damage = 1
+	}
+	damage_building = {
+		type = nuclear_reactor
+		damage = 1
+	}
+	damage_building = {
+		type = rocket_site
+		damage = 1
+	}
+	damage_building = {
+		type = fuel_silo
+		damage = 1
+	}
+	set_state_flag = {
+		flag = marines_commando_effect
+		days = 30
+	}
+}
+
+increase_state_category = {
+	if = {
+		limit = {
+			has_state_category = tiny_island
+		}
+		set_state_category = small_island
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = enclave
+			}
+		}
+		set_state_category = pastoral
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = pastoral
+		}
+		set_state_category = rural
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = rural
+		}
+		set_state_category = town
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = town
+		}
+		set_state_category = large_town
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = large_town
+		}
+		set_state_category = city
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_state_category = city
+		}
+		set_state_category = metropolis
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 4
+		}
+	}
+
+	else_if = {
+		limit = {
+			has_state_category = metropolis
+		} 
+		set_state_category = megalopolis
+		effect_tooltip = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+
+add_potential_special_forces_tree = {
+	custom_effect_tooltip = add_potential_special_forces_tree_tt
+	if = {
+		limit = { NOT = { has_variable = sf_trees } }
+		set_variable = { sf_trees = 2 }
+	}
+	else = {
+		add_to_variable = { sf_trees = 1 }
+	}
+}
+
+remove_potential_special_forces_tree = {
+	if = {
+		limit = { NOT = { has_variable = sf_trees } }
+		set_variable = { sf_trees = 0 }
+	}
+	else = {
+		subtract_from_variable = { sf_trees = 1 }
+	}
+}
+
+store_core_states_on_game_start = { #Should be called from history file
+	every_core_state = {
+		ROOT = {
+			add_to_array = {
+				array = core_states_at_game_start
+				value = PREV
+			}
+		}
+	}
+}
+replace_civ_with_arms_factories = {
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}

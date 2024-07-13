@@ -507,6 +507,7 @@ bookmarks = {
 					instant_build = yes
 				}
 			}
+
 			#Those nations are required to exist on map for the flags on industrial decisions to show properly
 			every_state = {
 				limit = {

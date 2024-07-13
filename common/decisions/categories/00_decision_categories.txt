@@ -1,0 +1,35 @@
+debug_decisions = {
+	icon = generic_research
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+}
+political_actions = {
+	icon = generic_political_actions
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+	}
+}
+economy_decisions = {
+	icon = generic_economy
+}
+propaganda_efforts = {
+	icon = generic_propaganda
+
+	visible = {
+
+	}
+}
+war_measures = {
+	icon = generic_propaganda
+
+	visible = {
+		has_war = yes
+		has_war_with_non_exiled_country = yes  
+	}
+}

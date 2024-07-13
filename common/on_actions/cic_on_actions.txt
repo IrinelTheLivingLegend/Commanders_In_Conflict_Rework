@@ -137,43 +137,4 @@ on_actions = {
 			}
 		}
 	}
-	on_startup = {
-		effect = { #Militraize the narvik area if demilitarized
-			if = {
-				limit = {
-					144 = { 
-						is_demilitarized_zone = yes 
-						#controller = { tag = SWE }
-					}
-				}
-				144 = {
-					set_demilitarized_zone = no
-				}
-			}
-
-			if = {
-				limit = {
-					924 = { 
-						is_demilitarized_zone = yes 
-						#controller = { tag = SWE }
-					}
-				}
-
-				924 = {
-					set_demilitarized_zone = no
-				}
-			}
-			if = {
-				limit = {
-					925 = { 
-						is_demilitarized_zone = yes 
-						#controller = { tag = SWE }
-					}
-				}
-				925 = {
-					set_demilitarized_zone = no
-				}
-			}
-		}
-	}
 }

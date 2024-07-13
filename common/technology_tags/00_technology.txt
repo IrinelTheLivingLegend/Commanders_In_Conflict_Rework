@@ -113,6 +113,10 @@ technology_categories = {
 	cat_paratroopers_doctrine
 	cat_cavalry_doctrine
 	cat_shocktroops_doctrine
+	category_cavalry
+	category_front_line
+	category_army
+	cat_light_infantry
 
 	mio_cat_tech_all_armor_and_modules #Includes modules and chassis (DOES NOT INCLUDE ARMORED CARS)
 	mio_cat_tech_light_armor_and_modules #Includes modules and stand-alone Amphibious Chassis

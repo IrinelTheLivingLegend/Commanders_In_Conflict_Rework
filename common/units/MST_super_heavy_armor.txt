@@ -31,7 +31,7 @@ sub_units = {
 		max_organisation = 15
 		default_morale = 0.3
 		max_strength = 2
-		training_time = 180
+		training_time = 30
 		weight = 1.75
 		
 		supply_consumption = 0.4
@@ -66,14 +66,14 @@ sub_units = {
 			defence = -0.2
 		}
 		river = { 
-			attack = -0.5
+			attack = -0.63
 			movement = -0.5
 		}
 		amphibious = { 
 			attack = -1.0
 		}
 		fort = {
-			attack = 0.5
+			attack = 0.25
 		}
 	}
 }

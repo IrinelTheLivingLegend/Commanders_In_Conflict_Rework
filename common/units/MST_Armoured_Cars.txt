@@ -35,7 +35,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 300
-		training_time = 120
+		training_time = 30
         
         suppression = 1
         

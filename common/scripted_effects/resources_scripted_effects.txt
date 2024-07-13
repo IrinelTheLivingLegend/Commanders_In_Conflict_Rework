@@ -1,0 +1,106 @@
+add_capital_resources = {
+	add_resource = {
+		type = aluminium
+		amount = 5
+	}
+	add_resource = {
+		type = steel
+		amount = 30
+	}
+	add_resource = {
+		type = tungsten
+		amount = 5
+	}
+	add_resource = {
+		type = chromium
+		amount = 5
+	}
+	add_resource = {
+		type = oil
+		amount = 5
+	}
+	add_resource = {
+		type = rubber
+		amount = 5
+	}
+}
+add_major_resources = {
+	add_resource = {
+		type = aluminium
+		amount = 5
+	}
+	add_resource = {
+		type = steel
+		amount = 20
+	}
+	add_resource = {
+		type = tungsten
+		amount = 5
+	}
+	add_resource = {
+		type = chromium
+		amount = 5
+	}
+	add_resource = {
+		type = oil
+		amount = 5
+	}
+	add_resource = {
+		type = rubber
+		amount = 5
+	}
+}
+add_minor_resources = {
+	add_resource = {
+		type = aluminium
+		amount = 5
+	}
+	add_resource = {
+		type = steel
+		amount = 5
+	}
+	add_resource = {
+		type = tungsten
+		amount = 5
+	}
+	add_resource = {
+		type = chromium
+		amount = 5
+	}
+	add_resource = {
+		type = oil
+		amount = 5
+	}
+	add_resource = {
+		type = rubber
+		amount = 5
+	}
+	
+}
+add_vp_resources = {
+	add_resource = {
+		type = aluminium
+		amount = 25
+	}
+	add_resource = {
+		type = steel
+		amount = 25
+	}
+	add_resource = {
+		type = tungsten
+		amount = 25
+	}
+	add_resource = {
+		type = chromium
+		amount = 25
+	}
+	add_resource = {
+		type = oil
+		amount = 25
+	}
+	add_resource = {
+		type = rubber
+		amount = 25
+	}
+	
+}

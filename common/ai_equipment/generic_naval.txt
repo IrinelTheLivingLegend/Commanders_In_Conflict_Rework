@@ -12,8 +12,6 @@ destroyers = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_screen
@@ -185,20 +183,13 @@ generic_escorts = {
 	
 	priority = {
 		factor = 1000
-		modifier = {
-			factor = 5
-			anti_submarine_strategy_required_trigger = yes
-		}
 	}
 	
 	escort_default = {
 	
 		priority = {
 			factor = 100
-			modifier = {
-				factor = 20
-				anti_submarine_strategy_required_trigger = yes
-			}
+
 		}
 
 		role_icon_index = 2
@@ -235,10 +226,6 @@ generic_escorts = {
 	
 		priority = {
 			factor = 120
-			modifier = {
-				factor = 20
-				anti_submarine_strategy_required_trigger = yes
-			}
 		}
 		enable = {
 			AND = {
@@ -288,8 +275,6 @@ naval_light_cruiser = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_cruiser_light
@@ -526,8 +511,6 @@ naval_cruiser_heavy = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_cruiser_heavy
@@ -711,8 +694,6 @@ naval_capital_battleship = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_capital_bb
@@ -979,8 +960,6 @@ naval_capital_bc = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_capital_bc
@@ -1121,8 +1100,6 @@ naval_carrier = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_carrier
@@ -1300,8 +1277,6 @@ naval_submarine = {
 		ITA
 	}
 	
-	available_for = {
-	}
 	
 	roles = {
 		naval_submarine

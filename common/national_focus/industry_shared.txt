@@ -89,220 +89,6 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 shared_focus = {
-	id = INDUSTRY_expand_the_dockyards
-	icon = GFX_goal_generic_navy_battleship
-	prerequisite = { focus = INDUSTRY_navy_1 }
-	x = 1
-	y = 3
-	text_icon = navy_focus_style
-	relative_position_id = INDUSTRY_navy_1
-	cost = 2
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		add_tech_bonus = {
-				name = SOV_an_oceangoing_navy
-				bonus = 1.0
-				uses = 1
-				category = bb_tech
-			}
-		if = {
-			limit = {
-				OR = {
-					tag = ALI
-					tag = ALJ
-					tag = ALK
-				}
-			}
-			mio:ALI_acl_organization = {
-				add_mio_size = 2
-			}
-		}
-		else = {
-			mio:AXI_crda_organization = {
-				add_mio_size = 2
-			}
-
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-				is_coastal = yes
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = {FOCUS_FILTER_NAVY_XP}
-}
-shared_focus = {
-	id = INDUSTRY_continue_expanding_the_dockyards
-	icon = GFX_focus_generic_cruiser2
-	prerequisite = { focus = INDUSTRY_navy_1 }
-	x = 0
-	y = 1
-	text_icon = navy_focus_style
-	relative_position_id = INDUSTRY_navy_1
-	cost = 2
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		add_tech_bonus = {
-				name = SOV_offensive_maritime_strategy
-				bonus = 1.0
-				uses = 1
-				category = ca_tech
-				category = cl_tech
-			}
-		if = {
-			limit = {
-				OR = {
-					tag = ALI
-					tag = ALJ
-					tag = ALK
-				}
-			}
-			mio:ALI_akers_mekaniske_verksted_organization = {
-				add_mio_size = 1
-			}
-			mio:ALI_acl_organization = {
-				add_mio_size = 1
-			}
-		}
-		else = {
-			mio:AXI_maizuru_naval_arsenal_organization = {
-				add_mio_size = 1
-			}
-			mio:AXI_crda_organization = {
-				add_mio_size = 1
-			}
-
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-				is_coastal = yes
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-shared_focus = {
-	id = INDUSTRY_final_dockyard_expansion
-	icon = GFX_goal_generic_navy_carrier
-	prerequisite = { focus = INDUSTRY_navy_1 }
-	x = -1
-	y = 3
-	text_icon = navy_focus_style
-	relative_position_id = INDUSTRY_navy_1
-	cost = 2
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		air_experience = 25
-		add_tech_bonus = {
-				name = SOV_expand_the_morskaya_aviatsiya
-				bonus = 1
-				uses = 1
-				category = cv_tech
-				category = naval_air
-			}
-		if = {
-			limit = {
-				OR = {
-					tag = ALI
-					tag = ALJ
-					tag = ALK
-				}
-			}
-			mio:ALI_newport_news_shipbuilding_organization = {
-				add_mio_size = 1
-			}
-			mio:ALI_fairey_aviation_organization = {
-				add_mio_size = 1
-			}
-		}
-		else = {
-			mio:AXI_yokosuka_naval_arsenal_organization = {
-				add_mio_size = 1
-			}
-			mio:AXI_set_organization = {
-				add_mio_size = 1
-			}
-
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-				is_coastal = yes
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-shared_focus = {
 	id = INDUSTRY_expand_the_industral_sector
 	icon = GFX_goal_generic_construct_civ_factory
 	prerequisite = { focus = INDUSTRY_phase_1 }
@@ -920,74 +706,6 @@ shared_focus = {
 #	}
 #}
 shared_focus = {
-	id = INDUSTRY_school_of_attack
-	icon = GFX_focus_CIC_school_of_attack
-	prerequisite = {
-		focus = INDUSTRY_final_expansion_of_the_industral_sector
-		focus = INDUSTRY_final_expansion_of_the_arms_industry
-		focus = INDUSTRY_navy_4
-	}
-	x = -2
-	y = 2
-	text_icon = politics_focus_style
-	relative_position_id = INDUSTRY_phase_3
-	cost = 5
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-	mutually_exclusive = {
-		focus = INDUSTRY_school_of_defence
-	}
-
-	completion_reward = {
-		custom_effect_tooltip= INDUSTRY_school_of_attack_tt
-		hidden_effect={
-		every_army_leader = {
-			add_planning = 2
-		}
-		every_army_leader = {
-			add_attack= 2
-		}
-		}
-	}
-}
-shared_focus = {
-	id = INDUSTRY_school_of_defence
-	icon = GFX_focus_CIC_school_of_defence
-	prerequisite = {
-		focus = INDUSTRY_final_expansion_of_the_industral_sector
-		focus = INDUSTRY_final_expansion_of_the_arms_industry
-		focus = INDUSTRY_navy_4
-	}
-	x = 0
-	y = 2
-	text_icon = politics_focus_style
-	relative_position_id = INDUSTRY_phase_3
-	cost = 5
-
-	search_filters = { FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-	mutually_exclusive = {
-		focus = INDUSTRY_school_of_attack
-	}
-
-	completion_reward = {
-		custom_effect_tooltip= INDUSTRY_school_of_defence_tt
-		hidden_effect={
-		every_army_leader = {
-			add_defense = 2
-		}
-		every_army_leader = {
-			add_logistics  = 2
-		}
-			}
-	}
-}
-shared_focus = {
 	id = INDUSTRY_phase_2
 	icon = GFX_industry_phase_2
 	prerequisite = { 
@@ -1070,6 +788,74 @@ shared_focus = {
 			uses = 1
 			category = nuclear
 		}
+	}
+}
+shared_focus = {
+	id = INDUSTRY_school_of_attack
+	icon = GFX_focus_CIC_school_of_attack
+	prerequisite = {
+		focus = INDUSTRY_final_expansion_of_the_industral_sector
+		focus = INDUSTRY_final_expansion_of_the_arms_industry
+		focus = INDUSTRY_navy_4
+	}
+	x = -2
+	y = 2
+	text_icon = politics_focus_style
+	relative_position_id = INDUSTRY_phase_3
+	cost = 5
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	available_if_capitulated = yes
+
+	mutually_exclusive = {
+		focus = INDUSTRY_school_of_defence
+	}
+
+	completion_reward = {
+		custom_effect_tooltip= INDUSTRY_school_of_attack_tt
+		hidden_effect={
+		every_army_leader = {
+			add_planning = 2
+		}
+		every_army_leader = {
+			add_attack= 2
+		}
+		}
+	}
+}
+shared_focus = {
+	id = INDUSTRY_school_of_defence
+	icon = GFX_focus_CIC_school_of_defence
+	prerequisite = {
+		focus = INDUSTRY_final_expansion_of_the_industral_sector
+		focus = INDUSTRY_final_expansion_of_the_arms_industry
+		focus = INDUSTRY_navy_4
+	}
+	x = 0
+	y = 2
+	text_icon = politics_focus_style
+	relative_position_id = INDUSTRY_phase_3
+	cost = 5
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	available_if_capitulated = yes
+
+	mutually_exclusive = {
+		focus = INDUSTRY_school_of_attack
+	}
+
+	completion_reward = {
+		custom_effect_tooltip= INDUSTRY_school_of_defence_tt
+		hidden_effect={
+		every_army_leader = {
+			add_defense = 2
+		}
+		every_army_leader = {
+			add_logistics  = 2
+		}
+			}
 	}
 }
 
@@ -1156,6 +942,223 @@ shared_focus = {
 	}
 }
 shared_focus = {
+	id = INDUSTRY_final_dockyard_expansion
+	icon = GFX_goal_generic_navy_carrier
+	prerequisite = { focus = INDUSTRY_navy_1 }
+	x = -1
+	y = 3
+	text_icon = navy_focus_style
+	relative_position_id = INDUSTRY_navy_1
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		air_experience = 25
+		add_tech_bonus = {
+				name = SOV_expand_the_morskaya_aviatsiya
+				bonus = 1
+				uses = 1
+				category = cv_tech
+				category = naval_air
+			}
+		if = {
+			limit = {
+				OR = {
+					tag = ALI
+					tag = ALJ
+					tag = ALK
+					tag = ALL
+				}
+			}
+			mio:ALI_newport_news_shipbuilding_organization = {
+				add_mio_size = 1
+			}
+			mio:ALI_fairey_aviation_organization = {
+				add_mio_size = 1
+			}
+		}
+		else = {
+			mio:AXI_yokosuka_naval_arsenal_organization = {
+				add_mio_size = 1
+			}
+			mio:AXI_set_organization = {
+				add_mio_size = 1
+			}
+
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = INDUSTRY_continue_expanding_the_dockyards
+	icon = GFX_focus_generic_cruiser2
+	prerequisite = { focus = INDUSTRY_navy_1 }
+	x = 0
+	y = 1
+	text_icon = navy_focus_style
+	relative_position_id = INDUSTRY_navy_1
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_tech_bonus = {
+				name = SOV_offensive_maritime_strategy
+				bonus = 1.0
+				uses = 1
+				category = ca_tech
+				category = cl_tech
+			}
+		if = {
+			limit = {
+				OR = {
+					tag = ALI
+					tag = ALJ
+					tag = ALK
+					tag = ALL
+				}
+			}
+			mio:ALI_akers_mekaniske_verksted_organization = {
+				add_mio_size = 1
+			}
+			mio:ALI_acl_organization = {
+				add_mio_size = 1
+			}
+		}
+		else = {
+			mio:AXI_maizuru_naval_arsenal_organization = {
+				add_mio_size = 1
+			}
+			mio:AXI_crda_organization = {
+				add_mio_size = 1
+			}
+
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = INDUSTRY_expand_the_dockyards
+	icon = GFX_goal_generic_navy_battleship
+	prerequisite = { focus = INDUSTRY_navy_1 }
+	x = 1
+	y = 3
+	text_icon = navy_focus_style
+	relative_position_id = INDUSTRY_navy_1
+	cost = 2
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		add_tech_bonus = {
+				name = SOV_an_oceangoing_navy
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+		if = {
+			limit = {
+				OR = {
+					tag = ALI
+					tag = ALJ
+					tag = ALK
+					tag = ALL
+				}
+			}
+			mio:ALI_acl_organization = {
+				add_mio_size = 2
+			}
+		}
+		else = {
+			mio:AXI_crda_organization = {
+				add_mio_size = 2
+			}
+
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = {FOCUS_FILTER_NAVY_XP}
+}
+shared_focus = {
 	id = INDUSTRY_navy_2
 	icon =  GFX_focus_generic_destroyer
 	prerequisite = { focus = INDUSTRY_navy_1 }
@@ -1195,6 +1198,7 @@ shared_focus = {
 					tag = ALI
 					tag = ALJ
 					tag = ALK
+					tag = ALL
 				}
 			}
 			mio:ALI_akers_mekaniske_verksted_organization = {
@@ -1261,6 +1265,7 @@ shared_focus = {
 					tag = ALI
 					tag = ALJ
 					tag = ALK
+					tag = ALL
 				}
 			}
 			mio:ALI_john_brown_organization = {

@@ -27,7 +27,7 @@ sub_units = { #Per ALbin Bus
 		max_organisation = 100 #Inf is 60
 		default_morale = 0.2 #Inf is 30
 		manpower = 10
-		training_time = 120 #Same as other support battalions
+		training_time = 30 #Same as other support battalions
 
 		#Misc Abilities
 		suppression = 0
@@ -66,7 +66,7 @@ sub_units = { #Per ALbin Bus
 			attack = -0.1
 		}
 		river = {
-			attack = -0.1
+			attack = -0.28
 			movement = -0.1
 		}
 		amphibious = {

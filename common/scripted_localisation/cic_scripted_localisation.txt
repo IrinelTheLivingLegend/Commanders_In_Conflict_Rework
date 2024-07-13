@@ -984,6 +984,7 @@ defined_text = {
 				original_tag = ALI
 				original_tag = ALJ
 				original_tag = ALK
+				original_tag = ALL
 			}
 		}
 		localization_key = alled_score_txt
@@ -993,7 +994,8 @@ defined_text = {
 			OR = {
 				original_tag = AXI
 				original_tag = AXJ
-				original_tag = ALK
+				original_tag = AXK
+				original_tag = AXL
 			}
 		}
 		localization_key = axis_score_txt

@@ -2577,10 +2577,6 @@ AXI_add_finnish_units = {
  						end = 2
  						create_ship = { type = light_cruiser_2 equipment_variant = "Light Cruiser II" creator = ROOT }
  						}
-				for_loop_effect = {
- 						end = 2
- 						create_ship = { type = coastal_defense_ships equipment_variant = "Coastal Defence Ship" creator = ROOT }
- 						}
 
 		}
 	}

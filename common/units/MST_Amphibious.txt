@@ -29,7 +29,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.5
@@ -74,11 +74,13 @@ sub_units = {
 			attack = 0.15
 		}
 		river = {
-			attack = 0.15
+			attack = 0.02
 		}
 		amphibious = {
 			attack = 0.25
 		}
+
+		same_support_type = support_amphibious_tank
 	}
 	
 	support_amphibious_light_tank = {
@@ -112,7 +114,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.5
@@ -157,11 +159,13 @@ sub_units = {
 			attack = 0.15
 		}
 		river = {
-			attack = 0.2
+			attack = 0.02
 		}
 		amphibious = {
 			attack = 0.3
-		}	
+		}
+		
+		same_support_type = support_amphibious_tank
 	}
 	
 	support_amphibious_medium_tank = {
@@ -195,7 +199,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.66
@@ -240,11 +244,13 @@ sub_units = {
 			attack = 0.15
 		}
 		river = {
-			attack = 0.2
+			attack = 0.02
 		}
 		amphibious = {
 			attack = 0.3
-		}	
+		}
+		
+		same_support_type = support_amphibious_tank
 	}
 	
 	support_amphibious_heavy_tank = {
@@ -278,7 +284,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.75
@@ -323,10 +329,12 @@ sub_units = {
 			attack = 0.15
 		}
 		river = {
-			attack = 0.2
+			attack = 0.02
 		}
 		amphibious = {
 			attack = 0.3
-		}	
+		}
+		
+		same_support_type = support_amphibious_tank
 	}
 }

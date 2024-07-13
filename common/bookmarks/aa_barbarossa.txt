@@ -676,33 +676,6 @@ bookmarks = {
 				instant_build = yes
 				}
 			}
-			every_state = {
-				limit = {state=195}
-					add_building_construction = {
-					province = 3151
-					type = supply_node
-					level = 1
-					instant_build = yes
-				}	
-			}
-			every_state = {
-				limit = {state=813}
-					add_building_construction = {
-					province = 4640
-					type = supply_node
-					level = 1
-					instant_build = yes
-				}	
-			}
-			every_state = {
-				limit = {state=812}
-					add_building_construction = {
-					province = 3152
-					type = supply_node
-					level = 1
-					instant_build = yes
-				}	
-			}
 
 			every_state = {
 				limit={

@@ -110,30 +110,6 @@ MOD_hide_other_focuses = {
 	}
 }
 
-AXI_ITA_missiolinis = { 
-
-	icon = decision_category_ITA_missiolinis
-
-	picture = GFX_decision_cat_picture_ITA_missiolinis
-	
-	allowed = {
-		OR={
-		original_tag = AXJ
-		original_tag = AXI
-		original_tag = AXK
-		original_tag = AXL
-		}
-	}
-	
-	priority = 91
-
-	visible_when_empty = yes
-	
-	visible = {
-		ITA_missiolinis_system_available = yes
-	}
-}
-
 AXI_ITA_balance_of_power_category = {
 	icon = GFX_decision_category_power_struggle
 	

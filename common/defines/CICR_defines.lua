@@ -14,13 +14,19 @@ NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.3, 0.2, 0.05, 0.0 }
 -- █     █   █ █   █ █   █ █   █ █       █     █   █   █ █  ██ 
 -- █     █   █  ███  ████  █████  ████   █   █████  ███  █   █ 
 
-NDefines.NProduction.BASE_FACTORY_SPEED = 10          -- vanilla 5 | Official CIC 10
-NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.5    -- vanilla 4.5 | Official CIC 5.0
-NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 10      -- vanilla 2.5 | Official CIC 5.0
-NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=1.15 -- vanilla 1 |  Official CIC 1.25
+NDefines.NProduction.BASE_FACTORY_SPEED = 10          	-- vanilla 5 | Official CIC 10
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 9   	-- vanilla 4.5 | Official CIC 5.0
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 10      	-- vanilla 2.5 | Official CIC 5.0
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=0.57 	-- vanilla 1 |  Official CIC 1.25
+NDefines.NProduction.PRODUCTION_RESOURCE_LACK_PENALTY = 0.05 -- -0.05 vanilla | Penalty decrease while lack of resource per factory
 
-NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 10	-- vanilla 10 | Base start efficiency for factories expressed in %.
-NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 40	-- vanilla 40 | Base max efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 5	-- vanilla 10 | Base start efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 25	-- vanilla 50 | Base max efficiency for factories expressed in %.
+
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_VARIANT_CHANGE_FACTOR = 100	-- Base factor for changing production variants in %.
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_PARENT_CHANGE_FACTOR = 100		-- Base factor for changing production parent<->children in %.
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_FAMILY_CHANGE_FACTOR = 100		-- Base factor for changing production with same family in %.
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_ARCHETYPE_CHANGE_FACTOR = 100 	-- Base factor for changing production with same archetype in %.
 
 NDefines.NBuildings.MAX_BUILDING_LEVELS=50 --vanilla 15 (you cant have more than 15 mils per state,problematic when having a lot of spawn in factories)
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
@@ -82,10 +88,10 @@ NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.04       -- vanilla is -0.02 -- 
  
 --massively decreased gambling, now stats of divisions in battle more accurately represents the damage dealt to the enemy divisions
 NDefines.NMilitary.LAND_COMBAT_ORG_DICE_SIZE = 1                 -- vanilla 4
-NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.044       -- vanilla 0.053 | 0.053(vanilla dmg)*2,5(removing vanilla dice | one dice has 0,5 value and the counting starts from 0,5 )/3(attack points have 3 times the chance to hit trough def.-break.)
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.0396       -- vanilla 0.053 | 0.053(vanilla dmg)*2,5(removing vanilla dice | one dice has 0,5 value and the counting starts from 0,5 )/3(attack points have 3 times the chance to hit trough def.-break.) - 10%
 
 NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 1                 -- vanilla 2
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.021       -- vanilla 0.060 | 0.06(vanilla damage)*1,5(removing vailla dice | one dice has 0,5 value and the counting starts from 0,5 )/3(attack points have 3 times the chance to hit trough def.-break.)/1,42(70*1,42=100|removed the 30% equipment refund relative to str. lost)
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.0189       -- vanilla 0.060 | 0.06(vanilla damage)*1,5(removing vailla dice | one dice has 0,5 value and the counting starts from 0,5 )/3(attack points have 3 times the chance to hit trough def.-break.)/1,42(70*1,42=100|removed the 30% equipment refund relative to str. lost) - 10%
 NDefines.NMilitary.EQUIPMENT_COMBAT_LOSS_FACTOR = 1.0            -- vanilla 0.7   | in vanilla, 30% of the lost equipment relative to strenght lost returned in the division after the battle finshed
 
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1   -- vanilla 2 | Extra damage dice if our armor outclasses enemy
@@ -112,8 +118,8 @@ NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.7        -- vanilla 0
 --  █   █   █ █   █ █   █     █   █ █   █ █   █  ███  █   █ 
 
 --Encourages mixing of tanks with infantry or low armoured light tanks with high armour heavy tanks, witch is unique
-NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.45	--vanilla 0.4
-NDefines.NMilitary.PEN_VS_AVERAGE = 0.45	--vanilla 0.4
+NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.3	--vanilla 0.4
+NDefines.NMilitary.PEN_VS_AVERAGE = 0.3	--vanilla 0.4
 
 NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
 		1.00,
@@ -222,8 +228,9 @@ NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 4			-- vanilla 5
 NDefines.NMilitary.FIELD_EXPERIENCE_SCALE=0.007               -- vanilla 0.0015 (2 times less) 
 NDefines.NMilitary.LEADER_EXPERIENCE_SCALE=1.5                -- vanilla 1.0
 
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1            -- vanilla 0.25 | the amount of bonus for each training level of a dvision
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.003  -- vanilla 0.0015
-NDefines.NMilitary.TRAINING_ORG = 0.5                         -- vanilla 0.2
+NDefines.NMilitary.TRAINING_ORG = 0.4                         -- vanilla 0.2
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2             -- vanilla 1
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2              -- vanilla 1
@@ -269,15 +276,16 @@ NDefines.NMilitary.NUKE_DELAY_HOURS = 24          -- vanilla 12
 -- █     █     █  ██ █   █ █       █     █   █         █ 
 -- █     █████ █   █ █   █ █████   █   █████ █████ █████ 
 
-NDefines.NMilitary.BASE_FORT_PENALTY = -0.1 --vanilla 0.15
+NDefines.NMilitary.BASE_FORT_PENALTY = -0.2 						--vanilla 0.15
+NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FORT_FACTOR =  0.0025     --0.005 | Max for limit is 5 | Factor to scale collateral damage to forts with.
 
 --█▀█ ▀█▀ █ █ █▀▀ █▀█    █▀█ █▀▀ █▄ █ ▄▀▄ █   ▀█▀ ▀█▀ █▀▀ █▀▀ 
 --█▀▄ ▄█▄ ▀▄▀ ██▄ █▀▄    █▀▀ ██▄ █ ▀█ █▀█ █▄▄  █  ▄█▄ ██▄ ▄██
 
 --A lot of rivers are found horizontallly in the middle of the neutral zone, penalty got reduced to prevent sitskrieg
---marines might have positive attack on rivers, witch makes no sense, but it's a game after all, not a real life simulation
-NDefines.NMilitary.RIVER_CROSSING_PENALTY=-0.2       --vanilla 0.4
-NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE=-0.3 --vanilla 0.6
+--lower penalties here, every terrain penalty was moved to brigade stats from common/units
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = 0        --vanilla 0.4
+NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE=-0.1 --vanilla 0.6
 
 --█▀▀ █ █ █▀█ █▀█ █   ▀▄▀    █▀█ █▀▀ █▄ █ ▄▀▄ █   ▀█▀ ▀█▀ █▀▀ █▀▀ 
 --▄██ █▄█ █▀▀ █▀▀ █▄▄  █     █▀▀ ██▄ █ ▀█ █▀█ █▄▄  █  ▄█▄ ██▄ ▄██ 
@@ -396,182 +404,6 @@ NDefines.NNavy.MISSION_FUEL_COSTS = {  -- fuel cost for each mission
 --█   █   █       █   █ █     █       █   █  ██ █         █ 
 --█   █ █████     ████  █████ █     █████ █   █ █████ █████ 
 
-NDefines.NMilitary.PLAN_EXECUTE_RUSH = -50					-- When looking for an attach target this score limit is required in the battle plan to consider province for attack
-
---Construction:
-NDefines.NAI.BUILDING_TARGETS_BUILDING_PRIORITIES = { -- buildings in order of pirority when considering building targets strategies. First has the greatest priority, omitted has the lowest. NOTE: not all buildings are supported by building targets strategies.
-	'arms_factory',
-	'dockyard',
-    'industrial_complex',
-}
-
--- <start> construction prioritization
-NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_CIV_FACTORY = 0.0 --0.80                                       -- base prio for civilian factories in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_MIL_FACTORY = 0.9 -- 0.70                                       -- base prio for military factories in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- base prio for railways in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- base prio for railway gun repairs in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- base prio for unspecified buildings (none of the categories above) in the construction queue
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- factor prio with this if occupied territory
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                              -- factor prio with this if owned non-core territory
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- factor prio with this if owned core territory
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                  -- factor prio with this if building is being repaired
--- <end> construction prioritization
-
-NDefines.NAI.WAIT_YEARS_BEFORE_FREER_BUILDING = 0
-NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0
-
-NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.0					-- ai will try to build a silo per this ratio of civ factories
-NDefines.NAI.NUM_SILOS_PER_MILITARY_FACTORIES = 0.0					-- ai will try to build a silo per this ratio of mil factories
-NDefines.NAI.NUM_SILOS_PER_DOCKYARDS = 0.0								-- ai will try to build a silo per this ratio of dockyards
-
-
---Military & Production/Deployment:
-NDefines.NAI.MIN_AI_UNITS_PER_TILE_FOR_STANDARD_COHESION = 2.0
-NDefines.NMilitary.PLAN_EXECUTE_RUSH = -10
-NDefines.NAI.HOUR_BAD_COMBAT_REEVALUATE = 24
-NDefines.NAI.PLAN_MIN_SIZE_FOR_FALLBACK = 5000
-NDefines.NAI.AREA_DEFENSE_IMPORTANCE_FACTOR = 0.2
-
-NDefines.NAI.MAIN_ENEMY_FRONT_IMPORTANCE = 20
-NDefines.NAI.MICRO_POCKET_SIZE = 10
-NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 5
-NDefines.NAI.ENTRENCHMENT_WEIGHT = 5.0						                -- AI should favour units with less entrenchment when assigning units around.
-NDefines.NAI.AREA_DEFENSE_BASE_IMPORTANCE = 3
-NDefines.NAI.MAX_SUPPLY_DIVISOR = 0.25
-
-NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 7 --1
-NDefines.NAI.UPGRADE_PERCENTAGE_OF_FORCES = 1.0 --0.01
-
-NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 500
-
-
-NDefines.NAI.DEPLOY_MIN_TRAINING_SURRENDER_FACTOR = 0.4		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in wartime while surrender progress is higher than 0 
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.4	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime while surrender progress is higher than 0 
-NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 1.0		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in peacetime
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_PEACE_FACTOR = 1.0	-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in peacetime
-NDefines.NAI.DEPLOY_MIN_TRAINING_WAR_FACTOR = 1.0		-- Required percentage of training (1.0 = 100%) for AI to deploy unit in wartime
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_WAR_FACTOR = 0.9		-- Required percentage of equipment (1.0 = 100%) for AI to deploy unit in wartime
-NDefines.NAI.DEPLOY_MIN_EQUIPMENT_CAP_DEPLOY_FACTOR = 0.4 -- If training is capped by equipment deficit and we have reached that cap, deploy unit anyway if percentage is above this (reinforce in field instead).
-
-NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.6 --0.95                               -- ai will not start to train if equipment drops below this level
-NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.5 --0.9                                -- ai will not train if equipment drops below this level
-
-
-
-	-- Calculating wanted nr of divisions
-NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 5
-NDefines.NAI.WANTED_UNITS_THREAT_MAX = 25.0    -- Normalized threat is clamped to this
-NDefines.NAI.WANTED_UNITS_WAR_THREAT_FACTOR = 1.5 -- Factor threat with this if country is at war. this value is overriden by the value in ideology database if that value exceedes this.
-
-NDefines.NAI.LAND_DESIGN_DEMAND_FIELD_DIVISION = 50
-NDefines.NAI.LAND_DESIGN_DEMAND_TRAINING_DIVISION = 50
-NDefines.NAI.LAND_DESIGN_DEMAND_GARRISON_DIVISION = 10
-NDefines.NAI.LAND_DESIGN_DEMAND_UNUSED_TEMPLATE = 10 --1
-NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 10 --0
-
-
-NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.01           -- vanilla 0.5
-NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON =0.01   -- vanill 0.3
-NDefines.NAI.PRODUCTION_LINE_SWITCH_SURPLUS_NEEDED_MODIFIER = 0.8 --unsure if this actually does something
-
-
-
---Spending XP
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_LAND_DOCTRINE = 1.0    -- How quickly is desire to unlock land doctrines accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVAL_DOCTRINE = 1.0   -- How quickly is desire to unlock naval doctrines accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_DOCTRINE = 1.0     -- How quickly is desire to unlock air doctrines accumulated?
-
---EAI: make sure land template desire is always at the top, if the doctrine desire is high but the mod blocks it, AI wont create templates
-NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 10 --2.0    -- How quickly is desire to update/create templates accumulated?
-
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_LAND_EQUIPMENT = 0.1  -- How quickly is desire to update/create land equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 10-- How quickly is desire to update/create naval equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 10   -- How quickly is desire to update/create air equipment variants accumulated?
-
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.1    -- How quickly is desire to unlock army spirits accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.1   -- How quickly is desire to unlock naval spirits accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.1     -- How quickly is desire to unlock air spirits accumulated?
-
-
-NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0           -- Ratio of available civilian factories to max use for equipment purchases (0.2 = 20 %, so 50 available civs would mean max ca 10 civs to spend on purchases at any one time). Gets modified by equipment_market_spend_factories AI strategy.
-NDefines.NAI.QUIPMENT_MARKET_BASE_MARKET_RATIO = 0                       -- The AI tries to keep ca this ratio of equipment surplus for sale on the market. Gets modified by equipment_market_for_sale_factor AI strategy.
-
---Research:
-NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10
-NDefines.NAI.RESEARCH_NEW_WEIGHT_FACTOR = 0			                            -- Impact of previously unexplored tech weights. Higher means more random exploration.
-NDefines.NAI.RESEARCH_BONUS_FACTOR = 3 				                       		-- To which extent AI should care about bonuses to research
-NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 0		                            -- To which extent AI should care about ahead of time penalties to research
-NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 1
-NDefines.NAI.RESEARCH_NEW_DOCTRINE_RANDOM_FACTOR = 0
-NDefines.NAI.RESEARCH_BASE_DAYS = 75					  --vanilla 60 | AI adds a base number of days when weighting completion time for techs to ensure it doesn't only research quick techs
-
--- The AI uses the below values when selecting which design to make among the types that use the tank designer
--- (the tank designer DLC feature must be active). For each role, the highest priority AI design that can be
--- created, if any, is assigned a weight. Any design with a weight of zero or a weight that falls below the
--- cutoff is dropped. A random design is then picked from the remaining.
--- Weight is calculated as AlternativeFactor * DemandFactor.
--- An "alternative" is a producible design of the same archetype (each specialized type is its own archetype).
-
--- EAI: AI delays upgrading the main tank types too much because it wants to create absent types for its templates first
--- makes sense but I'd rather have it get its most used type upgraded first
---NDefines.NAI.LAND_DESIGN_ALTERNATIVE_ABSENT = 1 --1000000
---NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 10 --10000
---NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 100 --100
---NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1000
-
--- If a design with a weight when divided by the largest weight falls below this value it's excluded from the
--- selection. Valid values are in the range [0, 1] inclusive.
---NDefines.NAI.LAND_DESIGN_CUTOFF_AS_PERCENTAGE_OF_MAX = 0.01 --0.25
-
-
-
-NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_LAND = 50 --50	-- Army XP needed before attempting to create a variant of a type that uses the tank designer (the tank designer DLC feature must be active).
-NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 25 --50	-- Same as above but for the ship designer.
-NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_AIR = 25 --25	-- Same as above but for the ship designer.
-
-
-NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_LAND = 400 --10	-- Army XP needed before attempting to create a variant of a type that uses the legacy upgrades system. ai_strategy supports land_xp_spend_priority upgrade_xp_cutoff. If none is set this define is used instead.
-NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_NAVY = 400 --25	-- Same as above but for navy XP and navy_xp_spend_priority.
-NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_AIR  = 400 --25	-- Same as above but for air XP and air_xp_spend_priority.
-
-NDefines.NAI.VARIANT_CREATION_XP_RESERVE_LAND = 50 --50					-- If the AI lacks army XP to create a variant it will reserve this much XP for variant creation so that it will eventually be able to create a variant.
-NDefines.NAI.VARIANT_CREATION_XP_RESERVE_NAVY = 50 --50					-- Same as above but for navy XP.
-NDefines.NAI.VARIANT_CREATION_XP_RESERVE_AIR = 50 --50					-- Same as above but for air XP.
-
-NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_LOW = 0.85		-- Minimum org % for a unit to actively attack an enemy unit when executing a plan
-NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_LOW = 0.85	-- Minimum strength for a unit to actively attack an enemy unit when executing a plan
-NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_MED = 0.7	-- (LOW,MED,HIGH) corresponds to the plan execution agressiveness level.
-NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_MED = 0.7
-NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_HIGH = 0.5
-NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_HIGH = 0.5
-
-NDefines.NAI.PLAN_FRONT_SECTION_MAX_LENGTH = 25			-- When a front is longer than this it will be split in two sections for the AI
-NDefines.NAI.PLAN_FRONT_SECTION_MIN_LENGTH = 15			-- When two front sections together are this short they will be merged for the AI
-
-NDefines.NAI.ESTIMATED_CONVOYS_PER_DIVISION = 12  --6
-
-NDefines.NAI.ORG_UNIT_STRONG = 0.5												-- Organization % for unit to be considered strong
-NDefines.NAI.STR_UNIT_STRONG = 0.8												-- Strength (equipment) % for unit to be considered strong
-
-NDefines.NAI.PLAN_FACTION_NORMAL_TO_EXECUTE = 0.5
-NDefines.NAI.ORG_UNIT_NORMAL = 0.35 --6												-- Organization % for unit to be considered normal
-NDefines.NAI.STR_UNIT_NORMAL = 0.65 --6												-- Strength (equipment) % for unit to be considered normal
-
-NDefines.NAI.PLAN_FACTION_WEAK_TO_ABORT = 0.5 --0.50		0.65		        -- % or more of units in an order to consider ececuting the plan
-NDefines.NAI.ORG_UNIT_WEAK = 0.25 --0.45												-- Organization % for unit to be considered weak
-NDefines.NAI.STR_UNIT_WEAK = 0.45 --0.45												-- Strength (equipment) % for unit to be considered weak
-
-NDefines.NAI.FORT_LEVEL_TO_CONSIDER_HIGHLY_FORTIFIED = 3	-- Provinces above this level of fortification will be considered highly fortified by plan evaluation
-NDefines.NAI.PLAN_VALUE_FORTIFICATION_LEVEL_MAX_PENALTY = -0.375	--Max plan value penalty from fortification. This is scaled by number of provinces along a frontline, over the number which exceed the fort value value above
-
-NDefines.NAI.FORTIFIED_RATIO_TO_CONSIDER_A_FRONT_FORTIFIED = 5 --0
-NDefines.NAI.DESPERATE_AI_WEAK_UNIT_STR_LIMIT = 0.5						-- ai will increase number of units assigned to break from desperate situations when units are start falling lower than this str limit
-NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_ATTACK = 0.4					-- ai will wait for this much org to attack an enemy prov in desperate situations
-NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_MOVE = 0.06					-- ai will wait for this much org to move in desperate situations
-NDefines.NAI.DESPERATE_ATTACK_WITHOUT_ORG_WHEN_NO_ORG_GAIN = 96			-- if ai can't regain enough org to attack in this many hours, it will go truly desperate and attack anyway (still has to wait for move org)
-
-NDefines.NAI.MAX_REQUEST_EXPEDITIONARIES_ARMY_RATIO = 0 -- 0.3
 
 --█   █ █████ █████  ████ █████ █     █      ███  █   █ █████  ███  █   █ █████ 
 --██ ██   █   █     █     █     █     █     █   █ ██  █ █     █   █ █   █ █     

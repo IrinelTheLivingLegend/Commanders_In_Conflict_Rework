@@ -696,16 +696,33 @@ MOD_countdown_to_victory_5vp_cat = {
 	Surrender2 = {
  		icon = generic_naval
  		fire_only_once = no
- 		allowed = { OR={original_tag = AXI original_tag = ALI original_tag = AXJ original_tag = ALJ original_tag = ALK original_tag = AXK} }
+ 		allowed = { 
+			OR={
+				original_tag = AXI
+				original_tag = AXJ
+				original_tag = AXK
+				original_tag = AXL
+				original_tag = ALI
+				original_tag = ALJ
+				original_tag = ALK
+				original_tag = ALL
+			}
+		}
  		
  		cost = 0
  		complete_effect = {
-			
-	set_variable={Global.end_date=Global.date}
- 			if={limit={original_tag=AXI}
-	set_variable={Global.super_event=2}
-	}
-	else={set_variable={Global.super_event=1}}
+		set_variable={Global.end_date=Global.date}
+ 		if={
+			limit={
+				original_tag=AXI
+			}
+		set_variable={Global.super_event=2}
+		}
+		else={
+			set_variable={
+				Global.super_event=1
+			}
+		}
  		}
  	}
 	MOD_countdown_to_victory_mission_5vp = {
@@ -1100,19 +1117,6 @@ MOD_custom_decisions = {
 	}
 	complete_effect = {
 		hidden_effect = { ROOT  = { set_variable = { show_background = 7 }}}}
-	}
-	fra_picture = {
-	priority = 4
-	visible = {
-		OR = {
-			original_tag = ALI
-			original_tag = ALJ
-			original_tag = ALK
-			original_tag = ALL
-		}
-	}
-	complete_effect = {
-		hidden_effect = { ROOT  = { set_variable = { show_background = 2 }}}}
 	}
 	eng1_picture = {
 	priority = 3
@@ -2181,7 +2185,6 @@ pre_made_template_decisions = {
 			hidden_effect = {
 				division_template = {
 					name = "Infantry Template 12INF/4ART/3AT/1AA"
-					division_names_group = ENG_INF_01
 
 					regiments = {
 						infantry = { x = 0 y = 0 }

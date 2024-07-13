@@ -140,7 +140,7 @@ technologies = {
 			entrenchment = 0.25
 			fort = {
 				defence = 0.10
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 
@@ -156,16 +156,6 @@ technologies = {
 		}
 		
 		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						original_tag = ITA
-						has_completed_focus = ITA_italian_tankettes
-					}
-					ITA_add_basic_light_flamethrower_template = yes
-				}
-			}
 		}
 		
 		path = {
@@ -215,8 +205,7 @@ technologies = {
 		engineer = {
 			entrenchment = 0.25
 			river = {
-				attack = 0.1	
-				defence = 0.10
+				attack = 0.06
 			}
 		}
 
@@ -225,7 +214,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		medium_flame_tank = {
@@ -233,7 +222,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		heavy_flame_tank = {
@@ -241,7 +230,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		path = {
@@ -300,7 +289,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		medium_flame_tank = {
@@ -308,7 +297,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		heavy_flame_tank = {
@@ -316,7 +305,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 		research_cost = 2
@@ -558,44 +547,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.5
-			
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-
-			modifier = {
-				factor = 10
-				tag = GER
-
-				POL = { has_capitulated = yes }
-				GER = { has_war = yes }
-			}
-			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
 		}
 	}
 	

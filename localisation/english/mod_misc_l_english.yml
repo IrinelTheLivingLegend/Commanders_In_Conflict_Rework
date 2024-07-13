@@ -45,7 +45,6 @@ AMAZONAS_DESC:0 ""
  MOD_countdown_to_victory_5vp_cat_desc:0 "The winner of the game is the player who controlls the majority of the following states:\n\n§Y[GetVPOne]§! - [GetVPOneOwner]\n§Y[GetVPTwo]§! - [GetVPTwoOwner]\n§Y[GetVPThree]§! - [GetVPThreeOwner]\n§Y[GetVPFour]§! - [GetVPFourOwner]\n§Y[GetVPFive]§! - [GetVPFiveOwner]\n\nYou Currently have §Y[?Root.score]§!/§Y5§! states.\n\nTo control the state you need to control the capital victory point in the state.\n\nYou will have §Y456 days§! after the war starts to win.\n\nCapitulating the other player also counts as a win."
  Points_AXI:0 "§g[?Global.axis_points|0] §!"
  Points_ALI:0 "§G[?Global.allies_points|0] §!"
- MOD_countdown_to_victory_5vp_cat_desc:0 "The winner of the game is the player who controlls the majority of the following states:\n\n§Y[GetVPOne]§! - [GetVPOneOwner]\n§Y[GetVPTwo]§! - [GetVPTwoOwner]\n§Y[GetVPThree]§! - [GetVPThreeOwner]\n§Y[GetVPFour]§! - [GetVPFourOwner]\n§Y[GetVPFive]§! - [GetVPFiveOwner]\n\nYou Currently have §Y[GetNationScore]§!/§Y5§! states.\n\nTo control the state you need to control the capital victory point in the state.\n\nYou will have §Y456 days§! after the war starts to win.\n\nCapitulating the other player also counts as a win."
 
  alled_score_txt:0 "[?global.allied_score]"
  axis_score_txt:0 "[?global.axis_score]"
@@ -190,12 +189,6 @@ vp_oradea_owner:0 "[83.controller.GetFlag] [83.controller.GetNameDefCap]"
 
  mechanised_infantry:0 "Mechanized Infantry"
 
- STRATEGICREGION_276:0 "Tunisia"
- STRATEGICREGION_275:0 "Cyrenaica"
- STRATEGICREGION_277:0 "Crete"
- STRATEGICREGION_153:0 "Central India"
- STRATEGICREGION_141:0 "Eastern India"
- STRATEGICREGION_254:0 "Western India"
  light_infantry:0 "Light Infantry"
  light_infantry_desc:0 "Troops specializing in forest and jungle combat. Often selected from hardy hunters and those who are used to living int he wild, they are provided specialised training to work in the wild and remote places of the world."
 
@@ -283,7 +276,6 @@ JAP_war_conferences_cd:0 "The Imperial War Conference has convened in the last 4
 
 GOOD_ARMOR_ATTACK_DESC_ORG:2 "\nIf attacking an Enemy Division that can penetrate less than §H40%§! of our armor we will do additional damage."
 
-category_all_infantry:0 "All Infantry & Mot/Mech/AC's"
 
 CAVALRY_DOCTRINE_LABEL: "Cavalry"
 CAVALRY_DOCTRINE_DESC: "Sudden raids are the history of cavalry. Elevating our cavalry will give us a reconnaissance and speed advantage in battle against the enemy."
@@ -360,11 +352,7 @@ improved_medium_tank_chassis_short:1 "1939 Medium"
  improved_light_tank_chassis_short:0 "1939 Light"
  basic_medium_tank_chassis_short:0 "1934 Medium"
  advanced_light_tank_chassis_short:0 "1942 Light"
- advanced_medium_tank_chassis_short:0 "1942 Medium"
  advanced_heavy_tank_chassis_short:0 "1942 Heavy"
-
-POWDER_KEG:0 "Powder Keg"
-POWDER_KEG_DESC:0 ""
 
 MOD_custom_decisions:0 "Focus Background"
 hun_picture:0 "§Y[HUN.GetNameWithFlag]§!"
@@ -413,9 +401,6 @@ second_guerilla_warfare:0 "Asymmetrical Warfare"
 second_guerilla_warfare_desc:0 "There is a need to reform the operational methods of the armed forces. The reality is that the armies that could potentially be engaged in conflict possess a significant advantage. Therefore, adopting an asymmetrical approach to warfare becomes crucial in order to have a chance at achieving success or maintaining a competitive edge."
 double_envelopment:0 "Sudden Envelopment"
 double_envelopment_desc:0 "Envelopment, an age-old military tactic, can be employed when the enemy's forces are overextended and we possess superior knowledge of the terrain. By quickly surrounding and eliminating small enemy groups, we can prevent assistance and disrupt their larger forces, gaining a tactical advantage."
-elastic_defence:0 "Elastic Defense"
-elastic_defence_desc:0 "Instead of concentrating all strength on the front line, an elastic defense strategy involves establishing a "deeper" layer of defenses. This approach provides the defender with additional time to react and launch counter-attacks, while the attacker becomes dispersed and entangled."
-infiltration_assault:0 "Infiltration Assault"
 infiltration_assault_desc:0 "During the initial stages of an attack, infantry units should focus on identifying and targeting vulnerable points in the enemy's defensive line. By bypassing and isolating these weaker sections, the remaining attacking forces can then concentrate their efforts on neutralizing the more heavily fortified areas."
 second_infiltration_in_depth:0 "Deep Infiltration"
 second_infiltration_in_depth_desc:0 "Our forces are now trained to bypass and isolate enemy strongpoints to a much greater depth. Ideally, our assault forces should not stop until they reach the enemy's rear areas and their forces are entirely cut off."
@@ -444,10 +429,6 @@ BREAKOUT_LABEL:0 "BREAKOUT"
 BREAKOUT_LABEL_TT:0 "§WWhen the enemy finally exhausts themselves on our defense, we can plan a counter-attack and breakout.§!"
 breakout:0 "Breakout"
 breakout_desc:0 "§WOnce the enemy has expended their resources and energy, we can strategically devise a counter-attack plan and execute a breakout from our fortified defense.§!"
-breakthrough_priority:0 "Breakthrough Priority"
-breakthrough_priority_desc:0 "The imperative of concentrating forces for Breakthroughs takes precedence over all front-line requirements. Local defeats pale in significance when weighed against the opportunity to deliver a decisive and impactful blow."
-operational_concentration:0 "Local Offensive Concentration"
-operational_concentration_desc:0 "Achieving overwhelming local superiority is paramount in any military action. Unless complete superiority can be achieved across the entire front, it necessitates the deliberate weakening of certain segments of the front line and concentrate where they are most needed."
 
  limited_engagement_spirit:0 "Limited Engagement"
 

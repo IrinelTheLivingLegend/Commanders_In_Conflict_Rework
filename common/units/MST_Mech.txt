@@ -40,7 +40,7 @@ sub_units = {
 		manpower = 500
 
 		#Misc Abilities
-		training_time = 120
+		training_time = 30
 		suppression = 2
 		weight = 0.5
 		
@@ -83,5 +83,7 @@ sub_units = {
 		amphibious = {
 			attack = -0.04
 		}
+
+		same_support_type = support_mechanized
 	}
 }

@@ -12,7 +12,7 @@ state={
 		}
 
 
-		add_claim_by = BUL
+		#add_claim_by = BUL
 	}
 
 	provinces={

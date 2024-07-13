@@ -63,7 +63,7 @@ technologies = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { ai_has_completed_army_doctrine = yes }
+				NOT = {  }
 			}
 		}
 		
@@ -496,10 +496,6 @@ technologies = {
 				factor = 0
 				tag = USA
 				NOT = { has_tech = special_forces_paratroopers }
-			}
-			modifier = {
-				factor = 0
-				NOT = { ai_has_completed_naval_doctrine = yes }
 			}
 		}
 		
@@ -1036,10 +1032,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				factor = 0
-				NOT = { ai_has_completed_air_doctrine = yes }
-			}
 		}
 		
 		ai_research_weights = {
@@ -1494,7 +1486,7 @@ technologies = {
 				factor = 10
 				modifier = {
 					factor = 0
-					NOT = { ai_has_completed_army_doctrine = yes }
+					NOT = {  }
 				}
 			}
 			

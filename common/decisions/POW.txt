@@ -69,7 +69,7 @@ POW = {
  		icon = GFX_decision_generic_merge_plant_materiel
  		cost=20
  		allowed = {
- 			is_playable_country =yes
+ 			#is_playable_country =yes
  		}
  		fire_only_once = no
  		fixed_random_seed = no
@@ -126,7 +126,7 @@ POW = {
  		icon = GFX_decision_SWE_set_navy_budget
  		cost=20
  		allowed = {
- 			is_playable_country =yes
+ 			#is_playable_country =yes
  		}
  		fire_only_once = no
  		fixed_random_seed = no
@@ -183,7 +183,7 @@ POW = {
  		icon = GFX_decision_category_generic_prospect_for_resources
  		cost=20
  		allowed = {
- 			is_playable_country =yes
+ 			#is_playable_country =yes
  		}
  		fire_only_once = no
  		fixed_random_seed = no
@@ -239,7 +239,7 @@ POW = {
  		icon = GFX_decision_category_generic_industry
  		cost=20
  		allowed = {
- 			is_playable_country =yes
+ 			#is_playable_country =yes
  		}
  		fire_only_once = no
  		fixed_random_seed = no

@@ -151,15 +151,6 @@ bookmarks = {
 				instant_build = yes
 				}
 			}
-
-			every_province = {
-				limit={OR={province=11489 }}
-				set_building_level = {
-				type = supply_node
-				level = 1
-				instant_build = yes
-				}
-			}
 			
 			#resources
 			

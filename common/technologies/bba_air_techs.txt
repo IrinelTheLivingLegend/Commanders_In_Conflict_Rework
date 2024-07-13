@@ -183,12 +183,6 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1941.1.1"
-			}
-
-			modifier = {
 				factor = 1.2
 				date > "1941.1.1"
 			}
@@ -322,10 +316,6 @@ technologies = {
 			factor = 1
 			modifier = {
 				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				tag = GER
 				factor = 2
 			}
 		}
@@ -606,16 +596,6 @@ technologies = {
 				factor = 0.1
 			}
 			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 10
-				tag = USA
-				date > 1937.1.1
-			}
 		}
 	}
 	

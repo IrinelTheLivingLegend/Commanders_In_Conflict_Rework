@@ -39,6 +39,7 @@ focus_tree = {
 	focus = {
 		id = ALI_commonwelth
 		icon = GFX_focus_AST_rats_tobruk
+		text_icon = land_focus_style
 		x = 0
 		y = 0
 		cost = 2
@@ -86,7 +87,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_french_forces
+						focus_progress = {
+							focus = ALI_french_forces
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		allow_branch = {
 			OR = {
@@ -108,32 +120,6 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE }
 	}
-	#focus = {
-	#	id = ALI_defence_in_depth
-	#	icon = GFX_goal_generic_defence
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	relative_position_id = ALI_commonwelth
-	#	prerequisite = {
-	#		focus = ALI_commonwelth
-	#	}
-	#
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#	completion_reward = {
-	#		add_doctrine_cost_reduction = {
-	#			name = land_doc_bonus
-	#			cost_reduction = 0.5
-	#			uses = 2
-	#			category = cat_grand_battle_plan
-	#		}
-	#		army_experience = 100
-	#		navy_experience = 100
-	#		air_experience = 100
-	#	}
-	#}
 
 #█   █ █  █  
 #█   █ █ █   
@@ -144,7 +130,7 @@ focus_tree = {
 	focus = {
 		id = ALI_commonwealth_8th_army
 		icon = GFX_focus_CIC_commonwealth_8th
-		x = 2
+		x = 3
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -194,7 +180,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "ANZAC Infantry Division"
-					division_names_group = AUS_INF_01
 						regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -255,8 +240,6 @@ focus_tree = {
 
 			division_template = {
 				name = "Indian Gurkhas"
-				division_names_group = FIN_INF_01
-
 				regiments = {
 					light_infantry = { x = 0 y = 0 }
 					light_infantry = { x = 0 y = 1 }
@@ -287,51 +270,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
-	focus = {
-		id = ALI_cairo_branch
-		icon = GFX_focus_generic_secret_service_agency
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = air_focus_style
-		relative_position_id = ALI_mediterainian_fleet
-		prerequisite = {
-			focus = ALI_mediterainian_fleet
-		}
 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			#Unlocks MI6 Agency + Some upgrades?
-			hidden_effect = { set_technology = { photo_reconnaisance = 1 popup=no} } 
-			if = {
-				limit = {
-					has_intelligence_agency = no
-				}
-				create_intelligence_agency = yes
-			}
-			add_ideas = ALI_cairo_branch
-			hidden_effect = {
-				create_equipment_variant = {
-					name = "Bristol Blenheim (Recon)"
-					type = medium_plane_scout_plane_airframe_1
-					modules = {
-						fixed_main_weapon_slot = recon_camera
-						engine_type_slot = engine_2_2x
-					}
-					icon = "GFX_ENG_heavy_fighter1_medium"
-				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_scout_plane_airframe_1
-					variant_name = "Bristol Blenheim (Recon)"
-					producer = ROOT
-					amount = 50
-				}
-			}
-			custom_effect_tooltip = ALI_cairo_branch_tt
-		}
-	}
 	focus = {
 		id = ALI_mediterainian_fleet
 		icon = GFX_goal_generic_navy_battleship
@@ -356,19 +295,19 @@ focus_tree = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_naval_bomber_airframe_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "Fairey Swordfish"
 				}
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_airframe_0
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "Sea Gladiator"
 				}
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_cas_airframe_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "Blackburn Skua"
 				}
@@ -438,17 +377,17 @@ focus_tree = {
 		        }
 				add_equipment_to_stockpile = {
 					type = cv_nav_bomber_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 				add_equipment_to_stockpile = {
 					type = cv_fighter_equipment_0
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 				add_equipment_to_stockpile = {
 					type = cv_CAS_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 
@@ -491,6 +430,51 @@ focus_tree = {
 			}
 	}
 }
+focus = {
+		id = ALI_cairo_branch
+		icon = GFX_focus_generic_secret_service_agency
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = air_focus_style
+		relative_position_id = ALI_mediterainian_fleet
+		prerequisite = {
+			focus = ALI_mediterainian_fleet
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#Unlocks MI6 Agency + Some upgrades?
+			hidden_effect = { set_technology = { photo_reconnaisance = 1 popup=no} } 
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+			add_ideas = ALI_cairo_branch
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "Bristol Blenheim (Recon)"
+					type = medium_plane_scout_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = recon_camera
+						engine_type_slot = engine_2_2x
+					}
+					icon = "GFX_ENG_heavy_fighter1_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = medium_plane_scout_plane_airframe_1
+					variant_name = "Bristol Blenheim (Recon)"
+					producer = ALI
+					amount = 50
+				}
+			}
+			custom_effect_tooltip = ALI_cairo_branch_tt
+		}
+	}
 	focus = {
 		id = ALI_promote_montgomary
 		icon = GFX_focus_eng_motion_of_no_confidence
@@ -607,7 +591,7 @@ focus_tree = {
 	focus = {
 		id = ALI_rule_britania
 		icon = GFX_focus_eng_imperial_federation
-		x = -2
+		x = -3
 		y = 1
 		cost = 5
 		text_icon = navy_focus_style
@@ -615,6 +599,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ALI_promote_montgomary
 			focus = ALI_promote_simonds
+		}
+		prerequisite = {
+			focus = ALI_bletchley_park
 		}
 
 		ai_will_do = {
@@ -690,7 +677,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Supermarine Spitfire - [TAG]"
 						}
@@ -718,7 +705,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Supermarine Spitfire - [TAG]"
 						}
@@ -750,7 +737,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Supermarine Spitfire - [TAG]"
 						}
@@ -779,7 +766,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Supermarine Spitfire - [TAG]"
 						}
@@ -806,7 +793,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = fighter_equipment_2
-				producer = ROOT
+				producer = ALI
 				amount = 200
 			}
 			}
@@ -834,7 +821,7 @@ focus_tree = {
 			add_ideas = ALI_tank_hunters_idea
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 500
 			}
 			add_tech_bonus = {
@@ -866,7 +853,7 @@ focus_tree = {
 	focus = {
 		id = ALI_canadian_1st_army
 		icon = GFX_focus_CIC_canadian_1st_army
-		x = -2
+		x = -3
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -946,8 +933,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Canadian Armored Division" 				# 1st Armoured Division
-					division_names_group = CAN_ARM_01
-
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
 						medium_armor = { x = 0 y = 1 }
@@ -1072,7 +1057,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 1500
-				producer = ROOT
+				producer = ALI
 			}
 		if = {
 				limit = {
@@ -1106,8 +1091,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Royal Canadian Engineers"
-					division_names_group = CAN_INF_01
-
 					regiments = {
 						motorized = { x = 0 y = 0 }
 						motorized = { x = 0 y = 1 }
@@ -1169,9 +1152,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				division_template = {
-					name = "Polish Armored Division" 				# 1st Armoured Division
-					division_names_group = POL_ARM_01
-
+					name = "Polish Armored Division"
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
 						medium_armor = { x = 0 y = 1 }
@@ -1263,7 +1244,7 @@ focus_tree = {
 			hidden_effect = {
 			add_equipment_to_stockpile = {
 					type = cv_small_plane_naval_bomber_airframe_1
-					producer = ROOT
+					producer = ALI
 					amount = 80
 					variant_name = "Fairey Swordfish"
 				}
@@ -1294,7 +1275,7 @@ focus_tree = {
 		        }
 			add_equipment_to_stockpile = {
 					type = cv_nav_bomber_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 80
 					variant_name = "CV NAV I"
 				}
@@ -1434,7 +1415,8 @@ focus_tree = {
 	focus = {
 		id = ALI_us_army
 		icon = GFX_focus_CIC_shaef
-		x = 18
+		text_icon = land_focus_style
+		x = 32
 		y = 0
 		cost = 2
 		relative_position_id = ALI_commonwelth
@@ -1482,7 +1464,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_french_forces
+						focus_progress = {
+							focus = ALI_french_forces
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1507,7 +1500,7 @@ focus_tree = {
 	focus = {
 		id = ALI_adopt_the_sherman
 		icon = GFX_focus_CIC_adopt_the_sherman
-		x = -10
+		x = -8
 		y = 3
 		cost = 5
 		text_icon = land_focus_style
@@ -1587,13 +1580,13 @@ focus_tree = {
 				hidden_effect = {
 					add_equipment_to_stockpile = {
 						type = medium_tank_chassis_1
-						producer = ROOT
+						producer = ALI
 						amount = 125
 						variant_name = "Grant I"
 					}
 					add_equipment_to_stockpile = {
 						type = medium_tank_chassis_2
-						producer = ROOT
+						producer = ALI
 						amount = 125
 						variant_name = "Sherman II"
 					}
@@ -1649,13 +1642,13 @@ focus_tree = {
 				hidden_effect = {
 					add_equipment_to_stockpile = {
 						type = medium_tank_chassis_1
-						producer = ROOT
+						producer = ALI
 						amount = 50
 						variant_name = "M3 Lee"
 					}
 					add_equipment_to_stockpile = {
 						type = medium_tank_chassis_2
-						producer = ROOT
+						producer = ALI
 						amount = 50
 						variant_name = "M4A1 Sherman"
 					}
@@ -1691,12 +1684,12 @@ focus_tree = {
 		}
 					add_equipment_to_stockpile = {
 						type =medium_tank_equipment_1 
-						producer = ROOT
+						producer = ALI
 						amount = 100
 					}
 					add_equipment_to_stockpile = {
 						type = medium_tank_equipment_2 
-						producer = ROOT
+						producer = ALI
 						amount = 100
 					}
 	}
@@ -1726,7 +1719,7 @@ focus_tree = {
 	focus = {
 		id = ALI_supplies_from_gibraltar
 		icon = GFX_focus_SWI_issue_war_bonds
-		x = -11
+		x = -9
 		y = 2
 		cost = 5
 		text_icon = land_focus_style
@@ -1764,32 +1757,6 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
-	#focus = {
-	#	id = ALI_overwhelming_fire
-	#	icon = GFX_goal_generic_army_artillery2
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	relative_position_id = ALI_us_army
-	#	prerequisite = {
-	#		focus = ALI_us_army
-	#	}
-	#
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#	completion_reward = {
-	#		add_doctrine_cost_reduction = {
-	#			name = land_doc_bonus
-	#			cost_reduction = 0.5
-	#			uses = 2
-	#			category = cat_superior_firepower
-	#		}
-	#		army_experience = 100
-	#		navy_experience = 100
-	#		air_experience = 100
-	#	}
-	#}
 
 #█   █ █████  ███       ███  ████  █   █ █   █ 
 #█   █ █     █   █     █   █ █   █ ██ ██  █ █  
@@ -1800,7 +1767,7 @@ focus_tree = {
 	focus = {
 		id = ALI_US_12th_army_group
 		icon = GFX_focus_CIC_US_12th
-		x = 0
+		x = -4
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -1809,7 +1776,6 @@ focus_tree = {
 			focus = ALI_us_army
 		}
 		mutually_exclusive = {
-			focus = ALI_french_liberation_army
 			focus = ALI_USMC
 		}
 		ai_will_do = {
@@ -1857,8 +1823,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "Armored Division" 				# 1st Armoured Division, 7th Armoured 'Desert
-					division_names_group = USA_ARM_01
-
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
 						medium_armor = { x = 0 y = 1 }
@@ -1950,8 +1914,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "US Infantry Division"
-					division_names_group = USA_INF_01
-
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -2010,33 +1972,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALI_calliopies
-		icon = GFX_focus_rocketry
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = ALI_smoke_and_ashes
-		prerequisite = {
-			focus = ALI_smoke_and_ashes
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = artillery_bonus
-				bonus = 2
-				uses = 3
-				technology = rocket_artillery
-				technology = rocket_artillery2
-				technology = rocket_artillery3
-			}
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
-	}
-	focus = {
 		id = ALI_smoke_and_ashes
 		icon = GFX_focus_SWE_let_fly_all_guns 
 		x = -2
@@ -2076,6 +2011,33 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+	}
+	focus = {
+		id = ALI_calliopies
+		icon = GFX_focus_rocketry
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = ALI_smoke_and_ashes
+		prerequisite = {
+			focus = ALI_smoke_and_ashes
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 2
+				uses = 3
+				technology = rocket_artillery
+				technology = rocket_artillery2
+				technology = rocket_artillery3
+			}
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 	}
 	focus = {
 		id = ALI_p47_strikes
@@ -2135,7 +2097,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 150
 							variant_name = "P-47 Thunderbolt - [TAG]"
 						}
@@ -2165,7 +2127,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 150
 							variant_name = "P-47 Thunderbolt - [TAG]"
 						}
@@ -2192,7 +2154,7 @@ focus_tree = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 150
 							variant_name = "P-47 Thunderbolt - [TAG]"
 						}
@@ -2214,7 +2176,7 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 				type = CAS_equipment_2
-				producer = ROOT
+				producer = ALI
 				amount = 200
 			}
 			}
@@ -2237,7 +2199,7 @@ focus_tree = {
 	focus = {
 		id = ALI_passing_the_torch
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		x = 0
+		x = 1
 		y = 1
 		cost = 5
 		text_icon = politics_focus_style
@@ -2344,15 +2306,17 @@ focus_tree = {
 	focus = {
 		id = ALI_arsenal_of_democracy
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 0
+		x = 3
 		y = 1
 		cost = 5
 		text_icon = industry_focus_style
 		relative_position_id = ALI_passing_the_torch
 		prerequisite = {
 			focus = ALI_passing_the_torch
-			focus = ALI_vive_la_france
 			focus = ALI_lords_of_midway
+		}
+		prerequisite = {
+			focus = ALI_shock_and_awe
 		}
 
 		ai_will_do = {
@@ -2383,17 +2347,16 @@ focus_tree = {
 	focus = {
 		id = ALI_french_liberation_army
 		icon = GFX_focus_CIC_free_france
-		x = -5
+		x = -3
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = ALI_us_army
+		relative_position_id = ALI_french_forces
 		prerequisite = {
-			focus = ALI_us_army
+			focus = ALI_french_forces
 		}
 		mutually_exclusive = {
-			focus = ALI_US_12th_army_group
-			focus = ALI_USMC
+			focus = ALI_army_of_the_maginot
 		}
 		ai_will_do = {
 			factor = 1
@@ -2424,7 +2387,7 @@ focus_tree = {
 	focus = {
 		id = ALI_2e_division_blindee
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
-		x = 1
+		x = -3
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -2459,8 +2422,6 @@ focus_tree = {
 				}
 				division_template = {
 					name = "Armored Division" 				# 1st Armoured Division, 7th Armoured 'Desert
-					division_names_group = FRA_ARM_01
-
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
 						medium_armor = { x = 0 y = 1 }
@@ -2558,35 +2519,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALI_army_of_africa
-		icon = GFX_focus_generic_africa_liberation
+		id = ALI_free_french_navy
+		icon = GFX_goal_generic_navy_cruiser
 		x = 0
 		y = 1
 		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = ALI_free_french_navy
-		prerequisite = {
-			focus = ALI_free_french_navy
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = ALI_army_of_africa
-		}
-		search_filters = {FOCUS_FILTER_MANPOWER}
-	}
-	focus = {
-		id = ALI_free_french_navy
-		icon = GFX_goal_generic_navy_cruiser
-		x = -3
-		y = 1
-		cost = 5
 		text_icon = navy_focus_style
-		relative_position_id = ALI_french_liberation_army
+		relative_position_id = ALI_cross_of_lorraine
 		prerequisite = {
-			focus = ALI_french_liberation_army
+			focus = ALI_cross_of_lorraine
 		}
 
 		ai_will_do = {
@@ -2601,19 +2542,19 @@ focus_tree = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_naval_bomber_airframe_0
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "PL.7"
 				}
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_airframe_0
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "D.371"
 				}
 				add_equipment_to_stockpile = {
 					type = cv_small_plane_cas_airframe_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 					variant_name = "LN.40"
 				}
@@ -2683,17 +2624,17 @@ focus_tree = {
 		        }
 				add_equipment_to_stockpile = {
 					type = cv_nav_bomber_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 				add_equipment_to_stockpile = {
 					type = cv_fighter_equipment_0
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 				add_equipment_to_stockpile = {
 					type = cv_CAS_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 
@@ -2736,16 +2677,37 @@ focus_tree = {
 			}
 	}
 }
+focus = {
+		id = ALI_army_of_africa
+		icon = GFX_focus_generic_africa_liberation
+		x = -3
+		y = 2
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = ALI_french_liberation_army
+		prerequisite = {
+			focus = ALI_french_liberation_army
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALI_army_of_africa
+		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
+	}
 	focus = {
 		id = ALI_legacy_of_french_innovation
 		icon = GFX_focus_ARG_develop_the_electricity_sector
 		x = 0
-		y = 1
+		y = 2
 		cost = 5
 		text_icon = industry_focus_style
-		relative_position_id =  ALI_2e_division_blindee
+		relative_position_id =  ALI_french_forces
 		prerequisite = {
-			focus =  ALI_2e_division_blindee
+			focus =  ALI_french_liberation_army
+			focus =  ALI_army_of_the_maginot
 		}
 
 		ai_will_do = {
@@ -2875,7 +2837,7 @@ focus_tree = {
 	focus = {
 		id = ALI_armored_honey_pot
 		icon = GFX_focus_NZL_bob_semple_tank
-		x = 10
+		x = 8
 		y = 2
 		cost = 5
 		text_icon = land_focus_style
@@ -2960,7 +2922,7 @@ focus_tree = {
 	focus = {
 		id = ALI_fisher_body_design_works
 		icon = GFX_focus_generic_tank_production
-		x = 11
+		x = 9
 		y = 3
 		cost = 5
 		text_icon = land_focus_style
@@ -2982,7 +2944,8 @@ focus_tree = {
 	focus = {
 		id = ALI_cbi
 		icon = GFX_focus_chi_legislative_yuan
-		x = 18
+		text_icon = land_focus_style
+		x = 19
 		y = 0
 		cost = 2
 		relative_position_id = ALI_us_army
@@ -3030,7 +2993,18 @@ focus_tree = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_french_forces
+						focus_progress = {
+							focus = ALI_french_forces
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3052,6 +3026,130 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
+	focus = {
+		id = ALI_citroen
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = ALI_french_liberation_army
+		
+		prerequisite = {
+			focus = ALI_french_liberation_army
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = mechanised_infantry
+					}
+				}
+				set_technology = {
+					mechanised_infantry = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 500
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = ROOT
+			}
+			add_ideas = ALI_citroen
+		}
+	}
+	focus = {
+		id = ALI_somua_s35s
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_citroen
+		
+		prerequisite = {
+			focus = ALI_citroen
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_equipment_variant = {
+				name = "SOUMUA S35"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_2
+					turret_type_slot = tank_medium_one_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 5
+				}
+				icon = "GFX_FRA_improved_medium_tank_medium"
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis_1
+				producer = ROOT
+				amount = 600
+				variant_name = "SOUMUA S35"
+			}
+		}
+	}
+	focus = {
+		id = ALI_colonel_motors_leader
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 2
+		cost = 8
+		relative_position_id = ALI_breaking_the_gustav_line
+		
+		prerequisite = {
+			focus = ALI_ffi
+			focus = ALI_somua_s35s
+			focus = ALI_army_of_africa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#army_experience = 100
+			hidden_effect = {
+				#set_cosmetic_tag = ALI_france
+			}
+			retire_country_leader = yes
+			meta_effect = {
+				text = {
+				[TAG]_charles_de_gaulle = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits = { colonel_motors_leader }
+						}
+					}
+				}
+
+				}
+				TAG = "[THIS.GetTag]"
+			}
+			
+
+			add_political_power = 150
+		}
+	}
 	
 # ████ █   █ █████ █   █  ███ 
 #█     █   █   █   ██  █ █   █
@@ -3061,7 +3159,7 @@ focus_tree = {
 	focus = {
 		id = ALI_national_revolutionary_army
 		icon = GFX_focus_CIC_chinese_army
-		x = -2
+		x = -5
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -3131,202 +3229,39 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALI_flying_tigers
-		icon = GFX_focus_CIC_flying_tigers
-		x = 0
+		id = ALI_jinling_arsenal
+		icon = GFX_goal_generic_trade
+		x = 1
 		y = 1
 		cost = 5
-		text_icon = air_focus_style
-		relative_position_id = ALI_the_hump
+		relative_position_id = ALI_national_revolutionary_army
+		
 		prerequisite = {
-			focus = ALI_the_hump
+			focus = ALI_national_revolutionary_army
 		}
 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone" 
-				}
-			custom_effect_tooltip = ALI_flying_tigers_tt
-			#Planes
-			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = ALI_desert_air_corps
-				cost_reduction = 0.25
-				uses = 2
-				category = operational_integrity_tree
-			}
-			hidden_effect = {
-				set_variable_to_random = {
-					var = random_num
-					max = 999
-					integer = yes
-				}
-
-				if = {
-				limit = {
-					has_tech = aa_hmg
-				}
-				if = {
-					limit = {
-						has_tech = survivability_studies
-					}
-					meta_effect = {
-						text = {
-							create_equipment_variant = {
-								name = "P-40 - [TAG]"
-								type = small_plane_airframe_2
-								modules = {
-									fixed_main_weapon_slot = heavy_mg_4x
-									fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-									fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-									engine_type_slot = engine_3_1x
-									special_type_slot_1 = self_sealing_fuel_tanks_small
-									special_type_slot_2 = armor_plate_small
-									special_type_slot_3 = armor_plate_small
-								}
-							icon = "GFX_USA_fighter2_medium"
-							}
-			
-						add_equipment_to_stockpile = {
-							type = small_plane_airframe_2
-							producer = ROOT
-							amount = 150
-							variant_name = "P-40 - [TAG]"
-						}
-						}
-					TAG = "[?random_num]"
-					}
-				}
-				else = {
-					meta_effect = {
-						text = {
-							create_equipment_variant = {
-								name = "P-40 - [TAG]"
-								type = small_plane_airframe_2
-								modules = {
-									fixed_main_weapon_slot = heavy_mg_4x
-									fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-									fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-									engine_type_slot = engine_3_1x
-									special_type_slot_1 = empty
-									special_type_slot_2 = empty
-									special_type_slot_3 = empty
-								}
-							icon = "GFX_USA_fighter2_medium"
-							}
-			
-						add_equipment_to_stockpile = {
-							type = small_plane_airframe_2
-							producer = ROOT
-							amount = 150
-							variant_name = "P-40 - [TAG]"
-						}
-						}
-					TAG = "[?random_num]"
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = survivability_studies
-				}
-				meta_effect = {
-						text = {
-							create_equipment_variant = {
-								name = "P-40 - [TAG]"
-								type = small_plane_airframe_2
-								modules = {
-									fixed_main_weapon_slot = light_mg_4x
-									fixed_auxiliary_weapon_slot_1 = light_mg_4x
-									fixed_auxiliary_weapon_slot_2 = light_mg_4x
-									engine_type_slot = engine_3_1x
-									special_type_slot_1 = self_sealing_fuel_tanks_small
-									special_type_slot_2 = armor_plate_small
-									special_type_slot_3 = armor_plate_small
-								}
-							icon = "GFX_USA_fighter2_medium"
-							}
-			
-						add_equipment_to_stockpile = {
-							type = small_plane_airframe_2
-							producer = ROOT
-							amount = 150
-							variant_name = "P-40 - [TAG]"
-						}
-						}
-					TAG = "[?random_num]"
-					}
-
-			}
-			else = {
-				meta_effect = {
-						text = {
-							create_equipment_variant = {
-								name = "P-40 - [TAG]"
-								type = small_plane_airframe_2
-								modules = {
-									fixed_main_weapon_slot = light_mg_4x
-									fixed_auxiliary_weapon_slot_1 = light_mg_4x
-									fixed_auxiliary_weapon_slot_2 = light_mg_4x
-									engine_type_slot = engine_3_1x
-									special_type_slot_1 = empty
-									special_type_slot_2 = empty
-									special_type_slot_3 = empty
-								}
-							icon = "GFX_USA_fighter2_medium"
-							}
-			
-						add_equipment_to_stockpile = {
-							type = small_plane_airframe_2
-							producer = ROOT
-							amount = 150
-							variant_name = "P-40 - [TAG]"
-						}
-						}
-					TAG = "[?random_num]"
-					}
-			}
-
-
+			add_ideas = ALI_jinling_arsenal
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				producer = ROOT
+				amount = 200
 			}
 		}
-	else = {
-	custom_effect_tooltip = ALI_flying_tigers_tt
-	air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = ALI_flying_tigers
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-	hidden_effect = {
-				set_technology = {
-					fighter2 = 1
-				}
-				add_equipment_to_stockpile = {
-				type = fighter_equipment_2
-				producer = ROOT
-				amount = 150
-			}
-			}
 	}
-	}
-	search_filters = {FOCUS_FILTER_AIR_XP}
-}
 	focus = {
 		id = ALI_the_hump
 		icon = GFX_focus_CIC_the_hump
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = ALI_national_revolutionary_army
+		relative_position_id = ALI_jinling_arsenal
 		prerequisite = {
-			focus = ALI_national_revolutionary_army
+			focus = ALI_jinling_arsenal
 		}
 
 		ai_will_do = {
@@ -3336,27 +3271,27 @@ focus_tree = {
 			add_ideas = ALI_the_hump
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 500
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 200
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 100
 			}
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 100
 			}
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 20
 			}
 		if = {
@@ -3393,7 +3328,6 @@ focus_tree = {
 			hidden_effect = {
 				division_template = {
 					name = "German-Trained Division"
-					division_names_group = CHI_INF_01
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -3437,13 +3371,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
 	focus = {
-		id = ALI_eighth_route_army
+		id = ALI_fifth_route_army
 		icon = GFX_focus_CIC_eighth_route_army
 		x = 0
 		y = 1
 		cost = 5
-		text_icon = land_focus_style
 		relative_position_id = ALI_defenders_of_shanghai
+		
 		prerequisite = {
 			focus = ALI_defenders_of_shanghai
 		}
@@ -3452,7 +3386,27 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			custom_effect_tooltip = ALI_eighth_route_army_tt
+			custom_effect_tooltip = ALI_fifth_route_army_units_tt
+			if = {
+				limit = {
+					NOT = {
+						has_tech = tech_field_hospital
+					}
+				}
+				set_technology = {
+					tech_field_hospital = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_tech = tech_field_hospital2
+					}
+				}
+				set_technology = {
+					tech_field_hospital2 = 1
+				}
+			}
 			hidden_effect = {
 				division_template = {
 					name = "Communist Division"
@@ -3462,17 +3416,23 @@ focus_tree = {
 						infantry = { x = 0 y = 1 }
 						infantry = { x = 0 y = 2 }
 						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
 						infantry = { x = 1 y = 2 }
 						infantry = { x = 1 y = 3 }
-						infantry = { x = 1 y = 4 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 3 y = 2 }
 					}
 					support = {
 						recon = { x = 0 y = 0 }
 						artillery = { x = 0 y = 1 }
-						engineer = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 2}
 					}
 				}
 				random_owned_controlled_state = {
@@ -3480,12 +3440,16 @@ focus_tree = {
 					create_unit = {
 						division = "name = \"115th Division\" division_template = \"Communist Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
 						owner = ROOT
-						count=4
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"120th Division\" division_template = \"Communist Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
 					}
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 	}
 	focus = {
 		id = ALI_united_front
@@ -3497,25 +3461,25 @@ focus_tree = {
 		relative_position_id = ALI_guerilla_warfare
 		prerequisite = {
 			focus = ALI_guerilla_warfare
-			focus = ALI_flying_tigers
-			focus = ALI_eighth_route_army
+			focus = ALI_the_hump
+			focus = ALI_fifth_route_army
 		}
-available = {
+		available = {
 			or = {
-			and = {
+				and = {
 					has_completed_focus = ALI_guerilla_warfare
-					has_completed_focus = ALI_flying_tigers
+					has_completed_focus = ALI_the_hump
+				}
+				and = { 
+					has_completed_focus = ALI_the_hump
+					has_completed_focus = ALI_fifth_route_army
+				}
+				and = { 
+					has_completed_focus = ALI_guerilla_warfare
+					has_completed_focus = ALI_fifth_route_army
+				}
+			}
 		}
-			and = { 
-				has_completed_focus = ALI_flying_tigers
-				has_completed_focus = ALI_eighth_route_army
-				}
-			and = { 
-				has_completed_focus = ALI_guerilla_warfare
-				has_completed_focus = ALI_eighth_route_army
-				}
-				}
-				}
 		ai_will_do = {
 			factor = 1
 		}
@@ -3601,7 +3565,7 @@ available = {
 	focus = {
 		id = ALI_war_of_resistance
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		x = 2
+		x = 5
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -3609,6 +3573,7 @@ available = {
 		prerequisite = {
 			focus = ALI_united_front
 			focus = ALI_the_king_of_kings
+			focus = ALI_the_peoples_tiger
 		}
 		ai_will_do = {
 			factor = 1
@@ -3626,7 +3591,7 @@ available = {
 	focus = {
 		id = ALI_USMC
 		icon = GFX_focus_CIC_USMC
-		x = 5
+		x = 3
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -3638,7 +3603,6 @@ available = {
 			factor = 1
 		}
 			mutually_exclusive = {
-			focus = ALI_french_liberation_army
 			focus = ALI_US_12th_army_group
 		}
 		available = {
@@ -3681,19 +3645,19 @@ available = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 				type = cv_small_plane_naval_bomber_airframe_1
-				producer = ROOT
+				producer = ALI
 				amount = 100
 				variant_name = "Devastator"
 			}
 			add_equipment_to_stockpile = {
 				type = cv_small_plane_airframe_1
-				producer = ROOT
+				producer = ALI
 				amount = 100
 				variant_name = "F2A Buffalo"
 			}
 			add_equipment_to_stockpile = {
 				type = cv_small_plane_cas_airframe_1
-				producer = ROOT
+				producer = ALI
 				amount = 50
 				variant_name = "Vindicator"
 			}
@@ -3735,17 +3699,17 @@ available = {
 		        }
 				add_equipment_to_stockpile = {
 					type = cv_nav_bomber_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 100
 				}
 				add_equipment_to_stockpile = {
 					type = cv_fighter_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 100
 				}
 				add_equipment_to_stockpile = {
 					type = cv_CAS_equipment_1
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 				for_loop_effect = {
@@ -3809,8 +3773,6 @@ available = {
 				  }
 				division_template = {
 					name = "US Artillery Division"
-					division_names_group = USA_INF_01
-
 					regiments = {
 						marine = { x = 0 y = 0 }
 						marine = { x = 0 y = 1 }
@@ -3951,7 +3913,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "B-23 - [TAG]"
 						}
@@ -3980,7 +3942,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "B-23 - [TAG]"
 						}
@@ -4013,7 +3975,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = large_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 25
 							variant_name = "B-17 - [TAG]"
 						}
@@ -4042,7 +4004,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = large_plane_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 25
 							variant_name = "B-17 - [TAG]"
 						}
@@ -4067,12 +4029,12 @@ available = {
 		        }
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment_1
-				producer = ROOT
+				producer = ALI
 				amount = 150
 			}
 			add_equipment_to_stockpile = {
 				type = strat_bomber_equipment_1
-				producer = ROOT
+				producer = ALI
 				amount = 50
 				}
 			}
@@ -4148,8 +4110,6 @@ available = {
 				}
 				division_template = {
 					name = "US Amphibious Division"
-					division_names_group = USA_INF_01
-				
 					regiments = {
 						amphibious_armor = { x = 0 y = 0 }
 						amphibious_armor = { x = 0 y = 1 }
@@ -4306,6 +4266,95 @@ available = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}
+
+	### Soviet ###
+	focus = {
+		id = ALI_soviet_expeditionary_force
+		icon = GFX_goal_support_communism
+		text_icon = land_focus_style
+		x = 0
+		y = 6
+		cost = 2
+		relative_position_id = ALI_commonwelth
+		available = {
+				and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_the_kings_choice
+						focus_progress = {
+							focus = ALI_the_kings_choice
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_us_army
+						focus_progress = {
+							focus = ALI_us_army
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+			ROOT = {
+					NOT = {
+						has_completed_focus = ALI_cbi
+						focus_progress = {
+							focus = ALI_cbi
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_commonwelth
+						focus_progress = {
+							focus = ALI_commonwelth
+							progress > 0
+						}
+					}
+				}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_french_forces
+						focus_progress = {
+							focus = ALI_french_forces
+							progress > 0
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALI_add_sov_equipment_tt
+			custom_effect_tooltip = ALI_add_usa_units_tt
+			ALI_add_sov_equipment = yes
+			ALI_add_sov_units = yes
+			add_ideas = ALI_talented_young_officiers
+		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_country_flag = AAA_hide_focus_tree
+				}
+				has_completed_focus = ALI_soviet_expeditionary_force
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+
 	focus = {
 		id = ALI_m3_halftracks
 		icon = GFX_goal_generic_army_motorized
@@ -4365,109 +4414,6 @@ available = {
 		}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
-
-	### Soviet ###
-	focus = {
-		id = ALI_soviet_expeditionary_force
-		icon = GFX_goal_support_communism
-		x = 0
-		y = 6
-		cost = 2
-		relative_position_id = ALI_commonwelth
-		available = {
-				and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_the_kings_choice
-						focus_progress = {
-							focus = ALI_the_kings_choice
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_us_army
-						focus_progress = {
-							focus = ALI_us_army
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-			ROOT = {
-					NOT = {
-						has_completed_focus = ALI_cbi
-						focus_progress = {
-							focus = ALI_cbi
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_commonwelth
-						focus_progress = {
-							focus = ALI_commonwelth
-							progress > 0
-						}
-					}
-				}
-		}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALI_add_sov_equipment_tt
-			custom_effect_tooltip = ALI_add_usa_units_tt
-			ALI_add_sov_equipment = yes
-			ALI_add_sov_units = yes
-			add_ideas = ALI_talented_young_officiers
-		}
-		allow_branch = {
-			OR = {
-				NOT = {
-					has_country_flag = AAA_hide_focus_tree
-				}
-				has_completed_focus = ALI_soviet_expeditionary_force
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
-	#focus = {
-	#	id = ALI_blood_and_iron
-	#	icon = GFX_goal_generic_war_with_comintern
-	#	x = 0
-	#	y = 1
-	#	cost = 5
-	#	relative_position_id = ALI_soviet_expeditionary_force
-	#	prerequisite = {
-	#		focus = ALI_soviet_expeditionary_force
-	#	}
-	#
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-	#	completion_reward = {
-	#		#Gives Moblie Assualt Doctrine %
-	#		add_doctrine_cost_reduction = {
-	#			name = land_doc_bonus
-	#			cost_reduction = 0.5
-	#			uses = 2
-	#			category = cat_mass_assault
-	#		}
-	#		army_experience = 100
-	#		navy_experience = 100
-	#		air_experience = 100
-	#	}
-	#}
 
 #█████  ███  █   █ █████ █████ █████     █     █████ █████ █████ 
 #█     █   █ █   █   █   █       █       █     █     █       █   
@@ -4631,7 +4577,7 @@ available = {
 			hidden_effect = {
 			add_equipment_to_stockpile = {
 				type = heavy_tank_destroyer_chassis_3
-				producer = ROOT
+				producer = ALI
 				amount = 100
 				variant_name = "ISU-152"
 				}
@@ -4651,7 +4597,7 @@ available = {
 		}
 			add_equipment_to_stockpile = {
 				type = heavy_tank_destroyer_equipment_3
-				producer = ROOT
+				producer = ALI
 				amount = 100
 				}
 			}
@@ -4788,7 +4734,6 @@ available = {
 				}
 				division_template = {
 					name = "Guards Mechanized Corps"
-					division_names_group = SOV_GMC_01
 
 					regiments = {
 						mechanized = { x = 0 y = 0 }
@@ -4832,8 +4777,6 @@ available = {
 				}
 				division_template = {
 					name = "Guards Mechanized Corps"
-					division_names_group = SOV_GMC_01
-
 					regiments = {
 						mechanized = { x = 0 y = 0 }
 						mechanized = { x = 0 y = 1 }
@@ -4888,8 +4831,6 @@ available = {
 			hidden_effect = {
 				division_template = {
 					name = "Guards Tank Corps"
-					division_names_group = SOV_GTC_01
-
 					regiments = {
 						heavy_armor = { x = 0 y = 0 }
 						heavy_armor = { x = 0 y = 1 }
@@ -4962,7 +4903,7 @@ available = {
 			}
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 500
 			}
 		}
@@ -5031,8 +4972,6 @@ available = {
 			hidden_effect = {
 				division_template = {
 					name = "Rifle Corps"
-					division_names_group = SOV_INF_01
-
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -5197,8 +5136,6 @@ available = {
 			hidden_effect = {
 				division_template = {
 					name = "Vozdushno-Desantnaya Div."
-					division_names_group = SOV_PAR_01
-
 					regiments = {
 						paratrooper = { x = 0 y = 0 }
 						paratrooper = { x = 0 y = 1 }
@@ -5228,54 +5165,8 @@ available = {
 			}
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 50
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
-	}
-	focus = {
-		id = ALI_arm_local_militias
-		icon = GFX_focus_SOV_penal_battalions
-		x = 0
-		y = 1
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = ALI_armored_trains
-		prerequisite = {
-			focus = ALI_armored_trains
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALI_arm_local_militias_tt
-			hidden_effect = {
-				division_template = {
-					name = "Red Militia Division"
-					is_locked = yes
-					force_allow_recruiting = yes
-
-					regiments = {
-						penal_battalion = { x = 0 y = 0 }
-						penal_battalion = { x = 0 y = 1 }
-						penal_battalion = { x = 0 y = 2 }
-						penal_battalion = { x = 1 y = 0 }
-						penal_battalion = { x = 1 y = 1 }
-					}
-					priority = 0
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 907 }
-					create_unit = {
-						division = "division_template = \"Red Militia Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 20
-					}
-				}
 			}
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
@@ -5326,6 +5217,53 @@ available = {
 	}
 	search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
+	focus = {
+		id = ALI_arm_local_militias
+		icon = GFX_focus_SOV_penal_battalions
+		x = 0
+		y = 1
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = ALI_armored_trains
+		prerequisite = {
+			focus = ALI_armored_trains
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALI_arm_local_militias_tt
+			hidden_effect = {
+				division_template = {
+					name = "Red Militia Division"
+					is_locked = yes
+					force_allow_recruiting = yes
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+					}
+					priority = 0
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 907 }
+					create_unit = {
+						division = "division_template = \"Red Militia Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 20
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+	}
+
 	focus = {
 		id = ALI_short_range_bombing_equipment
 		icon = GFX_goal_generic_CAS
@@ -5378,7 +5316,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Il-2 - [TAG]"
 						}
@@ -5408,7 +5346,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Il-2 - [TAG]"
 						}
@@ -5435,7 +5373,7 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = small_plane_cas_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 200
 							variant_name = "Il-2 - [TAG]"
 						}
@@ -5456,7 +5394,7 @@ available = {
 				}
 				add_equipment_to_stockpile = {
 				type = CAS_equipment_1
-				producer = ROOT
+				producer = ALI
 				amount = 200
 			}
 			}
@@ -5764,6 +5702,7 @@ available = {
 	focus = {
 		id = ALI_the_kings_choice
 		icon = GFX_focus_generic_scandinavia_flags
+		text_icon = land_focus_style
 		cost = 2
 		ai_will_do = {
 			factor = 100
@@ -5821,7 +5760,18 @@ available = {
 						}
 					}
 				}
-		}
+			}
+			and = {
+				ROOT = {
+					NOT = {
+						has_completed_focus = ALI_french_forces
+						focus_progress = {
+							focus = ALI_french_forces
+							progress > 0
+						}
+					}
+				}
+			}
 		}
 		allow_branch = {
 			OR = {
@@ -5889,59 +5839,14 @@ available = {
 			}
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
-				producer = ROOT
+				producer = ALI
 				amount = 500
 			}
 			add_ideas = ALI_fortitude_north_idea
 		}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
-	focus = {
-		id = ALI_military_police_forces
-		icon = GFX_goal_generic_allies_build_infantry
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = ALI_avonforce
-		prerequisite = {
-			focus = ALI_avonforce
-		}
-		x = 0
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = ALI_military_police_forces_tt
-			hidden_effect = {
-				division_template = {
-					name = "Royal Guards"
-					division_names_group = NOR_GAR_01
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1}
-					}
-					support = {
-					recon = { x = 0 y = 0 }
-					engineer = { x = 0 y = 1 }
-					artillery = { x = 0 y = 2 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Norwegian Royal Guards\" division_template = \"Royal Guards\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 6
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
+
 	focus = {
 		id = ALI_elverum_declaration
 		icon = GFX_focus_generic_improve_the_administration
@@ -6040,8 +5945,6 @@ available = {
 				}
 				division_template = {
 					name = "Avonforce"
-					division_names_group = ENG_MNT_01
-
 					regiments = {
 						mountaineers = { x = 0 y = 0 }
 						mountaineers = { x = 0 y = 1 }
@@ -6075,6 +5978,51 @@ available = {
 						division = "name = \"Avonforce\" division_template = \"Avonforce\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
 						owner = ROOT
 						count = 4
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
+		id = ALI_military_police_forces
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = ALI_avonforce
+		prerequisite = {
+			focus = ALI_avonforce
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ALI_military_police_forces_tt
+			hidden_effect = {
+				division_template = {
+					name = "Royal Guards"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1}
+					}
+					support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Norwegian Royal Guards\" division_template = \"Royal Guards\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 6
 					}
 				}
 			}
@@ -6190,7 +6138,6 @@ available = {
 		icon = GFX_focus_CIC_british_commandos
 		cost = 5
 		text_icon = land_focus_style
-		text_icon = land_focus_style
 		relative_position_id = ALI_the_kings_choice
 		prerequisite = {
 			focus = ALI_the_kings_choice
@@ -6248,6 +6195,71 @@ available = {
 		}
 	}
 	focus = {
+		id = ALI_no1_commandos
+		icon = GFX_focus_YUG_ikarus
+		cost = 5
+		text_icon = land_focus_style
+		relative_position_id = ALI_royal_commandos
+		prerequisite = {
+			focus = ALI_royal_commandos
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ALI_no1_commandos_tt
+			hidden_effect = {
+				if = {
+					limit ={
+						not = { has_tech = tech_mountaineers }
+					}
+					set_technology ={ 
+						tech_mountaineers = 1
+						popup = no
+					}
+				}
+				division_template = {
+					name = "No. 1 Commandos"
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+						mountaineers = { x = 0 y = 4 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+						mountaineers = { x = 1 y = 4 }
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 3 }
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						artillery_brigade = { x = 3 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						anti_air = { x= 0 y = 2 }
+						anti_tank = { x = 0 y = 3}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 907 }
+					create_unit = {
+						division = "name = \"Commandos\" division_template = \"No. 1 Commandos\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
 		id = ALI_royal_marines
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5
@@ -6272,8 +6284,6 @@ available = {
 				}
 				division_template = {
 					name = "Royal Marines"
-					division_names_group = ENG_MAR_01
-
 					regiments = {
 						marine = { x = 0 y = 0 }
 						marine = { x = 0 y = 1 }
@@ -6313,6 +6323,30 @@ available = {
 			}
 		}
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+	}
+	focus = {
+		id = ALI_bren_guns
+		icon = GFX_focus_CIC_bren_guns
+		cost = 5
+		text_icon = industry_focus_style
+		relative_position_id = ALI_royal_commandos
+		prerequisite = {
+			focus = ALI_royal_commandos
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = ALI_bren_guns_idea
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+			mio:ALI_lysaghts_works_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.15
+				}
+			}
+		}
 	}
 	focus = {
 		id = ALI_long_range_air_infiltration
@@ -6356,8 +6390,6 @@ available = {
 				}
 				division_template = {
 					name = "Special Air Service"
-					division_names_group = ENG_PAR_01
-
 					regiments = {
 						paratrooper = { x = 0 y = 0 }
 						paratrooper = { x = 0 y = 1 }
@@ -6406,13 +6438,13 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_fighter_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "Bristol Beaufighter - [TAG]"
 						}
 						add_equipment_to_stockpile = {
 						type = transport_plane_equipment
-						producer = ROOT
+						producer = ALI
 						amount = 50
 						}
 					}
@@ -6441,13 +6473,13 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_fighter_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "Bristol Beaufighter - [TAG]"
 						}
 						add_equipment_to_stockpile = {
 							type = transport_plane_equipment
-							producer = ROOT
+							producer = ALI
 							amount = 50
 						}
 						}
@@ -6480,13 +6512,13 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_fighter_airframe_2
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "Bristol Beaufighter - [TAG]"
 						}
 						add_equipment_to_stockpile = {
 							type = transport_plane_equipment
-							producer = ROOT
+							producer = ALI
 							amount = 50
 						}
 
@@ -6517,13 +6549,13 @@ available = {
 			
 						add_equipment_to_stockpile = {
 							type = medium_plane_fighter_airframe_22
-							producer = ROOT
+							producer = ALI
 							amount = 125
 							variant_name = "Bristol Beaufighter - [TAG]"
 						}
 						add_equipment_to_stockpile = {
 							type = transport_plane_equipment
-							producer = ROOT
+							producer = ALI
 							amount = 50
 						}
 						}
@@ -6541,8 +6573,6 @@ available = {
 				}
 				division_template = {
 					name = "Special Air Service"
-					division_names_group = ENG_PAR_01
-
 					regiments = {
 						paratrooper = { x = 0 y = 0 }
 						paratrooper = { x = 0 y = 1 }
@@ -6557,12 +6587,12 @@ available = {
 				}
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment_2
-				producer = ROOT
+				producer = ALI
 				amount = 125
 			}
 			add_equipment_to_stockpile = {
 					type = transport_plane_equipment
-					producer = ROOT
+					producer = ALI
 					amount = 50
 				}
 		}
@@ -6577,101 +6607,10 @@ available = {
 				}
 			}
 	}
-		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 	}
+	search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 }
 
-	focus = {
-		id = ALI_no1_commandos
-		icon = GFX_focus_YUG_ikarus
-		cost = 5
-		text_icon = land_focus_style
-		relative_position_id = ALI_royal_commandos
-		prerequisite = {
-			focus = ALI_royal_commandos
-		}
-		x = 3
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = ALI_no1_commandos_tt
-			hidden_effect = {
-				if = {
-					limit ={
-						not = { has_tech = tech_mountaineers }
-					}
-					set_technology ={ 
-						tech_mountaineers = 1
-						popup = no
-					}
-				}
-				division_template = {
-					name = "No. 1 Commandos"
-					division_names_group = ENG_MAR_01
-
-					regiments = {
-						mountaineers = { x = 0 y = 0 }
-						mountaineers = { x = 0 y = 1 }
-						mountaineers = { x = 0 y = 2 }
-						mountaineers = { x = 0 y = 3 }
-						mountaineers = { x = 0 y = 4 }
-						mountaineers = { x = 1 y = 0 }
-						mountaineers = { x = 1 y = 1 }
-						mountaineers = { x = 1 y = 2 }
-						mountaineers = { x = 1 y = 3 }
-						mountaineers = { x = 1 y = 4 }
-						mountaineers = { x = 2 y = 0 }
-						mountaineers = { x = 2 y = 1 }
-						mountaineers = { x = 2 y = 2 }
-						mountaineers = { x = 2 y = 3 }
-						artillery_brigade = { x = 3 y = 0 }
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						anti_air = { x= 0 y = 2 }
-						anti_tank = { x = 0 y = 3}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 907 }
-					create_unit = {
-						division = "name = \"Commandos\" division_template = \"No. 1 Commandos\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
-					}
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-	}
-	focus = {
-		id = ALI_bren_guns
-		icon = GFX_focus_CIC_bren_guns
-		cost = 5
-		text_icon = industry_focus_style
-		relative_position_id = ALI_royal_commandos
-		prerequisite = {
-			focus = ALI_royal_commandos
-		}
-		x = 1
-		y = 1
-		completion_reward = {
-			add_ideas = ALI_bren_guns_idea
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-			mio:ALI_lysaghts_works_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.15
-				}
-			}
-		}
-	}
 	focus = {
 		id = ALI_mountbatten_at_the_helm
 		icon = GFX_focus_SWE_en_svensk_tiger 
@@ -6835,8 +6774,6 @@ available = {
 			hidden_effect = {
 				division_template = {
 					name = "Special Air Service"
-					division_names_group = ENG_PAR_01
-
 					regiments = {
 						paratrooper = { x = 0 y = 0 }
 						paratrooper = { x = 0 y = 1 }
@@ -6862,7 +6799,7 @@ available = {
 				}
 				add_equipment_to_stockpile = {
 					type = transport_plane_equipment
-					producer = ROOT
+					producer = ALI
 					amount = 25
 				}
 			}
@@ -6955,7 +6892,7 @@ available = {
 			focus = ALI_commonwelth
 		}
 		relative_position_id = ALI_commonwelth
-		x = -7
+		x = -8
 		y = 2
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -7100,7 +7037,7 @@ available = {
 	focus = {
 		id = ALI_abbisinian_ambitions
 		icon = GFX_focus_ETH_lord_of_lords
-		x = 2
+		x = 5
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
@@ -7156,28 +7093,27 @@ available = {
 			custom_effect_tooltip = ALI_the_chitet_tt
 			hidden_effect = {
 			division_template = {
-							name = "Chitet Sefari"		
-							division_names_group = ETH_INF_03
-							is_locked = yes
-							force_allow_recruiting = yes
-							regiments = {
-								irregular_infantry = { x = 0 y = 0 }
-								irregular_infantry = { x = 0 y = 1 }
-								irregular_infantry = { x = 0 y = 2 }
-								irregular_infantry = { x = 0 y = 3 }
-								irregular_infantry = { x = 1 y = 0 }
-								irregular_infantry = { x = 1 y = 1 }
-								irregular_infantry = { x = 1 y = 2 }
-								irregular_infantry = { x = 1 y = 3 }
-							}
-							support = {
-						artillery = { x = 0 y = 0 }
-						anti_air = { x = 0 y = 1 }
-						engineer = { x = 0 y = 2 }
-						recon = { x = 0 y = 3 }
-					}
-							division_cap = 24
-						}
+				name = "Chitet Sefari"		
+				is_locked = yes
+				force_allow_recruiting = yes
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 0 y = 3 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 1 y = 3 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+					recon = { x = 0 y = 3 }
+				}
+				division_cap = 24
+			}
 			random_owned_controlled_state = {
 					limit = { ROOT = { has_full_control_of_state = PREV } }
 					prioritize = { 907 }
@@ -7249,8 +7185,6 @@ focus = {
 				}
 		division_template = {
 				name = "Somali Camel Corps"
-				#division_names_group = FIN_INF_01
-
 				regiments = {
 					camelry = { x = 0 y = 0 }
 					camelry = { x = 0 y = 1 }
@@ -7460,7 +7394,7 @@ focus = {
 focus = {
 		id = ALI_scavenging_tactics
 		icon = GFX_focus_ETH_scavenging_tactics
-		x = 7
+		x = 10
 		y = 2
 		cost = 5
 		text_icon = land_focus_style
@@ -7489,7 +7423,7 @@ focus = {
 focus = {
 		id = ALI_bomb_proofing
 		icon = GFX_goal_generic_occupy_start_war
-		x = 8
+		x = 11
 		y = 3
 		cost = 5
 		text_icon = air_focus_style
@@ -7504,4 +7438,1017 @@ focus = {
 	add_ideas = ALI_bomb_proofing_idea
 	}
 }
+
+focus = {
+	id = ALI_french_forces
+	icon = GFX_focus_attack_france
+	
+	x = 15
+	y = 0
+	cost = 5
+	relative_position_id = ALI_commonwelth
+	ai_will_do = {
+		factor = 100
+	}
+	available = {
+		AND = {
+		ROOT = {
+			NOT = {
+				has_completed_focus = ALI_the_kings_choice
+				focus_progress = {
+					focus = ALI_the_kings_choice
+					progress > 0
+				}
+			}
+		}
+	}
+	and = {
+		ROOT = {
+			NOT = {
+				has_completed_focus = ALI_us_army
+				focus_progress = {
+					focus = ALI_us_army
+					progress > 0
+				}
+			}
+		}
+	}
+	and = {
+		ROOT = {
+			NOT = {
+				has_completed_focus = ALI_cbi
+				focus_progress = {
+					focus = ALI_cbi
+					progress > 0
+				}
+			}
+		}
+	}
+	and = {
+		ROOT = {
+			NOT = {
+				has_completed_focus = ALI_soviet_expeditionary_force
+				focus_progress = {
+					focus = ALI_soviet_expeditionary_force
+					progress > 0
+				}
+			}
+		}
+}
+and = {
+	ROOT = {
+		NOT = {
+			has_completed_focus = ALI_commonwelth
+			focus_progress = {
+				focus = ALI_commonwelth
+				progress > 0
+			}
+		}
+	}
+}
+}
+	allow_branch = {
+		OR = {
+			NOT = {
+				has_country_flag = AAA_hide_focus_tree
+			}
+			has_completed_focus = ALI_us_army
+		}
+	}
+	completion_reward = {
+		ALI_add_usa_equipment = yes
+		#custom_effect_tooltip = ALI_add_usa_generals_tt
+		ALI_add_usa_units = yes
+
+	}
+}
+
+focus = {
+	id = ALI_army_of_the_maginot
+	icon = GFX_focus_CIC_maginot
+	x = 3
+	y = 1
+	cost = 5
+	relative_position_id = ALI_french_forces
+	
+	prerequisite = {
+		focus = ALI_french_forces
+	}
+	mutually_exclusive = {
+		focus = ALI_french_liberation_army
+	}
+	ai_will_do = {
+		factor = 0.5 # Deprioritized because AI dont make no tanks
+	}
+	available = {
+					NOT={has_global_flag = ALI_army_of_the_maginot_banned}
+		if = {
+			limit = {
+				any_allied_country = {
+					exists = yes
+				}
+			}
+			any_allied_country = {
+				NOT = {
+					has_completed_focus = ALI_french_liberation_army
+					focus_progress = {
+						focus = ALI_french_liberation_army
+						progress > 0
+					}
+				}
+			}
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = ALI_unlock_generals
+		ALI_add_french_equipment = yes
+
+		set_variable = { var_doctrine = 1 } # AI DOCTRINE
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_grand_battle_plan
+		}
+		army_experience = 100
+		navy_experience = 100
+		air_experience = 100
+	}
+}
+focus = {
+	id = ALI_the_locano_spirit
+	icon = GFX_goal_generic_military_sphere
+	
+	x = -1
+	y = 1
+	cost = 5
+	relative_position_id = ALI_army_of_the_maginot
+	prerequisite = {
+		focus = ALI_army_of_the_maginot
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		add_ideas = ALI_the_locano_spirit
+	}
+}
+focus = {
+	id = ALI_ZOAN
+	icon = GFX_goal_generic_air_fighter2
+	
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = ALI_the_locano_spirit
+	prerequisite = {
+		focus = ALI_the_locano_spirit
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		air_experience = 100
+		custom_effect_tooltip = ALI_ZOAN_tt
+		hidden_effect = {
+			set_variable_to_random = {
+				var = random_num
+				max = 999
+				integer = yes
+			}
+			meta_effect = {
+				text = {
+					create_equipment_variant = {
+						name = "P-36A - [TAG]" #
+						type = small_plane_airframe_1
+						modules = {
+							fixed_main_weapon_slot = light_mg_4x
+							fixed_auxiliary_weapon_slot_1 = light_mg_2x
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = empty
+						}
+						icon = "GFX_USA_fighter1_medium"
+					}
+			
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_1
+						producer = ROOT
+						amount = 75
+						variant_name = "P-36A - [TAG]"
+					}
+				}
+			TAG = "[?random_num]"
+			}
+			meta_effect = {
+				text = {
+					create_equipment_variant = {
+						name = "A-20 - [TAG]" #
+						type = small_plane_cas_airframe_2
+						modules = {
+							fixed_main_weapon_slot = small_bomb_bay
+							fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+							engine_type_slot = engine_2_2x
+							special_type_slot_1 = hmg_defense_turret
+						}
+						icon = "GFX_USA_CAS2_medium"
+					}
+			
+					add_equipment_to_stockpile = {
+						type = small_plane_cas_airframe_2
+						producer = ROOT
+						amount = 50
+						variant_name = "A-20 - [TAG]"
+					}
+				}
+			TAG = "[?random_num]"
+			}
+		}	
+	}
+}
+focus = {
+	id = ALI_established_telephone_lines
+	icon = GFX_goal_generic_radar
+	x = 1
+	y = 1
+	cost = 5
+	relative_position_id = ALI_army_of_the_maginot
+	
+	prerequisite = {
+		focus = ALI_army_of_the_maginot
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		add_ideas = ALI_established_telephone_lines
+		if = {
+			limit = {
+				NOT = {
+					has_tech = radio_detection
+				}
+			}
+			set_technology = {
+				radio_detection = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_tech = decimetric_radar
+				}
+			}
+			set_technology = {
+				decimetric_radar = 1
+			}
+		}
+	}
+}
+focus = {
+	id = ALI_char_de_bataille
+	icon = GFX_goal_generic_army_tanks
+	
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = ALI_established_telephone_lines
+	prerequisite = {
+		focus = ALI_established_telephone_lines
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_tech = improved_heavy_tank_chassis
+				}
+			}
+			set_technology = {
+				improved_heavy_tank_chassis = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Char B1 bis"
+			type = heavy_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_cannon
+				turret_type_slot = tank_heavy_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 7
+			}
+			icon = "GFX_FRA_improved_heavy_tank_medium"
+		}
+		custom_effect_tooltip = ALI_char_de_bataille_units_tt
+		if = {
+			limit = {
+				NOT = {
+					has_tech = mechanised_infantry
+				}
+			}
+			set_technology = {
+				mechanised_infantry = 1
+			}
+		}
+		hidden_effect = {
+			
+			division_template = {
+				name = "Brigades Légères Mécaniques"
+				division_names_group = GER_Arm_01
+
+				regiments = {
+					heavy_armor = { x = 0 y = 0 }
+					heavy_armor = { x = 0 y = 1 }
+					heavy_armor = { x = 0 y = 2 }
+					heavy_armor = { x = 0 y = 3 }
+					heavy_armor = { x = 1 y = 0 }
+					heavy_armor = { x = 1 y = 1 }
+					heavy_armor = { x = 1 y = 2 }
+					heavy_armor = { x = 1 y = 3 }
+					mechanized = { x = 2 y = 0 }
+					mechanized = { x = 2 y = 1 }
+					mechanized = { x = 2 y = 2 }
+					mechanized = { x = 2 y = 3 }
+					mechanized = { x = 3 y = 0 }
+					mechanized = { x = 3 y = 1 }
+					mechanized = { x = 3 y = 2 }
+				}
+				support = {
+					anti_air = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1}
+					engineer = { x = 0 y = 2}
+					logistics_company = { x = 0 y = 3}
+
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 458 289 64 }
+				create_unit = {
+					division = "name = \"2e Division Légère Mécanique\" division_template = \"Brigades Légères Mécaniques\" start_experience_factor = 0.3 start_equipment_factor = 1.1 force_equipment_variants = { heavy_tank_chassis_2 = { owner = ROOT version_name = \"Char B1 bis\" } }"
+					owner = ROOT
+					count = 1
+				}
+			}
+		}
+	}
+}
+focus = {
+	id = ALI_folie_a_deux
+	icon = GFX_focus_generic_railway_gun
+	x = 3
+	y = 1
+	cost = 5
+	relative_position_id = ALI_army_of_the_maginot
+	
+	prerequisite = {
+		focus = ALI_army_of_the_maginot
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_tech = railway_gun
+				}
+			}
+			set_technology = {
+				railway_gun = 1
+			}
+		}
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = "Singing Dora"
+		}
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = "Singing Dora"
+		}
+	}
+}
+focus = {
+	id = ALI_prepared_for_a_long_war
+	icon = GFX_goal_generic_axis_build_infantry
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = ALI_folie_a_deux
+	
+	prerequisite = {
+		focus = ALI_folie_a_deux
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		custom_effect_tooltip = ALI_prepared_for_a_long_war_units_tt
+		hidden_effect = {
+			division_template = {
+				name = "French Infantry Division"
+				division_names_group = USA_INF_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					anti_tank_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					anti_tank = { x = 0 y = 0 }
+					artillery = { x = 0 y = 2 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 907 }
+				create_unit = {
+					division = "division_template = \"French Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 5
+				}
+			}
+		}
+	}
+}
+focus = {
+	id = ALI_the_guardian_leader
+	icon = GFX_focus_fra_french_union
+	x = 1
+	y = 1
+	cost = 8
+	relative_position_id = ALI_ZOAN
+	
+	prerequisite = {
+		focus = ALI_ZOAN
+	}
+	prerequisite = {
+		focus = ALI_char_de_bataille
+	}
+	prerequisite = {
+		focus = ALI_prepared_for_a_long_war
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		#army_experience = 100
+		hidden_effect = {
+			#set_cosmetic_tag = ALI_france
+		}
+		retire_country_leader = yes
+		meta_effect = {
+			text = {
+			[TAG]_MAG_jaque_gardien = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+						expire = "1965.1.1.1"
+						traits = { sentinel_of_maginot }
+					}
+				}
+			}
+
+			}
+			TAG = "[THIS.GetTag]"
+		}
+		
+
+		add_political_power = 150
+	}
+}
+focus = {
+	id = ALI_vive_la_france
+	icon = GFX_focus_fra_french_union
+	x = 3
+	y = 1
+	cost = 8
+	relative_position_id = ALI_colonel_motors_leader
+	
+	prerequisite = {
+		focus = ALI_colonel_motors_leader
+		focus = ALI_the_guardian_leader
+	}
+	prerequisite = {
+		focus = ALI_free_french_navy
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		add_ideas = ALI_vive_la_france
+		add_ideas = tot_economic_mobilisation
+	}
+}
+focus = {
+	id = ALI_cross_of_lorraine
+	icon = GFX_focus_generic_strike_at_democracy1
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = ALI_legacy_of_french_innovation
+	
+	prerequisite = {
+		focus = ALI_legacy_of_french_innovation
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		add_ideas = ALI_cross_of_lorraine
+		custom_effect_tooltip = ALI_cross_of_lorraine_tt
+	}
+}
+focus = {
+		id = ALI_communist_forces
+		icon = GFX_focus_CIC_communist_forces
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_cbi
+		
+		prerequisite = {
+			focus = ALI_cbi
+		}
+		mutually_exclusive = {
+			focus = ALI_national_revolutionary_army
+		}
+		ai_will_do = {
+			factor = 1.2
+		}
+		available = {
+						NOT={has_global_flag = ALI_communist_forces_banned}
+			if = {
+				limit = {
+					any_allied_country = {
+						exists = yes
+					}
+				}
+				any_allied_country = {
+					NOT = {
+						has_completed_focus = ALI_national_revolutionary_army
+						focus_progress = {
+							focus = ALI_national_revolutionary_army
+							progress > 0
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALI_unlock_generals
+
+			set_variable = { var_doctrine = 4 } # AI DOCTRINE
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+			army_experience = 100
+			navy_experience = 100
+			air_experience = 100
+		}
+	}
+	focus = {
+		id = ALI_branch_school_training
+		icon = GFX_focus_CIC_mobilize_the_people
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = ALI_communist_forces
+		
+		prerequisite = {
+			focus = ALI_communist_forces
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALI_branch_school_training
+		}
+	}
+	focus = {
+		id = ALI_lessons_of_the_long_march
+		icon = GFX_focus_CIC_gurilla_warfare
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_branch_school_training
+		
+		prerequisite = {
+			focus = ALI_branch_school_training
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALI_lessons_of_the_long_march
+		}
+	}
+	focus = {
+		id = ALI_one_institution_two_names
+		icon = GFX_focus_generic_soviet_politics
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_communist_forces
+		
+		prerequisite = {
+			focus = ALI_communist_forces
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			# NEEDS MORE
+			add_political_power = 150
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = ALI_the_party_commands_the_gun
+		icon = GFX_focus_generic_join_comintern
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_one_institution_two_names
+		
+		prerequisite = {
+			focus = ALI_one_institution_two_names
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALI_the_party_commands_the_gun
+		}
+	}
+		focus = {
+			id = ALI_eighth_route_army
+			icon = GFX_focus_CIC_eighth_route_army
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = ALI_communist_forces
+		
+		prerequisite = {
+			focus = ALI_communist_forces
+		}
+			text_icon = land_focus_style
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				custom_effect_tooltip = ALI_eighth_route_army_tt
+				hidden_effect = {
+					if = {
+						limit ={
+							not = { has_tech = tech_mountaineers }
+						}
+						set_technology ={ 
+							tech_mountaineers = 1
+							popup = no
+						}
+					}
+					division_template = {
+						name = "Communist Division"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						create_unit = {
+							division = "name = \"115th Division\" division_template = \"Communist Division\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+							owner = ROOT
+							count=4
+						}
+					}
+				}
+			}
+			search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+		}
+	focus = {
+		id = ALI_n4a
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_eighth_route_army
+		
+		prerequisite = {
+			focus = ALI_eighth_route_army
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALI_defenders_of_shanghai_units_tt
+			hidden_effect = {
+				division_template = {
+					name = "The New Fourth Army"
+					division_names_group = CHI_INF_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+						mountaineers = { x = 2 y = 3 }
+						mountaineers = { x = 3 y = 0 }
+						mountaineers = { x = 3 y = 1 }
+						mountaineers = { x = 3 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"1st Division\" division_template = \"The New Fourth Army\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"2nd Division\" division_template = \"The New Fourth Army\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"3rd Division\" division_template = \"The New Fourth Army\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ALI_the_peoples_tiger
+		icon = GFX_focus_CIC_united_front
+		x = 2
+		y = 1
+		cost = 8
+		relative_position_id = ALI_lessons_of_the_long_march
+		
+		prerequisite = {
+			focus = ALI_lessons_of_the_long_march
+			focus = ALI_the_party_commands_the_gun
+			focus = ALI_n4a
+		}
+		available = {
+			or = {
+				and = {
+					has_completed_focus = ALI_lessons_of_the_long_march
+					has_completed_focus = ALI_the_party_commands_the_gun
+				}
+				and = { 
+					has_completed_focus = ALI_lessons_of_the_long_march
+					has_completed_focus = ALI_n4a
+				}
+				and = { 
+					has_completed_focus = ALI_the_party_commands_the_gun
+					has_completed_focus = ALI_n4a
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#set_cosmetic_tag = ALI_china
+			
+			retire_country_leader = yes
+			meta_effect = {
+				text = {
+				[TAG]_CCP_hao_lingdao = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = conservatism
+							expire = "1965.1.1.1"
+							traits={ the_peoples_tiger }
+						}
+					}
+				}
+
+				}
+				TAG = "[THIS.GetTag]"
+			}	
+			add_political_power = 150
+			hidden_effect = {
+			}
+		}
+	}
+
+	focus = {
+		id = ALI_dig_for_victory
+		icon = GFX_goal_generic_construction2
+		
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = ALI_commonwelth
+		prerequisite = {
+			focus = ALI_commonwealth_8th_army
+			focus = ALI_canadian_1st_army
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALI_dig_for_victory_idea
+		}
+	}
+	focus = {
+		id = ALI_mad_minute_training
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_dig_for_victory
+		
+		prerequisite = {
+			focus = ALI_dig_for_victory
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		completion_reward = {
+			add_ideas = ALI_mad_minute_idea
+		}
+	}
+	focus = {
+		id = ALI_bletchley_park
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_mad_minute_training
+		
+		prerequisite = {
+			focus = ALI_mad_minute_training
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		completion_reward = {
+			add_ideas = ALI_bletchley_park_idea
+			create_operative_leader = {
+				name = "Nancy Wake"
+				GFX = GFX_portrait_nancy_wake
+				skill = 2
+				traits = { operative_escape_artist operative_commando operative_seducer operative_linguist }
+				bypass_recruitment = yes
+				available_to_spy_master = yes
+				female = yes
+				nationalities = { ALI AXI }
+			}
+		}
+	}
+	focus = {
+		id = ALI_detroit_arsenal
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = ALI_us_army
+		
+		prerequisite = {
+			focus = ALI_US_12th_army_group
+			focus = ALI_USMC
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		completion_reward = {
+			set_technology = {
+				improved_medium_tank_chassis = 1
+			}
+			ALI_add_m4a1_sherman = yes
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis_2
+				producer = ROOT
+				amount = 200
+				variant_name = "M4A1 Sherman"
+			}
+			add_ideas = ALI_detroit_arsenal
+		}
+	}
+	focus = {
+		id = ALI_general_motors
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_detroit_arsenal
+		
+		prerequisite = {
+			focus = ALI_detroit_arsenal
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		completion_reward = {
+			add_ideas = ALI_general_motors
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 600
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		id = ALI_shock_and_awe
+		icon = GFX_goal_poland_goal
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ALI_general_motors
+		
+		prerequisite = {
+			focus = ALI_general_motors
+		}
+
+		ai_will_do = {
+			factor = 0.8
+		}
+		completion_reward = {
+			#Gives Artillery 2 tech + 1000 arty
+			add_tech_bonus = {
+				name = ALI_smoke_and_ashes
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				producer = ROOT
+				amount = 600
+			}
+		}
+	}
 }

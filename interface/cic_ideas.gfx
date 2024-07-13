@@ -1,0 +1,20 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_samuel_sync"
+		texturefile = "gfx/interface/ideas/idea_ALI_samuel_sync.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ALI_bernard_kenneth_bogey"
+		texturefile = "gfx/interface/ideas/idea_ALI_bernard_kenneth_bogey.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_hans_fuchs"
+		texturefile = "gfx/interface/ideas/idea_AXI_hans_fuchs.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_kiyoshi_yoki"
+		texturefile = "gfx/interface/ideas/idea_AXI_kiyoshi_yoki.tga"
+	}
+	
+
+}

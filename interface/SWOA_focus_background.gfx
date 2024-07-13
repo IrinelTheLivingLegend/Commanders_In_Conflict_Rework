@@ -71,4 +71,8 @@ spriteTypes = {
 		name = "GFX_USA2_focus_background"
 		texturefile = "gfx/interface/Focus_Tree_BG/USA2.dds"
 	}
+	spriteType = {
+		name = "GFX_load_1"
+		texturefile = "gfx/loadingscreens.dds"
+	}
 }

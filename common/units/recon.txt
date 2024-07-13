@@ -29,7 +29,7 @@ sub_units = {
 		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -122,7 +122,7 @@ sub_units = {
 		max_organisation 	= 20
 		default_morale 		= 0.3
 		manpower 			= 500
-		training_time 		= 120
+		training_time 		= 30
 
 		#Misc Abilities
 		weight 				= 0.1
@@ -211,7 +211,7 @@ sub_units = {
 		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -297,7 +297,7 @@ sub_units = {
 		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -378,7 +378,7 @@ sub_units = {
 		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -461,7 +461,7 @@ sub_units = {
 		max_organisation = 30
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 
 		#Misc Abilities
 		weight = 0.1
@@ -535,7 +535,7 @@ sub_units = {
 		max_organisation = 45
 		default_morale = 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 		acclimatization_cold_climate_gain_factor = 3
 
 		#Misc Abilities
@@ -615,7 +615,7 @@ sub_units = {
 		max_organisation = 60 #Inf is 60
 		default_morale = 0.3 #Inf is 0.3
 		manpower = 500
-		training_time = 120
+		training_time = 30
 		equipment_capture_factor = 0.05
 
 		#Misc Abilities

@@ -29,7 +29,7 @@ state={
 			}
 		}
 
-		add_claim_by = KUR
+		#add_claim_by = KUR
 	}
 
 	provinces={

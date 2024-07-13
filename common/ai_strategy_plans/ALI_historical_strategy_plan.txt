@@ -7,6 +7,7 @@ ALI_plan1 = {
 		original_tag = ALI
 		original_tag = ALJ
 		original_tag = ALK
+		original_tag = ALL
 		}
 	}
 	enable = {

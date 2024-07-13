@@ -17,7 +17,7 @@ state={
 
 		}
 
-		add_claim_by = SOM
+		#add_claim_by = SOM
 	}
 
 	provinces={

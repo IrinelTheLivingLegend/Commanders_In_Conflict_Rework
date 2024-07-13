@@ -34,7 +34,7 @@ sub_units = {
 		manpower = 1000
 
 		#Misc Abilities
-		training_time = 90
+		training_time = 30
 		suppression = 1.5
 		weight = 0.5
 		
@@ -187,7 +187,7 @@ sub_units = {
 			attack = 0.3
 		}
 		river = {
-			attack = 0.3
+			attack = -0.16
 		}
 		amphibious = {
 			attack = 0.5
@@ -253,7 +253,7 @@ sub_units = {
 			attack = 0.3
 		}
 		river = {
-			attack = 0.3
+			attack = -0.16
 		}
 		amphibious = {
 			attack = 0.5
@@ -450,7 +450,7 @@ sub_units = {
 			attack = -0.1
 		}
 		river = {
-			attack = -0.1
+			attack = -0.28
 			movement = -0.1
 		}
 		amphibious = {
@@ -532,7 +532,7 @@ sub_units = {
 			defence = -0.05
 		}
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 		amphibious = {
@@ -927,7 +927,7 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		plains = {
@@ -950,7 +950,7 @@ sub_units = {
 		}
 
 		river = {
-			attack = -0.1
+			attack = -0.28
 			movement = -0.1
 		}
 
@@ -1037,7 +1037,7 @@ sub_units = {
 			defence = 0.05
 		}
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 		amphibious = {

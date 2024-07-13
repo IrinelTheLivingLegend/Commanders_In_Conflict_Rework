@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		BUL_army_restrictions={
+			picture = generic_production_bonus
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier= {
+			}
+		}
+	}
+}

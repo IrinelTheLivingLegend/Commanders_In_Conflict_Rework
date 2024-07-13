@@ -28,7 +28,7 @@ sub_units = {
 
 		
 		combat_width = 0
-		training_time = 120
+		training_time = 30
 
 		need = {
 			anti_air_equipment = 6
@@ -52,5 +52,6 @@ sub_units = {
 		hard_attack = -0.4
 		air_attack = -0.2
 
+		same_support_type = support_light_tank_aa
 	}
 }

@@ -31,7 +31,7 @@ sub_units = {
 		max_strength = 0.6
 		max_organisation = 5
 		default_morale = 0.1
-		training_time = 120
+		training_time = 30
 		weight = 0.5
 		supply_consumption = 0.15
 
@@ -62,11 +62,11 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 
@@ -113,7 +113,7 @@ sub_units = {
 		max_strength = 0.6
 		max_organisation = 5
 		default_morale = 0.1
-		training_time = 120
+		training_time = 30
 		weight = 0.5
 		supply_consumption = 0.25
 		
@@ -141,11 +141,11 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 
@@ -185,7 +185,7 @@ sub_units = {
 		max_organisation = 5
 		default_morale = 0.1
 		max_strength = 0.6
-		training_time = 120
+		training_time = 30
 		weight = 0.5
 
 		initiative = 0.0075
@@ -216,11 +216,11 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 
@@ -261,7 +261,7 @@ sub_units = {
 		max_organisation = 5
 		default_morale = 0.1
 		max_strength = 0.6
-		training_time = 120
+		training_time = 30
 		weight = 0.5
 
 		supply_consumption = 0.21
@@ -292,11 +292,11 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 
@@ -338,7 +338,7 @@ sub_units = {
 		max_organisation = 5
 		default_morale = 0.1
 		max_strength = 0.6
-		training_time = 120
+		training_time = 30
 		weight = 0.5
 
 		initiative = 0.0075
@@ -369,11 +369,11 @@ sub_units = {
 		}
 
 		fort = {
-			attack = 0.1
+			attack = 0.06
 		}
 
 		river = {
-			attack = -0.2
+			attack = -0.36
 			movement = -0.2
 		}
 

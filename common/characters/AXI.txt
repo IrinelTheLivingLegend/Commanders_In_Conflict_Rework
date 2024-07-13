@@ -1,4 +1,3 @@
-@advisor_cost = 50
 
 characters={
 	###############
@@ -22,7 +21,7 @@ characters={
 			traits = {
 				army_armored_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 8.000
 			}
@@ -62,7 +61,7 @@ characters={
 			traits = {
 				air_chief_reform_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -130,7 +129,7 @@ characters={
 			traits = {
 				army_CombinedArms_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 0.01
 			}
@@ -156,7 +155,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 0.100
 			}
@@ -216,7 +215,7 @@ characters={
 			traits = {
 				army_chief_organizational_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -250,7 +249,7 @@ characters={
 			traits = {
 				army_chief_offensive_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -349,7 +348,7 @@ characters={
 			traits = {
 				army_chief_planning_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -446,7 +445,7 @@ characters={
 			traits = {
 				navy_fleet_logistics_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -493,7 +492,7 @@ characters={
 		}
 
 		advisor = {
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = AXI_rodolfo_graziani
 			ledger = army
@@ -543,7 +542,7 @@ characters={
 			traits = {
 				army_chief_drill_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -578,7 +577,7 @@ characters={
 			traits = {
 				army_chief_entrenchment_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -642,7 +641,7 @@ characters={
 			visible = {
 				has_completed_focus = AXI_army_of_the_po
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -695,7 +694,7 @@ characters={
 		}
 
 		advisor = {
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = AXI_giovanni_messe
 			ledger = army
@@ -768,7 +767,7 @@ characters={
 			traits = {
 				navy_anti_submarine_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -800,7 +799,7 @@ characters={
 		}
 
 		advisor = {
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = AXI_guiseppe_fioravanzo
 			ledger = army
@@ -849,7 +848,7 @@ characters={
 			traits = {
 				air_chief_all_weather_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -885,7 +884,7 @@ characters={
 			traits = {
 				army_chief_maneuver_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -921,7 +920,7 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -954,7 +953,7 @@ characters={
 			traits = {
 				army_chief_defensive_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -990,7 +989,7 @@ characters={
 			traits = {
 				air_chief_safety_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1015,7 +1014,7 @@ characters={
 			traits = {
 				army_infantry_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 2.000
 			}
@@ -1051,7 +1050,7 @@ characters={
 			traits = {
 				navy_capital_ship_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				base = 1.000
 			}
@@ -1090,7 +1089,7 @@ characters={
 			traits = {
 				army_concealment_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1128,7 +1127,7 @@ characters={
 			traits = {
 				army_logistics_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 3.000
 			}
@@ -1155,7 +1154,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = AXI_hisaichi_terauchi
 			ledger = army
@@ -1190,7 +1189,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = isoroku_yamamoto
 			ledger = navy
@@ -1233,7 +1232,7 @@ characters={
 			traits = {
 				navy_amphibious_assault_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1319,7 +1318,7 @@ characters={
 			traits = {
 				army_chief_reform_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1342,7 +1341,7 @@ characters={
 			traits = {
 				army_chief_morale_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1368,7 +1367,7 @@ characters={
 			traits = {
 				army_regrouping_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1707,7 +1706,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 0.200
 			}
@@ -1781,7 +1780,7 @@ characters={
 			traits = {
 				navy_carrier_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1808,7 +1807,7 @@ characters={
 			traits = {
 				war_industrialist
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1854,7 +1853,7 @@ characters={
 			traits = {
 				silent_workhorse
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1877,7 +1876,7 @@ characters={
 			traits = {
 				prince_of_terror
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1902,7 +1901,7 @@ characters={
 				quartermaster_general
 			}
 
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1924,7 +1923,7 @@ characters={
 			traits = {
 				armaments_organizer
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1954,7 +1953,7 @@ characters={
 			ai_will_do = {
 				base = 0.300
 			}
-			cost = advisor_cost
+			cost = 50
 			
 		}
 	}
@@ -1978,7 +1977,7 @@ characters={
 			traits = {
 				head_of_intelligence
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -2118,7 +2117,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = advisor_cost
+			cost = 50
 			slot = theorist
 			idea_token = HUN_shvoy_kalman
 			ledger = army
@@ -2227,7 +2226,7 @@ characters={
 			traits = {
 				army_artillery_3
 			}
-			cost = advisor_cost
+			cost = 50
 			ai_will_do = {
 				factor = 0.01
 			}

@@ -1,5 +1,3 @@
-@mobilization_law_cost = 150
-
 ideas = {
 
 	mobilization_laws = {
@@ -8,7 +6,7 @@ ideas = {
 
 		disarmed_nation = {
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 7
 
@@ -25,7 +23,7 @@ ideas = {
 
 		volunteer_only = {
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 6
 
@@ -53,7 +51,7 @@ ideas = {
 
 		limited_conscription = {
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 5
 
@@ -78,11 +76,6 @@ ideas = {
 					#Prio if low on manpower
 					factor = 20
 					manpower_per_military_factory < 1000
-				}
-				modifier = {
-					tag = ENG
-					has_idea_with_trait = military_theorist
-					factor = 20
 				}
 				modifier = {
 					factor = 0
@@ -114,37 +107,6 @@ ideas = {
 					factor = 20
 					manpower_per_military_factory <  800
 				}
-
-				modifier = {
-					tag = TUR
-					has_dlc = "Battle for the Bosporus"
-					factor = 50
-				}
-
-				# china relies a lot on throwing bodies at the enemy
-				modifier = {
-					factor = 3
-
-					original_tag = CHI
-					has_manpower < 300000
-				}
-
-				# soviet also relies a lot on throwing bodies at the enemy
-				modifier = {
-					factor = 3
-
-					original_tag = SOV
-					has_manpower < 300000
-				}
-
-				modifier = {
-					factor = 5
-
-					original_tag = SOV
-					has_war = yes
-					has_manpower < 1000000
-				}
-
 				modifier = {
 					factor = 0
 					NOT = { has_idea = limited_conscription }
@@ -152,7 +114,7 @@ ideas = {
 
 			}
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 4
 
@@ -187,34 +149,6 @@ ideas = {
 					factor = 0.5
 					manpower_per_military_factory >  1000
 				}
-				modifier = {
-					#Block has plenty manpower
-					factor = 0
-					NOT = { tag = CHI }
-					NOT = { tag = SOV }
-					manpower_per_military_factory >  3000
-				}
-
-				modifier = { # china relies a lot on throwing bodies at the enemy
-					factor = 3
-
-					original_tag = CHI
-					has_manpower < 200000
-				}
-
-				modifier = {
-					factor = 5
-
-					original_tag = SOV
-					has_manpower < 400000
-				}
-
-				modifier = { # germany needs this before russia, badly
-					factor = 10
-
-					original_tag = GER
-					has_manpower < 2000000
-				}
 
 				modifier = {
 					factor = 0
@@ -223,7 +157,7 @@ ideas = {
 
 			}
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 3
 
@@ -270,33 +204,13 @@ ideas = {
 					manpower_per_military_factory >  1000
 				}
 				modifier = {
-					#Block has plenty manpower
-					factor = 0
-					NOT = { tag = CHI }
-					manpower_per_military_factory >  2800
-				}
-
-				modifier = { # china relies a lot on throwing bodies at the enemy
-					factor = 3
-
-					tag = CHI
-					has_manpower < 200000
-				}
-				modifier = {
-					factor = 10
-					original_tag = SOV
-					date > 1943.1.1
-					has_manpower < 2000000
-				}
-
-				modifier = {
 					factor = 0
 					NOT = { has_idea = service_by_requirement }
 				}
 
 			}
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 2
 
@@ -355,7 +269,7 @@ ideas = {
 
 			}
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 1
 
@@ -373,7 +287,7 @@ ideas = {
 		### Ethiopian National Levy
 		ETH_chitet_law = {
 			picture = ETH_chitet_law
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 6
 
@@ -402,7 +316,7 @@ ideas = {
 		ETH_chitet_law_peace_time = {
 			picture = ETH_chitet_law
 
-			cost = mobilization_law_cost
+			cost = 150
 			removal_cost = -1
 			level = 6
 
