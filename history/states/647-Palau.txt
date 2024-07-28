@@ -5,8 +5,8 @@ state=
 	state_category = small_island
 	manpower = 1 # = 10000
 	resources = {
-		oil = 10
-		steel = 30
+		#oil = 10
+		#steel = 30
 	}
 	history=
 	{

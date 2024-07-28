@@ -2,14 +2,6 @@ state = {
 	id = 2
 	name = "STATE_2" # Latium
 	manpower = 1 # = 1
-	resources={
-		oil=10
-		aluminium=10
-		tungsten=10
-		rubber=10
-		steel=40
-		chromium=10
-	}
 	state_category = city
 
 	history = {

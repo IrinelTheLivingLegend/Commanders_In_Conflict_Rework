@@ -195,6 +195,27 @@ add_ideas = {
 	global_production_control
 }
 
+add_dynamic_modifier = {
+	modifier = ALI_industry
+	scope = ALJ
+}
+add_dynamic_modifier = { 
+	modifier = ALI_army
+	scope = ALJ
+}
+add_dynamic_modifier = { 
+	modifier = ALI_airforce
+	scope = ALJ
+}
+add_dynamic_modifier = { 
+	modifier = ALI_navy
+	scope = ALJ
+}
+add_dynamic_modifier = { 
+	modifier = ALI_politics
+	scope = ALJ
+}
+
 set_convoys = 100
 
 set_politics = {
@@ -209,18 +230,6 @@ set_popularities = {
 	communism = 0
 }
 
-add_opinion_modifier = {
-    target = AXI
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = AXJ
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = AXK
-    modifier = mod_no_enemy_trade
-}
 
 if = {
 	limit = {

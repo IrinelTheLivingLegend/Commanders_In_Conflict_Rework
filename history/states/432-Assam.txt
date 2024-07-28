@@ -1,18 +1,10 @@
 state={
 	id=432
 	name="STATE_432"
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 5
-		chromium = 5
-	}
 
 	history={
 		owner=NOO
-		add_core_of=NOO
+		add_core_of = NOO
 		buildings = {
 			#arms_factory = 2
 			#industrial_complex=2

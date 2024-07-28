@@ -6,8 +6,8 @@ state={
 	}
 	manpower = 1 # = 1042276
 	resources={
-		#chromium=45 # was: 84
-		#steel = 10 # was: 20
+		##chromium=45 # was: 84
+		##steel = 10 # was: 20
 	}
 
 	state_category = city

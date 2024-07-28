@@ -36,10 +36,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_CIC_bren_guns.dds"
 	}
 	SpriteType = { 
-		name = "GFX_focus_CIC_british_commandos"
-		texturefile = "gfx/interface/goals/focus_CIC_british_commandos.dds"
-	}
-	SpriteType = { 
 		name = "GFX_focus_CIC_amphibious_warfare"
 		texturefile = "gfx/interface/goals/focus_CIC_amphibious_warfare.dds"
 	}
@@ -236,20 +232,19 @@ SpriteType = {
 		texturefile = "gfx/interface/goals/industry_phase_3.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_picture"
-		texturefile = "gfx/interface/ideas/idea_picture.dds"
-	}
-
-	spriteType = {
-		name = "GFX_idea_phase_one"
-		texturefile = "gfx/interface/ideas/phase_one.dds"
+		name = "GFX_focus_united_kingdom"
+		texturefile = "gfx/interface/goals/united_kingdom.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_phase_two"
-		texturefile = "gfx/interface/ideas/phase_two.dds"
+		name = "GFX_focus_polonia"
+		texturefile = "gfx/interface/goals/polonia.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_phase_three"
-		texturefile = "gfx/interface/ideas/phase_three.dds"
+		name = "GFX_focus_soviet_union"
+		texturefile = "gfx/interface/goals/soviet_union.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_hungary"
+		texturefile = "gfx/interface/goals/hungary.dds"
 	}
 }

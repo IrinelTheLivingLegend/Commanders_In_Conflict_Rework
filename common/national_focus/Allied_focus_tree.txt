@@ -1,15 +1,390 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
-### search_filters = {FOCUS_FILTER_INDUSTRY}
-### search_filters = {FOCUS_FILTER_STABILITY}
-### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-### search_filters = {FOCUS_FILTER_MANPOWER}
-### search_filters = {FOCUS_FILTER_ARMY_XP}
-### search_filters = {FOCUS_FILTER_NAVY_XP}
-### search_filters = {FOCUS_FILTER_AIR_XP}
-### search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-### search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+#  ████  ███  █   █ █████ █████ █   █ █████     █   █  ███  ████  
+# █     █   █ ██  █   █   █     ██  █   █       ██ ██ █   █ █   █ 
+# █     █   █ █ █ █   █   ████  █ █ █   █       █ █ █ █████ ████  
+# █     █   █ █  ██   █   █     █  ██   █       █   █ █   █ █     
+#  ████  ███  █   █   █   █████ █   █   █       █   █ █   █ █     
+# Copy and search one of these phrases for better mobility within the file
+#
+#
+#	content map
+#
+#	tips
+#
+#	focus time pointers
+#
+#	country stats
+#
+#	start of focus tree
+#
+#	start of USA
+#
+#	start of UK
+# 
+#	start of France
+#
+#	start of Soviet Union
+#
+#	start of Nationalist China
+#
+#	start of Communist China
+#
+#	start of Greece
+#
+#	start of Yugoslavia
+#
+#	start of Canada
+#
+#	start of Australia
+#
+#	start of India
+#
+#	start of Netherlands
+#
+#	start of Norway
+#
+#	start of Sweden
+#
+#	start of Denmark
+#
+#	start of Switzerland
+#
+#	start of Czechoslovakia
+#
+#	start of Poland
+#
+#	start of Baltics
+#
+#	start of Mexico
+#
+#	start of Brazil
+#
+#	start of Ethiopia
+#
+#	start of old tree
 
+# █████ █████ ████  █████ 
+#   █     █   █   █ █     
+#   █     █   ████  █████ 
+#   █     █   █         █ 
+#   █   █████ █     █████
+# TODO tips
+#
+# GFX assets will not load without a prerequisite/available section.
+# add_to_variable = { 
+# 	ALI_production_factory_max_efficiency_factor = 0.05
+# 	tooltip = ALI_production_factory_max_efficiency_factor_tooltip
+# }
+
+# █████  ███   ████ █   █ █████     █████ █████ █   █ █████ 
+# █     █   █ █     █   █ █           █     █   ██ ██ █     
+# ████  █   █ █     █   █ █████       █     █   █ █ █ ████  
+# █     █   █ █     █   █     █       █     █   █   █ █     
+# █      ███   ████ █████ █████       █   █████ █   █ █████ 
+#
+# ████   ███  █████ █   █ █████ █████ ████  █████ 
+# █   █ █   █   █   ██  █   █   █     █   █ █     
+# ████  █   █   █   █ █ █   █   ████  ████  █████ 
+# █     █   █   █   █  ██   █   █     █   █     █ 
+# █      ███  █████ █   █   █   █████ █   █ █████ 
+# focus time pointers
+@no_cost = 0
+
+#  ████  ███  █   █ █   █ █████ ████  █   █     █████ █████  ███  █████ █████ 
+# █     █   █ █   █ ██  █   █   █   █  █ █      █       █   █   █   █   █     
+# █     █   █ █   █ █ █ █   █   ████    █       █████   █   █████   █   █████ 
+# █     █   █ █   █ █  ██   █   █   █   █           █   █   █   █   █       █ 
+#  ████  ███  █████ █   █   █   █   █   █       █████   █   █   █   █   █████ 
+# country stats
+
+#American Industry
+@USA_mpw = 43
+@USA_infr = 4
+@USA_civs = 62
+@USA_mils = 5
+@USA_docks = 10
+@USA_rsc = 4
+@USA_oil = 10
+@USA_aluminium = 10
+@USA_thungsten = 10
+@USA_rubber = 10
+@USA_steel = 10
+@USA_chromium = 10
+
+#English Industry
+@ENG_mpw = 23
+@ENG_infr = 4
+@ENG_civs = 21
+@ENG_mils = 10
+@ENG_docks = 11
+@ENG_rsc = 4
+@ENG_aluminium = 10
+@ENG_thungsten = 10
+@ENG_rubber = 10
+@ENG_steel = 10
+@ENG_chromium = 10
+
+#French Industry
+@FRA_mpw = 23
+@FRA_infr = 4
+@FRA_civs = 25
+@FRA_mils = 6
+@FRA_docks = 8
+@FRA_rsc = 3
+@FRA_aluminium = 10
+@FRA_thungsten = 10
+@FRA_rubber = 10
+@FRA_steel = 10
+@FRA_chromium = 10
+
+#Soviet Industry
+@SOV_mpw = 23
+@SOV_infr = 4
+@SOV_civs = 25
+@SOV_mils = 6
+@SOV_docks = 8
+@SOV_rsc = 3
+@SOV_aluminium = 10
+@SOV_thungsten = 10
+@SOV_rubber = 10
+@SOV_steel = 10
+@SOV_chromium = 10
+
+#National Chinese Industry
+@CHI_mpw = 97
+@CHI_infr = 2
+@CHI_civs = 21
+@CHI_mils = 11
+@CHI_docks = 1
+@CHI_rsc = 2
+@CHI_aluminium = 10
+@CHI_thungsten = 10
+@CHI_rubber = 10
+@CHI_steel = 10
+@CHI_chromium = 10
+
+#Communist Chinese Industry
+@PRC_mpw = 97
+@PRC_infr = 2
+@PRC_civs = 21
+@PRC_mils = 11
+@PRC_docks = 1
+@PRC_rsc = 2
+@PRC_aluminium = 10
+@PRC_thungsten = 10
+@PRC_rubber = 10
+@PRC_steel = 10
+@PRC_chromium = 10
+
+#Greek Industry
+@GRE_mpw = 18
+@GRE_infr = 2
+@GRE_civs = 17
+@GRE_mils = 6
+@GRE_docks = 4
+@GRE_rsc = 2
+@GRE_aluminium = 10
+@GRE_thungsten = 10
+@GRE_rubber = 10
+@GRE_steel = 10
+@GRE_chromium = 10
+
+#Yugoslavian Industry
+@YUG_mpw = 18
+@YUG_infr = 2
+@YUG_civs = 17
+@YUG_mils = 6
+@YUG_docks = 4
+@YUG_rsc = 2
+@YUG_aluminium = 10
+@YUG_thungsten = 10
+@YUG_rubber = 10
+@YUG_steel = 10
+@YUG_chromium = 10
+
+#Canadian Industry
+@CAN_mpw = 15
+@CAN_infr = 3
+@CAN_civs = 23
+@CAN_mils = 9
+@CAN_docks = 3
+@CAN_rsc = 4
+@CAN_aluminium = 10
+@CAN_thungsten = 10
+@CAN_rubber = 10
+@CAN_steel = 10
+@CAN_chromium = 10
+
+#Australian Industry
+@AST_mpw = 18
+@AST_infr = 2
+@AST_civs = 17
+@AST_mils = 6
+@AST_docks = 4
+@AST_rsc = 2
+@AST_aluminium = 10
+@AST_thungsten = 10
+@AST_rubber = 10
+@AST_steel = 10
+@AST_chromium = 10
+
+#Indian Industry
+@RAJ_mpw = 90
+@RAJ_infr = 2
+@RAJ_civs = 23
+@RAJ_mils = 3
+@RAJ_docks = 2
+@RAJ_rsc = 2
+@RAJ_aluminium = 10
+@RAJ_thungsten = 10
+@RAJ_rubber = 10
+@RAJ_steel = 10
+@RAJ_chromium = 10
+
+#Netherlands Industry
+@HOL_mpw = 90
+@HOL_infr = 2
+@HOL_civs = 23
+@HOL_mils = 3
+@HOL_docks = 2
+@HOL_rsc = 2
+@HOL_aluminium = 10
+@HOL_thungsten = 10
+@HOL_rubber = 10
+@HOL_steel = 10
+@HOL_chromium = 10
+
+#Norvegian Industry
+@NOR_mpw = 13
+@NOR_infr = 4
+@NOR_civs = 17
+@NOR_mils = 5
+@NOR_docks = 5
+@NOR_rsc = 4
+@NOR_aluminium = 10
+@NOR_thungsten = 10
+@NOR_rubber = 10
+@NOR_steel = 10
+@NOR_chromium = 10
+
+#Swedish Industry
+@SWE_mpw = 14
+@SWE_infr = 4
+@SWE_civs = 17
+@SWE_mils = 6
+@SWE_docks = 6
+@SWE_rsc = 4
+@SWE_aluminium = 10
+@SWE_thungsten = 10
+@SWE_rubber = 10
+@SWE_steel = 10
+@SWE_chromium = 10
+
+#Danish Industry
+@DEN_mpw = 14
+@DEN_infr = 4
+@DEN_civs = 17
+@DEN_mils = 6
+@DEN_docks = 6
+@DEN_rsc = 4
+@DEN_aluminium = 10
+@DEN_thungsten = 10
+@DEN_rubber = 10
+@DEN_steel = 10
+@DEN_chromium = 10
+
+#Swiss Industry
+@SWI_mpw = 18
+@SWI_infr = 2
+@SWI_civs = 17
+@SWI_mils = 6
+@SWI_docks = 4
+@SWI_rsc = 2
+@SWI_aluminium = 10
+@SWI_thungsten = 10
+@SWI_rubber = 10
+@SWI_steel = 10
+@SWI_chromium = 10
+
+#Czechoslovak Industry
+@CZE_mpw = 18
+@CZE_infr = 2
+@CZE_civs = 17
+@CZE_mils = 6
+@CZE_docks = 4
+@CZE_rsc = 2
+@CZE_aluminium = 10
+@CZE_thungsten = 10
+@CZE_rubber = 10
+@CZE_steel = 10
+@CZE_chromium = 10
+
+#Polish Industry
+@POL_mpw = 20
+@POL_infr = 3
+@POL_civs = 20
+@POL_mils = 11
+@POL_docks = 0
+@POL_rsc = 3
+@POL_aluminium = 10
+@POL_thungsten = 10
+@POL_rubber = 10
+@POL_steel = 10
+@POL_chromium = 10
+
+#Baltic Industry
+@BAL_mpw = 20
+@BAL_infr = 3
+@BAL_civs = 20
+@BAL_mils = 11
+@BAL_docks = 0
+@BAL_rsc = 3
+@BAL_aluminium = 10
+@BAL_thungsten = 10
+@BAL_rubber = 10
+@BAL_steel = 10
+@BAL_chromium = 10
+
+#Mexican Industry
+@MEX_mpw = 18
+@MEX_infr = 2
+@MEX_civs = 17
+@MEX_mils = 6
+@MEX_docks = 4
+@MEX_rsc = 2
+@MEX_aluminium = 10
+@MEX_thungsten = 10
+@MEX_rubber = 10
+@MEX_steel = 10
+@MEX_chromium = 10
+
+#Brazilian Industry
+@BRA_mpw = 23
+@BRA_infr = 2
+@BRA_civs = 22
+@BRA_mils = 4
+@BRA_docks = 3
+@BRA_rsc = 2
+@BRA_aluminium = 10
+@BRA_thungsten = 10
+@BRA_rubber = 10
+@BRA_steel = 10
+@BRA_chromium = 10
+
+#Ethiopian Industry
+@ETH_mpw = 18
+@ETH_infr = 2
+@ETH_civs = 17
+@ETH_mils = 6
+@ETH_docks = 4
+@ETH_rsc = 2
+@ETH_aluminium = 10
+@ETH_thungsten = 10
+@ETH_rubber = 10
+@ETH_steel = 10
+@ETH_chromium = 10
+
+
+# start of focus tree
 focus_tree = {
 	id = allied_focus_tree
 
@@ -30,90 +405,887 @@ focus_tree = {
 	continuous_focus_position = { x = 5600 y = 1400 }
 	shared_focus = INDUSTRY_start_rapid_industralisation
 
-# ████  ███  █   █ █   █  ███  █   █ █   █ █████ █     █████ █   █ 
-#█     █   █ ██ ██ ██ ██ █   █ ██  █ █   █ █     █       █   █   █ 
-#█     █   █ █ █ █ █ █ █ █   █ █ █ █ █ █ █ ████  █       █   █████ 
-#█     █   █ █   █ █   █ █   █ █  ██ ██ ██ █     █       █   █   █ 
-# ████  ███  █   █ █   █  ███  █   █ █   █ █████ █████   █   █   █
+# █   █ █████  ███  
+# █   █ █     █   █ 
+# █   █ █████ █████ 
+# █   █     █ █   █ 
+# █████ █████ █   █ 
+# start of USA
 
 	focus = {
-		id = ALI_commonwelth
-		icon = GFX_focus_AST_rats_tobruk
-		text_icon = land_focus_style
+		id = ALI_usa
+		icon = GFX_focus_chi_mission_to_the_us
+		text_icon = politics_focus_style
 		x = 0
 		y = 0
-		cost = 2
-		available = {
-				AND = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_the_kings_choice
-						focus_progress = {
-							focus = ALI_the_kings_choice
-							progress > 0
-						}
-					}
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
 				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_us_army
-						focus_progress = {
-							focus = ALI_us_army
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_cbi
-						focus_progress = {
-							focus = ALI_cbi
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_soviet_expeditionary_force
-						focus_progress = {
-							focus = ALI_soviet_expeditionary_force
-							progress > 0
-						}
-					}
-				}
-			}
-			and = {
-				ROOT = {
-					NOT = {
-						has_completed_focus = ALI_french_forces
-						focus_progress = {
-							focus = ALI_french_forces
-							progress > 0
-						}
-					}
-				}
+				has_completed_focus = ALI_usa
 			}
 		}
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_usa
+			}
+		}
+		cost = 0
+	}
+
+# █   █ █   █ █████ █████ █████ ████      █  █  █████ █   █  ████ ████   ███  █   █ 
+# █   █ ██  █   █     █   █     █   █     █ █     █   ██  █ █     █   █ █   █ ██ ██ 
+# █   █ █ █ █   █     █   ████  █   █     ██ █    █   █ █ █ █  ██ █   █ █   █ █ █ █ 
+# █   █ █  ██   █     █   █     █   █     █  █    █   █  ██ █   █ █   █ █   █ █   █ 
+# █████ █   █ █████   █   █████ ████      █   █ █████ █   █  ███  ████   ███  █   █ 
+# start of UK
+
+	focus = {
+		id = ALI_united_kingdom
+		icon = GFX_focus_united_kingdom
+		text_icon = politics_focus_style
+		x = 2
+		y = 0
+
+		cost = 0
+
 		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_united_kingdom
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_united_kingdom
+			}
+		}
+
+	}
+
+# █████ ████   ███  █   █  ████ █████ 
+# █     █   █ █   █ ██  █ █     █     
+# ████  ████  █████ █ █ █ █     ████  
+# █     █   █ █   █ █  ██ █     █     
+# █     █   █ █   █ █   █  ████ █████ 
+# start of France
+
+	focus = {
+		id = ALI_france
+		icon = GFX_focus_attack_france
+		text_icon = politics_focus_style
+		x = 4
+		y = 0
+
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_france
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_france
+			}
+		}
+	}
+
+# █████  ███  █   █ █████ █████ █████     █   █ █   █ █████  ███  █   █ 
+# █     █   █ █   █   █   █       █       █   █ ██  █   █   █   █ ██  █ 
+# █████ █   █  █ █    █   ████    █       █   █ █ █ █   █   █   █ █ █ █ 
+#     █ █   █  █ █    █   █       █       █   █ █  ██   █   █   █ █  ██ 
+# █████  ███    █   █████ █████   █       █████ █   █ █████  ███  █   █ 
+# start of Soviet Union
+
+	focus = {
+		id = ALI_soviet_union
+		icon = GFX_focus_soviet_union
+		text_icon = politics_focus_style
+		x = 6
+		y = 0
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_soviet_union
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_soviet_union
+			}
+		}
+	}
+
+# █   █  ███  █████ █████  ███  █   █  ███  █     █████ █████ █████      ████ █   █ █████ █   █  ███  
+# ██  █ █   █   █     █   █   █ ██  █ █   █ █       █   █       █       █     █   █   █   ██  █ █   █ 
+# █ █ █ █████   █     █   █   █ █ █ █ █████ █       █   █████   █       █     █████   █   █ █ █ █████ 
+# █  ██ █   █   █     █   █   █ █  ██ █   █ █       █       █   █   	█     █   █   █   █  ██ █   █ 
+# █   █ █   █   █   █████  ███  █   █ █   █ █████ █████ █████   █   	 ████ █   █ █████ █   █ █   █ 
+# start of Nationalist China
+
+	focus = {
+		id = ALI_nationalist_china
+		icon = GFX_focus_generic_china1
+		text_icon = politics_focus_style
+		x = 0
+		y = 1
+
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_nationalist_china
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_nationalist_china
+			}
+		}
+	}
+
+#  ████  ███  █   █ █   █ █   █ █   █ █████ █████ █████      ████ █   █ █████ █   █   ███  
+# █     █   █ ██ ██ ██ ██ █   █ ██  █   █   █       █       █     █   █   █   ██  █  █   █ 
+# █     █   █ █ █ █ █ █ █ █   █ █ █ █   █   █████   █       █     █████   █   █ █ █  █████ 
+# █     █   █ █   █ █   █ █   █ █  ██   █       █   █       █     █   █   █   █  ██  █   █ 
+#  ████  ███  █   █ █   █ █████ █   █ █████ █████   █        ████ █   █ █████ █   █  █   █ 
+#start of Communist China
+
+	focus = {
+		id = ALI_communist_china
+		icon = GFX_focus_PAR_align_with_the_guion_rojo
+		text_icon = politics_focus_style
+		x = 2
+		y = 1
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_communist_china
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_communist_china
+			}
+		}
+	}
+#  ████ ████  █████ █████  ████ █████ 
+# █     █   █ █     █     █     █     
+# █  ██ ████  ████  ████  █     ████  
+# █   █ █   █ █     █     █     █     
+#  ███  █   █ █████ █████  ████ █████ 
+# start of Greece
+	focus = {
+		id = ALI_greece
+		icon = GFX_focus_generic_attack_greece
+		text_icon = politics_focus_style
+		x = 4
+		y = 1
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_greece
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_greece
+			}
+		}
+	}
+
+# █   █ █   █  ████  ███  █████ █      ███  █   █ █████  ███  
+#  █ █  █   █ █     █   █ █     █     █   █ █   █   █   █   █ 
+#   █   █   █ █  ██ █   █ █████ █     █████  █ █    █   █████ 
+#   █   █   █ █   █ █   █     █ █     █   █  █ █    █   █   █ 
+#   █   █████  ███   ███  █████ █████ █   █   █   █████ █   █ 
+# start of Yugoslavia
+
+	focus = {
+		id = ALI_yugoslavia
+		icon = GFX_focus_invite_yugoslavia
+		text_icon = politics_focus_style
+		x = 6
+		y = 1
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_yugoslavia
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_yugoslavia
+			}
+		}
+	}
+#  ████  ███  █   █  ███  ████   ███  
+# █     █   █ ██  █ █   █ █   █ █   █ 
+# █     █████ █ █ █ █████ █   █ █████ 
+# █     █   █ █  ██ █   █ █   █ █   █ 
+#  ████ █   █ █   █ █   █ ████  █   █ 
+# start of Canada
+
+	focus = {
+		id = ALI_canada
+		icon = GFX_focus_attack_canada
+		text_icon = politics_focus_style
+		x = 0
+		y = 2
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_canada
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_canada
+			}
+		}
+	}
+
+#  ███  █   █ █████ █████ ████   ███  █     █████  ███  
+# █   █ █   █ █       █   █   █ █   █ █       █   █   █ 
+# █████ █   █ █████   █   ████  █████ █       █   █████ 
+# █   █ █   █     █   █   █   █ █   █ █       █   █   █ 
+# █   █ █████ █████   █   █   █ █   █ █████ █████ █   █ 
+# start of Australia
+
+	focus = {
+		id = ALI_australia
+		icon = GFX_focus_attack_australia
+		text_icon = politics_focus_style
+		x = 2
+		y = 2
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_australia
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_australia
+			}
+		}
+	}
+
+# █████ █   █ ████  █████  ███  
+#   █   ██  █ █   █   █   █   █ 
+#   █   █ █ █ █   █   █   █████ 
+#   █   █  ██ █   █   █   █   █ 
+# █████ █   █ ████  █████ █   █ 
+# start of India
+
+	focus = {
+		id = ALI_india
+		icon = GFX_focus_attack_india
+		text_icon = politics_focus_style
+		x = 4
+		y = 2
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_india
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_india
+			}
+		}
+	}
+
+# █   █ █████ █████ █   █ █████ ████  █      ███  █   █ ████  █████ 
+# ██  █ █       █   █   █ █     █   █ █     █   █ ██  █ █   █ █     
+# █ █ █ ████    █   █████ ████  ████  █     █████ █ █ █ █   █ █████ 
+# █  ██ █       █   █   █ █     █   █ █     █   █ █  ██ █   █     █ 
+# █   █ █████   █   █   █ █████ █   █ █████ █   █ █   █ ████  █████ 
+#	start of Netherlands
+
+focus = {
+	id = ALI_netherlands
+	icon = GFX_focus_hol_oranje_boven
+	text_icon = politics_focus_style
+	x = 6
+	y = 2
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = ALI_netherlands
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = ALI_netherlands
+		}
+	}
+}
+
+# █   █  ███  ████  █   █  ███  █   █ 
+# ██  █ █   █ █   █ █   █ █   █  █ █  
+# █ █ █ █   █ ████  █ █ █ █████   █   
+# █  ██ █   █ █   █ ██ ██ █   █   █   
+# █   █  ███  █   █ █   █ █   █   █   
+# start of Norway
+
+	focus = {
+		id = ALI_norway
+		icon = GFX_focus_generic_attack_norway
+		text_icon = land_focus_style
+		x = 0
+		y = 3
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_norway
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_norway
+			}
+		}
+	}
+
+# █████ █   █ █████ ████  █████ █   █ 
+# █     █   █ █     █   █ █     ██  █ 
+# █████ █ █ █ ████  █   █ ████  █ █ █ 
+#     █ ██ ██ █     █   █ █     █  ██ 
+# █████ █   █ █████ ████  █████ █   █ 
+# start of Sweden
+
+	focus = {
+		id = ALI_sweden
+		icon = GFX_focus_generic_attack_sweden
+		text_icon = land_focus_style
+		x = 2
+		y = 3
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_sweden
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_sweden
+			}
+		}
+	}
+
+# ████  █████ █   █ █   █  ███  ████  █  █  
+# █   █ █     ██  █ ██ ██ █   █ █   █ █ █   
+# █   █ ████  █ █ █ █ █ █ █████ ████  ██ █  
+# █   █ █     █  ██ █   █ █   █ █   █ █  █  
+# ████  █████ █   █ █   █ █   █ █   █ █   █ 
+#	start of Denmark
+
+focus = {
+	id = ALI_denmark
+	icon = GFX_focus_generic_attack_denmark
+	text_icon = politics_focus_style
+	x = 4
+	y = 3
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = ALI_denmark
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = ALI_denmark
+		}
+	}
+}
+
+# █████ █   █ █████ █████ █████ █████ ████  █      ███  █   █ ████  
+# █     █   █   █     █      █  █     █   █ █     █   █ ██  █ █   █ 
+# █████ █ █ █   █     █     █   ████  ████  █     █████ █ █ █ █   █ 
+#     █ ██ ██   █     █    █    █     █   █ █     █   █ █  ██ █   █ 
+# █████ █   █ █████   █   █████ █████ █   █ █████ █   █ █   █ ████  
+# start of Switzerland
+
+	focus = {
+		id = ALI_switzerland
+		icon = GFX_focus_attack_switzerland
+		text_icon = land_focus_style
+		x = 6
+		y = 3
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_switzerland
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_switzerland
+			}
+		}
+	}
+
+#  ████ █████ █████  ████ █   █  ███  █████ █      ███  █   █  ███  █  █  █████  ███  
+# █        █  █     █     █   █ █   █ █     █     █   █ █   █ █   █ █ █     █   █   █ 
+# █       █   ████  █     █████ █   █ █████ █     █   █  █ █  █████ ██ █    █   █████ 
+# █      █    █     █     █   █ █   █     █ █     █   █  █ █  █   █ █  █    █   █   █ 
+#  ████ █████ █████  ████ █   █  ███  █████ █████  ███    █   █   █ █   █ █████ █   █ 
+#	start of Czechoslovakia
+
+focus = {
+	id = ALI_czechoslovakia
+	icon = GFX_focus_cze_military_research_institute
+	text_icon = politics_focus_style
+	x = 0
+	y = 4
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = ALI_czechoslovakia
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = ALI_czechoslovakia
+		}
+	}
+}
+
+# ████   ███  █      ███  █   █ ████  
+# █   █ █   █ █     █   █ ██  █ █   █ 
+# ████  █   █ █     █████ █ █ █ █   █ 
+# █     █   █ █     █   █ █  ██ █   █ 
+# █      ███  █████ █   █ █   █ ████  	
+# start of Poland
+
+	focus = {
+		id = ALI_poland
+		icon = GFX_focus_polonia
+		text_icon = land_focus_style
+		x = 2
+		y = 4
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_poland
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_poland
+			}
+		}
+	}
+
+# ████   ███  █     █████ █████  ████ █████ 
+# █   █ █   █ █       █     █   █     █     
+# ████  █████ █       █     █   █     █████ 
+# █   █ █   █ █       █     █   █         █ 
+# ████  █   █ █████   █   █████  ████ █████ 
+#	start of Baltics
+
+focus = {
+	id = ALI_baltics
+	icon = GFX_focus_generic_baltic_entente
+	text_icon = politics_focus_style
+	x = 4
+	y = 4
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = ALI_baltics
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = ALI_baltics
+		}
+	}
+}
+
+# █   █ █████ █   █ █████  ████  ███  
+# ██ ██ █      █ █    █   █     █   █ 
+# █ █ █ ████    █     █   █     █   █ 
+# █   █ █      █ █    █   █     █   █ 
+# █   █ █████ █   █ █████  ████  ███  
+# start of Mexico
+
+	focus = {
+		id = ALI_mexico
+		icon = GFX_focus_attack_mexico
+		text_icon = land_focus_style
+		x = 6
+		y = 4
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_mexico
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_mexico
+			}
+		}
+	}
+
+# ████  ████   ███  █████ █████ █     
+# █   █ █   █ █   █    █    █   █     
+# ████  ████  █████   █     █   █     
+# █   █ █   █ █   █  █      █   █     
+# ████  █   █ █   █ █████ █████ █████ 
+# start of Brazil
+
+	focus = {
+		id = ALI_brazil
+		icon = GFX_focus_BRA_empire_of_brazil
+		text_icon = land_focus_style
+		x = 0
+		y = 5
+
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_brazil
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_brazil
+			}
+		}
+	}
+
+# █████ █   █ █   █ █████  ███  ████  █████  ███  
+# █      █ █  █   █   █   █   █ █   █   █   █   █ 
+# ████    █   █████   █   █   █ ████    █   █████ 
+# █       █   █   █   █   █   █ █       █   █   █ 
+# █████   █   █   █ █████  ███  █     █████ █   █ 
+# start of Ethiopia
+
+	focus = {
+		id = ALI_ethiopia
+		icon = GFX_focus_ETH_continuous_supporting_the_arbegnoch
+		text_icon = land_focus_style
+		x = 2
+		y = 5
+		
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = ALI_ethiopia
+			}
+		}
+		available = {
+			#has_country_flag = ban_system_over
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = ALI_ethiopia
+			}
+		}
+
+	}
+	
+#start of old tree
+######################################################################
+
+	focus = {
+		id = ALI_united_kingdomm
+		icon = GFX_focus_united_kingdom
+		text_icon = land_focus_style
+		x = 30
+		y = 0
+
+		cost = 0
+
+		allow_branch = {
+			not = {
+				has_completed_focus = ALI_french_forces
+			}
 			OR = {
 				NOT = {
 					has_country_flag = AAA_hide_focus_tree
 				}
-				has_completed_focus = ALI_commonwelth
+				has_completed_focus = ALI_united_kingdomm
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			custom_effect_tooltip = ALI_add_british_equipment_tt
-			custom_effect_tooltip = ALI_add_commonwelth_units_tt
+			hidden_effect = {
+				for_loop_effect = {
+					# manpower
+					end = @ENG_mpw
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+						}
+						add_manpower = 1000000
+					}
+				}
+				# infrastructure
+				every_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					set_building_level = {
+						type = infrastructure
+						level = @ENG_inf
+						   instant_build = yes
+					}
+					
+				}
+				for_loop_effect = {
+					# civs
+					end = @ENG_civs
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				for_loop_effect = {
+					# mils
+					end = @ENG_mils
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				for_loop_effect = {
+					# dockyards
+					end = @ENG_docks
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							is_coastal = yes
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
 			ALI_add_british_equipment = yes
 			ALI_add_commonwelth_units = yes
 
@@ -134,9 +1306,9 @@ focus_tree = {
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = ALI_commonwelth
+		relative_position_id = ALI_united_kingdomm
 		prerequisite = {
-			focus = ALI_commonwelth
+			focus = ALI_united_kingdomm
 		}
 		mutually_exclusive = {
 			focus = ALI_canadian_1st_army
@@ -490,20 +1662,20 @@ focus = {
 		}
 		available = {
 			or = {
-			and = {
+				and = {
 					has_completed_focus = ALI_cairo_branch
 					has_completed_focus = ALI_indian_4th
+				}
+				and = { 
+					has_completed_focus = ALI_indian_4th
+					has_completed_focus = ALI_tank_hunters
+				}
+				and = { 
+					has_completed_focus = ALI_cairo_branch
+					has_completed_focus = ALI_tank_hunters
+				}
+			}
 		}
-			and = { 
-				has_completed_focus = ALI_indian_4th
-				has_completed_focus = ALI_tank_hunters
-				}
-			and = { 
-				has_completed_focus = ALI_cairo_branch
-				has_completed_focus = ank_hunters
-				}
-				}
-				}
 
 		ai_will_do = {
 			factor = 1
@@ -857,9 +2029,9 @@ focus = {
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = ALI_commonwelth
+		relative_position_id = ALI_united_kingdomm
 		prerequisite = {
-			focus = ALI_commonwelth
+			focus = ALI_united_kingdomm
 		}
 		mutually_exclusive = {
 			focus = ALI_commonwealth_8th_army
@@ -1418,8 +2590,8 @@ focus = {
 		text_icon = land_focus_style
 		x = 32
 		y = 0
-		cost = 2
-		relative_position_id = ALI_commonwelth
+		cost = 0
+		relative_position_id = ALI_united_kingdomm
 		available = {
 				and = {
 				ROOT = {
@@ -1435,9 +2607,9 @@ focus = {
 			and = {
 				ROOT = {
 					NOT = {
-						has_completed_focus = ALI_commonwelth
+						has_completed_focus = ALI_united_kingdomm
 						focus_progress = {
-							focus = ALI_commonwelth
+							focus = ALI_united_kingdomm
 							progress > 0
 						}
 					}
@@ -1507,7 +2679,7 @@ focus = {
 		relative_position_id = ALI_us_army
 		prerequisite = {
 			focus = ALI_us_army
-			focus = ALI_commonwelth
+			focus = ALI_united_kingdomm
 		}
 
 		ai_will_do = {
@@ -1531,7 +2703,7 @@ focus = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = ALI_commonwelth
+					has_completed_focus = ALI_united_kingdomm
 				}
 				create_equipment_variant = {
 					name = "Grant I"
@@ -1726,7 +2898,7 @@ focus = {
 		relative_position_id = ALI_us_army
 			prerequisite = {
 			focus = ALI_us_army
-			focus = ALI_commonwelth
+			focus = ALI_united_kingdomm
 		}
 
 		ai_will_do = {
@@ -1987,27 +3159,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			#Gives Artillery 2 tech + 1000 arty
-			add_tech_bonus = {
-				name = ALI_smoke_and_ashes
-				bonus = 2.0
-				uses = 2
-				category = artillery
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				producer = USA
-				amount = 1000
-			}
-		if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-			mio:ALI_schneider_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.15
-				}
-			}
+			add_ideas = ALI_smoke_and_ashes
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
@@ -2720,118 +3872,6 @@ focus = {
 		search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 	}
-	focus = {
-		id = ALI_vive_la_france
-		icon = GFX_focus_fra_french_union
-		x = 3
-		y = 1
-		cost = 5
-		text_icon = politics_focus_style
-		relative_position_id = ALI_army_of_africa
-		prerequisite = {
-			focus = ALI_ffi
-			focus = ALI_legacy_of_french_innovation
-			focus = ALI_army_of_africa
-		}
-		available = {
-			or = {
-			and = {
-					has_completed_focus = ALI_ffi
-					has_completed_focus = ALI_legacy_of_french_innovation
-		}
-			and = { 
-				has_completed_focus = ALI_legacy_of_french_innovation
-				has_completed_focus = ALI_army_of_africa
-				}
-			and = { 
-				has_completed_focus = ALI_breaking_the_gustav_line
-				has_completed_focus = ALI_army_of_africa
-				}
-				}
-				}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			army_experience = 100
-			hidden_effect = {
-				set_cosmetic_tag = ALI_france
-			}
-			if = {
-				limit = {
-					original_tag = ALI
-				}
-				retire_country_leader = yes
-				ALI_charles_de_gaulle = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = conservatism
-							expire = "1965.1.1.1"
-							traits = { hero_of_france }
-						}
-					}
-				}
-				
-			}
-			else_if = {
-				limit = {
-					original_tag = ALJ
-				}
-				retire_country_leader = yes
-				ALJ_charles_de_gaulle = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = conservatism
-							expire = "1965.1.1.1"
-							traits = { hero_of_france }
-						}
-					}
-				}
-				
-			}
-			else_if = {
-				limit = {
-					original_tag = ALK
-				}
-				retire_country_leader = yes
-				ALK_charles_de_gaulle = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = conservatism
-							expire = "1965.1.1.1"
-							traits = { hero_of_france }
-						}
-					}
-				}
-				
-			}
-			else_if = {
-				limit = {
-					original_tag = ALL
-				}
-				retire_country_leader = yes
-				ALL_charles_de_gaulle = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = conservatism
-							expire = "1965.1.1.1"
-							traits = { hero_of_france }
-						}
-					}
-				}
-				
-			}
-
-			add_political_power = 150
-		}
-		search_filters = {FOCUS_FILTER_ARMY_XP}
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		search_filters = {FOCUS_FILTER_POLITICAL}
-	}
 
 	
 	focus = {
@@ -2947,7 +3987,7 @@ focus = {
 		text_icon = land_focus_style
 		x = 19
 		y = 0
-		cost = 2
+		cost = 0
 		relative_position_id = ALI_us_army
 		available = {
 				and = {
@@ -2986,9 +4026,9 @@ focus = {
 			and = {
 				ROOT = {
 					NOT = {
-						has_completed_focus = ALI_commonwelth
+						has_completed_focus = ALI_united_kingdomm
 						focus_progress = {
-							focus = ALI_commonwelth
+							focus = ALI_united_kingdomm
 							progress > 0
 						}
 					}
@@ -3120,6 +4160,24 @@ focus = {
 			focus = ALI_somua_s35s
 			focus = ALI_army_of_africa
 		}
+
+		available = {
+			or = {
+				and = {
+					has_completed_focus = ALI_army_of_africa
+					has_completed_focus = ALI_ffi
+				}
+				and = { 
+					has_completed_focus = ALI_army_of_africa
+					has_completed_focus = ALI_somua_s35s
+				}
+				and = { 
+					has_completed_focus = ALI_ffi
+					has_completed_focus = AlI_somua_s35s
+				}
+			}
+		}
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -4274,8 +5332,8 @@ available = {
 		text_icon = land_focus_style
 		x = 0
 		y = 6
-		cost = 2
-		relative_position_id = ALI_commonwelth
+		cost = 0
+		relative_position_id = ALI_united_kingdomm
 		available = {
 				and = {
 				ROOT = {
@@ -4313,9 +5371,9 @@ available = {
 			and = {
 				ROOT = {
 					NOT = {
-						has_completed_focus = ALI_commonwelth
+						has_completed_focus = ALI_united_kingdomm
 						focus_progress = {
-							focus = ALI_commonwelth
+							focus = ALI_united_kingdomm
 							progress > 0
 						}
 					}
@@ -5703,11 +6761,11 @@ available = {
 		id = ALI_the_kings_choice
 		icon = GFX_focus_generic_scandinavia_flags
 		text_icon = land_focus_style
-		cost = 2
+		cost = 0
 		ai_will_do = {
 			factor = 100
 		}
-		relative_position_id = ALI_commonwelth
+		relative_position_id = ALI_united_kingdomm
 		x = 15
 		y = 6
 		completion_reward = {
@@ -5720,9 +6778,9 @@ available = {
 				and = {
 				ROOT = {
 					NOT = {
-						has_completed_focus = ALI_commonwelth
+						has_completed_focus = ALI_united_kingdomm
 						focus_progress = {
-							focus = ALI_commonwelth
+							focus = ALI_united_kingdomm
 							progress > 0
 						}
 					}
@@ -6135,7 +7193,7 @@ available = {
 
 	focus = {
 		id = ALI_royal_commandos
-		icon = GFX_focus_CIC_british_commandos
+		icon = GFX_focus_united_kingdom
 		cost = 5
 		text_icon = land_focus_style
 		relative_position_id = ALI_the_kings_choice
@@ -6889,9 +7947,9 @@ available = {
 		cost = 5
 		text_icon = land_focus_style
 		prerequisite ={
-			focus = ALI_commonwelth
+			focus = ALI_united_kingdomm
 		}
-		relative_position_id = ALI_commonwelth
+		relative_position_id = ALI_united_kingdomm
 		x = -8
 		y = 2
 		completion_reward = {
@@ -7319,7 +8377,7 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			set_cosmetic_tag = ALI_ethiopia
+			set_cosmetic_tag = ALI_abbisinia
 			retire_country_leader = yes
 			if = {
 				limit = {
@@ -7445,69 +8503,15 @@ focus = {
 	
 	x = 15
 	y = 0
-	cost = 5
-	relative_position_id = ALI_commonwelth
+	cost = 0
+	relative_position_id = ALI_united_kingdomm
 	ai_will_do = {
 		factor = 100
 	}
-	available = {
-		AND = {
-		ROOT = {
-			NOT = {
-				has_completed_focus = ALI_the_kings_choice
-				focus_progress = {
-					focus = ALI_the_kings_choice
-					progress > 0
-				}
-			}
-		}
-	}
-	and = {
-		ROOT = {
-			NOT = {
-				has_completed_focus = ALI_us_army
-				focus_progress = {
-					focus = ALI_us_army
-					progress > 0
-				}
-			}
-		}
-	}
-	and = {
-		ROOT = {
-			NOT = {
-				has_completed_focus = ALI_cbi
-				focus_progress = {
-					focus = ALI_cbi
-					progress > 0
-				}
-			}
-		}
-	}
-	and = {
-		ROOT = {
-			NOT = {
-				has_completed_focus = ALI_soviet_expeditionary_force
-				focus_progress = {
-					focus = ALI_soviet_expeditionary_force
-					progress > 0
-				}
-			}
-		}
-}
-and = {
-	ROOT = {
-		NOT = {
-			has_completed_focus = ALI_commonwelth
-			focus_progress = {
-				focus = ALI_commonwelth
-				progress > 0
-			}
-		}
-	}
-}
-}
 	allow_branch = {
+		not = {
+			has_completed_focus = ALI_united_kingdomm
+		}
 		OR = {
 			NOT = {
 				has_country_flag = AAA_hide_focus_tree
@@ -7516,8 +8520,77 @@ and = {
 		}
 	}
 	completion_reward = {
+		hidden_effect = {
+			for_loop_effect = {
+				# manpower
+				end = FRA_mpw
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_manpower = 1000000
+				}
+			}
+			# infrastructure
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				set_building_level = {
+					type = infrastructure
+					level = @FRA_infr
+					   instant_build = yes
+				}
+				
+			}
+			for_loop_effect = {
+				# civs
+				end = @FRA_civs
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			for_loop_effect = {
+				# mils
+				end = @FRA_mils
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			for_loop_effect = {
+				# dockyards
+				end = @FRA_dock
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
 		ALI_add_usa_equipment = yes
-		#custom_effect_tooltip = ALI_add_usa_generals_tt
 		ALI_add_usa_units = yes
 
 	}
@@ -8306,7 +9379,7 @@ focus = {
 		x = 0
 		y = 2
 		cost = 5
-		relative_position_id = ALI_commonwelth
+		relative_position_id = ALI_united_kingdomm
 		prerequisite = {
 			focus = ALI_commonwealth_8th_army
 			focus = ALI_canadian_1st_army
@@ -8437,7 +9510,6 @@ focus = {
 			factor = 0.8
 		}
 		completion_reward = {
-			#Gives Artillery 2 tech + 1000 arty
 			add_tech_bonus = {
 				name = ALI_smoke_and_ashes
 				bonus = 1.0
@@ -8447,8 +9519,31 @@ focus = {
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				producer = ROOT
-				amount = 600
+				amount = 1000
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+			mio:ALI_schneider_organization = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.15
+				}
 			}
 		}
 	}
+
+	
 }
+
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+### search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}

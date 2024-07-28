@@ -2,10 +2,6 @@
 state={
 	id=235
 	name="STATE_235"
-	resources={
-		chromium=14.000
-	}
-
 	history={
 		owner = NOO
 		add_core_of = NOO

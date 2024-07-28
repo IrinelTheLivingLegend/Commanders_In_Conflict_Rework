@@ -196,6 +196,27 @@ add_ideas = {
 	global_production_control
 }
 
+add_dynamic_modifier = {
+	modifier = AXI_industry
+	scope = AXL
+}
+add_dynamic_modifier = { 
+	modifier = AXI_army
+	scope = AXL
+}
+add_dynamic_modifier = { 
+	modifier = AXI_airforce
+	scope = AXL
+}
+add_dynamic_modifier = { 
+	modifier = AXI_navy
+	scope = AXL
+}
+add_dynamic_modifier = { 
+	modifier = AXI_politics
+	scope = AXL
+}
+
 recruit_character = AXL_high_command
 recruit_character = AXL_rodolfo_graziani
 recruit_character = AXL_mario_berti

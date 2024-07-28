@@ -5,14 +5,7 @@ state={
 	manpower = 1 # = 300000
 	state_category = city
 
-	resources = {
-		aluminium = 25
-		steel = 25
-		tungsten = 25
-		chromium = 25
-		oil = 25
-		rubber = 25
-	}
+	
 
 	history={
 

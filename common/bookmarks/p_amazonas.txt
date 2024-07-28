@@ -154,13 +154,6 @@ bookmarks = {
 				}
 				add_core_of = ALI
 				remove_core_of = NOO
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 				set_state_category = town
 			}
 			every_state = {
@@ -250,13 +243,6 @@ bookmarks = {
 				}
 				add_core_of = AXI
 				remove_core_of = NOO
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 				set_state_category = town
 			}
 			every_state = {
@@ -270,15 +256,6 @@ bookmarks = {
 				}
 				add_core_of = AXI
 				remove_core_of = NOO
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 				set_state_category = town
 			}
 			every_state = {
@@ -293,72 +270,7 @@ bookmarks = {
 					instant_build = yes
 				}
 			}
-			#resources
-			every_state = {
-				limit = {
-					OR = {
-						state = 498
-						state = 499
-						state = 496
-						state = 500
-						state = 501
-						state = 504
-						state = 926
-						state = 497
-						state = 940
-						state = 939
-						state = 505
-						state = 280
-						state = 504						#ALI
-						state = 307
-						state = 486
-						state = 490
-						state = 491
-						state = 494
-						state = 489
-						state = 306
-						state = 493
-						state = 305
-						state = 303
-						state = 695
-						state = 492						#AXI              
-					}
-				}
-				add_resource = {
-					type = oil
-					amount = 3
-				}
-				add_resource = {
-					type = aluminium
-					amount = 3
-				}
-				add_resource = {
-					type = tungsten
-					amount = 3
-				}
-				add_resource = {
-					type = rubber
-					amount = 3
-				}
-				add_resource = {
-					type = steel
-					amount = 8
-				}
-				add_resource = {
-					type = chromium
-					amount = 3
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+
 			every_state = {
 				limit = {
 					OR = {
@@ -392,26 +304,7 @@ bookmarks = {
 					amount = 30
 				}
 			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 307
-						state = 489
-						state = 493
-						state = 306
-						state = 937
-						state = 926
-						state = 497
-						state = 940
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
+			
 			every_state = {
 				set_building_level = {
 					province = 12997					#Lima

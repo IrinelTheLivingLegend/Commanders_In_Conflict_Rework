@@ -1,3 +1,217 @@
+#  ████  ███  █   █ █████ █████ █   █ █████     █   █  ███  ████  
+# █     █   █ ██  █   █   █     ██  █   █       ██ ██ █   █ █   █ 
+# █     █   █ █ █ █   █   ████  █ █ █   █       █ █ █ █████ ████  
+# █     █   █ █  ██   █   █     █  ██   █       █   █ █   █ █     
+#  ████  ███  █   █   █   █████ █   █   █       █   █ █   █ █    
+# Copy and search one of these phrases for better mobility within the file
+#
+# 
+#	content map
+#
+#	tips
+#
+#	focus time pointers
+#
+#	country stats
+#
+#	start of Germany
+#
+#	start of Italy 
+#
+#	start of Japan
+#
+#	start of Manchuquo
+#
+#	start of Finland
+#
+#	start of Romania
+#
+#	start of Hungary
+#
+#	start of Bulgaria
+#
+#	start of Turkey
+#
+#	start of Spain
+#
+#	start of Portugal
+#
+#	start of Argentina
+#
+#	start of Chile
+#
+#	start of old focus tree
+
+
+#German Industry
+@GER_mpw = 28
+@GER_infr = 4
+@GER_civs = 21
+@GER_mils = 18
+@GER_docks = 7
+@GER_rsc = 4
+@GER_aluminium = 10
+@GER_thungsten = 10
+@GER_rubber = 10
+@GER_steel = 10
+@GER_chromium = 10
+
+#Italian Industry
+@ITA_mpw = 20
+@ITA_infr = 4
+@ITA_civs = 15
+@ITA_mils = 15
+@ITA_docks = 11
+@ITA_rsc = 4
+@ITA_aluminium = 10
+@ITA_thungsten = 10
+@ITA_rubber = 10
+@ITA_steel = 10
+@ITA_chromium = 10
+
+#Japan Industry
+@JAP_mpw = 28
+@JAP_infr = 4
+@JAP_civs = 18
+@JAP_mils = 11
+@JAP_docks = 11
+@JAP_rsc = 4
+@JAP_aluminium = 10
+@JAP_thungsten = 10
+@JAP_rubber = 10
+@JAP_steel = 10
+@JAP_chromium = 10
+
+#Manchu Industry
+@MAN_mpw = 28
+@MAN_infr = 4
+@MAN_civs = 18
+@MAN_mils = 11
+@MAN_docks = 11
+@MAN_rsc = 4
+@MAN_aluminium = 10
+@MAN_thungsten = 10
+@MAN_rubber = 10
+@MAN_steel = 10
+@MAN_chromium = 10
+
+#Finnish Industry
+@FIN_mpw = 13
+@FIN_infr = 3
+@FIN_civs = 17
+@FIN_mils = 7
+@FIN_docks = 2
+@FIN_rsc = 3
+@FIN_aluminium = 10
+@FIN_thungsten = 10
+@FIN_rubber = 10
+@FIN_steel = 10
+@FIN_chromium = 10
+
+#Romanian Industry
+@ROM_mpw = 17
+@ROM_infr = 3
+@ROM_civs = 16
+@ROM_mils = 10
+@ROM_docks = 3
+@ROM_rsc = 3
+@ROM_aluminium = 10
+@ROM_thungsten = 10
+@ROM_rubber = 10
+@ROM_steel = 10
+@ROM_chromium = 10
+
+#Hungarian Industry
+@HUN_mpw = 14
+@HUN_infr = 3
+@HUN_civs = 17
+@HUN_mils = 10
+@HUN_docks = 0
+@HUN_rsc = 3
+@HUN_aluminium = 10
+@HUN_thungsten = 10
+@HUN_rubber = 10
+@HUN_steel = 10
+@HUN_chromium = 10
+
+#Bulgarian Industry
+@BUL_mpw = 14
+@BUL_infr = 3
+@BUL_civs = 21
+@BUL_mils = 6
+@BUL_docks = 0
+@BUL_rsc = 3
+@BUL_aluminium = 10
+@BUL_thungsten = 10
+@BUL_rubber = 10
+@BUL_steel = 10
+@BUL_chromium = 10
+
+#Turkish Industry
+@TUR_mpw = 18
+@TUR_infr = 2
+@TUR_civs = 17
+@TUR_mils = 6
+@TUR_docks = 4
+@TUR_rsc = 2
+@TUR_aluminium = 10
+@TUR_thungsten = 10
+@TUR_rubber = 10
+@TUR_steel = 10
+@TUR_chromium = 10
+
+#Spanish Industry
+@SPR_mpw = 18
+@SPR_infr = 3
+@SPR_civs = 19
+@SPR_mils = 8
+@SPR_docks = 5
+@SPR_rsc = 3
+@SPR_aluminium = 10
+@SPR_thungsten = 10
+@SPR_rubber = 10
+@SPR_steel = 10
+@SPR_chromium = 10
+
+#Portugese Industry
+@POR_mpw = 14
+@POR_infr = 3
+@POR_civs = 19
+@POR_mils = 3
+@POR_docks = 5
+@POR_rsc = 3
+@POR_aluminium = 10
+@POR_thungsten = 10
+@POR_rubber = 10
+@POR_steel = 10
+@POR_chromium = 10
+
+#Argentinian Industry
+@ARG_mpw = 16
+@ARG_infr = 3
+@ARG_civs = 20
+@ARG_mils = 6
+@ARG_docks = 2
+@ARG_rsc = 2
+@ARG_aluminium = 10
+@ARG_thungsten = 10
+@ARG_rubber = 10
+@ARG_steel = 10
+@ARG_chromium = 10
+
+#Chilean Industry
+@CHL_mpw = 16
+@CHL_infr = 3
+@CHL_civs = 20
+@CHL_mils = 6
+@CHL_docks = 2
+@CHL_rsc = 2
+@CHL_aluminium = 10
+@CHL_thungsten = 10
+@CHL_rubber = 10
+@CHL_steel = 10
+@CHL_chromium = 10
+
 focus_tree = { 
 	id = axis_focus_tree
 
@@ -18,11 +232,461 @@ focus_tree = {
 	continuous_focus_position = { x = 5000 y = 1400 }
 	shared_focus = INDUSTRY_start_rapid_industralisation
 
+
+#  ████ █████ ████  █   █  ███  █   █ █   █ 
+# █     █     █   █ ██ ██ █   █ ██  █  █ █  
+# █  ██ ████  ████  █ █ █ █████ █ █ █   █   
+# █   █ █     █   █ █   █ █   █ █  ██   █   
+#  ███  █████ █   █ █   █ █   █ █   █   █   
+# start of Germany
+
+	focus = {
+		id = AXI_germany
+		icon = GFX_focus_attack_germany
+		text_icon = politics_focus_style
+		x = 0
+		y = 0
+
+		cost = 0
+
+		allow_branch = {
+			or = {
+				not = {
+					has_country_flag = picked_country
+				}
+				has_completed_focus = AXI_germany
+			}
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = picked_country
+				set_cosmetic_tag = AXI_germany
+			}
+		}
+	}
+
+# █████ █████  ███  █     █   █ 
+#   █     █   █   █ █      █ █  
+#   █     █   █████ █       █   
+#   █     █   █   █ █       █   
+# █████   █   █   █ █████   █   
+# start of Italy
+
+focus = {
+	id = AXI_italy
+	icon = GFX_focus_ITA_italian_irredentism
+	text_icon = politics_focus_style
+	x = 2
+	y = 0
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_italy
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_italy
+		}
+	}
+}
+
+# █████  ███  ████   ███  █   █ 
+#   █   █   █ █   █ █   █ ██  █ 
+#   █   █████ ████  █████ █ █ █ 
+# █ █   █   █ █     █   █ █  ██ 
+# ███   █   █ █     █   █ █   █
+# start of Japan
+
+focus = {
+	id = AXI_japan
+	icon = GFX_focus_attack_japan
+	text_icon = politics_focus_style
+	x = 4
+	y = 0
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_japan
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_japan
+		}
+	}
+}
+
+# start of Manchuquo
+# █   █  ███   ████ █   █ █   █  ███  █   █  ███  
+# ██ ██ █   █ █     █   █ █   █ █   █ █   █ █   █ 
+# █ █ █ █████ █     █████ █   █ █   █ █   █ █   █ 
+# █   █ █   █ █     █   █ █   █ █  █  █   █ █   █ 
+# █   █ █   █  ████ █   █ █████  ██ █ █████  ███ 
+
+focus = {
+	id = AXI_manchuquo
+	icon = GFX_focus_man_claim_the_mandate_of_heaven
+	text_icon = politics_focus_style
+	x = 6
+	y = 0
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_manchuquo
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_manchuquo
+		}
+	}
+}
+
+# █████ █████ █   █ █      ███  █   █ ████  
+# █       █   ██  █ █     █   █ ██  █ █   █ 
+# ████    █   █ █ █ █     █████ █ █ █ █   █ 
+# █       █   █  ██ █     █   █ █  ██ █   █ 
+# █     █████ █   █ █████ █   █ █   █ ████  
+# start of Finland
+
+focus = {
+	id = AXI_finland
+	icon = GFX_focus_generic_attack_finland
+	text_icon = politics_focus_style
+	x = 0
+	y = 1
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_finland
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_finland
+		}
+	}
+}
+
+# ████   ███  █   █  ███  █   █ █████  ███  
+# █   █ █   █ ██ ██ █   █ ██  █   █   █   █ 
+# ████  █   █ █ █ █ █████ █ █ █   █   █████ 
+# █   █ █   █ █   █ █   █ █  ██   █   █   █ 
+# █   █  ███  █   █ █   █ █   █ █████ █   █ 
+# start of Romania
+
+focus = {
+	id = AXI_romania
+	icon = GFX_focus_generic_attack_romania
+	text_icon = politics_focus_style
+	x = 2
+	y = 1
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_romania
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_romania
+		}
+	}
+}
+
+# █   █ █   █ █   █  ████  ███  ████  █   █ 
+# █   █ █   █ ██  █ █     █   █ █   █  █ █  
+# █████ █   █ █ █ █ █  ██ █████ ████    █   
+# █   █ █   █ █  ██ █   █ █   █ █   █   █   
+# █   █ █████ █   █  ███  █   █ █   █   █   
+# start of Hungary
+
+focus = {
+	id = AXI_hungary
+	icon = GFX_focus_hungary
+	text_icon = politics_focus_style
+	x = 4
+	y = 1
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_hungary
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_hungary
+		}
+	}
+}
+
+# ████  █   █ █      ████  ███  ████  █████  ███  
+# █   █ █   █ █     █     █   █ █   █   █   █   █ 
+# ████  █   █ █     █  ██ █████ ████    █   █████ 
+# █   █ █   █ █     █   █ █   █ █   █   █   █   █ 
+# ████  █████ █████  ███  █   █ █   █ █████ █   █ 
+#	start of Bulgaria
+
+focus = {
+	id = AXI_bulgaria
+	icon = GFX_focus_BUL_promote_bulgarian_nationalism
+	text_icon = politics_focus_style
+	x = 6
+	y = 1
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_bulgaria
+		}
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_bulgaria
+		}
+	}
+}
+
+# █████ █   █ ████  █  █  █████ █   █ 
+#   █   █   █ █   █ █ █   █      █ █  
+#   █   █   █ ████  ██ █  ████    █   
+#   █   █   █ █   █ █  █  █       █   
+#   █   █████ █   █ █   █ █████   █   
+# start of Turkey
+
+focus = {
+	id = AXI_turkey
+	icon = GFX_focus_generic_attack_turkey
+	text_icon = politics_focus_style
+	x = 0
+	y = 2
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_turkey
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_turkey
+		}
+	}
+}
+
+# █████ ████   ███  █████ █   █ 
+# █     █   █ █   █   █   ██  █ 
+# █████ ████  █████   █   █ █ █ 
+#     █ █     █   █   █   █  ██ 
+# █████ █     █   █ █████ █   █ 
+# start of Spain
+
+focus = {
+	id = AXI_spain
+	icon = GFX_focus_ARG_invite_spanish_nationalists
+	text_icon = politics_focus_style
+	x = 2
+	y = 2
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_spain
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_spain
+		}
+	}
+}
+
+
+# ████   ███  ████  █████ █   █  ████  ███  █     
+# █   █ █   █ █   █   █   █   █ █     █   █ █     
+# ████  █   █ ████    █   █   █ █  ██ █████ █     
+# █     █   █ █   █   █   █   █ █   █ █   █ █     
+# █      ███  █   █   █   █████  ███  █   █ █████ 
+# start of Portugal
+
+focus = {
+	id = AXI_portugal
+	icon = GFX_focus_generic_attack_portugal
+	text_icon = politics_focus_style
+	x = 4
+	y = 2
+
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_portugal
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_portugal
+		}
+	}
+}
+
+#  ███  ████   ████ █████ █   █ █████ █████ █   █  ███  
+# █   █ █   █ █     █     ██  █   █     █   ██  █ █   █ 
+# █████ ████  █  ██ ████  █ █ █   █     █   █ █ █ █████ 
+# █   █ █   █ █   █ █     █  ██   █     █   █  ██ █   █ 
+# █   █ █   █  ███  █████ █   █   █   █████ █   █ █   █ 
+#	start of Argentina
+
+focus = {
+	id = AXI_argentina
+	icon = GFX_focus_ARG_argentine_nationalism
+	text_icon = politics_focus_style
+	x = 6
+	y = 2
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_argentina
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_argentina
+		}
+	}
+}
+
+#  ████ █   █ █████ █     █████ 
+# █     █   █   █   █     █     
+# █     █████   █   █     ████  
+# █     █   █   █   █     █     
+#  ████ █   █ █████ █████ █████ 
+#	start of Chile
+
+focus = {
+	id = AXI_chile
+	icon = GFX_focus_generic_attack_chile
+	text_icon = politics_focus_style
+	x = 0
+	y = 3
+	
+	cost = 0
+
+	allow_branch = {
+		or = {
+			not = {
+				has_country_flag = picked_country
+			}
+			has_completed_focus = AXI_chile
+		}
+	}
+	available = {
+		#has_country_flag = ban_system_over
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			set_country_flag = picked_country
+			set_cosmetic_tag = AXI_chile
+		}
+	}
+}
+
+
+
+# start of old focus tree
+#################################################################################33
 	focus = {
 		id = AXI_hr_start
 		icon = GFX_focus_CIC_hungary_romania
-		cost = 2
-		x = 4
+		cost = 0
+		x = 50
 		y = 0
 		text_icon = land_focus_style
 		available = {
@@ -107,7 +771,7 @@ focus_tree = {
 	focus = {
 		id = AXI_wehrmacht
 		icon = GFX_focus_CIC_wehrmacht
-		cost = 2
+		cost = 0
 		ai_will_do = {
 			factor = 100
 		}
@@ -1528,7 +2192,7 @@ focus_tree = {
 		id = AXI_royal_italian
 		icon = GFX_focus_ITA_italian_irredentism
 		text_icon = land_focus_style
-		cost = 2
+		cost = 0
 		ai_will_do = {
 			factor = 100
 		}
@@ -3138,7 +3802,7 @@ focus_tree = {
 	focus = {
 		id = AXI_IJA
 		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
-		cost = 2
+		cost = 0
 		relative_position_id = AXI_hr_start
 		ai_will_do = {
 			factor = 100
@@ -4379,7 +5043,7 @@ focus_tree = {
 #█   █ █████ █   █  ███  █   █ █   █   █   
 
 	focus = {
-		id = AXI_hungary
+		id = AXI_hungaryq
 		icon = GFX_focus_CIC_royal_hungarian_army
 		cost = 5
 		text_icon = land_focus_style
@@ -4388,7 +5052,7 @@ focus_tree = {
 			focus = AXI_hr_start
 		}
 		mutually_exclusive = {
-			focus = AXI_romania
+			focus = AXI_romaniaq
 		}
 		x = -2
 		y = 1
@@ -4416,9 +5080,9 @@ focus_tree = {
 		y = 1
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_hungary
+		relative_position_id = AXI_hungaryq
 		prerequisite = {
-			focus = AXI_hungary
+			focus = AXI_hungaryq
 		}
 
 		ai_will_do = {
@@ -4594,9 +5258,9 @@ focus_tree = {
 		icon = GFX_goal_generic_cavalry
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_hungary
+		relative_position_id = AXI_hungaryq
 		prerequisite = {
-			focus = AXI_hungary
+			focus = AXI_hungaryq
 		}
 		x = -3
 		y = 1
@@ -4666,9 +5330,9 @@ focus_tree = {
 		y = 1
 		cost = 5
 		text_icon = industry_focus_style
-		relative_position_id = AXI_hungary
+		relative_position_id = AXI_hungaryq
 		prerequisite = {
-			focus = AXI_hungary
+			focus = AXI_hungaryq
 		}
 
 		ai_will_do = {
@@ -4799,7 +5463,7 @@ focus_tree = {
 			}
 			add_political_power = 150
 			hidden_effect = {
-				set_cosmetic_tag = AXI_hungary
+				set_cosmetic_tag = AXI_hungaryq
 			}
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -4813,7 +5477,7 @@ focus_tree = {
 
 
 	focus = {
-		id = AXI_romania
+		id = AXI_romaniaq
 		icon = GFX_focus_CIC_romanian_land_forces
 		cost = 5
 		text_icon = land_focus_style
@@ -4822,7 +5486,7 @@ focus_tree = {
 			focus = AXI_hr_start
 		}
 		mutually_exclusive = {
-			focus = AXI_hungary
+			focus = AXI_hungaryq
 		}
 		x = 2
 		y = 1
@@ -4844,18 +5508,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 	}
 	focus = {
-		id = AXI_romanian_artillery
+		id = AXI_romaniaqn_artillery
 		icon = GFX_focus_artillery_romania
 		cost = 5
 		text_icon = industry_focus_style
-		relative_position_id = AXI_romania
+		relative_position_id = AXI_romaniaq
 		prerequisite = {
-			focus = AXI_romania
+			focus = AXI_romaniaq
 		}
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = AXI_romanian_artillery
+			add_ideas = AXI_romaniaqn_artillery
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 500
@@ -4885,9 +5549,9 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_romanian_artillery
+		relative_position_id = AXI_romaniaqn_artillery
 		prerequisite = {
-			focus = AXI_romanian_artillery
+			focus = AXI_romaniaqn_artillery
 		}
 		x = 0
 		y = 1
@@ -4914,9 +5578,9 @@ focus_tree = {
 		icon = GFX_focus_generic_self_propelled_gun
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_romania
+		relative_position_id = AXI_romaniaq
 		prerequisite = {
-			focus = AXI_romania
+			focus = AXI_romaniaq
 		}
 		x = 1
 		y = 1
@@ -5057,7 +5721,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 }
 focus = {
-		id = AXI_romanian_infantry
+		id = AXI_romaniaqn_infantry
 		icon = GFX_focus_vanatori_de_munte
 		cost = 5
 		text_icon = land_focus_style
@@ -5070,7 +5734,7 @@ focus = {
 
 
 		completion_reward = {
-			custom_effect_tooltip = AXI_romanian_infantry_tt
+			custom_effect_tooltip = AXI_romaniaqn_infantry_tt
 			hidden_effect = {
 				every_army_leader = {
 				limit = {
@@ -5139,9 +5803,9 @@ focus = {
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		text_icon = land_focus_style
-		relative_position_id = AXI_romania
+		relative_position_id = AXI_romaniaq
 		prerequisite = {
-			focus = AXI_romania
+			focus = AXI_romaniaq
 		}
 		x = 3
 		y = 1
@@ -5150,7 +5814,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = AXI_romanian_oil
+		id = AXI_romaniaqn_oil
 		icon = GFX_goal_generic_oil_refinery
 		cost = 5
 		text_icon = industry_focus_style
@@ -5161,7 +5825,7 @@ focus = {
 		x = 0
 		y = 1
 		completion_reward = {
-			add_ideas = AXI_romanian_oil
+			add_ideas = AXI_romaniaqn_oil
 			if = {
 				limit = {
 					has_capitulated = no
@@ -5181,22 +5845,22 @@ focus = {
 		text_icon = politics_focus_style
 		prerequisite = {
 			focus = AXI_siege_warfare
-			focus = AXI_romanian_infantry
-			focus = AXI_romanian_oil
+			focus = AXI_romaniaqn_infantry
+			focus = AXI_romaniaqn_oil
 		}
 			available = {
 			or = {
 			and = {
 					has_completed_focus = AXI_siege_warfare
-					has_completed_focus = AXI_romanian_infantry
+					has_completed_focus = AXI_romaniaqn_infantry
 			}
 			and = { 
-				has_completed_focus = AXI_romanian_oil
-				has_completed_focus = AXI_romanian_infantry
+				has_completed_focus = AXI_romaniaqn_oil
+				has_completed_focus = AXI_romaniaqn_infantry
 				}
 			and = { 
 				has_completed_focus = AXI_siege_warfare
-				has_completed_focus = AXI_romanian_oil
+				has_completed_focus = AXI_romaniaqn_oil
 				}
 				}
 				}
@@ -5272,7 +5936,7 @@ focus = {
 			}
 			add_political_power = 150
 			hidden_effect = {
-				set_cosmetic_tag = AXI_romania
+				set_cosmetic_tag = AXI_romaniaq
 			}
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -5403,7 +6067,7 @@ focus = {
 		id = AXI_winter_is_coming
 		icon = GFX_focus_CIC_finland
 		text_icon = land_focus_style
-		cost = 2
+		cost = 0
 		ai_will_do = {
 			factor = 100
 		}
@@ -6663,7 +7327,7 @@ focus = {
 			id = AXI_okh
 			icon = GFX_focus_CIC_wehrmacht
 			
-			cost = 5
+			cost = 0
 			ai_will_do = {
 				factor = 100
 			}

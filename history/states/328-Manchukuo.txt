@@ -4,14 +4,7 @@ state={
 	name="STATE_328" # Kirin
 	manpower = 1 # = 10000000
 
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 30
-		chromium = 5
-	}
+
 
 	state_category = megalopolis
 

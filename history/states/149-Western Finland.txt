@@ -6,15 +6,7 @@ state={
 
 	state_category = megalopolis
 
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 5
-		chromium = 5
-	}
-
+	
 	history={
 		owner = NOO
 		add_core_of = NOO

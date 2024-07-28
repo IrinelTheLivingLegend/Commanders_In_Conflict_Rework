@@ -44,7 +44,7 @@
 shared_focus = {
 	id = INDUSTRY_start_rapid_industralisation
 	icon = GFX_focus_SOV_merge_plants
-	x = 51
+	x = 67
 	y = 0
 	offset = {
 		x = -3

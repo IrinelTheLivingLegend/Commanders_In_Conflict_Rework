@@ -6,9 +6,6 @@ state = {
 
 	state_category = rural
 
-	resources = {
-		oil = 7 # was: 8
-	}
 
 	history = {
 		victory_points = {

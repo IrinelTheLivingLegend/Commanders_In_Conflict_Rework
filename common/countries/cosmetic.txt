@@ -212,7 +212,7 @@ CHI_warlord_leader = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
-MAN_restored = {
+AXI_manchuquo = {
 	color = rgb { 237 152 18 }
 	color_ui = rgb { 224 139 5 }
 }
@@ -973,7 +973,7 @@ ALI_CAN = {
 	color_ui = rgb { 155 62 51 }
 }
 
-ALI_USA = {
+ALI_usa = {
 	color = rgb { 20 133 237 }
 	color_ui = rgb { 87 160 255 }
 }
@@ -988,12 +988,12 @@ AXI_GER = {
 	color_ui = rgb { 138 155 116 }
 }
 
-AXI_ITA = {
+AXI_italy = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 87 165 82 }
 }
 
-AXI_JAP = {
+AXI_japan = {
 	color = hsv { 0.05 0.3 1 }
 	color_ui = hsv { 0.05 0.25 1.2 }
 }
@@ -1041,7 +1041,7 @@ ALI_commandos = {
 	color_ui = rgb { 255 73 121 }
 }
 
-AXI_5th_panzer_army = {
+AXI_germany = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
 }
@@ -1073,7 +1073,7 @@ AXI_nfg = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 0 83 142 }
 }
-ALI_china = {
+ALI_nationalist_china = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
@@ -1088,6 +1088,110 @@ AXI_hungary = {
 AXI_romania = {
 	color = rgb { 215 196 72 }
 	color_ui = rgb { 255 255 120 }
+}
+AXI_finland = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 0 83 142 }
+}
+AXI_bulgaria = {
+	color = rgb { 138 249 195 }
+	color_ui = rgb { 138 249 195 }
+}
+AXI_turkey = {
+	color = rgb { 171  190  152 }
+	color_ui = rgb { 171  190  152 }
+}
+AXI_spain = {
+	color = rgb { 200 100 31 }
+	color_ui = rgb { 245 123 38 }
+}
+AXI_portugal = {
+	color = rgb { 39 116 70 }
+	color_ui = rgb { 39 116 70 }
+}
+AXI_argentina = {
+	color = rgb { 145 157 236 }
+	color_ui = rgb { 145 157 236 }
+}
+AXI_chile = {
+	color = rgb { 155 101 107 }
+	color_ui = rgb { 155 101 107 }
+}
+ALI_united_kingdom = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 201 56 93 }
+}
+ALI_soviet_union = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+ALI_communist_china = {
+	color = rgb { 245 12 55 }
+	color_ui = rgb { 178 34 60 }
+}
+ALI_greece = {
+	color = rgb { 93 181 227 }
+	color_ui = rgb { 93 181 227 }
+}
+ALI_yugoslavia = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 72 73 126 }
+}
+ALI_canada = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+ALI_australia = {
+	color = rgb { 57 143 97 }
+	color_ui = rgb { 57 143 97 }
+}
+ALI_india = {
+	color = rgb { 170 10 10 }
+	color_ui = rgb { 170 10 10 }
+}
+ALI_norway = {
+	color = rgb { 111 71 71 }
+	color_ui = rgb { 0 47 131 }
+}
+ALI_sweden = {
+	color = rgb { 36 132 247 }
+	color_ui = rgb { 36 132 247 }
+}
+ALI_switzerland = {
+	color = rgb { 33 14 19 }
+	color_ui = rgb { 33 14 19 }
+}
+ALI_poland = {
+	color = rgb { 150 23 23 }
+	color_ui = rgb { 150 23 23 }
+}
+ALI_mexico = {
+	color = rgb { 104 152 83 }
+	color_ui = rgb { 104 152 83 }
+}
+ALI_brazil = {
+	color = rgb { 76 145 63 }
+	color_ui = rgb { 76 145 63 }
+}
+ALI_ethiopia = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 152 130 191 }
+}
+ALI_netherlands = {
+	color = rgb { 203 138 74 }
+	color_ui = rgb { 203 138 74 }
+}
+ALI_denamrk = {
+	color = rgb { 153 116 93 }
+	color_ui = rgb { 153 116 93 }
+}
+ALI_czechoslovakia = {
+	color = rgb { 54 167 156 }
+	color_ui = rgb { 54 167 156 }
+}
+ALI_baltics = {
+	color = rgb { 0 102 102 }
+	color_ui = rgb { 0 102 102 }
 }
 
 ################################################################################################
@@ -1158,4 +1262,12 @@ ALI_third_bulgarian_empire_def_name = {
 ALI_brazil_def_name = {
 	color = rgb { 76 145 63 }
 	color_ui = rgb { 76 145 63 }
+}
+AXI_iran_def_name = {
+	color = rgb { 71  113  97 }
+	color_ui = rgb { 71 113 97 }
+}
+AXI_turkey_def_name = {
+	color = rgb { 171  190  152 }
+	color_ui = rgb { 171  190  152 }
 }

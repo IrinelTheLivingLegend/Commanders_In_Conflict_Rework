@@ -6,15 +6,7 @@ state={
 
 	state_category = rural
 
-	resources = {
-		aluminium = 25
-		steel = 25
-		tungsten = 25
-		chromium = 25
-		oil = 25
-		rubber = 25
-	}
-
+	
 	history={
 		owner = NOO
 		add_core_of = NOO

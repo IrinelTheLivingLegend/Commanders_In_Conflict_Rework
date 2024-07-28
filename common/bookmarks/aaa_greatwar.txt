@@ -163,196 +163,159 @@ bookmarks = {
 		}
 				
 			every_state = {
-				limit={OR={state = 851 state=21 state = 32  state=20 state = 27 state=26}}
+				limit={
+					OR={
+						state = 851 state=21 state = 32  state=20 state = 27 state=26
+					}
+				}
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
 				
 			}
 
 
 			every_state = {
-				limit={OR={state=6 state=7 state=28 state=34 state=35 state=36 state=42 state=50 state=55 state=56 state=57 state=51 state=8
-				state=17 state=18 state=29 state=158 state=159 state=161 state=160 state=850 state=39 state=785 state=846 state=735 }}
+				limit={
+					OR={
+						state=6 state=7 state=28 state=34 state=35 state=36 state=42 state=50 state=55 state=56 state=57 state=51 state=8
+						state=17 state=18 state=29 state=158 state=159 state=161 state=160 state=850 state=39 state=785 state=846 state=735
+					}
+				}
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 			}
 			every_state = {
-				limit={OR={state = 4 state = 152 state=153 state=52 state=53 state=54}}
+				limit={
+					OR={
+						state = 4 state = 152 state=153 state=52 state=53 state=54
+					}
+				}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
-				
 			}
 			every_state = {
-				limit={OR={state = 848 state = 853 state = 736 state = 852 state=102}}
+				limit={
+					OR={
+						state = 848 state = 853 state = 736 state = 852 state=102
+					}
+				}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = wasteland
 				
 			}
 			every_state = {
-				limit={OR={ state=60 state=65 state=64 state=61 state=58 state=59}}
+				limit={
+					OR={
+						state=60 state=65 state=64 state=61 state=58 state=59
+					}
+				}
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
 				
 			}
 			every_state = {
-				limit={or = {state=62 state=918}}
+				limit={
+					or = {
+						state=62 state=918
+					}
+				}
 				AXJ={transfer_state=PREV}
 				add_core_of =AXJ
 				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = wasteland
 				
 			}
 			every_state = {
-				limit={OR={state=23 state=24 state=30 state=14 state=15 state=16}}
+				limit={
+					OR={
+						state=23 state=24 state=30 state=14 state=15 state=16
+					}
+				}
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
 				
 			}
 			every_state = {
-				limit={state=33}
+				limit={
+					state=33
+				}
 				ALJ={transfer_state=PREV}
 				add_core_of =ALJ
 				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = wasteland
 				
 			}
 			every_state = {
-				limit={OR={state=806 state=19 state=31 state=25 state=22 state=165}}
+				limit={
+					OR={
+						state=806 state=19 state=31 state=25 state=22 state=165
+					}
+				}
 				ALK={transfer_state=PREV}
 				add_core_of =ALK
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
 				
 			}
 			every_state = {
-				limit={OR={state=763 state=5 state=807 state=86 state=66 state=63}}
+				limit={
+					OR={
+						state=763 state=5 state=807 state=86 state=66 state=63
+					}
+				}
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
 				add_extra_state_shared_building_slots = 3
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = megalopolis
 				
 			}
 			every_state = {
-				limit={OR={state=188 state=85 state=68 state=67 state=762}}
+				limit={
+					OR={
+						state=188 state=85 state=68 state=67 state=762
+					}
+				}
 				AXK={transfer_state=PREV}
 				add_core_of =AXK
 				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 3
-   					instant_build = yes
-				}
 				set_state_category = wasteland
-				
 			}
 			
 			#resources
 			every_state = {
-				limit={OR={ state = 851 state=21 state = 32  state=20 state = 27 #ALI
-				state = 4 state = 152 state=153 state=52 state=53 state=54 # AXI
-				state=60 state=65 state=62 state=61 state=58 state=59 # AXJ
-				state=23 state=24 state=30 state=14 state=15 state=16 #ALJ
-				state=806 state=19 state=31 state=25 state=26 state=22 state=165 #ALK
-				state=763 state=5 state=807 state=86 state=66 state=63 #AXK
-				 }}
+				limit={
+					OR={
+						state = 851 state=21 state = 32  state=20 state = 27 #ALI
+						state = 4 state = 152 state=153 state=52 state=53 state=54 # AXI
+						state=60 state=65 state=62 state=61 state=58 state=59 # AXJ
+						state=23 state=24 state=30 state=14 state=15 state=16 #ALJ
+						state=806 state=19 state=31 state=25 state=26 state=22 state=165 #ALK
+						state=763 state=5 state=807 state=86 state=66 state=63 #AXK
+				 	}
+				}
 				add_resource = {
 					type = oil
 					amount = 5
@@ -377,21 +340,14 @@ bookmarks = {
 					type = chromium
 					amount = 8
 				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
 			}
 
 			every_state = {
-				limit={OR={state=7 state=51 state=8 state=6 state=161}}
+				limit={
+					OR={
+						state=7 state=51 state=8 state=6 state=161
+					}
+				}
 				add_resource = {
 					type = oil
 					amount = 50
@@ -419,17 +375,18 @@ bookmarks = {
 			}
 
 			every_state = {
-				limit={OR={
-					state = 158 #Piedmont
-					state = 160 #Venzia
-					state = 59 #Munich
-					state = 4 #Vienna
-					state = 27 #Djon
-					state = 851 #Toulon
-					state = 25 #Bordeaux
-					state = 31 #Toulouse
-
-				}}
+				limit={
+					OR={
+						state = 158 #Piedmont
+						state = 160 #Venzia
+						state = 59 #Munich
+						state = 4 #Vienna
+						state = 27 #Djon
+						state = 851 #Toulon
+						state = 25 #Bordeaux
+						state = 31 #Toulouse
+					}
+				}
 				add_building_construction = {
 				type = air_base
 				level = 3
@@ -437,10 +394,12 @@ bookmarks = {
 				}
 			}
 			every_state = {
-				limit={OR={
-					state = 17 #Paris
-					state =15 #Normandy
-				}}
+				limit={
+					OR={
+						state = 17 #Paris
+						state =15 #Normandy
+					}
+				}
 				add_building_construction = {
 				type = air_base
 				level = 5
@@ -449,24 +408,11 @@ bookmarks = {
 			}
 
 			every_state = {
-				limit={OR={state=21 state=851  #allies
-						   state=15 state=14 #allies 2
-						   state=19 state=165 #Allies 3
-						   state=736 state=852  #axis
-						   state=58 state=61 	#axis 2
-						   state=763 state=63 #axis 3
-							}}
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-			}
-			}
-			every_state = {
-				limit={OR={
-						   state=736 state=852  #axis
-							}}
-
+				limit={
+					OR={
+						state=736 state=852  #axis
+					}
+				}
 				add_extra_state_shared_building_slots = 3
 			}
 
@@ -501,48 +447,47 @@ bookmarks = {
 			}
 		
 
-		#Those nations are required to exist on map for the flags on industrial decisions to show properly
-		every_state = {
+			#Those nations are required to exist on map for the flags on industrial decisions to show properly
+			every_state = {
 				limit={state=270}
 				USA={transfer_state=PREV}
 				add_core_of =USA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=650}
 				ENG={transfer_state=PREV}
 				add_core_of =ENG
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=631}
 				FRA={transfer_state=PREV}
 				add_core_of =FRA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=630}
 				SOV={transfer_state=PREV}
 				add_core_of =SOV
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=713}
 				GER={transfer_state=PREV}
 				add_core_of =GER
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=706}
 				ROM={transfer_state=PREV}
 				add_core_of =ROM
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=707}
 				ITA={transfer_state=PREV}
 				add_core_of =ITA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=704}
 				JAP={transfer_state=PREV}
 				add_core_of =JAP
+			}
 		}
-
-	}
 	}
 }

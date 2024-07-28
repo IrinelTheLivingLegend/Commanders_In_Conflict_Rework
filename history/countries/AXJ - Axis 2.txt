@@ -197,6 +197,27 @@ add_ideas = {
 	global_production_control
 }
 
+add_dynamic_modifier = {
+	modifier = AXI_industry
+	scope = AXJ
+}
+add_dynamic_modifier = { 
+	modifier = AXI_army
+	scope = AXJ
+}
+add_dynamic_modifier = { 
+	modifier = AXI_airforce
+	scope = AXJ
+}
+add_dynamic_modifier = { 
+	modifier = AXI_navy
+	scope = AXJ
+}
+add_dynamic_modifier = { 
+	modifier = AXI_politics
+	scope = AXJ
+}
+
 recruit_character = AXJ_high_command
 recruit_character = AXJ_rodolfo_graziani
 recruit_character = AXJ_mario_berti
@@ -298,19 +319,6 @@ set_popularities = {
 	democratic = 0
 	fascism = 100
 	communism = 0
-}
-
-add_opinion_modifier = {
-    target = ALI
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = ALJ
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = ALK
-    modifier = mod_no_enemy_trade
 }
 if = {
 	limit = {

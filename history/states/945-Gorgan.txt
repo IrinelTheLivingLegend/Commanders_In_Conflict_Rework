@@ -1,0 +1,19 @@
+state={
+	id=945
+	name="STATE_945"
+	provinces={
+		1521 7573 7602 10351 11671 
+	}
+	history={
+		owner = NOO
+		add_core_of = NOO
+		buildings = {
+
+		}
+
+	}
+	manpower=1
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

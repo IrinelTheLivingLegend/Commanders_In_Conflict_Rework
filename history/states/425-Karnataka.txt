@@ -6,10 +6,6 @@ state={
 
 	state_category = rural
 
-	resources={
-		chromium=10 # was: 20
-	}
-
 	history={
 		owner = NOO
 		add_core_of = NOO

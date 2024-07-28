@@ -6,9 +6,6 @@ state={
 
 	state_category = town
 
-	resources={
-		oil=15 # was: 22
-	}
 
 	history={
 		owner = NOO

@@ -1,5 +1,12 @@
 on_actions = {
-
+	on_startup = {
+		effect = {
+			every_country = {
+				#avoids filling the screen with unusable focus trees
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
 	on_daily_NOO = {
 		effect = {
 			if={
@@ -8,7 +15,7 @@ on_actions = {
 						has_global_flag = game_started
 					}
 				}
-				set_global_flag=game_started
+				set_global_flag = game_started
 				every_country={
 					remove_ideas=starting_eff
 				}

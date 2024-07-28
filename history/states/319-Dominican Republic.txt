@@ -5,12 +5,12 @@ state=
 	manpower = 1 # = 100000
 
 	resources = {
-		oil = 35
-		aluminium = 25
-		tungsten = 25
-		rubber = 25
-		steel = 25
-		chromium = 25
+		#oil = 35
+		#aluminium = 25
+		#tungsten = 25
+		#rubber = 25
+		#steel = 25
+		#chromium = 25
 	}
 
 	state_category = town

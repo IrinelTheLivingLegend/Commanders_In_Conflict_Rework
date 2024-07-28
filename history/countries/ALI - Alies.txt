@@ -194,6 +194,26 @@ add_ideas = {
 	peace_supply_grace
 	global_production_control
 }
+add_dynamic_modifier = {
+	modifier = ALI_industry
+	scope = ALI
+}
+add_dynamic_modifier = { 
+	modifier = ALI_army
+	scope = ALI
+}
+add_dynamic_modifier = { 
+	modifier = ALI_airforce
+	scope = ALI
+}
+add_dynamic_modifier = { 
+	modifier = ALI_navy
+	scope = ALI
+}
+add_dynamic_modifier = { 
+	modifier = ALI_politics
+	scope = ALI
+}
 
 set_convoys = 100
 
@@ -210,20 +230,6 @@ set_popularities = {
 }
 
 create_faction = Allies
-
-
-add_opinion_modifier = {
-    target = AXI
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = AXJ
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = AXK
-    modifier = mod_no_enemy_trade
-}
 
 if = {
 	limit = {

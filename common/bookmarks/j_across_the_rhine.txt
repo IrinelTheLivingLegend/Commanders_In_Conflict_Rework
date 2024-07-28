@@ -39,7 +39,11 @@ bookmarks = {
 				set_oob = ALI_across_the_rhine
 			}
 			every_state = {
-				limit={OR={state=16 state=18 state=785 state=15 state=17 state=27 state=29}}
+				limit={
+					OR={
+						state=16 state=18 state=785 state=15 state=17 state=27 state=29
+					}
+				}
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
@@ -47,85 +51,45 @@ bookmarks = {
 
 
 			every_state = {
-				limit={OR={state=6 state=7 state=28 state=34 state=35 state=36 state=42 state=50 state=54 state=55 state=56 state=57 state=51 state=8}}
+				limit={
+					OR={
+						state=6 state=7 state=28 state=34 state=35 state=36 state=42 state=50 state=54 state=55 state=56 state=57 state=51 state=8
+					}
+				}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO
-				add_manpower = 1000000
+				add_manpower = 500000
 				set_building_level = {
     				type = infrastructure
-    				level = 4
+    				level = 3
    					instant_build = yes
 				}
 			}
 			every_state = {
-				limit={OR={state=60 state=65 state=64 state=62 state=61 state=58 state=59}}
+				limit={
+					OR={
+						state=60 state=65 state=64 state=62 state=61 state=58 state=59
+					}
+				}
 				AXI={transfer_state=PREV}
 				add_core_of =AXI
 				remove_core_of =NOO
 			}
 			every_state = {
-				limit={OR={ state=16 state=18 state=785 state=15 state=17 state=27 state=29 #ALI
-				state=60 state=65 state=64 state=62 state=61 state=58 state=59 # AXI
-				 }}
-				add_resource = {
-					type = oil
-					amount = 5
+				limit={
+					OR={
+						state = 158 #Piedmont
+						state = 160 #Venzia
+						state = 59 #Munich
+						state = 4 #Vienna
+						state = 27 #Djon
+						state = 851 #Toulon
+						state = 25 #Bordeaux
+						state = 31 #Toulouse
+						state = 29 # Calais
+					}
 				}
-				add_resource = {
-					type = aluminium
-					amount = 9
-				}
-				add_resource = {
-					type = tungsten
-					amount = 8
-				}
-				add_resource = {
-					type = rubber
-					amount = 5
-				}
-				add_resource = {
-					type = steel
-					amount = 12
-				}
-				add_resource = {
-					type = chromium
-					amount = 8
-				}
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
-				}
-			}
-			every_state = {
-				limit={OR={
-					state = 158 #Piedmont
-					state = 160 #Venzia
-					state = 59 #Munich
-					state = 4 #Vienna
-					state = 27 #Djon
-					state = 851 #Toulon
-					state = 25 #Bordeaux
-					state = 31 #Toulouse
-					state = 29 # Calais
-
-				}}
 				set_building_level = {
 				type = air_base
 				level = 3
@@ -133,10 +97,12 @@ bookmarks = {
 				}
 			}
 			every_state = {
-				limit={OR={
-					state = 17 #Paris
-					state =15 #Normandy
-				}}
+				limit={
+					OR={
+						state = 17 #Paris
+						state =15 #Normandy
+					}
+				}
 				add_building_construction = {
 				type = air_base
 				level = 5
@@ -171,46 +137,46 @@ bookmarks = {
 			}
 
 			#Those nations are required to exist on map for the flags on industrial decisions to show properly
-		every_state = {
+			every_state = {
 				limit={state=270}
 				USA={transfer_state=PREV}
 				add_core_of =USA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=650}
 				ENG={transfer_state=PREV}
 				add_core_of =ENG
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=631}
 				FRA={transfer_state=PREV}
 				add_core_of =FRA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=630}
 				SOV={transfer_state=PREV}
 				add_core_of =SOV
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=713}
 				GER={transfer_state=PREV}
 				add_core_of =GER
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=706}
 				ROM={transfer_state=PREV}
 				add_core_of =ROM
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=707}
 				ITA={transfer_state=PREV}
 				add_core_of =ITA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=704}
 				JAP={transfer_state=PREV}
 				add_core_of =JAP
-		}
+			}
 		}
 	}
 }

@@ -5,17 +5,9 @@ state={
 	manpower = 1 # = 2142858
 
 	state_category = metropolis
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 30
-		chromium = 5
-	}
 	history={
 		owner=NOO
-		add_core_of=NOO
+		add_core_of = NOO
 
 		buildings = {
 			#infrastructure = 3 #was: 5

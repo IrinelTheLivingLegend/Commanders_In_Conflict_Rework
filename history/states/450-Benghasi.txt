@@ -25,11 +25,6 @@ state={
 	provinces={
 		1127 4120 10123 11954
 	}
-	resources = {
-		aluminium = 25
-		steel = 25
-		oil = 30
-	}
 
 	local_supplies=0.0
 }

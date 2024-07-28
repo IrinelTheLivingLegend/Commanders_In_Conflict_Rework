@@ -22,6 +22,18 @@ ideas = {
 				naval_detection = -100
 			}
 		}
+		MOD_industry_tooltip = {
+			picture = GFX_idea_ALI_industry
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			
+		}
+
 	}
 	hidden_ideas= {
 		global_production_control = {

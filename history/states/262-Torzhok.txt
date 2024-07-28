@@ -6,10 +6,7 @@ state = {
 
 	state_category = rural
 
-	resources = {
-		oil = 7 # was: 8
-	}
-
+	
 	history = {
 		owner = NOO
 		add_core_of = NOO

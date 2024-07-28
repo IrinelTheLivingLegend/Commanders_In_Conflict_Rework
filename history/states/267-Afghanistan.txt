@@ -7,12 +7,12 @@ state={
 	state_category = town
 
 	resources={
-		tungsten=3 # was: 3
+		#tungsten=3 # was: 3
 	}
 	history={
 		
 		owner=NOO
-		add_core_of=NOO
+		add_core_of = NOO
 		buildings = {
 			#infrastructure = 1
 			#arms_factory = 1

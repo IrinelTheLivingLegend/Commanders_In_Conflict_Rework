@@ -4,9 +4,7 @@ state={
 	name="STATE_533" # Tohoku
 	manpower = 1 # = 6575000
 	state_category = large_city
-	resources={
-		steel=27 # was: 35
-	}
+	
 
 	history={
 

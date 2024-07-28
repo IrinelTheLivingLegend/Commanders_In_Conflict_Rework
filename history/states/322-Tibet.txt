@@ -2,13 +2,13 @@ state={
 	id=322
 	name="STATE_322"
 	resources={
-		tungsten=2.000
+		#tungsten=2.000
 	}
 
 	history={
 		
 		owner=NOO
-		add_core_of=NOO
+		add_core_of = NOO
 		buildings = {
 			#infrastructure = 1
 			#industrial_complex = 1

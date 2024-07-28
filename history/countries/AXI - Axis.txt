@@ -197,6 +197,27 @@ add_ideas = {
 	global_production_control
 }
 
+add_dynamic_modifier = {
+	modifier = AXI_industry
+	scope = AXI
+}
+add_dynamic_modifier = { 
+	modifier = AXI_army
+	scope = AXI
+}
+add_dynamic_modifier = { 
+	modifier = AXI_airforce
+	scope = AXI
+}
+add_dynamic_modifier = { 
+	modifier = AXI_navy
+	scope = AXI
+}
+add_dynamic_modifier = { 
+	modifier = AXI_politics
+	scope = AXI
+}
+
 recruit_character = AXI_high_command
 recruit_character = AXI_rodolfo_graziani
 recruit_character = AXI_mario_berti
@@ -302,19 +323,6 @@ set_popularities = {
 
 
 create_faction = Axis
-
-add_opinion_modifier = {
-    target = ALI
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = ALJ
-    modifier = mod_no_enemy_trade
-}
-add_opinion_modifier = {
-    target = ALK
-    modifier = mod_no_enemy_trade
-}
 
 if = {
 	limit = {

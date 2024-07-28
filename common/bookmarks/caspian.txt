@@ -1,0 +1,398 @@
+bookmarks = {
+	bookmark = {
+		name = "CASPIAN2V2"
+		desc = "CASPIAN2V2_DESC"
+		date = 1940.1.1.12
+		picture = "GFX_select_date_liberation3v3"
+		default_country = "ALI"
+		default = yes
+
+		"ALI"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ALJ"={
+			history = "ALI_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXI"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AXJ"={
+			history = "AXI_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+
+			set_global_flag = game_caspian_2v2
+			set_global_flag=FiveVpMap
+
+			#ALI={set_cosmetic_tag = ALI_france_def_name}
+			
+			AXI={set_cosmetic_tag = AXI_turkey_def_name}
+			AXJ={set_cosmetic_tag = AXI_iran_def_name}
+
+			set_victory_points = {
+				province = 1599 #Tiblisi
+				value = 50
+			}
+			set_victory_points = {
+				province = 9663 #Sochi
+				value = 50
+			}
+			set_victory_points = {
+				province = 7661 #Baku
+				value = 50
+			}
+			set_victory_points = {
+				province = 1517 #Mangystau
+				value = 50
+			}
+			set_victory_points = {
+				province = 12465 #Khiva
+				value = 50
+			}
+			set_victory_points = {
+				province = 9932 #Trabzon
+				value = 5
+			}
+			set_victory_points = {
+				province = 3734 #Krasnodar
+				value = 5
+			}
+			set_victory_points = {
+				province = 9417 #Rostov
+				value = 25
+			}
+			set_victory_points = {
+				province = 11724 #Elista
+				value = 15
+			}
+			set_victory_points = {
+				province = 487 #Mikhlaivka
+				value = 15
+			}
+			set_victory_points = {
+				province = 11476 #Milerovo
+				value = 15
+			}
+			set_victory_points = {
+				province = 3529 #Stalingrad
+				value = 50
+			}
+			set_victory_points = {
+				province = 9753 #Astrakhan
+				value = 15
+			}
+			set_victory_points = {
+				province = 3618 #Guryev
+				value = 15 
+			}
+			set_victory_points = {
+				province = 11537 #Ural'sk
+				value = 50
+			}
+			set_victory_points = {
+				province = 11881 #Samsun'g
+				value = 15 
+			}
+			set_victory_points = {
+				province = 10106 #Mosul
+				value = 15 
+			}
+			set_victory_points = {
+				province = 12473 #Aleppo
+				value = 50
+			}
+			set_victory_points = {
+				province = 2097 #Baghdad
+				value = 50
+			}
+			set_victory_points = {
+				province = 10837 #Teheran
+				value = 15 
+			}
+			set_victory_points = {
+				province = 2026 #Isfahan
+				value = 15 
+			}
+
+			AXI={
+				set_capital = {state = 677}
+				set_oob = AXI_greatwar3v3
+				AXI_high_command = {
+					set_character_name = AXI_high_command_ger
+				}
+			}
+			AXJ={
+				set_capital = {state = 291}
+				set_oob = AXJ_greatwar3v3
+				AXI_high_command = {
+					set_character_name = AXJ_high_command_ger
+				}
+			}
+			ALI={
+				set_capital = {state = 217}
+				set_oob = ALI_greatwar3v3
+			}
+			ALJ={
+				set_capital = {state = 407}
+				set_oob = ALJ_greatwar3v3
+
+			}
+				
+			every_state = {
+				limit={
+					OR={
+						state = 829 state = 238 state = 218 state = 245 state = 217 state = 265 state = 237 
+					}
+				}
+				ALI={transfer_state=PREV}
+				add_core_of =ALI
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				set_state_category = megalopolis
+			}
+			every_state = {
+				limit={
+					OR={
+						 state = 401 state = 916 state = 236 state = 407 state = 406 state = 652
+					}
+				}
+				ALJ={transfer_state=PREV}
+				add_core_of =ALJ
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				set_state_category = megalopolis
+				
+			}
+
+
+			every_state = {
+				limit={
+					OR={
+						state=354 state = 800 state = 419 state = 420 state = 230 state = 229 state = 231 state = 826 state = 232 state = 821 state = 828 state = 827 state = 233 state = 235 state = 232 state = 234 state = 416 state = 584 state = 832 state = 831 state = 828 state = 587 state = 830 state = 585  state = 402 state = 823 state= 945
+					}
+				}
+				add_manpower = 500000
+				set_building_level = {
+    				type = infrastructure
+    				level = 3
+   					instant_build = yes
+				}
+				NEU={transfer_state=PREV}
+				add_core_of =NEU
+				remove_core_of =NOO
+			}
+
+			every_state = {
+				limit={
+					OR={
+						state = 355 state = 349 state = 353 state = 344 state = 350 state = 352 state = 799 state = 677 state = 680 state = 676
+					}
+				}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				set_state_category = megalopolis
+				
+			}
+			every_state = {
+				limit={
+					OR={ 
+						state = 291 state = 413 state = 411 state = 417 state = 418 state = 266 state = 421
+					}
+				}
+				AXJ={transfer_state=PREV}
+				add_core_of =AXJ
+				remove_core_of =NOO
+				add_extra_state_shared_building_slots = 3
+				set_state_category = megalopolis
+				
+			}
+			#resources
+			every_state = {
+				limit={
+					OR={
+						state = 829 state = 238 state = 218 state = 245 state = 217 state = 265 #ALI
+						state = 401 state = 916 state = 236 state = 407 state = 406 state = 652 #ALJ
+						state = 355 state = 349 state = 353 state = 344 state = 350 state = 352 #AXI
+						state = 291 state = 413 state = 411 state = 417 state = 418 state = 266 #AXJ
+				 	}
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 9
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+
+			every_state = {
+				limit={
+					OR={
+						 state= 233 #Sochi
+						 state= 231 #Tiblisi
+						 state= 229 #Baku
+						 state= 587 #Magystau
+						 state= 831 #Khiva
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 50
+				}
+				add_resource = {
+					type = aluminium
+					amount = 50
+				}
+				add_resource = {
+					type = tungsten
+					amount = 50
+				}
+				add_resource = {
+					type = rubber
+					amount = 50
+				}
+				add_resource = {
+					type = steel
+					amount = 50
+				}
+				add_resource = {
+					type = chromium
+					amount = 50
+				}
+			}
+
+			every_state = {
+				limit={OR={
+					state = 158 #Piedmont
+
+				}}
+				add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+				}
+			}
+
+			every_state = {
+				limit={
+					OR={
+						state=21 state=851  #allies
+						state=15 state=14 #allies 2
+						state=736 state=852  #axis
+						state=58 state=61 	#axis 2
+					}
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+
+			every_state = {
+				limit={
+					OR={
+						state = 852 #Fiume
+					}
+				}
+				add_building_construction = {
+					province = 11564 #Fiume
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}	
+
+			ALI = {
+				add_to_faction = ALJ
+			}
+			AXI = {
+				add_to_faction = AXJ
+			}
+		
+
+		#Those nations are required to exist on map for the flags on industrial decisions to show properly
+			every_state = {
+				limit={state=270}
+				USA={transfer_state=PREV}
+				add_core_of =USA
+			}
+			every_state = {
+				limit={state=650}
+				ENG={transfer_state=PREV}
+				add_core_of =ENG
+			}
+			every_state = {
+				limit={state=631}
+				FRA={transfer_state=PREV}
+				add_core_of =FRA
+			}
+			every_state = {
+				limit={state=630}
+				SOV={transfer_state=PREV}
+				add_core_of =SOV
+			}
+			every_state = {
+				limit={state=713}
+				GER={transfer_state=PREV}
+				add_core_of =GER
+			}
+			every_state = {
+				limit={state=706}
+				ROM={transfer_state=PREV}
+				add_core_of =ROM
+			}
+			every_state = {
+				limit={state=707}
+				ITA={transfer_state=PREV}
+				add_core_of =ITA
+			}
+			every_state = {
+				limit={state=704}
+				JAP={transfer_state=PREV}
+				add_core_of =JAP
+			}
+		}
+	}
+}

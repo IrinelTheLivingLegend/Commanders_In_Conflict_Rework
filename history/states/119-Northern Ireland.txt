@@ -35,9 +35,6 @@ state={
 	buildings_max_level_factor=1
 	state_category="city"
 
-	resources={
-		aluminium=2
-	}
-
+	
 	local_supplies=0.0
 }

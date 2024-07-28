@@ -17,8 +17,7 @@ NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.3, 0.2, 0.05, 0.0 }
 NDefines.NProduction.BASE_FACTORY_SPEED = 10          	-- vanilla 5 | Official CIC 10
 NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 9   	-- vanilla 4.5 | Official CIC 5.0
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 10      	-- vanilla 2.5 | Official CIC 5.0
-NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=0.57 	-- vanilla 1 |  Official CIC 1.25
-NDefines.NProduction.PRODUCTION_RESOURCE_LACK_PENALTY = 0.05 -- -0.05 vanilla | Penalty decrease while lack of resource per factory
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN=0.5 	-- vanilla 1 |  Official CIC 1.25
 
 NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 5	-- vanilla 10 | Base start efficiency for factories expressed in %.
 NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 25	-- vanilla 50 | Base max efficiency for factories expressed in %.
@@ -28,11 +27,14 @@ NDefines.NProduction.BASE_FACTORY_EFFICIENCY_PARENT_CHANGE_FACTOR = 100		-- Base
 NDefines.NProduction.BASE_FACTORY_EFFICIENCY_FAMILY_CHANGE_FACTOR = 100		-- Base factor for changing production with same family in %.
 NDefines.NProduction.BASE_FACTORY_EFFICIENCY_ARCHETYPE_CHANGE_FACTOR = 100 	-- Base factor for changing production with same archetype in %.
 
+NDefines.NProduction.BASE_LAND_EQUIPMENT_CONVERSION_IC_COST_FACTOR=0.5         -- vanilla 0.9
+NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.5  -- vanilla 0
+
 NDefines.NBuildings.MAX_BUILDING_LEVELS=50 --vanilla 15 (you cant have more than 15 mils per state,problematic when having a lot of spawn in factories)
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 
-NDefines.NProduction.BASE_LAND_EQUIPMENT_CONVERSION_IC_COST_FACTOR=0.5         -- vanilla 0.9
-NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.5  -- vanilla 0
+NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0   -- vanilla 0.2 | multiplicative resource bonus for each level of (non damaged) infrastructure
+NDefines.NProduction.PRODUCTION_RESOURCE_LACK_PENALTY = 0.05 -- -0.05 vanilla | Penalty decrease while lack of resource per factory
 
 --█   █ █████  ███  
 --██ ██   █   █   █ 
@@ -95,7 +97,7 @@ NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.0189       -- vanilla 0.0
 NDefines.NMilitary.EQUIPMENT_COMBAT_LOSS_FACTOR = 1.0            -- vanilla 0.7   | in vanilla, 30% of the lost equipment relative to strenght lost returned in the division after the battle finshed
 
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 1   -- vanilla 2 | Extra damage dice if our armor outclasses enemy
-NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 1   -- vanilla 6 | Removed the extra damage because it didn't worked properly, it's supposed to deal more damage if unpierced 100%, but it's also active when partially pierced.
+NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 2   -- vanilla 6 | Removed the extra damage because it didn't worked properly, it's supposed to deal more damage if unpierced 100%, but it's also active when partially pierced.
 
 -- in vanilla, if attack is higher than the enemy defence, the chance for attack points to hit is 4 times higher, here it's only 3.3 times higher 
 NDefines.NMilitary.BASE_CHANCE_TO_AVOID_HIT = 70                 -- vanilla 90| 30% chance for a attack point to hit through 1 defence-breakthrough point
@@ -119,36 +121,24 @@ NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.7        -- vanilla 0
 
 --Encourages mixing of tanks with infantry or low armoured light tanks with high armour heavy tanks, witch is unique
 NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.3	--vanilla 0.4
-NDefines.NMilitary.PEN_VS_AVERAGE = 0.3	--vanilla 0.4
+NDefines.NMilitary.PEN_VS_AVERAGE = 1.0	--vanilla 0.4
 
 NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
-		1.00,
-		0.90,
-		0.80,
-		0.70, --there isn't much point setting this higher than 0
-		0.60,
-		0.50,
-		0.40,
-		0.00
+		1.0,
+		0
 	}
 NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always receive maximum damage (so add overmatching at your own peril). the system expects at least 2 values, with no upper limit.
-		1.00,
-		0.90,
-		0.80,
-		0.70,
-		0.60,
-		0.50,
-		0.40,
-		0.30
+		1.0,
+		0.5
 	}
 
-NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.7 -- damage reduction if armor outclassing enemy
-NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.7 -- damage reduction if armor outclassing enemy
+	NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.5 -- damage reduction if armor outclassing enemy, will look at increasing if AT is too deadly to org. 
+	NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 1.0 -- damage reduction if armor outclassing enemy
 
 --█▀▀ █▀█ █▀▀ █ █ █▀▀    ▀█▀ ▀█▀ █▄ ▄█ █▀▀ 
 --█▀  █▄█ █▄▄ █▄█ ▄██     █  ▄█▄ █ ▀ █ ██▄ 
 
-NDefines.NFocus.FOCUS_POINT_DAYS = 9          --vanilla 7
+NDefines.NFocus.FOCUS_POINT_DAYS = 1          --vanilla 7
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20 --vanilla 10
 
 
@@ -250,7 +240,14 @@ NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 15000000
 --█▀█ █▀▀ █▀▀ ▀█▀ █▀▀ ▀█▀ ▄▀▄ █▄ █ █▀▀ █▀▀ 
 --█▀▄ ██▄ ▄██ ▄█▄ ▄██  █  █▀█ █ ▀█ █▄▄ ██▄ 
 
-NDefines.NResistance.RESISTANCE_ACTIVITY_CHANCE_AT_MAX_RESISTANCE=0.112
+NDefines.NResistance.INITIAL_HISTORY_RESISTANCE = 0			-- vanilla 0 | resistance value for initial colony states
+NDefines.NResistance.RESISTANCE_ACTIVITY_CHANCE_AT_MAX_RESISTANCE=0 -- vanilla 0.312
+NDefines.NResistance.INITIAL_HISTORY_COMPLIANCE = 0 -- vanillla 70 %
+NDefines.NResistance.RESISTANCE_TARGET_BASE = 0 -- vanilla 35
+NDefines.NResistance.RESISTANCE_TARGET_MIN_CAP_FOR_NON_COMPLIANCE = 0
+NDefines.NResistance.RESISTANCE_GROWTH_MAX = 0
+NDefines.NResistance.COMPLIANCE_GROWTH_MAX = 0
+
 
 --█▀▀ █▀█ █ █ █▄ █ ▀█▀ █▀█ ▀▄▀   ▄▀  █▀█ █▀█ █   ▀█▀ ▀█▀ ▀█▀ █▀▀ █▀▀ 
 --█▄▄ █▄█ █▄█ █ ▀█  █  █▀▄  █  ▄▀    █▀▀ █▄█ █▄▄ ▄█▄  █  ▄█▄ █▄▄ ▄██ 

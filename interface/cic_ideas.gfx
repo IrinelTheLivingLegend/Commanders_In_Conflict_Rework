@@ -15,6 +15,64 @@ spriteTypes = {
 		name = "GFX_idea_AXI_kiyoshi_yoki"
 		texturefile = "gfx/interface/ideas/idea_AXI_kiyoshi_yoki.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_ALI_industry"
+		texturefile = "gfx/interface/ideas/ALI_industry.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ALI_army"
+		texturefile = "gfx/interface/ideas/ALI_army.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ALI_airforce"
+		texturefile = "gfx/interface/ideas/ALI_airforce.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ALI_navy"
+		texturefile = "gfx/interface/ideas/ALI_navy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ALI_politics"
+		texturefile = "gfx/interface/ideas/ALI_politics.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_industry"
+		texturefile = "gfx/interface/ideas/AXI_industry.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_army"
+		texturefile = "gfx/interface/ideas/AXI_army.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_airforce"
+		texturefile = "gfx/interface/ideas/AXI_airforce.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_navy"
+		texturefile = "gfx/interface/ideas/AXI_navy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_AXI_politics"
+		texturefile = "gfx/interface/ideas/AXI_politics.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_picture"
+		texturefile = "gfx/interface/ideas/idea_picture.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_phase_one"
+		texturefile = "gfx/interface/ideas/phase_one.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_phase_two"
+		texturefile = "gfx/interface/ideas/phase_two.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_phase_three"
+		texturefile = "gfx/interface/ideas/phase_three.dds"
+	}
+
 	
 
 }

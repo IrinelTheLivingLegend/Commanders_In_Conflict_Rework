@@ -197,6 +197,27 @@ add_ideas = {
 	global_production_control
 }
 
+add_dynamic_modifier = {
+	modifier = ALI_industry
+	scope = ALL
+}
+add_dynamic_modifier = { 
+	modifier = ALI_army
+	scope = ALL
+}
+add_dynamic_modifier = { 
+	modifier = ALI_airforce
+	scope = ALL
+}
+add_dynamic_modifier = { 
+	modifier = ALI_navy
+	scope = ALL
+}
+add_dynamic_modifier = { 
+	modifier = ALI_politics
+	scope = ALL
+}
+
 set_convoys = 100
 
 set_politics = {

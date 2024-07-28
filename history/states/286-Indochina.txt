@@ -1,14 +1,6 @@
 state={
 	id=286
 	name="STATE_286"
-	resources = {
-		oil = 5
-		aluminium = 5
-		tungsten = 5
-		rubber = 5
-		steel = 20
-		chromium = 5
-	}
 	history={
 
 		owner = NOO

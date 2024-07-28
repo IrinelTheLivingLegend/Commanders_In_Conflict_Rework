@@ -1,0 +1,259 @@
+ALI_industry = {
+	icon =  "GFX_idea_ALI_industry"
+
+	production_factory_efficiency_gain_factor = ALI_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = ALI_production_factory_max_efficiency_factor
+	consumer_goods_factor = ALI_consumer_goods_factor
+	production_speed_industrial_complex_factor = ALI_production_speed_industrial_complex_factor
+	industrial_concern_cost_factor = ALI_industrial_concern_cost_factor
+	local_resources_factor = ALI_local_resources_factor
+	line_change_production_efficiency_factor = ALI_line_change_production_efficiency_factor
+	industrial_capacity_factory = ALI_industrial_capacity_factory
+	industrial_capacity_dockyard = ALI_industrial_capacity_dockyard
+	fuel_gain_factor_from_states = ALI_fuel_gain_factor_from_states
+	production_oil_factor = ALI_production_oil_factor
+	industry_repair_factor = ALI_industry_repair_factor
+	production_factory_start_efficiency_factor = ALI_production_factory_start_efficiency_factor
+	local_resources_factor = ALI_local_resources_factor
+	production_speed_arms_factory_factor = ALI_production_speed_arms_factory_factor
+	research_speed_factor = ALI_research_speed_factor
+	conversion_cost_civ_to_mil_factor = ALI_conversion_cost_civ_to_mil_factor
+	tank_manufacturer_cost_factor = ALI_tank_manufacturer_cost_factor
+	land_equipment_upgrade_xp_cost = ALI_land_equipment_upgrade_xp_cost
+	materiel_manufacturer_cost_factor = ALI_materiel_manufacturer_cost_factor
+	production_speed_coastal_bunker_factor = ALI_production_speed_coastal_bunker_factor
+	production_speed_bunker_factor = ALI_production_speed_bunker_factor
+	state_production_speed_buildings_factor = ALI_state_production_speed_buildings_factor
+}
+
+ALI_army = {
+	icon = "GFX_idea_ALI_army"
+
+	mobilization_laws_cost_factor = ALI_mobilization_laws_cost_factor
+	army_org_factor = ALI_army_org_factor
+	experience_gain_army_factor = ALI_experience_gain_army_factor
+	experience_loss_factor = ALI_experience_loss_factor
+	mobilization_speed = ALI_mobilization_speed
+	conscription_factor = ALI_conscription_factor
+	modifier_army_sub_unit_cavalry_speed_factor = ALI_modifier_army_sub_unit_cavalry_speed_factor
+	cavalry_attack_factor = ALI_cavalry_attack_factor
+	training_time_factor = ALI_training_time_factor
+	heat_attrition_factor = ALI_heat_attrition_factor
+	winter_attrition_factor = ALI_winter_attrition_factor
+	acclimatization_cold_climate_gain_factor = ALI_acclimatization_cold_climate_gain_factor
+	acclimatization_hot_climate_gain_factor = ALI_acclimatization_hot_climate_gain_factor
+	terrain_penalty_reduction = ALI_terrain_penalty_reduction
+	unit_infantry_design_cost_factor = ALI_unit_infantry_design_cost_factor
+	unit_artillery_brigade_design_cost_factor = ALI_unit_artillery_brigade_design_cost_factor
+	army_org_regain = ALI_army_org_regain
+	special_forces_cap = ALI_special_forces_cap
+	land_doctrine_cost_factor = ALI_land_doctrine_cost_factor
+	cas_damage_reduction = ALI_cas_damage_reduction
+	max_dig_in = ALI_max_dig_in 
+	dig_in_speed_factor = ALI_dig_in_speed_factor
+	max_dig_in_factor = ALI_max_dig_in_factor
+	max_command_power_mult = ALI_max_command_power_mult
+	max_command_power = ALI_max_command_power
+	breakthrough_factor = ALI_breakthrough_factor
+	army_artillery_defence_factor = ALI_army_artillery_defence_factor
+}
+
+ALI_airforce = {
+	icon = "GFX_idea_ALI_airforce"
+
+	experience_gain_air = ALI_experience_gain_air
+	air_cas_present_factor = ALI_air_cas_present_factor
+	air_strategic_bomber_bombing_factor = ALI_air_strategic_bomber_bombing_factor
+	air_intercept_efficiency = ALI_air_intercept_efficiency
+	air_superiority_efficiency = ALI_air_superiority_efficiency
+	air_range_factor = ALI_air_range_factor
+	production_speed_air_base_factor = ALI_production_speed_air_base_factor 
+	air_accidents_factor = ALI_air_accidents_factor
+
+	air_ace_generation_chance_factor = ALI_air_ace_generation_chance_factor
+	air_night_penalty = ALI_air_night_penalty
+	air_weather_penalty = ALI_air_weather_penalty
+	air_wing_xp_loss_when_killed_factor = ALI_air_wing_xp_loss_when_killed_factor
+	air_mission_xp_gain_factor = ALI_air_mission_xp_gain_factor
+	air_training_xp_gain_factor = ALI_air_training_xp_gain_factor
+
+	aircraft_manufacturer_cost_factor = ALI_aircraft_manufacturer_cost_factor
+	air_fuel_consumption_factor = ALI_air_fuel_consumption_factor
+	air_agility_factor = ALI_air_agility_factor
+	air_strategic_bomber_night_penalty = ALI_air_strategic_bomber_night_penalty
+	strategic_bomb_visibility = ALI_strategic_bomb_visibility
+	air_mission_efficiency = ALI_air_mission_efficiency
+	air_nav_efficiency = ALI_air_nav_efficiency
+
+	#custom_modifier_tooltip = NORDIC_airforces_dALI_production_cost_TT
+}
+
+ALI_navy = {
+	icon = "GFX_idea_ALI_navy"
+
+	experience_gain_navy = ALI_experience_gain_navy
+	naval_doctrine_cost_factor = ALI_naval_doctrine_cost_factor
+	repair_speed_factor = ALI_repair_speed_factor
+	navy_leader_cost_factor = ALIavy_leader_cost_factor
+	refit_ic_cost = ALI_refit_ic_cost
+	naval_coordination = ALI_naval_coordination
+	navy_visibility = ALI_navy_visibility
+	positioning = ALI_positioning
+	screening_efficiency = ALI_screening_efficiency
+	naval_invasion_capacity = ALI_naval_invasion_capacity 
+	invasion_preparation = ALI_invasion_preparation
+	special_forces_cap = Special_forces_cap
+}
+
+ALI_politics = {
+	icon = "GFX_idea_ALI_politics"
+
+	drift_defence_factor = ALI_drift_defence_factor
+	defensive_war_stability_factor = ALI_defensive_war_stability_factor
+	communism_drift = ALI_communism_drift
+	political_power_factor = ALI_political_power_factor
+	economy_cost_factor = ALI_economy_cost_factor
+	trade_laws_cost_factor = ALI_trade_laws_cost_factor
+	mobilization_laws_cost_factor = ALI_mobilization_laws_cost_factor
+	consumer_goods_factor = ALI_consumer_goods_factor
+	production_speed_buildings_factor = ALI_production_speed_buildings_factor
+	global_building_slots_factor = ALI_global_building_slots_factor
+	max_surrender_limit_offset = ALI_max_surrender_limit_offset
+	mobilization_speed = ALI_mobilization_speed
+	operative_slot = ALI_operative_slot
+	political_advisor_cost_factor = ALI_political_advisor_cost_factor
+	opinion_gain_monthly_same_ideology_factor = ALI_opinion_gain_monthly_same_ideology_factor
+	surrender_limit = ALI_surrender_limit
+	party_popularity_stability_factor = ALI_party_popularity_stability_factor
+}
+
+AXI_industry = {
+	icon =  "GFX_idea_AXI_industry"
+
+	production_factory_efficiency_gain_factor = AXI_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = AXI_production_factory_max_efficiency_factor
+	consumer_goods_factor = AXI_consumer_goods_factor
+	production_speed_industrial_complex_factor = AXI_production_speed_industrial_complex_factor
+	industrial_concern_cost_factor = AXI_industrial_concern_cost_factor
+	local_resources_factor = AXI_local_resources_factor
+	line_change_production_efficiency_factor = AXI_line_change_production_efficiency_factor
+	industrial_capacity_factory = AXI_industrial_capacity_factory
+	industrial_capacity_dockyard = AXI_industrial_capacity_dockyard
+	fuel_gain_factor_from_states = AXI_fuel_gain_factor_from_states
+	production_oil_factor = AXI_production_oil_factor
+	industry_repair_factor = AXI_industry_repair_factor
+	production_factory_start_efficiency_factor = AXI_production_factory_start_efficiency_factor
+	local_resources_factor = AXI_local_resources_factor
+	production_speed_arms_factory_factor = AXI_production_speed_arms_factory_factor
+	research_speed_factor = AXI_research_speed_factor
+	conversion_cost_civ_to_mil_factor = AXI_conversion_cost_civ_to_mil_factor
+	tank_manufacturer_cost_factor = AXI_tank_manufacturer_cost_factor
+	land_equipment_upgrade_xp_cost = AXI_land_equipment_upgrade_xp_cost
+	materiel_manufacturer_cost_factor = AXI_materiel_manufacturer_cost_factor
+	production_speed_coastal_bunker_factor = AXI_production_speed_coastal_bunker_factor
+	production_speed_bunker_factor = AXI_production_speed_bunker_factor
+	state_production_speed_buildings_factor = AXI_state_production_speed_buildings_factor
+}
+
+AXI_army = {
+	icon = "GFX_idea_AXI_army"
+
+	mobilization_laws_cost_factor = AXI_mobilization_laws_cost_factor
+	army_org_factor = AXI_army_org_factor
+	experience_gain_army_factor = AXI_experience_gain_army_factor
+	experience_loss_factor = AXI_experience_loss_factor
+	mobilization_speed = AXI_mobilization_speed
+	conscription_factor = AXI_conscription_factor
+	modifier_army_sub_unit_cavalry_speed_factor = AXI_modifier_army_sub_unit_cavalry_speed_factor
+	cavalry_attack_factor = AXI_cavalry_attack_factor
+	training_time_factor = AXI_training_time_factor
+	heat_attrition_factor = AXI_heat_attrition_factor
+	winter_attrition_factor = AXI_winter_attrition_factor
+	acclimatization_cold_climate_gain_factor = AXI_acclimatization_cold_climate_gain_factor
+	acclimatization_hot_climate_gain_factor = AXI_acclimatization_hot_climate_gain_factor
+	terrain_penalty_reduction = AXI_terrain_penalty_reduction
+	unit_infantry_design_cost_factor = AXI_unit_infantry_design_cost_factor
+	unit_artillery_brigade_design_cost_factor = AXI_unit_artillery_brigade_design_cost_factor
+	army_org_regain = AXI_army_org_regain
+	special_forces_cap = AXI_special_forces_cap
+	land_doctrine_cost_factor = AXI_land_doctrine_cost_factor
+	cas_damage_reduction = AXI_cas_damage_reduction
+	max_dig_in = AXI_max_dig_in 
+	dig_in_speed_factor = AXI_dig_in_speed_factor
+	max_dig_in_factor = AXI_max_dig_in_factor
+	max_command_power_mult = AXI_max_command_power_mult
+	max_command_power = AXI_max_command_power
+	breakthrough_factor = AXI_breakthrough_factor
+	army_artillery_defence_factor = AXI_army_artillery_defence_factor
+}
+
+AXI_airforce = {
+	icon = "GFX_idea_AXI_airforce"
+
+	experience_gain_air = AXI_experience_gain_air
+	air_cas_present_factor = AXI_air_cas_present_factor
+	air_strategic_bomber_bombing_factor = AXI_air_strategic_bomber_bombing_factor
+	air_intercept_efficiency = AXI_air_intercept_efficiency
+	air_superiority_efficiency = AXI_air_superiority_efficiency
+	air_range_factor = AXI_air_range_factor
+	production_speed_air_base_factor = AXI_production_speed_air_base_factor 
+	air_accidents_factor = AXI_air_accidents_factor
+
+	air_ace_generation_chance_factor = AXI_air_ace_generation_chance_factor
+	air_night_penalty = AXI_air_night_penalty
+	air_weather_penalty = AXI_air_weather_penalty
+	air_wing_xp_loss_when_killed_factor = AXI_air_wing_xp_loss_when_killed_factor
+	air_mission_xp_gain_factor = AXI_air_mission_xp_gain_factor
+	air_training_xp_gain_factor = AXI_air_training_xp_gain_factor
+
+	aircraft_manufacturer_cost_factor = AXI_aircraft_manufacturer_cost_factor
+	air_fuel_consumption_factor = AXI_air_fuel_consumption_factor
+	air_agility_factor = AXI_air_agility_factor
+	air_strategic_bomber_night_penalty = AXI_air_strategic_bomber_night_penalty
+	strategic_bomb_visibility = AXI_strategic_bomb_visibility
+	air_mission_efficiency = AXI_air_mission_efficiency
+	air_nav_efficiency = AXI_air_nav_efficiency
+
+	#custom_modifier_tooltip = NORDIC_airforces_dAXI_production_cost_TT
+}
+
+AXI_navy = {
+	icon = "GFX_idea_AXI_navy"
+
+	experience_gain_navy = AXI_experience_gain_navy
+	naval_doctrine_cost_factor = AXI_naval_doctrine_cost_factor
+	repair_speed_factor = AXI_repair_speed_factor
+	navy_leader_cost_factor = AXIavy_leader_cost_factor
+	refit_ic_cost = AXI_refit_ic_cost
+	naval_coordination = AXI_naval_coordination
+	navy_visibility = AXI_navy_visibility
+	positioning = AXI_positioning
+	screening_efficiency = AXI_screening_efficiency
+	naval_invasion_capacity = AXI_naval_invasion_capacity 
+	invasion_preparation = AXI_invasion_preparation
+	special_forces_cap = Special_forces_cap
+}
+
+AXI_politics = {
+	icon = "GFX_idea_AXI_politics"
+
+	drift_defence_factor = AXI_drift_defence_factor
+	defensive_war_stability_factor = AXI_defensive_war_stability_factor
+	communism_drift = AXI_communism_drift
+	political_power_factor = AXI_political_power_factor
+	economy_cost_factor = AXI_economy_cost_factor
+	trade_laws_cost_factor = AXI_trade_laws_cost_factor
+	mobilization_laws_cost_factor = AXI_mobilization_laws_cost_factor
+	consumer_goods_factor = AXI_consumer_goods_factor
+	production_speed_buildings_factor = AXI_production_speed_buildings_factor
+	global_building_slots_factor = AXI_global_building_slots_factor
+	max_surrender_limit_offset = AXI_max_surrender_limit_offset
+	mobilization_speed = AXI_mobilization_speed
+	operative_slot = AXI_operative_slot
+	political_advisor_cost_factor = AXI_political_advisor_cost_factor
+	opinion_gain_monthly_same_ideology_factor = AXI_opinion_gain_monthly_same_ideology_factor
+	surrender_limit = AXI_surrender_limit
+	party_popularity_stability_factor = AXI_party_popularity_stability_factor
+}
+
+

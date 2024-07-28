@@ -43,130 +43,91 @@ bookmarks = {
 			AXI={set_cosmetic_tag=AXI_finland_def_name}
 
 			every_state = {
-				limit={OR={state=142	state=110	state=143	state=140}}
+				limit={
+					OR={
+						state=142 state=110	state=143 state=140
+					}
+				}
 				ALI={transfer_state=PREV}
 				add_core_of =ALI
 				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
-				}
-				
 			}
 
-
 			every_state = {
-				limit={OR={state=138 state=139 state=124 state=141 state=38 state=666 state=144 state=148 state=722 state=147 state=145}}
+				limit={
+					OR={
+						state=138 state=139 state=124 state=141 state=38 state=666 state=144 state=148 state=722 state=147 state=145
+					}
+				}
 				NEU={transfer_state=PREV}
 				add_core_of =NEU
 				remove_core_of =NOO
-				add_manpower = 1000000
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
-				}
-			}
-			every_state = {
-				limit={OR={state=111 state=149 state=150 state=146}}
-				AXI={transfer_state=PREV}
-				add_core_of =AXI
-				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
-				}
-				
-			}
-			every_state = {
-				limit={OR={state=215 state=213}}
-				AXI={transfer_state=PREV}
-				add_core_of =AXI
-				remove_core_of =NOO
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
-				}
-				set_state_category = wasteland
-				
-			}
-
-			every_state = {
-				limit={OR={ state=142	state=110	state=143	state=140 #ALI
-				state=111 state=149 state=150 state=146 # AXI
-				 }}
-				add_manpower = 1000000
-				add_manpower = 1000000
-				add_manpower = 1000000
 				add_manpower = 500000
-				add_manpower = 250000
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
+			}
+			every_state = {
+				limit={
+					OR={
+						state=111 state=149 state=150 state=146
+					}
 				}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
 				
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
 			}
-				set_building_level = {
-    				type = infrastructure
-    				level = 4
-   					instant_build = yes
+			every_state = {
+				limit={
+					OR={
+						state=215 state=213
+					}
 				}
+				AXI={transfer_state=PREV}
+				add_core_of =AXI
+				remove_core_of =NOO
+				set_state_category = wasteland
 			}
+			
 			#Those nations are required to exist on map for the flags on industrial decisions to show properly
-		every_state = {
+			every_state = {
 				limit={state=270}
 				USA={transfer_state=PREV}
 				add_core_of =USA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=650}
 				ENG={transfer_state=PREV}
 				add_core_of =ENG
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=631}
 				FRA={transfer_state=PREV}
 				add_core_of =FRA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=630}
 				SOV={transfer_state=PREV}
 				add_core_of =SOV
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=713}
 				GER={transfer_state=PREV}
 				add_core_of =GER
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=706}
 				ROM={transfer_state=PREV}
 				add_core_of =ROM
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=707}
 				ITA={transfer_state=PREV}
 				add_core_of =ITA
-		}
-		every_state = {
+			}
+			every_state = {
 				limit={state=704}
 				JAP={transfer_state=PREV}
 				add_core_of =JAP
-		}
+			}
 		}
 	}
 }

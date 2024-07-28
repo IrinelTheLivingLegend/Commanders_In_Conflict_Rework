@@ -137,3 +137,16 @@ MOD_industrial_concern_ret_axi:0 "Bring Italian Experts"
  MOD_industrial_concern_base_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
  MOD_industrial_concern_grow_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
  MOD_industrial_concern_ret_axi_desc:0 "We will sign an agreement with major [FROM.GetAdjective] industrial entities to bring in expert engineers and architects from [FROM.GetNameDef] to act as consultants for our industrial projects."
+
+ALI_industry:0 "Industry"
+ALI_army:0 "Army"
+ALI_airforce:0 "Airforce"
+ALI_navy:0 "Navy"
+ALI_politics:0 "Politics"
+
+AXI_industry:0 "Industry"
+AXI_army:0 "Army"
+AXI_airforce:0 "Airforce"
+AXI_navy:0 "Navy"
+AXI_politics:0 "Politics"
+
